@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo_32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo_32x32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo_16x16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo_32x32.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Standard," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Waylan Punch" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="An Android Code Standard Document, It’s A Public Resource, You Might Find It On My Company’s Home Site Or Not. 1.避免坏习惯1.1 代码重复几乎是最常见的坏习惯 代码重复往往来自于copy-and-paste的编程风格。  1.2 代码很长的方法 一个方法应当具有自我独立的意图，不要把几">
+<meta name="keywords" content="Standard">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Code Standard">
+<meta property="og:url" content="https://waylanpunch.github.io/2016/07/03/2016-07-25-AndroidCodeStandard/index.html">
+<meta property="og:site_name" content="Waylan Punch">
+<meta property="og:description" content="An Android Code Standard Document, It’s A Public Resource, You Might Find It On My Company’s Home Site Or Not. 1.避免坏习惯1.1 代码重复几乎是最常见的坏习惯 代码重复往往来自于copy-and-paste的编程风格。  1.2 代码很长的方法 一个方法应当具有自我独立的意图，不要把几">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-04-01T09:19:17.430Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android Code Standard">
+<meta name="twitter:description" content="An Android Code Standard Document, It’s A Public Resource, You Might Find It On My Company’s Home Site Or Not. 1.避免坏习惯1.1 代码重复几乎是最常见的坏习惯 代码重复往往来自于copy-and-paste的编程风格。  1.2 代码很长的方法 一个方法应当具有自我独立的意图，不要把几">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://waylanpunch.github.io/2016/07/03/2016-07-25-AndroidCodeStandard/"/>
+
+
+
+
+
+  <title>Android Code Standard | Waylan Punch</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Waylan Punch</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">WP</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            Commonweal 404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2016/07/03/2016-07-25-AndroidCodeStandard/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Android Code Standard</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-03T20:45:15+08:00">
+                2016-07-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/07/03/2016-07-25-AndroidCodeStandard/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2016/07/03/2016-07-25-AndroidCodeStandard/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/07/03/2016-07-25-AndroidCodeStandard/" class="leancloud_visitors" data-flag-title="Android Code Standard">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>An Android Code Standard Document, It’s A Public Resource, You Might Find It On My Company’s Home Site Or Not.</strong></p>
+<h1 id="1-避免坏习惯"><a href="#1-避免坏习惯" class="headerlink" title="1.避免坏习惯"></a>1.避免坏习惯</h1><h2 id="1-1-代码重复几乎是最常见的坏习惯"><a href="#1-1-代码重复几乎是最常见的坏习惯" class="headerlink" title="1.1 代码重复几乎是最常见的坏习惯"></a>1.1 代码重复几乎是最常见的坏习惯</h2><blockquote>
+<p>代码重复往往来自于copy-and-paste的编程风格。</p>
+</blockquote>
+<h2 id="1-2-代码很长的方法"><a href="#1-2-代码很长的方法" class="headerlink" title="1.2 代码很长的方法"></a>1.2 代码很长的方法</h2><blockquote>
+<p>一个方法应当具有自我独立的意图，不要把几个意图放在一起。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="1-3-大类"><a href="#1-3-大类" class="headerlink" title="1.3 大类"></a>1.3 大类</h2><blockquote>
+<p>就是把太多的责任交给一个类，应该是一个类一个责任，这个和长方法相似。</p>
+</blockquote>
+<h2 id="1-4-一起出现在很多类的成员变量中，一起出现在许多方法的参数中…"><a href="#1-4-一起出现在很多类的成员变量中，一起出现在许多方法的参数中…" class="headerlink" title="1.4 一起出现在很多类的成员变量中，一起出现在许多方法的参数中…"></a>1.4 一起出现在很多类的成员变量中，一起出现在许多方法的参数中…</h2><blockquote>
+<p>这些数据或许应该自己独立形成对象。</p>
+</blockquote>
+<h2 id="1-5-一个干活不多的类"><a href="#1-5-一个干活不多的类" class="headerlink" title="1.5 一个干活不多的类"></a>1.5 一个干活不多的类</h2><blockquote>
+<p>类的维护需要额外的开销，如果一个类承担了太少的责任，应当消除它。</p>
+</blockquote>
+<h2 id="1-6-一个类实现了从未用到的功能和通用性"><a href="#1-6-一个类实现了从未用到的功能和通用性" class="headerlink" title="1.6 一个类实现了从未用到的功能和通用性"></a>1.6 一个类实现了从未用到的功能和通用性</h2><blockquote>
+<p>通常这样的类或方法唯一的用户是testcase。不要犹豫，删除它。</p>
+</blockquote>
+<h2 id="1-7-一个对象的属性可能只在某些情况下才有意义"><a href="#1-7-一个对象的属性可能只在某些情况下才有意义" class="headerlink" title="1.7 一个对象的属性可能只在某些情况下才有意义"></a>1.7 一个对象的属性可能只在某些情况下才有意义</h2><blockquote>
+<p>这样的代码将难以理解。专门建立一个对象来持有这样的孤儿属性，把只和他相关的行为移到该类。最常见的是一个特定的算法需要某些只有该算法才有用的变量。</p>
+</blockquote>
+<h2 id="1-8-做相同事情的方法有不同的函数"><a href="#1-8-做相同事情的方法有不同的函数" class="headerlink" title="1.8 做相同事情的方法有不同的函数"></a>1.8 做相同事情的方法有不同的函数</h2><blockquote>
+<p>一致把它们往类层次上移，直至协议一致。</p>
+</blockquote>
+<h2 id="1-9-对象包括状态和行为"><a href="#1-9-对象包括状态和行为" class="headerlink" title="1.9 对象包括状态和行为"></a>1.9 对象包括状态和行为</h2><blockquote>
+<p>如果一个类只有状态没有行为，那么肯定有什么地方出问题了。</p>
+</blockquote>
+<h2 id="1-10-经常觉得要写很多注释才能解释你的代码"><a href="#1-10-经常觉得要写很多注释才能解释你的代码" class="headerlink" title="1.10 经常觉得要写很多注释才能解释你的代码"></a>1.10 经常觉得要写很多注释才能解释你的代码</h2><blockquote>
+<p>如果这种感觉太多，表示你需要重构。</p>
+</blockquote>
+<hr>
+<h1 id="2-命名规范"><a href="#2-命名规范" class="headerlink" title="2.命名规范"></a>2.命名规范</h1><h2 id="2-1-包命名"><a href="#2-1-包命名" class="headerlink" title="2.1 包命名"></a>2.1 包命名</h2><ul>
+<li>范围：</li>
+</ul>
+<blockquote>
+<p>适用于包（<strong>package</strong>）的命名</p>
+</blockquote>
+<ul>
+<li>命名规范：</li>
+</ul>
+<blockquote>
+<p>一个唯一包名的前缀总是全部小写的 ASCII 字母并且是一个顶级域名，通常是 com，edu，gov，mil，net，org。</p>
+</blockquote>
+<p>Ø  例如：</p>
+<blockquote>
+<p>顶级域名.公司名.项目名.*（模块）</p>
+</blockquote>
+<pre><code>com.hengtiansoft.mobiledemo.
+</code></pre><h2 id="2-2-类和接口命名"><a href="#2-2-类和接口命名" class="headerlink" title="2.2 类和接口命名"></a>2.2 类和接口命名</h2><ul>
+<li>范围：</li>
+</ul>
+<p>适用于类（<strong>class</strong>）和接口（<strong>interface</strong>）的命名</p>
+<ul>
+<li>命名规范：</li>
+</ul>
+<blockquote>
+<p>类名是个一名词，采用大小写混合的方式，每个单词的首字母大写。类名应简洁而富于描述。使用完整单词，避免缩写词（除非该缩写词被更广泛使用，像 URL，HTML），接口一般要使用<strong>able</strong>、<strong>ible</strong>、<strong>er</strong>等后缀。</p>
+</blockquote>
+<p>Ø  例如：</p>
+<pre><code>classUserHomeActivity
+classIOUtils
+interfaceUserClickListener
+</code></pre><blockquote>
+<p>规约：类名必须使用驼峰规则，即首字母必须大写，如果为词组，则每个单词的首字母也必须要大写，类名必须使用名字，或名词词组。要求类名简单，不允许出现无意义的单词(如classXXXActivity)。</p>
+</blockquote>
+<h2 id="2-3-异常命名"><a href="#2-3-异常命名" class="headerlink" title="2.3 异常命名"></a>2.3 异常命名</h2><ul>
+<li>范围：</li>
+</ul>
+<blockquote>
+<p>适用于自定义异常（<strong>Exception</strong>）的命名</p>
+</blockquote>
+<ul>
+<li>命名规范：</li>
+</ul>
+<blockquote>
+<p>自定义异常的命名必须以<strong>Exception</strong>为结尾。</p>
+</blockquote>
+<p>Ø  例如：</p>
+<pre><code>NetworkException
+
+AppException
+</code></pre><h2 id="2-4-方法命名"><a href="#2-4-方法命名" class="headerlink" title="2.4 方法命名"></a>2.4 方法命名</h2><ul>
+<li>范围：</li>
+</ul>
+<blockquote>
+<p>适用于方法（<strong>method</strong>）的命名</p>
+</blockquote>
+<ul>
+<li>命名规范：</li>
+</ul>
+<blockquote>
+<p>方法名是一个动词，采用大小写混合的方式，第一个单词的首字母小写，其后单词的首字母大写。</p>
+</blockquote>
+<blockquote>
+<p>类的获取方法（一般具有返回值）一般要求在被访问的字段名前加上get，如getFirstName ()，getLastName()。</p>
+</blockquote>
+<blockquote>
+<p>类的设置方法（一般返回类型为<strong>void</strong>）：被访问字段名的前面加上前缀 set，如setFirstName()，setLastName()。</p>
+</blockquote>
+<blockquote>
+<p>类的布尔型的判断方法一般要求方法名使用单词is做前缀，如isNetWorkConnected()，isString()。</p>
+</blockquote>
+<blockquote>
+<p>类的普通方法一般采用完整的英文描述说明成员方法功能，第一个单词尽可能采用动词，首字母小写，如openFile()，addCount()。</p>
+</blockquote>
+<blockquote>
+<p>构造方法应该用递增的方式写。（参数多的写在后面）</p>
+</blockquote>
+<p>Ø  例如：</p>
+<pre><code>publicintgetId()
+private void doBack()
+</code></pre><h2 id="2-5-变量命名"><a href="#2-5-变量命名" class="headerlink" title="2.5 变量命名"></a>2.5 变量命名</h2><ul>
+<li>范围：</li>
+</ul>
+<blockquote>
+<p>适用于Java代码中。在模型（model）或者bean对象中，成员变量命名可不遵循下述规范，直接使用小写字母开头。</p>
+</blockquote>
+<ul>
+<li>命名规范：</li>
+</ul>
+<blockquote>
+<p>第一个单词的首字母小写，其后单词的首字母大写。</p>
+</blockquote>
+<blockquote>
+<p>非公有，非静态的变量以 m开头。</p>
+</blockquote>
+<blockquote>
+<p>静态变量以s开头。</p>
+</blockquote>
+<blockquote>
+<p>其他变量以小写字母开头。</p>
+</blockquote>
+<blockquote>
+<p>公有静态最终（public static final）变量全大写并用下划线“_”分隔。</p>
+</blockquote>
+<p>Ø  例如：</p>
+<pre><code>public class MyClass {
+    public static final int SOME_CONSTANT = 42;
+    publicintpublicField;
+    private static MyClasssSingleton;
+    intmPackagePrivate;
+    privateintmPrivate;
+    protectedintmProtected;
+}
+</code></pre><h2 id="2-6-Android控件变量命名"><a href="#2-6-Android控件变量命名" class="headerlink" title="2.6 Android控件变量命名"></a>2.6 Android控件变量命名</h2><ul>
+<li>范围：</li>
+</ul>
+<blockquote>
+<p>适用于Java代码的Android控件命名。</p>
+</blockquote>
+<ul>
+<li>命名规范：</li>
+</ul>
+<blockquote>
+<p>[控件缩写_描述] </p>
+</blockquote>
+<p>//首先应满足上述的变量命名规范。</p>
+<p>Ø  例如：</p>
+<pre><code>private Button mBtnLogin
+privateLinearLayoutmLlytMainContainer
+publicAlertDialogalertConfirm;
+</code></pre><h2 id="2-7-Layout命名"><a href="#2-7-Layout命名" class="headerlink" title="2.7 Layout命名"></a>2.7 Layout命名</h2><h3 id="2-7-1-Layout文件命名"><a href="#2-7-1-Layout文件命名" class="headerlink" title="2.7.1 Layout文件命名"></a>2.7.1 Layout文件命名</h3><ul>
+<li>范围：</li>
+</ul>
+<blockquote>
+<p>应用于在res/layout目录下的文件。</p>
+</blockquote>
+<ul>
+<li>命名规范：</li>
+</ul>
+<p>[类型_描述]</p>
+<blockquote>
+<p>类型：使用该文件的对象的类型，如果需要多个单词则直接合并，不使用“_”分隔</p>
+</blockquote>
+<blockquote>
+<p>描述：描述该文件的功能，使用“-”分隔每个单词</p>
+</blockquote>
+<blockquote>
+<p><strong>layout xml</strong>的命名必须以 全部单词小写，单词间以”_”分割，并且使用名词或名词词组，即使用 模块名功能名称 来命名。</p>
+</blockquote>
+<p>Ø  例如:</p>
+<pre><code>activity\_main.xml
+fragment\_title.xml
+dialog\_cancel\_confirm.xml
+listitem\_game.xml
+popup\_user\_info.xml
+</code></pre><h3 id="2-7-2-Layout文件中的id命名"><a href="#2-7-2-Layout文件中的id命名" class="headerlink" title="2.7.2 Layout文件中的id命名"></a>2.7.2 Layout文件中的id命名</h3><ul>
+<li>范围：</li>
+</ul>
+<blockquote>
+<p>应用于在<strong>res/layout</strong>目录下的文件中的<strong>id</strong>命名。</p>
+</blockquote>
+<ul>
+<li>命名规范：</li>
+</ul>
+<blockquote>
+<p>[控件缩写_描述]</p>
+</blockquote>
+<blockquote>
+<p>控件缩写：该<strong>id</strong>所表示的控件的缩写</p>
+</blockquote>
+<blockquote>
+<p>描述：描述该文件的功能，使用“_”分隔每个单词</p>
+</blockquote>
+<blockquote>
+<p><strong>layout</strong>中所使用的<strong>id</strong>必须以全部单词小写，单词间以下划线分割，并且使用名词或名词词组，并且要求能够通过id直接理解当前组件要实现的功能。</p>
+</blockquote>
+<p>Ø  例如:</p>
+<pre><code>@+id/tv\_name
+@+id/et\_first\_name
+@+id/llyt\_user\_info
+</code></pre><h1 id="资源命名"><a href="#资源命名" class="headerlink" title="资源命名"></a>资源命名</h1><blockquote>
+<p>规约：<strong>layout</strong>中所使用的所有资源（如drawable,style等）命名必须以全部单词小写，单词间以下划线分割，并且尽可能的使用名词或名词组，即使用[模块名_用途] 来命名。如果为公共资源，如分割线等，则直接用用途来命名.</p>
+</blockquote>
+<blockquote>
+<p>只能使用a-z,0-9,和“_”组成，并且不能单独使用数字作为资源名称。 </p>
+</blockquote>
+<h2 id="2-8-图片命名"><a href="#2-8-图片命名" class="headerlink" title="2.8 图片命名"></a>2.8 图片命名</h2><blockquote>
+<p>应用于<strong>res/drawable</strong>目录下的文件。该目录下可能存在静态图片文件，动态图片文件和选择器（selector），静态图片是指只有一种状态的图片，动态图片是指由多种状态的图片，例如按钮按下和放开时的不同状态图片，选择器是指包含动态图片组合的xml文件。</p>
+</blockquote>
+<h3 id="2-8-1-静态图片"><a href="#2-8-1-静态图片" class="headerlink" title="2.8.1 静态图片"></a>2.8.1 静态图片</h3><ul>
+<li>范围：</li>
+</ul>
+<blockquote>
+<p><strong>res/drawable</strong>目录下的静态图片，静态图片是指只有一种状态的图片，如背景图片、图标。</p>
+</blockquote>
+<ul>
+<li>命名规范：</li>
+</ul>
+<blockquote>
+<p>[前缀<em>模块]、[前缀</em>模块_描述]、[描述]</p>
+</blockquote>
+<blockquote>
+<p>前缀：类别的缩写（参照表 1 - 前缀）</p>
+</blockquote>
+<blockquote>
+<p>模块：使用该文件的模块</p>
+</blockquote>
+<blockquote>
+<p>描述：描述该文件的功能</p>
+</blockquote>
+<p>Ø  例如：</p>
+<pre><code>bg\_main.png
+ic\_feedback\_send.png
+menuitem\_save.png 
+</code></pre><h3 id="2-8-2-动态图片"><a href="#2-8-2-动态图片" class="headerlink" title="2.8.2 动态图片"></a>2.8.2 动态图片</h3><ul>
+<li>范围：</li>
+</ul>
+<blockquote>
+<p><strong>res/drawable</strong>目录下的动态图片，静态图片是指只有多种状态的图片，如按钮（button）、状态图片、选择按钮（radio button）状态图片。</p>
+</blockquote>
+<ul>
+<li>命名规范：</li>
+</ul>
+<blockquote>
+<p>[前缀_描述<em>状态]、[前缀</em>模块_描述_状态]</p>
+</blockquote>
+<blockquote>
+<p>前缀：文件类别的缩写（参照表 1 - 前缀）</p>
+</blockquote>
+<blockquote>
+<p>模块：使用该文件的模块</p>
+</blockquote>
+<blockquote>
+<p>描述：描述该文件的功能</p>
+</blockquote>
+<blockquote>
+<p>状态：该图片的所表示的状态（参照表 2 –后缀）</p>
+</blockquote>
+<p>Ø  例如：</p>
+<pre><code>btn\_film\_buy\_nor.png
+btn\_film\_buy\_press.png
+btn\_back\_nor.png
+btn\_back\_press.png
+</code></pre><h3 id="2-8-3-选择器（selector）"><a href="#2-8-3-选择器（selector）" class="headerlink" title="2.8.3 选择器（selector）"></a>2.8.3 选择器（selector）</h3><ul>
+<li>范围：</li>
+</ul>
+<blockquote>
+<p><strong>res/drawable</strong>目录下的选择器，选择器是指包含动态图片组合的xml文件。</p>
+</blockquote>
+<ul>
+<li>命名规范：</li>
+</ul>
+<blockquote>
+<p>[前缀<em>描述]、[前缀</em>模块_描述]</p>
+</blockquote>
+<blockquote>
+<p>前缀：类别的缩写（参照表 1 - 前缀）</p>
+</blockquote>
+<blockquote>
+<p>模块：使用该文件的模块</p>
+</blockquote>
+<blockquote>
+<p>描述：描述该文件的功能</p>
+</blockquote>
+<p>Ø  例如：</p>
+<pre><code>btn\_film\_buy.xml
+btn\_back.xml
+rbtn\_film.xml 
+</code></pre><h3 id="2-8-9-动画文件命名"><a href="#2-8-9-动画文件命名" class="headerlink" title="2.8.9 动画文件命名"></a>2.8.9 动画文件命名</h3><ul>
+<li>范围：</li>
+</ul>
+<blockquote>
+<p><strong>res/anim</strong>文件夹下面，为一些动态效果文件</p>
+</blockquote>
+<ul>
+<li>命名规范：</li>
+</ul>
+<blockquote>
+<p>[前缀<em>描述]、[前缀</em>模块_描述]</p>
+</blockquote>
+<blockquote>
+<p>全部小写，采用下划线命名法，加前缀区分。（参照表4–动画）</p>
+</blockquote>
+<blockquote>
+<p>前缀: 动画的类型</p>
+</blockquote>
+<blockquote>
+<p>模块：使用该文件的模块</p>
+</blockquote>
+<blockquote>
+<p>描述：动画的方向</p>
+</blockquote>
+<p>Ø 例如：</p>
+<pre><code>fade\_in.xml
+push\_down\_out.xml 
+</code></pre><ul>
+<li>表1 - 前缀  </li>
+</ul>
+<p>ic – icon：主要用于布局和子布局的图标<br>bg – background：主要用于布局和子布局的背景<br>div – divider：主要用于分隔线，不仅包括Listview中的还包括普通布局中的线<br>btn – button：主要用于按钮的表示</p>
+<ul>
+<li>表2 - 后缀  </li>
+</ul>
+<p>unit：在使用xml的tilemode来配图片时，element图片使用此后缀<br>nor：图片的状态，代表普通状态<br>hl：图片的状态，代表高亮状态<br>press：图片的状态，代表按下状态<br>select：图片的状态，代表其所占的view被选中<br>unselect：图片的状态，代表其所占的view没有被选中</p>
+<ul>
+<li>表3 - 组件缩写 </li>
+</ul>
+<p>Button：Btn(btn)<br>RadioButton：Rbtn(rbtn)<br>ImageButton：Ibtn(ibtn)<br>TextView：Tv(tv)<br>ImageView：Iv (iv)<br>ListView：Lv(lv)<br>ProgressBar：Pbar(pbar)<br>EditText：Edtv(et)<br>ScrollView：Sclv(scly)<br>CheckBox：Chk(chk)<br>RelativeLayout：Rlyt(rlyt)<br>LinearLayout：Llyt(llyt)<br>TableLayout：Tlyt(tlyt)<br>AbsoluteLayout：ALyt(alyt)<br>FrameLayout：Flyt(flyt)<br>DigtalClock：DgtClk(dgtclk)<br>analogClock：AnaClk(anaclk)<br>DatePicker：DtPk(dtpk)<br>TimePicker：TmPk(tmpk)<br>ToggleButton：TgBtn(tgbtn)<br>SeekBar：SkBar(skbar)<br>AutoCompleteTextView：AutoTv(autotv)<br>ZoomControls：ZmCtl(zmctl)<br>VideoView：Vidv(vidv)<br>WebView：Wv(wv)<br>RantingBar：RtBr(rtbr)<br>MapView：Mapv(mapv)<br>Spinner：Spn(spn)<br>Chronometer：Cmt(cmt)<br>TextSwitch：TeSw(tesw)<br>ImageSwitch：ImgSw(imgsw)<br>ExpandableList：EpdLt(epdlt) </p>
+<ul>
+<li>表4–常见动画文件命名 </li>
+</ul>
+<p>fade_in:淡入<br>slide_in_from_top:从头部滑动进入<br>fade_out:淡出<br>zoom_enter:变形进入<br>push_down_in:从下方推入<br>slide_in:滑动进入<br>push_down_out:从下方推出<br>shrink_to_middle:中间缩小<br>push_left:推向左方</p>
+<h2 id="2-9-Value命名"><a href="#2-9-Value命名" class="headerlink" title="2.9 Value命名"></a>2.9 Value命名</h2><h3 id="2-9-1-color命名"><a href="#2-9-1-color命名" class="headerlink" title="2.9.1 color命名"></a>2.9.1 color命名</h3><blockquote>
+<p>如果是android系统有原生的，就用原生的颜色，譬如白色，黑色，透明，深灰，浅灰等</p>
+</blockquote>
+<blockquote>
+<p>一般控件和背景色中都会用到的颜色，命名规则：颜色。例如 blue，dark_blue,sky_blue, sapphire_blue</p>
+</blockquote>
+<blockquote>
+<p>多个界面某种控件会用到的颜色，命名规则：控件缩写_颜色。例如btn_blue</p>
+</blockquote>
+<blockquote>
+<p>某个界面中专有控件会用到的颜色，命名规则：[控件缩写_模块_颜色]。例如txt_menu_light_blue, btn_title_blue</p>
+</blockquote>
+<h3 id="2-9-2-dimens命名"><a href="#2-9-2-dimens命名" class="headerlink" title="2.9.2 dimens命名"></a>2.9.2 dimens命名</h3><blockquote>
+<p>一些常量的常规定义,例如：</p>
+</blockquote>
+<pre><code>&lt;dimen name=&quot;default\_padding\_0.5x&quot;&gt;5dp&lt;/dimen&gt;
+&lt;dimen name=&quot;default\_padding\_0.2x&quot;&gt;2dp&lt;/dimen&gt;
+&lt;dimen name=&quot;default\_padding\_1x&quot;&gt;10dp&lt;/dimen&gt;
+&lt;dimen name=&quot;default\_text\_size\_big&quot;&gt;18sp&lt;/dimen&gt;
+&lt;dimen name=&quot;default\_text\_size\_normal&quot;&gt;16sp&lt;/dimen&gt;
+</code></pre><h3 id="2-9-3-Strings命名"><a href="#2-9-3-Strings命名" class="headerlink" title="2.9.3 Strings命名"></a>2.9.3 Strings命名</h3><blockquote>
+<p>在多个界面中需要用到的字符串可放在各分类的normal下，例如<strong>normal</strong>分类可包括：</p>
+</blockquote>
+<pre><code>&lt;!-- normal text --&gt;
+&lt;stringname=&quot;text\_null&quot;&gt;null&lt;/string&gt;
+&lt;stringname=&quot;text\_login&quot;&gt;登录&lt;/string&gt; 
+&lt;!--nornal  dialog --&gt;
+&lt;stringname=&quot;dialog\_loading&quot;&gt;数据加载中&amp;#8230;&lt;/string&gt;
+&lt;stringname=&quot;dialog\_tips&quot;&gt;提示&lt;/string&gt; 
+&lt;!--nornmal toast --&gt;
+&lt;stringname=&quot;toast\_error\_404&quot;&gt;找不到服务器&lt;/string&gt;
+&lt;stringname=&quot;toast\_server\_error&quot;&gt;系统繁忙，请稍后再试&lt;/string&gt;
+</code></pre><blockquote>
+<p>若只在一个界面中用到，可放在各自<strong>activity</strong>或者<strong>fragment</strong>注释下，命名规则仍旧遵循<strong>normal</strong>的格式，该显示在<strong>dialog</strong>中，<strong>name</strong>就以<strong>dialog</strong>开头，是显示<strong>hint</strong>的，用<strong>hint</strong>开头，后面加上模块描述：例如：</p>
+</blockquote>
+<pre><code>&lt;!-- title --&gt;
+&lt;stringname=&quot;hint\_title\_search\_key&quot;&gt;搜索关键字&lt;/string&gt;
+&lt;stringname=&quot;text\_title\_notification&quot;&gt;通知&lt;/string&gt; 
+&lt;!-- login activity --&gt;
+&lt;stringname=&quot;hint\_login\_email&quot;&gt;邮箱地址&lt;/string&gt; 
+&lt;!-- change pwd activity --&gt;
+&lt;stringname=&quot;text\_change\_pwd\_old\_pwd&quot;&gt;旧密码&lt;/string&gt;
+</code></pre><hr>
+<h1 id="3-代码规范"><a href="#3-代码规范" class="headerlink" title="3.代码规范"></a>3.代码规范</h1><h2 id="3-1-通用规范"><a href="#3-1-通用规范" class="headerlink" title="3.1 通用规范"></a>3.1 通用规范</h2><h3 id="3-1-1-变量赋值"><a href="#3-1-1-变量赋值" class="headerlink" title="3.1.1 变量赋值"></a>3.1.1 变量赋值</h3><blockquote>
+<p>避免在一个语句中给多个变量赋相同的值。它很难读懂。如下面例子。</p>
+</blockquote>
+<blockquote>
+<p>不推荐：</p>
+</blockquote>
+<pre><code>fooBar.fChar = barFoo.lchar = &apos;c&apos;
+</code></pre><blockquote>
+<p>推荐: </p>
+</blockquote>
+<pre><code>fooBar.fChar = &apos;c&apos;
+barFoo.lchar = &apos;c&apos;
+</code></pre><blockquote>
+<p>不要将赋值运算符用在容易与相等关系运算符混淆的地方。</p>
+</blockquote>
+<blockquote>
+<p>不推荐：</p>
+</blockquote>
+<pre><code>if (c++ = d++) { // (Java disallows)
+    ...
+}
+</code></pre><blockquote>
+<p>推荐:</p>
+</blockquote>
+<pre><code>if ((c++ = d++) != 0) {
+    ...
+}
+</code></pre><blockquote>
+<p>不要使用内嵌(<strong>embedded</strong>)赋值运算符试图提高运行时的效率，这是编译器的工作。</p>
+</blockquote>
+<blockquote>
+<p>不推荐：</p>
+</blockquote>
+<pre><code>d = (a = b + c) + r;
+</code></pre><blockquote>
+<p>推荐:</p>
+</blockquote>
+<pre><code>a = b + c;
+d = a + r;
+</code></pre><h3 id="3-1-2-圆括号"><a href="#3-1-2-圆括号" class="headerlink" title="3.1.2 圆括号"></a>3.1.2 圆括号</h3><blockquote>
+<p>一般而言，在含有多种运算符的表达式中使用圆括号来避免运算符优先级问题。</p>
+</blockquote>
+<blockquote>
+<p>不推荐：</p>
+</blockquote>
+<pre><code>if (a == b &amp;&amp; c == d)
+x &gt;= 0 ?x : -x
+</code></pre><blockquote>
+<p>推荐:</p>
+</blockquote>
+<pre><code>if ((a == b) &amp;&amp; (c == d))
+(x &gt;= 0) ?x : -x
+</code></pre><h3 id="3-1-3-返回值"><a href="#3-1-3-返回值" class="headerlink" title="3.1.3 返回值"></a>3.1.3 返回值</h3><blockquote>
+<p>设法让你的程序结构符合目的。</p>
+</blockquote>
+<blockquote>
+<p>不推荐：</p>
+</blockquote>
+<pre><code>if (booleanExpression) {
+    return true;
+} else {
+    return false;
+}
+if (condition) {
+    return x;
+}
+return y;
+</code></pre><blockquote>
+<p>推荐:</p>
+</blockquote>
+<pre><code>returnbooleanExpression;
+return (condition ? x : y); 
+</code></pre><h2 id="3-2-注释"><a href="#3-2-注释" class="headerlink" title="3.2 注释"></a>3.2 注释</h2><blockquote>
+<p>Java 程序有两类注释：实现注释（<strong>implementation comments</strong>）和文档注释（<strong>document</strong>，<strong>comments</strong>）。实现注释是使用/<em>…</em>/和//界定的注释。文档注释（被称为”<strong>doc comments</strong>”），由/*<em>…</em>/界定。</p>
+</blockquote>
+<h3 id="3-2-1-文件注释"><a href="#3-2-1-文件注释" class="headerlink" title="3.2.1 文件注释"></a>3.2.1 文件注释</h3><blockquote>
+<p>所有的源文件都应该在开头有一个注释，其中列出类名、版本信息、日期和版权声明。如下：</p>
+</blockquote>
+<pre><code>/*
+*  文件名
+* 包含类名列表
+*  版本信息，版本号
+*  创建日期
+*  版权声明
+/
+</code></pre><h3 id="3-2-2-类注释"><a href="#3-2-2-类注释" class="headerlink" title="3.2.2 类注释"></a>3.2.2 类注释</h3><blockquote>
+<p>每一个类都要包含如下格式的注释，以说明当前类的功能等。</p>
+</blockquote>
+<pre><code>/*
+*  类名
+* @author 作者
+*  实现的主要功能。
+*  创建日期
+*  修改者，修改日期，修改内容。
+*/
+</code></pre><h3 id="3-2-3-方法注释"><a href="#3-2-3-方法注释" class="headerlink" title="3.2.3 方法注释"></a>3.2.3 方法注释</h3><blockquote>
+<p>每一个方法都要包含如下格式的注释包括当前方法的用途，当前方法参数的含义，当前方法返回值的内容和抛出异常的列表。</p>
+</blockquote>
+<pre><code>/*
+* 方法的一句话概述
+*  方法详述（简单方法可不必详述）
+*  @params说明参数含义
+*  @return 说明返回值含义
+*  @throws IOException说明发生此异常的条件
+* @throws NullPointerException说明发生此异常的条件
+/
+</code></pre><h3 id="3-2-4-类成员变量和常量注释"><a href="#3-2-4-类成员变量和常量注释" class="headerlink" title="3.2.4 类成员变量和常量注释"></a>3.2.4 类成员变量和常量注释</h3><blockquote>
+<p>成员变量和常量需要使用<strong>java doc</strong>形式的注释，以说明当前变量或常量的含义。</p>
+</blockquote>
+<pre><code>/*
+ * XXXX含义
+/
+</code></pre><h3 id="3-2-5-其他注释"><a href="#3-2-5-其他注释" class="headerlink" title="3.2.5 其他注释"></a>3.2.5 其他注释</h3><blockquote>
+<p>方法内部的注释如果为多行，使用/„„ /形式，如果为单行，使用//„„形式的注释。不要再方法内部使用 java doc 形式的注释“/*„„**/”。</p>
+</blockquote>
+<h2 id="3-3-Log规范"><a href="#3-3-Log规范" class="headerlink" title="3.3 Log规范"></a>3.3 Log规范</h2><blockquote>
+<p><strong>Log</strong>所打印出来的信息应具有可读性，不要打印只有自己能看懂的log，例如“1”、“Finish”等。</p>
+</blockquote>
+<blockquote>
+<p>不推荐：</p>
+</blockquote>
+<pre><code>Log.d(&quot;MainActivity&quot;, &quot;success&quot;);
+Log.d(TAG, &quot;1&quot;);
+</code></pre><blockquote>
+<p>推荐:</p>
+</blockquote>
+<pre><code>Log.d(&quot;MainActivity&quot;, &quot;Get user info successfully&quot;);
+Log.d(TAG, &quot;Search finished. Get user id: 1&quot;);
+</code></pre><blockquote>
+<p>使用规范的log分类，例如调试的信息使用<strong>DEBUG</strong>，错误的信息使用<strong>ERROR</strong>。</p>
+</blockquote>
+<blockquote>
+<p>注意发布版本的log中不能打印敏感信息，防止隐私泄漏。</p>
+</blockquote>
+<blockquote>
+<p>临时的用来调试的log应尽量使用DEBUG 和VERBOSE。</p>
+</blockquote>
+<hr>
+<h1 id="4-代码格式化"><a href="#4-代码格式化" class="headerlink" title="4.代码格式化"></a>4.代码格式化</h1><h2 id="4-1在Eclipse中导入Formatter和Importor"><a href="#4-1在Eclipse中导入Formatter和Importor" class="headerlink" title="4.1在Eclipse中导入Formatter和Importor"></a>4.1在Eclipse中导入Formatter和Importor</h2><h3 id="4-1-1-注释模板"><a href="#4-1-1-注释模板" class="headerlink" title="4.1.1 注释模板"></a>4.1.1 注释模板</h3><blockquote>
+<p><strong>preferences</strong> 中，选择 <strong>java</strong> → <strong>code style</strong> → <strong>formatter</strong> 中选择 <strong>Import</strong>，选择<strong>formatter.xml</strong>。</p>
+</blockquote>
+<h3 id="4-1-2-添加文件创建日志模板"><a href="#4-1-2-添加文件创建日志模板" class="headerlink" title="4.1.2 添加文件创建日志模板"></a>4.1.2 添加文件创建日志模板</h3><blockquote>
+<p><strong>preferences</strong> 中，选择 java → <strong>code style</strong> → <strong>code Template</strong> 中选择 &gt;<strong>Import</strong>，选择<strong>codetemplates.xml</strong>。但是注意修改类注释和文件注释的作者名称为自己的。</p>
+</blockquote>
+<h3 id="4-1-3-XML格式化："><a href="#4-1-3-XML格式化：" class="headerlink" title="4.1.3 XML格式化："></a>4.1.3 XML格式化：</h3><blockquote>
+<p><strong>preferences</strong>中，选择<strong>xml</strong> → <strong>xml files</strong>→ <strong>xml editor</strong>中做如下设置。</p>
+</blockquote>
+<h2 id="4-2-在Android-studio中导入Formatter和Importor"><a href="#4-2-在Android-studio中导入Formatter和Importor" class="headerlink" title="4.2 在Android studio中导入Formatter和Importor"></a>4.2 在Android studio中导入Formatter和Importor</h2><h3 id="4-2-1-注释模板："><a href="#4-2-1-注释模板：" class="headerlink" title="4.2.1 注释模板："></a>4.2.1 注释模板：</h3><blockquote>
+<p>在<strong>Android studio</strong>的<strong>File</strong>中，选择<strong>Settings</strong>，点击<strong>Editor</strong> → <strong>File and Code Templates</strong> → <strong>Includes</strong>→ <strong>File Header</strong>。 </p>
+</blockquote>
+<h3 id="4-2-2-Android-Studio设置代码风格"><a href="#4-2-2-Android-Studio设置代码风格" class="headerlink" title="4.2.2 Android Studio设置代码风格"></a>4.2.2 Android Studio设置代码风格</h3><blockquote>
+<p>在<strong>Android studio</strong>的<strong>File</strong>中，选择<strong>Settings</strong>，然后搜索<strong>CodeStyle</strong>选择<strong>Java</strong>进入如下界面搜索<strong>java</strong>，进入<strong>Code  Style</strong> 中的<strong>java</strong>设置如下编码风格。</p>
+</blockquote>
+<hr>
+<h1 id="5-推荐规范"><a href="#5-推荐规范" class="headerlink" title="5.推荐规范"></a>5.推荐规范</h1><h2 id="5-1-一个方法尽量不要超过15行。"><a href="#5-1-一个方法尽量不要超过15行。" class="headerlink" title="5.1 一个方法尽量不要超过15行。"></a>5.1 一个方法尽量不要超过15行。</h2><blockquote>
+<p>如果方法太长，说明当前方法业务逻辑已经非常复杂，那么就需要进行方法拆分，保证每个方法只作一件事。</p>
+</blockquote>
+<h2 id="5-2-代码中不允许出现单独的数字，字符！"><a href="#5-2-代码中不允许出现单独的数字，字符！" class="headerlink" title="5.2 代码中不允许出现单独的数字，字符！"></a>5.2 代码中不允许出现单独的数字，字符！</h2><blockquote>
+<p>如果需要使用数字或字符，则将它们按照含义封装为静态常量！（<strong>for</strong>语句中除外）</p>
+</blockquote>
+<h2 id="5-3-所有if-语句最好用-包括起来-即便是只有一句："><a href="#5-3-所有if-语句最好用-包括起来-即便是只有一句：" class="headerlink" title="5.3 所有if 语句最好用{}包括起来,即便是只有一句："></a>5.3 所有if 语句最好用{}包括起来,即便是只有一句：</h2><blockquote>
+<p>推荐: </p>
+</blockquote>
+<pre><code>if (true){
+   //do something......
+}
+</code></pre><blockquote>
+<p>不推荐: </p>
+</blockquote>
+<pre><code>if (true)
+    i = 0; 
+</code></pre><h2 id="5-4-对于循环"><a href="#5-4-对于循环" class="headerlink" title="5.4 对于循环"></a>5.4 对于循环</h2><blockquote>
+<p>推荐: </p>
+</blockquote>
+<pre><code>//将操作结构保存在临时变量里，减少方法调用次数
+final int count = products.getCount();
+    while(index &lt; count){
+}
+</code></pre><blockquote>
+<p>不推荐: </p>
+</blockquote>
+<pre><code>while(index &lt;products.getCount()){
+    //每此都会执行一次getCount()方法，
+    //若此方法耗时则会影响执行效率
+    //而且可能带来同步问题，若有同步需求，请使用同步块或同步方法
+} 
+</code></pre><h2 id="5-5-控制访问"><a href="#5-5-控制访问" class="headerlink" title="5.5 控制访问"></a>5.5 控制访问</h2><blockquote>
+<p>若没有足够理由，不要把实例或类变量声明为公有。通常，实例变量无需显式的设置(<strong>set</strong>)和获取(<strong>gotten</strong>)，通常这作为方法调用的边缘效应 (<strong>side effect</strong>)而产生。 </p>
+</blockquote>
+<blockquote>
+<p>一个具有公有实例变量的恰当例子，是类仅作为数据结构，没有行为。亦即，若你要使用一个结构(struct)而非一个类(如果java 支持结构的话)，那么把类的实例变量声明为公有是合适的。</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>I Don't Want Your Money, I Want Aragaki Yui.</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/reward_images.jpg" alt="Waylan Punch Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Standard/" rel="tag"># Standard</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/03/2016-07-03-collectionandcollections/" rel="next" title="Collection接口与Collections类">
+                <i class="fa fa-chevron-left"></i> Collection接口与Collections类
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/03/2016-07-17-RecyclerViewScrollToHide/" rel="prev" title="RecyclerView滑动显示/隐藏控件">
+                RecyclerView滑动显示/隐藏控件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Waylan Punch" />
+            
+              <p class="site-author-name" itemprop="name">Waylan Punch</p>
+              <p class="site-description motion-element" itemprop="description">Keep Calm And Code On.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/WaylanPunch" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:waylanpunch@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/waylanpunch" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/users/4849200/waylan-punch" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://stackoverflow.com/" title="StackOverflow" target="_blank">StackOverflow</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://leancloud.cn" title="LeanCloud" target="_blank">LeanCloud</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://yq.aliyun.com/" title="云栖社区" target="_blank">云栖社区</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com" title="GitHub" target="_blank">GitHub</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://juejin.im/" title="掘金网" target="_blank">掘金网</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhihu.com/" title="知乎" target="_blank">知乎</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-避免坏习惯"><span class="nav-number">1.</span> <span class="nav-text">1.避免坏习惯</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-代码重复几乎是最常见的坏习惯"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 代码重复几乎是最常见的坏习惯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-代码很长的方法"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 代码很长的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-大类"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 大类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-一起出现在很多类的成员变量中，一起出现在许多方法的参数中…"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 一起出现在很多类的成员变量中，一起出现在许多方法的参数中…</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-一个干活不多的类"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 一个干活不多的类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-一个类实现了从未用到的功能和通用性"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 一个类实现了从未用到的功能和通用性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-7-一个对象的属性可能只在某些情况下才有意义"><span class="nav-number">1.7.</span> <span class="nav-text">1.7 一个对象的属性可能只在某些情况下才有意义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-8-做相同事情的方法有不同的函数"><span class="nav-number">1.8.</span> <span class="nav-text">1.8 做相同事情的方法有不同的函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-9-对象包括状态和行为"><span class="nav-number">1.9.</span> <span class="nav-text">1.9 对象包括状态和行为</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-10-经常觉得要写很多注释才能解释你的代码"><span class="nav-number">1.10.</span> <span class="nav-text">1.10 经常觉得要写很多注释才能解释你的代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-命名规范"><span class="nav-number">2.</span> <span class="nav-text">2.命名规范</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-包命名"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 包命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-类和接口命名"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 类和接口命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-异常命名"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 异常命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-方法命名"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 方法命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-变量命名"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 变量命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-Android控件变量命名"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 Android控件变量命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-Layout命名"><span class="nav-number">2.7.</span> <span class="nav-text">2.7 Layout命名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-1-Layout文件命名"><span class="nav-number">2.7.1.</span> <span class="nav-text">2.7.1 Layout文件命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-2-Layout文件中的id命名"><span class="nav-number">2.7.2.</span> <span class="nav-text">2.7.2 Layout文件中的id命名</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#资源命名"><span class="nav-number">3.</span> <span class="nav-text">资源命名</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-8-图片命名"><span class="nav-number">3.1.</span> <span class="nav-text">2.8 图片命名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-8-1-静态图片"><span class="nav-number">3.1.1.</span> <span class="nav-text">2.8.1 静态图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-8-2-动态图片"><span class="nav-number">3.1.2.</span> <span class="nav-text">2.8.2 动态图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-8-3-选择器（selector）"><span class="nav-number">3.1.3.</span> <span class="nav-text">2.8.3 选择器（selector）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-8-9-动画文件命名"><span class="nav-number">3.1.4.</span> <span class="nav-text">2.8.9 动画文件命名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-9-Value命名"><span class="nav-number">3.2.</span> <span class="nav-text">2.9 Value命名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-9-1-color命名"><span class="nav-number">3.2.1.</span> <span class="nav-text">2.9.1 color命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-9-2-dimens命名"><span class="nav-number">3.2.2.</span> <span class="nav-text">2.9.2 dimens命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-9-3-Strings命名"><span class="nav-number">3.2.3.</span> <span class="nav-text">2.9.3 Strings命名</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-代码规范"><span class="nav-number">4.</span> <span class="nav-text">3.代码规范</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-通用规范"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 通用规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-1-变量赋值"><span class="nav-number">4.1.1.</span> <span class="nav-text">3.1.1 变量赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-2-圆括号"><span class="nav-number">4.1.2.</span> <span class="nav-text">3.1.2 圆括号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-3-返回值"><span class="nav-number">4.1.3.</span> <span class="nav-text">3.1.3 返回值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-注释"><span class="nav-number">4.2.</span> <span class="nav-text">3.2 注释</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-1-文件注释"><span class="nav-number">4.2.1.</span> <span class="nav-text">3.2.1 文件注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-2-类注释"><span class="nav-number">4.2.2.</span> <span class="nav-text">3.2.2 类注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-3-方法注释"><span class="nav-number">4.2.3.</span> <span class="nav-text">3.2.3 方法注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-4-类成员变量和常量注释"><span class="nav-number">4.2.4.</span> <span class="nav-text">3.2.4 类成员变量和常量注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-5-其他注释"><span class="nav-number">4.2.5.</span> <span class="nav-text">3.2.5 其他注释</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-Log规范"><span class="nav-number">4.3.</span> <span class="nav-text">3.3 Log规范</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-代码格式化"><span class="nav-number">5.</span> <span class="nav-text">4.代码格式化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1在Eclipse中导入Formatter和Importor"><span class="nav-number">5.1.</span> <span class="nav-text">4.1在Eclipse中导入Formatter和Importor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-1-注释模板"><span class="nav-number">5.1.1.</span> <span class="nav-text">4.1.1 注释模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-2-添加文件创建日志模板"><span class="nav-number">5.1.2.</span> <span class="nav-text">4.1.2 添加文件创建日志模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-3-XML格式化："><span class="nav-number">5.1.3.</span> <span class="nav-text">4.1.3 XML格式化：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-在Android-studio中导入Formatter和Importor"><span class="nav-number">5.2.</span> <span class="nav-text">4.2 在Android studio中导入Formatter和Importor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-1-注释模板："><span class="nav-number">5.2.1.</span> <span class="nav-text">4.2.1 注释模板：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-2-Android-Studio设置代码风格"><span class="nav-number">5.2.2.</span> <span class="nav-text">4.2.2 Android Studio设置代码风格</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-推荐规范"><span class="nav-number">6.</span> <span class="nav-text">5.推荐规范</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-一个方法尽量不要超过15行。"><span class="nav-number">6.1.</span> <span class="nav-text">5.1 一个方法尽量不要超过15行。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-代码中不允许出现单独的数字，字符！"><span class="nav-number">6.2.</span> <span class="nav-text">5.2 代码中不允许出现单独的数字，字符！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-所有if-语句最好用-包括起来-即便是只有一句："><span class="nav-number">6.3.</span> <span class="nav-text">5.3 所有if 语句最好用{}包括起来,即便是只有一句：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-对于循环"><span class="nav-number">6.4.</span> <span class="nav-text">5.4 对于循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5-控制访问"><span class="nav-number">6.5.</span> <span class="nav-text">5.5 控制访问</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2014 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Waylan Punch</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'PmkIV6teulYlkGBTiDrJMRVn-gzGzoHsz',
+        appKey: 'SHRefBY1U0LkDzdvXp1oNkAY',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("PmkIV6teulYlkGBTiDrJMRVn-gzGzoHsz", "SHRefBY1U0LkDzdvXp1oNkAY");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://waylanpunch.github.io/"/>
-  <updated>2018-03-31T15:27:57.869Z</updated>
+  <updated>2018-04-01T09:02:57.236Z</updated>
   <id>https://waylanpunch.github.io/</id>
   
   <author>
@@ -17,13 +17,17 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>index</title>
-    <link href="https://waylanpunch.github.io/2018/03/31/index/"/>
-    <id>https://waylanpunch.github.io/2018/03/31/index/</id>
-    <published>2018-03-31T15:27:57.000Z</published>
-    <updated>2018-03-31T15:27:57.869Z</updated>
+    <title>Hello World</title>
+    <link href="https://waylanpunch.github.io/2018/03/31/hello-world/"/>
+    <id>https://waylanpunch.github.io/2018/03/31/hello-world/</id>
+    <published>2018-03-31T15:11:08.598Z</published>
+    <updated>2018-04-01T09:02:57.236Z</updated>
     
     <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -31,11 +35,11 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://waylanpunch.github.io/2018/03/31/hello-world/"/>
-    <id>https://waylanpunch.github.io/2018/03/31/hello-world/</id>
-    <published>2018-03-31T15:11:08.598Z</published>
-    <updated>2018-03-31T15:11:08.598Z</updated>
+    <title>已加入Electron中文简体翻译计划</title>
+    <link href="https://waylanpunch.github.io/2017/12/12/2017-12-12-Electron-Translation/"/>
+    <id>https://waylanpunch.github.io/2017/12/12/2017-12-12-Electron-Translation/</id>
+    <published>2017-12-12T04:12:12.000Z</published>
+    <updated>2018-04-01T09:27:16.923Z</updated>
     
     <summary type="html">
     
@@ -43,12 +47,561 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+          &lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/WaylanPunch&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Waylan Punch&lt;/a&gt;已加入&lt;a
         
       
     
     </summary>
     
+    
+      <category term="Electron" scheme="https://waylanpunch.github.io/tags/Electron/"/>
+    
+      <category term="Translation" scheme="https://waylanpunch.github.io/tags/Translation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MathJax在网页中的使用</title>
+    <link href="https://waylanpunch.github.io/2017/12/11/2017-12-11-MathJax-Usage/"/>
+    <id>https://waylanpunch.github.io/2017/12/11/2017-12-11-MathJax-Usage/</id>
+    <published>2017-12-11T14:16:04.000Z</published>
+    <updated>2018-04-01T09:27:01.142Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;MathJax允许你在网页中使用LaTeX，MathML或AsciiMath注解来包含数学公式，这些数学公式将使用JavaScript处理HTML，SVG或MathML方程式来产生，以显示在任何浏览器中。&lt;/p&gt;
+&lt;p&gt;有两种方法可以访问MathJax：最简单的方法是使用分布式网络服务（如cdnjs.com）提供的MathJax副本，但是也可以在本地机器上下载并安装MathJax的副本，或者在你的硬盘上使用（不需要网络访问）。 本文给出了在您的Web站点上运行MathJax的最快和最简单的方法，但是您可能需要去官网查阅更详细得信息以进行自定义页面的设置。&lt;/p&gt;
+&lt;p&gt;#使用CDN&lt;/p&gt;
+&lt;p&gt;使用MathJax最简单的方法是直接接入内容分发网络（CDN）提供的公共链接。&lt;br&gt;有许多免费的CDN提供商提供MathJax的副本。 一些提供“滚动版本”，即在发布时更新到最新可用版本的链接：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cdnjs.com（推荐）(&lt;a href=&quot;https://cdnjs.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://cdnjs.com/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;jsdelivr.com &lt;a href=&quot;https://jsdelivr.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;滚动&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;unpkg.com &lt;a href=&quot;https://unpkg.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;滚动&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;rawgit.com(&lt;a href=&quot;https://rawgit.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://rawgit.com/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;gitcdn.xyz(&lt;a href=&quot;http://gitcdn.xyz/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://gitcdn.xyz/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;raw.githack.com(&lt;a href=&quot;http://docs.mathjax.org/en/latest/raw.githack.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://docs.mathjax.org/en/latest/raw.githack.com&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如何接入？&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;async&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="MathJax" scheme="https://waylanpunch.github.io/tags/MathJax/"/>
+    
+      <category term="TeX" scheme="https://waylanpunch.github.io/tags/TeX/"/>
+    
+      <category term="LaTeX" scheme="https://waylanpunch.github.io/tags/LaTeX/"/>
+    
+      <category term="MathML" scheme="https://waylanpunch.github.io/tags/MathML/"/>
+    
+      <category term="AsciiMath" scheme="https://waylanpunch.github.io/tags/AsciiMath/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于LeanCloud Restful API的Retrofit编程</title>
+    <link href="https://waylanpunch.github.io/2017/03/12/2017-03-12-leancloud-restfulapi-retrofit/"/>
+    <id>https://waylanpunch.github.io/2017/03/12/2017-03-12-leancloud-restfulapi-retrofit/</id>
+    <published>2017-03-12T12:13:52.000Z</published>
+    <updated>2018-04-01T09:25:59.877Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;基于LeanCloud-Restful-API的Retrofit编程&quot;&gt;&lt;a href=&quot;#基于LeanCloud-Restful-API的Retrofit编程&quot; class=&quot;headerlink&quot; title=&quot;基于LeanCloud Restful API的Retrofit编程&quot;&gt;&lt;/a&gt;基于LeanCloud Restful API的Retrofit编程&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;BaaS提供商LeanCloud提供了Restful API，没有提供Retrofit使用教程。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;注册用户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注册API设计：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -X POST \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  -H &amp;quot;X-LC-Id: y0crQpaNCKUq9WFaSMLByoKo-gzGzoHsz&amp;quot; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  -H &amp;quot;X-LC-Key: ihdOweBmtk9yrDbuPEbJfyBb&amp;quot; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  -H &amp;quot;Content-Type: application/json&amp;quot; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  -d &amp;apos;&amp;#123;&amp;quot;username&amp;quot;:&amp;quot;hjiang&amp;quot;,&amp;quot;password&amp;quot;:&amp;quot;f32@ds*@&amp;amp;dsa&amp;quot;,&amp;quot;phone&amp;quot;:&amp;quot;18612340000&amp;quot;&amp;#125;&amp;apos; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  https://api.leancloud.cn/1.1/users&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;登录API设计：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -X POST \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-H &amp;quot;Content-Type: application/json&amp;quot; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-H &amp;quot;X-LC-Id: y0crQpaNCKUq9WFaSMLByoKo-gzGzoHsz&amp;quot; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-H &amp;quot;X-LC-Key: ihdOweBmtk9yrDbuPEbJfyBb&amp;quot; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d &amp;apos;&amp;#123;&amp;quot;username&amp;quot;:&amp;quot;hjiang&amp;quot;,&amp;quot;password&amp;quot;:&amp;quot;f32@ds*@&amp;amp;dsa&amp;quot;&amp;#125;&amp;apos; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;https://api.leancloud.cn/1.1/login&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Retrofit" scheme="https://waylanpunch.github.io/tags/Retrofit/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ButterKnife vs RoboGuice</title>
+    <link href="https://waylanpunch.github.io/2017/03/12/2017-03-21-butterknife-vs-roboguice/"/>
+    <id>https://waylanpunch.github.io/2017/03/12/2017-03-21-butterknife-vs-roboguice/</id>
+    <published>2017-03-12T11:19:57.000Z</published>
+    <updated>2018-04-01T09:26:32.117Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;ButterKnife-vs-RoboGuice&quot;&gt;&lt;a href=&quot;#ButterKnife-vs-RoboGuice&quot; class=&quot;headerlink&quot; title=&quot;ButterKnife vs RoboGuice&quot;&gt;&lt;/a&gt;ButterKnife
+        
+      
+    
+    </summary>
+    
+    
+      <category term="ButterKnife" scheme="https://waylanpunch.github.io/tags/ButterKnife/"/>
+    
+      <category term="RoboGuice" scheme="https://waylanpunch.github.io/tags/RoboGuice/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fragment操作宿主Activity</title>
+    <link href="https://waylanpunch.github.io/2016/12/17/2016-12-17-Fragment-to-Activity/"/>
+    <id>https://waylanpunch.github.io/2016/12/17/2016-12-17-Fragment-to-Activity/</id>
+    <published>2016-12-17T13:04:28.000Z</published>
+    <updated>2018-04-01T09:25:19.450Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;宿主 Activity 实现 Fragment 定义的对外接口 IOneFragmentClickListener，便可以实现 Fragment 调用 Activity 的功能。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public class OneFragment extends Fragment implements View.OnClickListener{
+
+    private IOneFragmentClickListener clickListener;
+
+    public interface IOneFragmentClickListener{
+        void onOneFragmentClick();
+    }
+
+    public void setClickListener(IOneFragmentClickListener clickListener) {
+        this.clickListener = clickListener;
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View contentView = inflater.inflate(R.layout.fragment_one, null);
+        contentView.findViewById(R.id.edt_one).setOnClickListener(this);
+        return contentView;
+    }
+
+    @Override
+    public void onClick(View v) {
+        clickListener.onOneFragmentClick();
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="Activity" scheme="https://waylanpunch.github.io/tags/Activity/"/>
+    
+      <category term="Fragment" scheme="https://waylanpunch.github.io/tags/Fragment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何反编译apk文件</title>
+    <link href="https://waylanpunch.github.io/2016/12/15/2016-12-15-how-to-decompile-apk-file/"/>
+    <id>https://waylanpunch.github.io/2016/12/15/2016-12-15-how-to-decompile-apk-file/</id>
+    <published>2016-12-14T17:12:03.000Z</published>
+    <updated>2018-04-01T09:25:01.726Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;em&gt;准备三个工具：Apktool、dex2jar、jd-gui&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://ibotpeaches.github.io/Apktool/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Apktool&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;下载：&lt;a href=&quot;https://bitbucket.org/iBotPeaches/apktool/downloads&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;downloads&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装：&lt;a href=&quot;https://ibotpeaches.github.io/Apktool/install/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;install&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;**Windows:**
+1.Download Windows wrapper script (Right click, Save Link As apktool.bat)
+2.Download apktool-2 (find newest here)
+3.Rename downloaded jar to apktool.jar
+4.Move both files (apktool.jar &amp;amp; apktool.bat) to your Windows directory (Usually C://Windows)
+5.If you do not have access to C://Windows, you may place the two files anywhere then add that directory to your Environment Variables System PATH variable.
+6.Try running apktool via command prompt
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;使用：&lt;a href=&quot;https://ibotpeaches.github.io/Apktool/documentation/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="Decompile" scheme="https://waylanpunch.github.io/tags/Decompile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Visual Studio Code进行Python编程输出中文乱码问题</title>
+    <link href="https://waylanpunch.github.io/2016/12/12/2016-12-12-VSCode-encode/"/>
+    <id>https://waylanpunch.github.io/2016/12/12/2016-12-12-VSCode-encode/</id>
+    <published>2016-12-11T16:36:41.000Z</published>
+    <updated>2018-04-01T09:24:42.765Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;print(b&amp;apos;ABC&amp;apos;.decode(&amp;apos;ascii&amp;apos;))
+print(
+        
+      
+    
+    </summary>
+    
+    
+      <category term="VisualStudioCode" scheme="https://waylanpunch.github.io/tags/VisualStudioCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WeakRefrence Demo</title>
+    <link href="https://waylanpunch.github.io/2016/12/10/2016-12-10-WeakRefrence-Demo/"/>
+    <id>https://waylanpunch.github.io/2016/12/10/2016-12-10-WeakRefrence-Demo/</id>
+    <published>2016-12-10T12:16:31.000Z</published>
+    <updated>2018-04-01T09:24:26.067Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Strong-reference（强引用）&quot;&gt;&lt;a href=&quot;#Strong-reference（强引用）&quot; class=&quot;headerlink&quot; title=&quot;Strong reference（强引用）&quot;&gt;&lt;/a&gt;Strong reference（强引用）&lt;/h2&gt;&lt;p&gt;在Java中，非静态内部类会在其整个生命周期中持有对它外部类的强引用。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public class MainActivity extends Activity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        new MyAsyncTask(this).execute();
+    }
+
+    private class MyAsyncTask extends AsyncTask { 
+
+        @Override
+        protected Object doInBackground(Object[] params) {
+
+            // 模拟耗时任务
+            try {
+                Thread.sleep(60000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            return doSomeStuff();
+        }
+        private Object doSomeStuff() {
+            return new Object();
+        }
+        @Override
+        protected void onPostExecute(Object object) {
+            super.onPostExecute(object);
+            // 更新UI
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="WeakReference" scheme="https://waylanpunch.github.io/tags/WeakReference/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android提供的下载类DownloadManager</title>
+    <link href="https://waylanpunch.github.io/2016/10/18/2016-10-19-DownloadManager-Usage/"/>
+    <id>https://waylanpunch.github.io/2016/10/18/2016-10-19-DownloadManager-Usage/</id>
+    <published>2016-10-18T15:54:11.000Z</published>
+    <updated>2018-04-01T09:24:04.515Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Android提供的下载类DownloadManager&quot;&gt;&lt;a href=&quot;#Android提供的下载类DownloadManager&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>透明的系统状态栏SystemBar</title>
+    <link href="https://waylanpunch.github.io/2016/10/18/2016-10-18-system-bar-transparent/"/>
+    <id>https://waylanpunch.github.io/2016/10/18/2016-10-18-system-bar-transparent/</id>
+    <published>2016-10-18T15:26:51.000Z</published>
+    <updated>2018-04-01T09:23:54.573Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;透明的系统状态栏SystemBar&quot;&gt;&lt;a href=&quot;#透明的系统状态栏SystemBar&quot; class=&quot;headerlink&quot; title=&quot;透明的系统状态栏SystemBar&quot;&gt;&lt;/a&gt;透明的系统状态栏SystemBar&lt;/h1&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;values/styles.xml&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;resources&amp;gt;
+
+    &amp;lt;!-- Base application theme. --&amp;gt;
+    &amp;lt;style name=&amp;quot;AppTheme&amp;quot; parent=&amp;quot;Theme.AppCompat.Light.DarkActionBar&amp;quot;&amp;gt;
+        &amp;lt;item name=&amp;quot;colorPrimary&amp;quot;&amp;gt;@color/colorPrimary&amp;lt;/item&amp;gt;
+        &amp;lt;item name=&amp;quot;colorPrimaryDark&amp;quot;&amp;gt;@color/colorPrimaryDark&amp;lt;/item&amp;gt;
+        &amp;lt;item name=&amp;quot;colorAccent&amp;quot;&amp;gt;@color/colorAccent&amp;lt;/item&amp;gt;
+        &amp;lt;!-- Customize your theme here. --&amp;gt;
+    &amp;lt;/style&amp;gt;
+
+    &amp;lt;style name=&amp;quot;AppTheme.NoActionBar&amp;quot;&amp;gt;
+        &amp;lt;item name=&amp;quot;windowActionBar&amp;quot;&amp;gt;false&amp;lt;/item&amp;gt;
+        &amp;lt;item name=&amp;quot;windowNoTitle&amp;quot;&amp;gt;true&amp;lt;/item&amp;gt;
+    &amp;lt;/style&amp;gt;
+
+&amp;lt;/resources&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>使用AppCompat-21适配Material Design</title>
+    <link href="https://waylanpunch.github.io/2016/09/30/2016-09-30-AppCompat-21-Material-Design/"/>
+    <id>https://waylanpunch.github.io/2016/09/30/2016-09-30-AppCompat-21-Material-Design/</id>
+    <published>2016-09-30T10:29:36.000Z</published>
+    <updated>2018-04-01T09:23:37.198Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;使用AppCompat-21适配Material-Design&quot;&gt;&lt;a href=&quot;#使用AppCompat-21适配Material-Design&quot; class=&quot;headerlink&quot; title=&quot;使用AppCompat-21适配Material Design&quot;&gt;&lt;/a&gt;使用AppCompat-21适配Material Design&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;设置compileSdkVersion为21&quot;&gt;&lt;a href=&quot;#设置compileSdkVersion为21&quot; class=&quot;headerlink&quot; title=&quot;设置compileSdkVersion为21&quot;&gt;&lt;/a&gt;设置compileSdkVersion为21&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;android {
+    compileSdkVersion 21
+    buildToolsVersion &amp;quot;21.0.0&amp;quot;
+
+    defaultConfig {
+        applicationId &amp;quot;com.way.material&amp;quot;
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName &amp;quot;1.0&amp;quot;
+    }
+     ...
+}
+
+dependencies {
+    compile fileTree(dir: &amp;apos;libs&amp;apos;, include: [&amp;apos;*.jar&amp;apos;])
+    compile &amp;apos;com.android.support:appcompat-v7:21.+&amp;apos;
+}
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>TextInput使用知识</title>
+    <link href="https://waylanpunch.github.io/2016/09/26/2016-09-26-TextInput-Usage/"/>
+    <id>https://waylanpunch.github.io/2016/09/26/2016-09-26-TextInput-Usage/</id>
+    <published>2016-09-25T17:11:00.000Z</published>
+    <updated>2018-04-01T09:23:05.843Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;TextInput使用知识&quot;&gt;&lt;a href=&quot;#TextInput使用知识&quot; class=&quot;headerlink&quot; title=&quot;TextInput使用知识&quot;&gt;&lt;/a&gt;TextInput使用知识&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/22402340&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;TextInput&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;XML属性&amp;amp;常用方法&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;counterEnabled：false or true，用于设置字符计数器的开启或关闭。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对应方法：setCounterEnabled(boolean)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;counterMaxLength：设置字符计数器的最大长度。（仅用于设置计数器最大值，并不影响文本实际能输入的最大长度）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对应方法：setCounterMaxLength(int)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;errorEnabled：false or true，用于设置错误提示是否开启。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对应方法：setErrorEnabled(boolean)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>A MarginLayoutParams Error</title>
+    <link href="https://waylanpunch.github.io/2016/09/25/2016-09-25-MarginLayoutParams-Error/"/>
+    <id>https://waylanpunch.github.io/2016/09/25/2016-09-25-MarginLayoutParams-Error/</id>
+    <published>2016-09-25T08:24:44.000Z</published>
+    <updated>2018-04-01T09:22:50.014Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;A-MarginLayoutParams-Error&quot;&gt;&lt;a href=&quot;#A-MarginLayoutParams-Error&quot; class=&quot;headerlink&quot; title=&quot;A MarginLayoutParams Error&quot;&gt;&lt;/a&gt;A
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RenderScript框架实现图片模糊效果</title>
+    <link href="https://waylanpunch.github.io/2016/09/16/2016-09-16-renderscript-fuzy-image/"/>
+    <id>https://waylanpunch.github.io/2016/09/16/2016-09-16-renderscript-fuzy-image/</id>
+    <published>2016-09-16T15:30:59.000Z</published>
+    <updated>2018-04-01T09:22:31.121Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;RenderScript框架实现图片模糊效果&quot;&gt;&lt;a href=&quot;#RenderScript框架实现图片模糊效果&quot; class=&quot;headerlink&quot; title=&quot;RenderScript框架实现图片模糊效果&quot;&gt;&lt;/a&gt;RenderScript框架实现图片模糊效果&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;1-使用RenderScript-Support-Library-APIs&quot;&gt;&lt;a href=&quot;#1-使用RenderScript-Support-Library-APIs&quot; class=&quot;headerlink&quot; title=&quot;1.使用RenderScript Support Library APIs&quot;&gt;&lt;/a&gt;1.使用RenderScript Support Library APIs&lt;/h2&gt;&lt;p&gt;为了使用Support Library RenderScript的API，你必须确保你的开发环境能够访问到它们。下面的Android SDK工具是使用这些API所需要的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Android SDK Tools revision 22.2 or higher&lt;/li&gt;
+&lt;li&gt;Android SDK Build-tools revision 18.1.0 or higher&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="RenderScript" scheme="https://waylanpunch.github.io/tags/RenderScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 6.0之后的权限适配处理</title>
+    <link href="https://waylanpunch.github.io/2016/09/13/2016-09-13-android-6-permissions/"/>
+    <id>https://waylanpunch.github.io/2016/09/13/2016-09-13-android-6-permissions/</id>
+    <published>2016-09-13T15:03:04.000Z</published>
+    <updated>2018-04-01T09:22:06.112Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Android-6-0之后的权限适配处理&quot;&gt;&lt;a href=&quot;#Android-6-0之后的权限适配处理&quot; class=&quot;headerlink&quot; title=&quot;Android 6.0之后的权限适配处理&quot;&gt;&lt;/a&gt;Android 6.0之后的权限适配处理&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;一个基本的android程序是没有任何权限的。也就是说，无论是从用户体验上和设备数据上都没有什么危害。 在产品需求下，为了能够使用设备的受保护特性，你必须在AndroidManifest.xml 里声明至少一种所需要的权限。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="https://waylanpunch.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ButterKnife Problem</title>
+    <link href="https://waylanpunch.github.io/2016/08/28/2017-03-10-butterknife-problem/"/>
+    <id>https://waylanpunch.github.io/2016/08/28/2017-03-10-butterknife-problem/</id>
+    <published>2016-08-28T15:16:57.000Z</published>
+    <updated>2018-04-01T09:25:39.342Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;注入式框架共有的问题&quot;&gt;&lt;a href=&quot;#注入式框架共有的问题&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="ButterKnife" scheme="https://waylanpunch.github.io/tags/ButterKnife/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>An Simple HandlerThread Example</title>
+    <link href="https://waylanpunch.github.io/2016/08/10/2016-08-10-handlerthreadexample/"/>
+    <id>https://waylanpunch.github.io/2016/08/10/2016-08-10-handlerthreadexample/</id>
+    <published>2016-08-10T15:51:35.000Z</published>
+    <updated>2018-04-01T09:20:09.565Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;HandlerThread实例&quot;&gt;&lt;a href=&quot;#HandlerThread实例&quot; class=&quot;headerlink&quot; title=&quot;HandlerThread实例&quot;&gt;&lt;/a&gt;HandlerThread实例&lt;/h1&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;import android.os.Bundle;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
+import android.widget.TextView;
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="HandlerThread" scheme="https://waylanpunch.github.io/tags/HandlerThread/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Toolbar里的文本或者控件不能左对齐</title>
+    <link href="https://waylanpunch.github.io/2016/07/21/2016-08-09-toolbar-style-custom/"/>
+    <id>https://waylanpunch.github.io/2016/07/21/2016-08-09-toolbar-style-custom/</id>
+    <published>2016-07-20T16:16:49.000Z</published>
+    <updated>2018-04-01T09:19:36.548Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;原因:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Wiget.AppCompat.Toolbar&lt;/strong&gt;的默认style指定了&lt;strong&gt;contentInsetStart&lt;/strong&gt;属性，即内容插入只能在&lt;strong&gt;16dp&lt;/strong&gt;处开始。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;style name=&amp;quot;Base.Widget.AppCompat.Toolbar&amp;quot; parent=&amp;quot;android:Widget&amp;quot;&amp;gt;  
+    &amp;lt;item name=&amp;quot;titleTextAppearance&amp;quot;&amp;gt;@style/TextAppearance.Widget.AppCompat.Toolbar.Title&amp;lt;/item&amp;gt;  
+    &amp;lt;item name=&amp;quot;subtitleTextAppearance&amp;quot;&amp;gt;@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle&amp;lt;/item&amp;gt;  
+    &amp;lt;item name=&amp;quot;android:minHeight&amp;quot;&amp;gt;?attr/actionBarSize&amp;lt;/item&amp;gt;  
+    &amp;lt;item name=&amp;quot;titleMargins&amp;quot;&amp;gt;4dp&amp;lt;/item&amp;gt;  
+    &amp;lt;item name=&amp;quot;maxButtonHeight&amp;quot;&amp;gt;56dp&amp;lt;/item&amp;gt;  
+    &amp;lt;item name=&amp;quot;collapseIcon&amp;quot;&amp;gt;?attr/homeAsUpIndicator&amp;lt;/item&amp;gt;  
+    &amp;lt;item name=&amp;quot;collapseContentDescription&amp;quot;&amp;gt;@string/abc_toolbar_collapse_description&amp;lt;/item&amp;gt;  
+    &amp;lt;item name=&amp;quot;contentInsetStart&amp;quot;&amp;gt;16dp&amp;lt;/item&amp;gt;  
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="Toolbar" scheme="https://waylanpunch.github.io/tags/Toolbar/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学习ConstraintLayout布局</title>
+    <link href="https://waylanpunch.github.io/2016/07/20/2016-07-21-about-constraint-layout/"/>
+    <id>https://waylanpunch.github.io/2016/07/20/2016-07-21-about-constraint-layout/</id>
+    <published>2016-07-19T16:29:48.000Z</published>
+    <updated>2018-04-01T09:18:29.254Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;下载了Android Studio 2.2 Preview 5版本，发现新建项目&lt;strong&gt;build.gradle&lt;/strong&gt;文件新增了一个&lt;strong&gt;layout&lt;/strong&gt;插件&lt;strong&gt;ConstraintLayout&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;compile &amp;apos;com.android.support.constraint:constraint-layout:1.0.0-alpha4&amp;apos;
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="ConstraintLayout" scheme="https://waylanpunch.github.io/tags/ConstraintLayout/"/>
     
   </entry>
   

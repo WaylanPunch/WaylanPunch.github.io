@@ -1,0 +1,2083 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo_32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo_32x32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo_16x16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo_32x32.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="LeanCloud," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Waylan Punch" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="获取第一行 AVQuery&amp;lt;Studentq = AVObject.getQuery(Student.class); Student student = q.getFirst();">
+<meta name="keywords" content="LeanCloud">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeanCloud Learning Course">
+<meta property="og:url" content="https://waylanpunch.github.io/2016/06/05/2016-06-05-leanCloud-learning/index.html">
+<meta property="og:site_name" content="Waylan Punch">
+<meta property="og:description" content="获取第一行 AVQuery&amp;lt;Studentq = AVObject.getQuery(Student.class); Student student = q.getFirst();">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-04-01T09:15:55.349Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LeanCloud Learning Course">
+<meta name="twitter:description" content="获取第一行 AVQuery&amp;lt;Studentq = AVObject.getQuery(Student.class); Student student = q.getFirst();">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://waylanpunch.github.io/2016/06/05/2016-06-05-leanCloud-learning/"/>
+
+
+
+
+
+  <title>LeanCloud Learning Course | Waylan Punch</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Waylan Punch</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">WP</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            Commonweal 404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2016/06/05/2016-06-05-leanCloud-learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">LeanCloud Learning Course</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-05T23:17:03+08:00">
+                2016-06-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/06/05/2016-06-05-leanCloud-learning/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2016/06/05/2016-06-05-leanCloud-learning/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/06/05/2016-06-05-leanCloud-learning/" class="leancloud_visitors" data-flag-title="LeanCloud Learning Course">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ol>
+<li><p>获取第一行</p>
+<pre><code>AVQuery&lt;Studentq = AVObject.getQuery(Student.class);
+Student student = q.getFirst();
+</code></pre></li>
+</ol>
+<a id="more"></a>
+<ol start="2">
+<li><p>根据已有ObjectID获取数据</p>
+<pre><code>Student student = AVObject.createWithoutData(Student.class, &quot;objectId&quot;);
+AVObject fetched = student.fetch();
+</code></pre></li>
+<li><p>保存文件</p>
+<pre><code>AVFile avatar = new AVFile(&quot;avatar&quot;, getAvatarBytes());
+Student student = new Student();
+student.setName(&quot;name&quot;);
+student.setAvatar(avatar);
+student.save();
+</code></pre></li>
+<li><p>序列化</p>
+<pre><code>//将对象序列化成字符串
+Student student = getFirstStudent();
+String s = student.toString();
+
+//从字符串中解析对象
+AVObject parseObject = AVObject.parseAVObject(s);
+</code></pre></li>
+<li><p>AVObject已经实现了Parcelable接口</p>
+<pre><code>public class AVObject implements Parcelable {
+......
+}
+
+......
+
+Intent intent = new Intent();
+intent.putExtra(&quot;student&quot;, student);
+
+Student intentStudent = intent.getParcelableExtra(&quot;student&quot;);
+</code></pre></li>
+<li><p>离线保存对象</p>
+<pre><code>public void saveEventually(SaveCallback callback) {
+......
+}
+
+......
+
+Student student = new Student();
+student.setName(&quot;testOfflineSave&quot;);
+student.saveEventually();
+</code></pre><blockquote>
+<p>  适用于用户并不关心具体保存到服务器的具体时间，或者数据并不需要时常与服务器发生交互时，可以使用本方法 在网络请求遇到异常时，AVOS Cloud会将此类请求保存到本地，等到网络回复正常或者排除故障以后再发送请求 被保存下来的请求会按照初始的发送顺序进行发送<br>由于保存的时间无法确定，回调发生时可能已经超出了原来的运行环境，即便发生也没有意义，所以不鼓励用户saveEventually中传入callback</p>
+</blockquote>
+</li>
+<li><p>整形字段的自增方法</p>
+<pre><code>student.increment(&quot;age&quot;, 1);
+student.save();
+</code></pre></li>
+<li><p>any字段可以存储任意类型</p>
+<pre><code>//Any 字段保存为了数字
+student.setAny(1);
+student.save();
+
+//Any 字段保存为了字符串
+student.setAny(&quot;hello&quot;);
+student.save();
+
+//Any 字段保存为了Map
+HashMap&lt;String, Object&gt; map = new HashMap&lt;&gt;();
+map.put(&quot;like&quot;, &quot;swimming&quot;);
+student.setAny(map);
+student.save();
+
+student.getAny()
+</code></pre></li>
+<li><p>讲某个字段所有数据置空</p>
+<pre><code>student.remove(&quot;age&quot;);
+student.save();
+</code></pre></li>
+<li><p>ARRAY类型字段添加或移除数据</p>
+<pre><code>List&lt;String&gt; hobbies = new ArrayList&lt;&gt;();
+hobbies.add(&quot;running&quot;);
+hobbies.add(&quot;fly&quot;);
+student.addAll(&quot;hobbies&quot;, hobbies);
+student.save();
+
+......
+
+student.add(&quot;hobbies&quot;, &quot;swimming&quot;);
+student.save();
+
+......
+
+List&lt;String&gt; removeHobbies = new ArrayList&lt;&gt;();
+removeHobbies.add(&quot;swimming&quot;);
+student.removeAll(&quot;hobbies&quot;, removeHobbies);
+student.save();
+
+......
+
+//添加唯一数据，存在就覆盖，保证唯一性
+student.addUnique(&quot;hobbies&quot;, &quot;swimming&quot;);
+student.save();
+</code></pre></li>
+<li><p>添加多条数据，批量保存</p>
+<pre><code>List&lt;Student&gt; students = new ArrayList&lt;&gt;();
+for (int i = 0; i &lt; 5; i++) {
+    Student student = new Student();
+    student.setName(i + &quot;&quot;);
+    student.setAge(i + 10);
+    students.add(student);
+}
+AVObject.saveAll(students);
+
+......
+
+List&lt;Student&gt; students = new ArrayList&lt;&gt;();
+    for (int i = 0; i &lt; 5; i++) {
+        Student student = new Student();
+        student.setName(i + &quot;&quot;);
+        AVFile avatar = new AVFile(&quot;avatar&quot; + i, getAvatarBytes());
+        student.setAvatar(avatar);
+        students.add(student);
+    }
+    AVObject.saveAll(students);
+</code></pre></li>
+<li><p>修改多条数据，批量修改</p>
+<pre><code>for (Student student : students) {
+    student.setName(&quot;testBatchUpdate&quot;);
+}
+AVObject.saveAll(students);
+</code></pre></li>
+<li><p>删除多条数据，批量删除</p>
+<pre><code>AVObject.deleteAll(students);
+</code></pre></li>
+<li><p>从ARRAY类型字段获取数据</p>
+<pre><code>AVObject myObject = new AVObject(&quot;Student&quot;);//新建AVObject对象会自动生成ObjectID
+for (int i = 0; i &lt; 5; ++i) {
+    myObject.add(&quot;array&quot;, i);
+}
+myObject.save();
+
+AVQuery&lt;AVObject&gt; query = AVQuery.getQuery(&quot;Student&quot;);
+AVObject result = query.get(myObject.getObjectId());
+List&lt;Number&gt; array = result.getList(&quot;array&quot;);
+</code></pre></li>
+<li><p>查询全部数据</p>
+<pre><code>AVQuery&lt;Student&gt; query = AVQuery.getQuery(Student.class);
+List&lt;Student&gt; students = query.find();
+</code></pre></li>
+<li><p>获取第一条记录</p>
+<pre><code>Student student = query.getFirst();
+</code></pre></li>
+<li><p>限制记录行数</p>
+<pre><code>query.limit(2);
+List&lt;Student&gt; students = query.find();
+</code></pre></li>
+<li><p>递减，降序</p>
+<pre><code>query.orderByDescending(&quot;createdAt&quot;);
+query.skip(3);
+Student first = query.getFirst();
+</code></pre></li>
+<li><p>递增，升序</p>
+<pre><code>query.orderByAscending(&quot;createdAt&quot;).limit(5);
+</code></pre></li>
+<li><p>条件查询，AND查询</p>
+<pre><code>query.whereNotEqualTo(Student.NAME, &quot;Mike&quot;);
+// 默认就是 And
+query.whereStartsWith(Student.NAME, &quot;M&quot;);
+</code></pre></li>
+<li><p>条件查询，OR查询</p>
+<pre><code>query1.whereEqualTo(Student.NAME, &quot;Mike&quot;);
+query2.whereStartsWith(Student.NAME, &quot;J&quot;);
+
+List&lt;AVQuery&lt;Student&gt;&gt; queries = new ArrayList&lt;&gt;();
+queries.add(query1);
+queries.add(query2);
+
+AVQuery&lt;Student&gt; query = AVQuery.or(queries);
+List&lt;Student&gt; students = query.find();
+</code></pre></li>
+<li><p>二次排序</p>
+<pre><code>query.orderByDescending(Student.NAME)
+        .addDescendingOrder(Student.AGE)
+        .limit(5);
+List&lt;Student&gt; students = query.find();
+</code></pre></li>
+<li><p>ARRAY类型字段的查询匹配</p>
+<pre><code>query.whereSizeEqual(&quot;hobbies&quot;, 2).limit(10);
+</code></pre></li>
+<li><p>某个字段的多条件匹配</p>
+<pre><code>//字符匹配
+query.whereStartsWith(&quot;name&quot;, &quot;M&quot;)
+.whereEndsWith(&quot;name&quot;, &quot;e&quot;)
+.whereContains(&quot;name&quot;, &quot;i&quot;);
+
+......
+
+//包含其中之一
+query.whereContainedIn(&quot;name&quot;, Arrays.asList(&quot;Mike&quot;, &quot;Jane&quot;));
+List&lt;Student&gt; students = query.find();
+
+......
+
+//全部包含
+query.whereContainsAll(&quot;hobbies&quot;, Arrays.asList(&quot;swimming&quot;, &quot;running&quot;));
+List&lt;Student&gt; students = query.find();
+</code></pre></li>
+<li><p>通过正则表达式查询匹配</p>
+<pre><code>query.whereMatches(&quot;name&quot;, &quot;^M.*&quot;);
+</code></pre></li>
+<li><p>开启全局省流量模式</p>
+<pre><code>// 应该放在 Application 的 onCreate 中，开启全局省流量模式
+AVOSCloud.setLastModifyEnabled(true);
+
+Student student = getFirstStudent();
+
+// 此处服务器应该返回了所有数据
+AVQuery&lt;Student&gt; q = AVQuery.getQuery(Student.class);
+Student student1 = q.get(student.getObjectId());
+log(&quot;从服务器获取了对象：&quot; + prettyJSON(student1));
+
+// 客户端把该对象的udpatedAt传给服务器，服务器判断对象未改变，于是返回 304 和空数据，客户端返回本地缓存的数据，节省流量
+Student student2 = q.get(student.getObjectId());
+
+......
+
+q.limit(5);
+// 此处服务器应该返回了所有数据
+List&lt;Student&gt; students = q.find();
+
+// 服务器记录表的修改时间，如果两次查询之间表未被修改且参数一样，则以下查询将从本地缓存获取数据
+List&lt;Student&gt; students1 = q.find();
+</code></pre></li>
+<li><p>设置查询策略，本地缓存或网络</p>
+<pre><code>AVQuery&lt;Student&gt; q = AVQuery.getQuery(Student.class);
+</code></pre><p> //1.CACHE_THEN_NETWORK</p>
+<pre><code>//查询首先尝试从缓存中获取，然后再从网络获取。在这种情况下，FindCallback 会被实际调用两次：
+//首先是缓存的结果，其次是网络查询的结果。这个缓存策略只能用在异步的 findInBackground 方法中。
+q.setCachePolicy(AVQuery.CachePolicy.CACHE_THEN_NETWORK);
+// 单位毫秒
+q.setMaxCacheAge(1000 * 60 * 60); // 一小时
+q.limit(1);
+q.findInBackground(new FindCallback&lt;Student&gt;() {
+  int count = 0;
+
+  @Override
+  public void done(List&lt;Student&gt; list, AVException e) {
+      if (count == 0) {
+        log(&quot;第一次从缓存中获取了结果：&quot; + prettyJSON(list));
+    } else {
+        log(&quot;第二次从网络获取了结果：&quot; + prettyJSON(list));
+    }
+    count++;
+  }
+});
+</code></pre></li>
+</ol>
+<pre><code>    ......
+
+//2.CACHE_ELSE_NETWORK
+
+    //查询首先尝试从缓存中获取，如果失败，则从网络获取，如果两者都失败，则引发一个 AVException。
+    q.setCachePolicy(AVQuery.CachePolicy.CACHE_ELSE_NETWORK);
+    // 单位毫秒
+    q.setMaxCacheAge(1000 * 60 * 60); // 一小时
+    q.limit(1);
+    if (q.hasCachedResult()) {
+      log(&quot;有本地缓存，将从本地获取&quot;);
+    } else {
+      log(&quot;无本地缓存，将从服务器获取&quot;);
+    }
+    List&lt;Student&gt; students = q.find();
+
+    ......
+
+//3.NETWORK_ELSE_CACHE
+
+    //查询首先尝试从网络获取，如果失败，则从缓存中查找；如果两者都失败，则应发一个 AVException。
+    q.setCachePolicy(AVQuery.CachePolicy.NETWORK_ELSE_CACHE);
+    // 单位毫秒
+    q.setMaxCacheAge(1000 * 60 * 60); // 一小时
+    q.limit(1);
+    if (q.hasCachedResult()) {
+      log(&quot;有本地缓存，无网络时将从本地获取&quot;);
+    } else {
+      log(&quot;无本地缓存，将从服务器获取&quot;);
+    }
+
+    ......
+
+//4.NETWORK_ONLY
+
+    //查询不走缓存，从网路中获取，但是查询结果会写入缓存。
+    q.setCachePolicy(AVQuery.CachePolicy.NETWORK_ONLY);
+    // 单位毫秒
+    q.setMaxCacheAge(1000 * 60 * 60); // 一小时
+    q.limit(1);
+    if (q.hasCachedResult()) {
+      log(&quot;有本地缓存，但无视之&quot;);
+    } else {
+      log(&quot;无本地缓存，也无视之&quot;);
+    }
+
+    ......
+
+//5.CACHE_ONLY
+
+    //查询只从缓存获取，不走网络。如果缓存中没有结果，引发一个 AVException。
+    q.setCachePolicy(AVQuery.CachePolicy.CACHE_ONLY);
+    // 单位毫秒
+    q.setMaxCacheAge(1000 * 60 * 60); // 一小时
+    q.limit(1);
+    if (q.hasCachedResult()) {
+      log(&quot;有本地缓存，将从本地获取结果&quot;);
+    } else {
+      log(&quot;无本地缓存，将抛出异常，请先运行上一个例子，从网络获取结果保存到本地&quot;);
+    }
+
+    ......
+
+//6.IGNORE_CACHE
+
+    //默认的缓存策略，查询不走缓存，查询结果也不存储在缓存。
+    log(&quot;此策略才网络获取结果，并不保存结果到本地&quot;);
+    q.setCachePolicy(AVQuery.CachePolicy.IGNORE_CACHE);
+    // 单位毫秒
+    q.setMaxCacheAge(1000 * 60 * 60); // 一小时
+    q.limit(1);
+</code></pre><ol>
+<li><p>清除缓存</p>
+<pre><code>//清除当前查询缓存
+AVQuery&lt;Student&gt; q = AVQuery.getQuery(Student.class);
+q.limit(1);
+q.clearCachedResult();
+
+......
+
+//清除所有缓存
+AVQuery.clearAllCachedResults();
+log(&quot;已删除所有的缓存&quot;);
+</code></pre></li>
+<li><p>whereMatchesKeyInQuery的使用，相应的有whereDoesNotMatchKeyInQuery</p>
+<pre><code>//Add a constraint to the query that requires a particular key&apos;s value matches a value for a key in the results
+//of another AVQuery
+//当前查询的某个字段与另外一个查询的某个字段的值相匹配
+AVQuery q1 = AVQuery.getQuery(&quot;Person&quot;);
+
+AVQuery q2 = AVQuery.getQuery(&quot;Something&quot;);
+q2.whereMatchesKeyInQuery(&quot;belongTo&quot;, &quot;name&quot;, q1);
+</code></pre></li>
+<li><p>注册用户</p>
+<pre><code>AVUser user = new AVUser();
+user.setUsername(&quot;waylanpunch&quot;);
+user.setPassword(&quot;111111&quot;);
+user.signUp();
+Assert.assertFalse(user.getObjectId().isEmpty());
+String username = user.getUsername();
+</code></pre></li>
+<li><p>登录</p>
+<pre><code>AVUser.logOut();
+AVUser.logInInBackground(username, password, new LogInCallback&lt;AVUser&gt;() {
+      @Override
+      public void done(AVUser avUser, AVException e) {
+        if (e != null) {
+              log(e.getMessage());
+        } else {
+              log(&quot;登录成功 user：&quot; + avUser.toString());
+        }
+    }
+});
+</code></pre></li>
+</ol>
+<ol>
+<li><p>当前已登录的用户</p>
+<pre><code>AVUser user = AVUser.getCurrentUser();
+</code></pre></li>
+<li><p>注销当前已登录的用户</p>
+<pre><code>AVUser.logOut();
+</code></pre></li>
+<li><p>删除当前已登录的用户</p>
+<pre><code>user.delete();
+  log(&quot;已删除当前用户&quot;);
+</code></pre></li>
+<li><p>修改用户数据</p>
+<pre><code>AVQuery&lt;AVUser&gt; q = AVUser.getQuery();
+AVUser first = q.getFirst();
+log(&quot;获取了一个用户，但未登录该用户&quot;);
+first.put(&quot;city&quot;, &quot;ShangHai&quot;);
+try {
+  first.save();
+} catch (AVException e) {
+  if (e.getCode() == AVException.SESSION_MISSING) {
+    log(&quot;尝试修改未登录用户的数据，发生错误：&quot; + e.getMessage());
+  } else {
+    throw e;
+  }
+}
+log(&quot;结论：不能修改未登录用户的数据&quot;);
+
+......
+
+//修改密码
+user.updatePassword(oldPassword, newPassword);
+</code></pre></li>
+<li><p>验证注册用户手机号码</p>
+<pre><code>// 请在网站勾选 &quot;验证注册用户手机号码&quot; 选项，否则不会发送验证短信
+final AVUser user = new AVUser();
+user.setUsername(&quot;test&quot;);
+user.setPassword(&quot;test&quot;);
+user.setMobilePhoneNumber(&quot;15866778899&quot;);
+user.signUpInBackground(new SignUpCallback() {
+      @Override
+      public void done(AVException e) {
+        if (e == null) {
+              AVUser.verifyMobilePhoneInBackground(&quot;verifycode&quot;, new AVMobilePhoneVerifyCallback() {
+                @Override
+                public void done(AVException e) {
+                      if (e == null) {
+                        log(&quot;注册成功, user:&quot; + user);
+                      }
+                   }
+            });
+        }
+      }
+});
+</code></pre></li>
+<li><p>输入手机号码+密码登录</p>
+<pre><code>AVUser.loginByMobilePhoneNumberInBackground(&quot;15866778899&quot;, demoPassword, new LogInCallback&lt;AVUser&gt;() {
+      @Override
+      public void done(AVUser avUser, AVException e) {
+        if (e == null) {
+          log(&quot;登录成功, user:&quot; + avUser);
+        }
+      }
+});
+</code></pre></li>
+<li><p>输入手机号码+验证码登录</p>
+<pre><code>AVUser.requestLoginSmsCodeInBackground(&quot;15866778899&quot;, new RequestMobileCodeCallback() {
+  @Override
+  public void done(AVException e) {
+    if (e == null) {
+          AVUser.loginBySMSCodeInBackground(&quot;15866778899&quot;, smsCode, new LogInCallback&lt;AVUser&gt;() {
+            @Override
+            public void done(AVUser avUser, AVException e) {
+              if (e == null) {
+                log(&quot;登录成功, user: &quot; + avUser);
+              }
+            }
+          });
+    }
+  }
+});
+</code></pre></li>
+<li><p>使用手机号码重置密码</p>
+<pre><code>AVUser.requestPasswordResetBySmsCodeInBackground(&quot;15866778899&quot;, new RequestMobileCodeCallback() {
+  @Override
+  public void done(AVException e) {
+    if (e == null) {
+          final String newPassword = &quot;abcdefg&quot;;
+          AVUser.resetPasswordBySmsCodeInBackground(smsCode, newPassword, new UpdatePasswordCallback() {
+            @Override
+            public void done(AVException e) {
+              if (e == null) {
+                log(&quot;密码更改成功，新密码 &quot; + newPassword);
+                log(&quot;试着用手机号和新密码登录吧&quot;);
+              }
+            }
+          });
+    }
+  }
+});
+</code></pre></li>
+<li><p>邮箱验证</p>
+<pre><code>//请确认控制台已开启注册时开启邮箱验证，这样才能收到验证邮件
+final AVUser user = new AVUser();
+user.setUsername(text);
+user.setPassword(demoPassword);
+user.setEmail(text);
+user.signUpInBackground(new SignUpCallback() {
+  @Override
+  public void done(AVException e) {
+    if (e == null) {
+      log(&quot;注册成功，user: &quot; + user);
+    }
+  }
+});
+</code></pre></li>
+<li><p>邮箱登录</p>
+<pre><code>AVUser.logInInBackground(&quot;waylanpunch@gmail.com&quot;, &quot;testpassword&quot;, new LogInCallback&lt;AVUser&gt;() {
+  @Override
+  public void done(AVUser avUser, AVException e) {
+    if (e == null) {
+      log(&quot;登录成功 user:&quot; + avUser);
+    }
+  }
+});
+</code></pre></li>
+<li><p>使用邮箱进行密码重置</p>
+<pre><code>AVUser.requestPasswordResetInBackground(text, new RequestPasswordResetCallback() {
+  @Override
+  public void done(AVException e) {
+    if (e == null) {
+      log(&quot;重置密码的邮件已发送到邮箱 &quot; + text);
+    }
+  }
+});
+</code></pre></li>
+<li><p>匿名登录</p>
+<pre><code>AVAnonymousUtils.logIn(new LogInCallback&lt;AVUser&gt;() {
+      @Override
+      public void done(AVUser avUser, AVException e) {
+        if (e == null) {
+              log(&quot;创建了一个匿名用户并登录，user:&quot; + avUser);
+        }
+      }
+});
+</code></pre></li>
+<li><p>文件上传</p>
+<pre><code>//文件转换成字节数组
+byte[] data = DemoUtils.readFile(file);
+final AVFile avFile = new AVFile(file.getName(), data);
+avFile.saveInBackground(new SaveCallback() {
+  @Override
+  public void done(AVException e) {
+    if (e == null) {
+      fileUrl = avFile.getUrl();
+      objectId = avFile.getObjectId();
+      log(&quot;文件上传成功 url:&quot; + fileUrl);
+    } else {
+      log(e.getMessage());
+    }
+  }
+}, new ProgressCallback() {
+  @Override
+  public void done(Integer percentDone) {
+    log(&quot;uploading: &quot; + percentDone);
+  }
+});
+</code></pre></li>
+<li><p>文件下载</p>
+<pre><code>AVFile avFile = new AVFile(&quot;my_download_file&quot;, fileUrl, null);
+byte[] bytes = avFile.getData();
+log(&quot;下载文件完毕，总字节数：&quot; + bytes.length);
+</code></pre></li>
+<li><p>文件删除    </p>
+<pre><code>// 需要控制台开启权限
+AVFile avFile = AVFile.withObjectId(objectId);
+avFile.delete();
+</code></pre></li>
+<li><p>根据文件绝对路径上传</p>
+<pre><code>File tmpFile = ......
+AVFile file = AVFile.withAbsoluteLocalPath(&quot;filename&quot;, tmpFile.getAbsolutePath());
+file.save();
+log(&quot;从文件的路径中构造了 AVFile，并保存成功。file:&quot; + toString(file));
+</code></pre></li>
+<li><p>直接上传文件</p>
+<pre><code>File tmpFile = ......
+
+AVFile file = AVFile.withFile(&quot;filename&quot;, tmpFile);
+file.save();
+log(&quot;用文件构造了 AVFile，并保存成功。file:&quot; + toString(file));
+</code></pre></li>
+<li><p>AVObject转换成AVFile</p>
+<pre><code>AVQuery&lt;AVObject&gt; q = new AVQuery&lt;&gt;(&quot;_File&quot;);
+AVObject first = q.getFirst();
+log(&quot;获取了文件 AVObject：&quot; + first);
+
+AVFile file = AVFile.withAVObject(first);
+
+......
+
+//根据ObjectId转换
+AVFile file = AVFile.withObjectId(first.getObjectId());
+</code></pre></li>
+<li><p>修改AVFile元数据</p>
+<pre><code>Bitmap bitmap = ......
+bytes = ......bitmap......
+
+AVFile file = new AVFile(&quot;filename&quot;, bytes);
+file.addMetaData(&quot;width&quot;, bitmap.getWidth());
+file.addMetaData(&quot;height&quot;, bitmap.getHeight());
+file.save();
+</code></pre></li>
+<li><p>AVFile获取图片缩略图</p>
+<pre><code>AVFile avatar = ......
+String url = avatar.getThumbnailUrl(true, 200, 200);
+log(&quot;最大宽度为200 、最大高度为200的缩略图 url:&quot; + url);
+//[http://docs.qiniu.com/api/v6/image-process.html](http://docs.qiniu.com/api/v6/image-process.html &quot;七牛文档&quot;)
+log(&quot;其它图片处理见七牛文档&quot;);
+</code></pre></li>
+<li><p>POINTER类型存储另外一个对象一个实例的ObjectId</p>
+<pre><code>AVObject post = new AVObject(&quot;Post&quot;);
+post.put(&quot;author&quot;, user);
+post.save();
+</code></pre></li>
+<li><p>ARRAY类型存储另外一个对象多个实例的ObjectId</p>
+<pre><code>AVObject post = new AVObject(&quot;Post&quot;);
+post.addAll(&quot;likes&quot;, users);
+post.save();
+</code></pre><p> ：注意add与put的区别，一个是在原ARRAY数组末尾新增，一个是直接赋值</p>
+<pre><code>add(java.lang.String key, java.lang.Object value)
+//Atomically adds an object to the end of the array associated with a given key.
+
+put(java.lang.String key, java.lang.Object value)
+//Add a key-value pair to this object.
+</code></pre><p> ：ARRAY可以存储多个POINTER类型</p>
+</li>
+<li><p>联表查询</p>
+<pre><code>//返回的数据将只包含ClassName和ObjectId
+AVQuery&lt;Post&gt; query = AVQuery.getQuery(&quot;Post&quot;);
+query.whereExists(&quot;likes&quot;);
+log(&quot;将不包含 likes 字段的具体数据&quot;);
+Post first = query.getFirst();
+
+......
+
+//返回的数据除了ClassName和ObjectId字段，还包含其他所有字段
+query.whereExists(Post.LIKES);
+log(&quot;让返回结果包含了 likes 字段的具体数据，不单单是赞的人的 objectId&quot;);
+query.include(Post.LIKES);
+Post first = query.getFirst();
+</code></pre><p> ：注意</p>
+<pre><code>POINTER ： 一对一的关系
+ARRAY ： 一对多的关系
+AVRelation ：多对多的关系 
+</code></pre></li>
+<li><p>AVRelation类型的使用，添加数据</p>
+<pre><code>Post post = query1.getFirst();
+Student student = query2.getFirst();
+
+AVRelation&lt;Student&gt; rewardStudents = post.getRelation(&quot;rewards&quot;);
+rewardStudents.add(student);
+post.save();
+</code></pre></li>
+<li><p>AVRelation类型的使用，移除数据</p>
+<pre><code>rewardStudents.remove(student);
+post.save();
+</code></pre></li>
+<li><p>AVRelation类型的使用，查询数据</p>
+<pre><code>AVRelation&lt;Student&gt; students = post.getRelation(&quot;rewards&quot;);
+AVQuery&lt;Student&gt; query = students.getQuery();
+List&lt;Student&gt; stuList = query.find();
+
+......
+
+int count = query.count();
+
+......
+
+AVQuery&lt;Post&gt; postQuery = AVRelation.reverseQuery(Post.class, &quot;rewards&quot;, student);
+List&lt;Post&gt; posts = postQuery.find();
+
+：注意，reverseQuery(java.lang.Class&lt;M&gt; theParentClazz, java.lang.String relationKey, AVObject child)
+Create a query that can be used to query the parent objects in this relation.
+</code></pre></li>
+<li><p>类的继承，创建一个类SubUser继承自AVUser</p>
+<pre><code>public class SubUser extends AVUser {
+    public static final Creator CREATOR = AVObjectCreator.instance;
+    ......
+}
+</code></pre><p> ：注意，SubUser继承自AVUser类</p>
+<pre><code>Armor armor = new Armor();
+armor.setDisplayName(&quot;avos cloud demo object.&quot;);
+armor.setBroken(false);
+armor.save();
+
+SubUser subUser = new SubUser();
+String nickName = &quot;testSignupSubUser&quot;;
+subUser.setUsername(username);
+subUser.setPassword(password);
+subUser.setNickName(nickName);
+subUser.setArmor(armor);
+subUser.signUp();
+
+SubUser cloudUser = AVUser.logIn(username, password, SubUser.class);
+AVUser currentUser = AVUser.getCurrentUser();
+
+......
+
+//可以利用创建的子类SubUser登录，因为SubUser继承了AVUser所有属性和方法
+SubUser.logInInBackground(username, password, new LogInCallback&lt;AVUser&gt;() {
+      @Override
+      public void done(AVUser avUser, AVException e) {
+            AVUser currentUser = AVUser.getCurrentUser();
+            Assert.assertTrue(currentUser instanceof SubUser);//Error
+      }
+});
+</code></pre><p> ：注意，Armor继承自AVObject类。</p>
+<pre><code>public class Armor extends AVObject {
+      public static final Creator CREATOR = AVObjectCreator.instance;
+    ......
+}
+</code></pre></li>
+<li><p>使用SQL语句查询</p>
+<p> //1. select</p>
+<pre><code>String cql = &quot;select * from _User&quot;;
+AVCloudQueryResult result = AVQuery.doCloudQuery(cql);
+</code></pre><p> //AVCloudQueryResult以Json对象展示</p>
+<pre><code>result:[{
+        &quot;username&quot;: &quot;p1nrxk2393jpi8twib0f0wwpu&quot;,
+            &quot;authData&quot;: {
+                &quot;anonymous&quot;: {
+                    &quot;id&quot;: &quot;nmey8BRBOHXJLNQnjWw0LqB&quot;
+                 }
+             },
+         &quot;emailVerified&quot;: false,
+         &quot;className&quot;: &quot;_User&quot;,
+         &quot;mobilePhoneVerified&quot;: false,
+         &quot;updatedAt&quot;: &quot;2016-04-05T05:28:29.189Z&quot;,
+         &quot;createdAt&quot;: &quot;2016-04-05T05:28:29.189Z&quot;,
+         &quot;objectId&quot;: &quot;57034cfd71cfe4005cd64e05&quot;
+     },{
+         &quot;emailVerified&quot;: false,
+         &quot;className&quot;: &quot;_User&quot;,
+         &quot;mobilePhoneVerified&quot;: false,
+         &quot;username&quot;: &quot;XiaoMing&quot;,
+         &quot;updatedAt&quot;: &quot;2016-04-05T05:28:45.473Z&quot;,
+         &quot;createdAt&quot;: &quot;2016-04-05T05:28:45.473Z&quot;,
+         &quot;objectId&quot;: &quot;57034d0d5bbb50004dc9f001&quot;
+    },
+    ......
+    }]
+
+......
+</code></pre><p> //2. count</p>
+<pre><code>String cql = &quot;select count(*) from _User&quot;;
+AVCloudQueryResult result = AVQuery.doCloudQuery(cql);
+
+{&quot;results&quot;:[],&quot;className&quot;:&quot;_User&quot;,&quot;count&quot;:19}
+
+......
+</code></pre><p> //3. where</p>
+<pre><code>String cql = String.format(&quot;select * from _User where username in (?,?)&quot;);
+AVCloudQueryResult result = AVQuery.doCloudQuery(cql, &quot;test1&quot;, &quot;test2&quot;);
+
+......
+</code></pre><p> //4. order by</p>
+<pre><code>String cql = String.format(&quot;select * from _User where createdAt &lt; date(?) order by createdAt limit ?&quot;);
+AVCloudQueryResult result = AVQuery.doCloudQuery(cql, &quot;2016-05-01T00:00:00.0000Z&quot;, 3);
+</code></pre><p> //AVCloudQueryResult以Json对象展示</p>
+<pre><code>result:[{
+    &quot;username&quot;: &quot;p1nrxk2393jpi8twib0f0wwpu&quot;,
+    &quot;authData&quot;: {
+        &quot;anonymous&quot;: {
+            &quot;id&quot;: &quot;nmey8BRBOHXJLNQnjWw0LqB&quot;
+        }
+    },
+    &quot;emailVerified&quot;: false,
+    &quot;className&quot;: &quot;_User&quot;,
+    &quot;mobilePhoneVerified&quot;: false,
+    &quot;updatedAt&quot;: &quot;2016-04-05T05:28:29.189Z&quot;,
+    &quot;createdAt&quot;: &quot;2016-04-05T05:28:29.189Z&quot;,
+    &quot;objectId&quot;: &quot;57034cfd71cfe4005cd64e05&quot;
+    },{
+    &quot;emailVerified&quot;: false,
+    &quot;className&quot;: &quot;_User&quot;,
+    &quot;mobilePhoneVerified&quot;: false,
+    &quot;username&quot;: &quot;XiaoMing&quot;,
+    &quot;updatedAt&quot;: &quot;2016-04-05T05:28:45.473Z&quot;,
+    &quot;createdAt&quot;: &quot;2016-04-05T05:28:45.473Z&quot;,
+    &quot;objectId&quot;: &quot;57034d0d5bbb50004dc9f001&quot;
+    },{
+    &quot;username&quot;: &quot;9lsrmw91febck0fduf81o9fq9&quot;,
+    &quot;authData&quot;: {
+        &quot;anonymous&quot;: {
+            &quot;id&quot;: &quot;zwAzy6L4MGVgsIhbmQLWMXB&quot;
+        }
+    },
+    &quot;emailVerified&quot;: false,
+    &quot;className&quot;: &quot;_User&quot;,
+    &quot;mobilePhoneVerified&quot;: false,
+    &quot;updatedAt&quot;: &quot;2016-04-06T01:01:59.100Z&quot;,
+    &quot;createdAt&quot;: &quot;2016-04-06T01:01:53.809Z&quot;,
+    &quot;objectId&quot;: &quot;57046001128fe100524f097d&quot;
+    },]
+</code></pre></li>
+<li><p>获取服务器时间</p>
+<pre><code>Date date = AVOSCloud.getServerDate();
+</code></pre></li>
+<li><p>设置网络响应时长</p>
+<pre><code>// 得放到 Application 里
+AVOSCloud.setNetworkTimeout(10);
+</code></pre></li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>I Don't Want Your Money, I Want Aragaki Yui.</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/reward_images.jpg" alt="Waylan Punch Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/LeanCloud/" rel="tag"># LeanCloud</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/24/2016-05-24-android-font-setting/" rel="next" title="在Android Studio中为APP设置全局字体">
+                <i class="fa fa-chevron-left"></i> 在Android Studio中为APP设置全局字体
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/07/2016-06-17-AndroidStudioSuperPlugin/" rel="prev" title="安装AndroidStudioSuperPlugin插件">
+                安装AndroidStudioSuperPlugin插件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Waylan Punch" />
+            
+              <p class="site-author-name" itemprop="name">Waylan Punch</p>
+              <p class="site-description motion-element" itemprop="description">Keep Calm And Code On.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/WaylanPunch" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:waylanpunch@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/waylanpunch" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/users/4849200/waylan-punch" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://stackoverflow.com/" title="StackOverflow" target="_blank">StackOverflow</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://leancloud.cn" title="LeanCloud" target="_blank">LeanCloud</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://yq.aliyun.com/" title="云栖社区" target="_blank">云栖社区</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com" title="GitHub" target="_blank">GitHub</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://juejin.im/" title="掘金网" target="_blank">掘金网</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhihu.com/" title="知乎" target="_blank">知乎</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2014 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Waylan Punch</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'PmkIV6teulYlkGBTiDrJMRVn-gzGzoHsz',
+        appKey: 'SHRefBY1U0LkDzdvXp1oNkAY',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("PmkIV6teulYlkGBTiDrJMRVn-gzGzoHsz", "SHRefBY1U0LkDzdvXp1oNkAY");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo_32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo_32x32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo_16x16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo_32x32.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Gradle," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Waylan Punch" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="原文 SHRINK APPS WITH GRADLE FOR ANDROID通过Gradle构建工具压缩Android应用作者：David Tiago Conceição 译者：Waylan Punch">
+<meta name="keywords" content="Gradle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SHRINK APPS WITH GRADLE FOR-ANDROID">
+<meta property="og:url" content="https://waylanpunch.github.io/2016/07/11/2016-08-11-SHRINK-APPS-WITH-GRADLE-FOR-ANDROID/index.html">
+<meta property="og:site_name" content="Waylan Punch">
+<meta property="og:description" content="原文 SHRINK APPS WITH GRADLE FOR ANDROID通过Gradle构建工具压缩Android应用作者：David Tiago Conceição 译者：Waylan Punch">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://github.com/WaylanPunch/Technical-Article/blob/master/Images/1-VxXc8tG9BInaxNQc5mAqEw.png">
+<meta property="og:image" content="https://github.com/WaylanPunch/Technical-Article/blob/master/Images/1-_E0QiV26jbm2aBRn3LWU2Q.png">
+<meta property="og:image" content="https://github.com/WaylanPunch/Technical-Article/blob/master/Images/1-N8bAxV3OquAPvgrGRTwb8g.png">
+<meta property="og:image" content="https://github.com/WaylanPunch/Technical-Article/blob/master/Images/1-s89imr7FXb4WRDfX_RNNwA.png">
+<meta property="og:updated_time" content="2018-04-01T09:20:33.314Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SHRINK APPS WITH GRADLE FOR-ANDROID">
+<meta name="twitter:description" content="原文 SHRINK APPS WITH GRADLE FOR ANDROID通过Gradle构建工具压缩Android应用作者：David Tiago Conceição 译者：Waylan Punch">
+<meta name="twitter:image" content="https://github.com/WaylanPunch/Technical-Article/blob/master/Images/1-VxXc8tG9BInaxNQc5mAqEw.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://waylanpunch.github.io/2016/07/11/2016-08-11-SHRINK-APPS-WITH-GRADLE-FOR-ANDROID/"/>
+
+
+
+
+
+  <title>SHRINK APPS WITH GRADLE FOR-ANDROID | Waylan Punch</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Waylan Punch</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">WP</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            Commonweal 404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2016/07/11/2016-08-11-SHRINK-APPS-WITH-GRADLE-FOR-ANDROID/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">SHRINK APPS WITH GRADLE FOR-ANDROID</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-11T21:11:49+08:00">
+                2016-07-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/07/11/2016-08-11-SHRINK-APPS-WITH-GRADLE-FOR-ANDROID/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2016/07/11/2016-08-11-SHRINK-APPS-WITH-GRADLE-FOR-ANDROID/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/07/11/2016-08-11-SHRINK-APPS-WITH-GRADLE-FOR-ANDROID/" class="leancloud_visitors" data-flag-title="SHRINK APPS WITH GRADLE FOR-ANDROID">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://medium.com/android-news/shrinking-apps-with-gradle-for-android-615f44b0c641" title="Shrink apps with Gradle for Android" target="_blank" rel="noopener">原文</a></p>
+<h2 id="SHRINK-APPS-WITH-GRADLE-FOR-ANDROID"><a href="#SHRINK-APPS-WITH-GRADLE-FOR-ANDROID" class="headerlink" title="SHRINK APPS WITH GRADLE FOR ANDROID"></a>SHRINK APPS WITH GRADLE FOR ANDROID</h2><h2 id="通过Gradle构建工具压缩Android应用"><a href="#通过Gradle构建工具压缩Android应用" class="headerlink" title="通过Gradle构建工具压缩Android应用"></a>通过Gradle构建工具压缩Android应用</h2><p><strong>作者：David Tiago Conceição</strong></p>
+<p><strong>译者：<a href="https://github.com/WaylanPunch/" title="Waylan Punch" target="_blank" rel="noopener">Waylan Punch</a></strong></p>
+<a id="more"></a>
+<blockquote>
+<p><em>It is almost impossible to write a good Android App without using many libraries. Several features like networking, image loading, caching, database operations, social networking and many others can be very easily incorporated with libraries from different sources. That makes development much easier and faster, but also bring some consequences.</em></p>
+</blockquote>
+<p>要编写出好的Android应用程序，需要使用许多库文件。有些功能，如网络连接，图像加载，缓存，数据库操作，社交网络等等，可以与不同源的库文件很轻易地结合使用。这使得开发更加容易和快捷，同时也带来了一些后果。</p>
+<blockquote>
+<h1 id="The-problem"><a href="#The-problem" class="headerlink" title="The problem"></a><strong>The problem</strong></h1><p><em>Every library added to a project brings many possibilities and features. To achieve that, the libraries usually contain a lot of code files and resources. Almost every library I use contain more features than what I need. That creates a sort of waste: my applications have a lot of stuff that are never actually used. More than that, the size of the packages is growing in a fast pace. One of the apps I have been working reached 6.5MB recently. That’s a lot, I can do better.</em></p>
+</blockquote>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a><strong>问题</strong></h1><p>每一个加载到项目中的库文件会带来了许多可能性和功能。为了实现这些功能，库文件通常包含大量的代码文件和资源。几乎每一个我使用的库文件都包含了更多我用不到的特性。这就造成了一种浪费：我的应用程序有很多的东西都没有在程序中使用到。不止如此，包文件的大小其实增长的很快。我最近开发的一个APP达到6.5MB。这就有点大了，我可以压缩一些。</p>
+<p><img src="https://github.com/WaylanPunch/Technical-Article/blob/master/Images/1-VxXc8tG9BInaxNQc5mAqEw.png" alt="That’s a big apk."></p>
+<p><strong>That’s a big apk.(太大)</strong></p>
+<blockquote>
+<h1 id="Enters-Gradle"><a href="#Enters-Gradle" class="headerlink" title="Enters Gradle"></a><strong>Enters Gradle</strong></h1><p><em>The Android plugin for Gradle has some nice features to improve the applications. One of those is the option to minify the source code. With this option enabled, the source code will be decreased by the reduction of the identifiers and deletion of unused parts. The source will also be obfuscated, making harder do read if it gets decompiled. Let’s enable it on the build.gradle.</em></p>
+</blockquote>
+<h1 id="进入Gradle构建工具"><a href="#进入Gradle构建工具" class="headerlink" title="进入Gradle构建工具"></a><strong>进入Gradle构建工具</strong></h1><p>Gradle的Android插件有一些不错的功能，可以改善应用程序。其中之一就是缩小的源代码的大小。启用该选项后，源代码将通过减少不必要的标识符和删除未使用的部分减小尺寸。也可以通过这个插件混淆代码，使得源代码在被反编译后更难阅读。接下来我们在build.gradle文件中启用此功能。</p>
+<pre><code>//...
+buildTypes {
+release {
+minifyEnabled true
+proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;
+signingConfig signingConfigs.release
+}
+//...
+</code></pre><blockquote>
+<p><em>The result is a 6.0MB apk. That’s a good start.</em></p>
+</blockquote>
+<p>build之后大小变成6.0MB。效果还不错。</p>
+<p><img src="https://github.com/WaylanPunch/Technical-Article/blob/master/Images/1-_E0QiV26jbm2aBRn3LWU2Q.png" alt="A bit better."></p>
+<p><strong>A bit better.(稍微小了点)</strong></p>
+<blockquote>
+<h1 id="Resource-Shrink"><a href="#Resource-Shrink" class="headerlink" title="Resource Shrink"></a><strong>Resource Shrink</strong></h1><p><em>Another cool option from Android Gradle is the resource shrink. When this option is enabled, unused resources are removed from the final apk, reducing it’s size. Let’s enable it:</em></p>
+</blockquote>
+<h1 id="资源压缩"><a href="#资源压缩" class="headerlink" title="资源压缩"></a><strong>资源压缩</strong></h1><p>Android的Gradle插件另一个很酷的功能是资源文件的压缩。当启用该功能之后，未使用的资源文件将从最终的apk文件中删除，以减小apk的大小。接下来我们实际运用一下：</p>
+<pre><code>release {
+minifyEnabled true
+shrinkResources true
+proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;
+signingConfig signingConfigs.release
+}
+</code></pre><blockquote>
+<p><em>The result is, well, disappointing.</em></p>
+</blockquote>
+<p>结果有点令人失望。</p>
+<p><img src="https://github.com/WaylanPunch/Technical-Article/blob/master/Images/1-N8bAxV3OquAPvgrGRTwb8g.png" alt="No changes in file size."></p>
+<p><strong>No changes in file size.(大小没有改变)</strong></p>
+<blockquote>
+<p><em>Reading a little further in the <a href="http://tools.android.com/tech-docs/new-build-system/resource-shrinking" title="resource" target="_blank" rel="noopener"><strong>resource</strong></a> shrink <a href="http://tools.android.com/tech-docs/new-build-system/resource-shrinking" title="technical doc" target="_blank" rel="noopener"><strong>technical doc</strong></a>, there are some options to make the shrink more aggressive. In the case of the application I am working, the option resConfigs did a very good job. By creating a list of the resources configuration used by the application, the tool can eliminate more things.</em></p>
+</blockquote>
+<p>我们再来深读一下Android官网上关于<a href="http://tools.android.com/tech-docs/new-build-system/resource-shrinking" title="资源" target="_blank" rel="noopener"><strong>资源</strong></a>压缩的<a href="http://tools.android.com/tech-docs/new-build-system/resource-shrinking" title="技术文档" target="_blank" rel="noopener"><strong>技术文档</strong></a>，还有一些选项可以进一步压缩。以我开发的这个App为例， resConfigs选项产生了很好的效果。通过创建应用程序所使用的资源配置的列表，该工具可以削减更多的东西。</p>
+<pre><code>resConfigs &quot;en&quot;, &quot;pt&quot;
+resConfigs &quot;nodpi&quot;, &quot;hdpi&quot;, &quot;xhdpi&quot;, &quot;xxhdpi&quot;, &quot;xxxhdpi&quot;
+</code></pre><p><img src="https://github.com/WaylanPunch/Technical-Article/blob/master/Images/1-s89imr7FXb4WRDfX_RNNwA.png" alt="Better now."></p>
+<p><strong> Better now.(稍小了一些)</strong></p>
+<blockquote>
+<p><em>By decreasing source code size and removing unused resources, the apk was reduced from 6.5MB to about 5MB. That’s a good improvement.</em></p>
+</blockquote>
+<p>通过减小源代码的尺寸和删除未使用的资源，我将APK从6.5MB减少到大约5MB。这是一个极大的提升。</p>
+<blockquote>
+<h1 id="But-not-that-fast"><a href="#But-not-that-fast" class="headerlink" title="But not that fast"></a><strong>But not that fast</strong></h1><p><em>One of the reasons that make some people disable the minify option and, by consequence, the shrink option is that it can create runtime issues. In the case of my application, <a href="https://github.com/google/gson" title="gson" target="_blank" rel="noopener"><strong>gson</strong></a> wasn’t enable to convert the JSON data returned by the server. To make that work, I had to add a big set of the instructions to my proguard-rules.pro file. The initial set can be found at the <a href="https://github.com/google/gson/blob/master/examples/android-proguard-example/proguard.cfg" title="gson repository" target="_blank" rel="noopener"><strong>gson repository</strong></a>. To complete the set, I had to make the tools ignore (or keep) the classes used with gson:</em></p>
+</blockquote>
+<h1 id="先别急着乐"><a href="#先别急着乐" class="headerlink" title="先别急着乐"></a><strong>先别急着乐</strong></h1><p>从某种意义上来讲，压缩功能会导致运行时异常，这就是禁止开发者启用压缩选项的原因之一。以我的App为例，<a href="https://github.com/google/gson" title="gson" target="_blank" rel="noopener"><strong>GSON</strong></a>没法转换从服务器返回的JSON数据。为了使GSON工作，我不得不在proguard-rules.pro文件中添加一系列的指令集。初始设置可以在<a href="https://github.com/google/gson/blob/master/examples/android-proguard-example/proguard.cfg" title="GSON库" target="_blank" rel="noopener"><strong>GSON库</strong></a>中找到。为了完成设置，我不得不让这些工具忽略（或保留）使用到的GSON类：</p>
+<pre><code>-keep class com.package.model.** { *; }
+</code></pre><blockquote>
+<p><em>The libraries also have it’s own configurations. Glide has the instructions detailed in <a href="https://github.com/bumptech/glide/wiki" title="their page" target="_blank" rel="noopener"><strong>their page</strong></a>. Okio, that is used in a indirect way, works ignoring the warnings:</em></p>
+</blockquote>
+<p>库文件也有自己的配置。Glide在<a href="https://github.com/bumptech/glide/wiki" title="他们的主页" target="_blank" rel="noopener"><strong>他们的主页</strong></a>有详细说明。Okio，以一种间接的方式，忽略警告来工作：</p>
+<pre><code>-dontwarn okio.**
+</code></pre><blockquote>
+<p><em>SnappyDB is more tricky:</em></p>
+</blockquote>
+<p>SnappyDB更棘手：</p>
+<pre><code>-dontwarn sun.reflect.**
+-dontwarn java.beans.**
+-keep,allowshrinking class com.esotericsoftware.** {
+   &lt;fields&gt;;
+   &lt;methods&gt;;
+}
+-keep,allowshrinking class java.beans.** { *; }
+-keep,allowshrinking class sun.reflect.** { *; }
+-keep,allowshrinking class com.esotericsoftware.kryo.** { *; }
+-keep,allowshrinking class com.esotericsoftware.kryo.io.** { *; }
+-keep,allowshrinking class sun.nio.ch.** { *; }
+-dontwarn sun.nio.ch.**
+-dontwarn sun.misc.**
+
+-keep,allowshrinking class com.snappydb.** { *; }
+-dontwarn com.snappydb.**
+</code></pre><blockquote>
+<p><em>In the end, there is no choice besides searching for the specific configurations to each library. The point here is to pay attention to each of those configurations. One of the suggestions to make SnappyDB work recommended to disable the resource shrink. That’s is something that won’t happen :) Every time you change one of those options, check the final size again and look for potential runtime errors.</em></p>
+</blockquote>
+<p>最后，除了为每个库文件搜索特定的配置，别无其他捷径。其中的关键是要注意每个配置。为了使SnappyDB工作，我的建议是，禁用资源收缩功能。这是不可能的事情:)  每次你更改某些配置之后，要检查一下apk文件的最终大小，然后再寻找潜在的运行时错误。</p>
+<blockquote>
+<h1 id="Going-further"><a href="#Going-further" class="headerlink" title="Going further"></a><strong>Going further</strong></h1><p><em>The apk size probably can be more compressed. At some moment I will go deeper, following the instructions presented by Cyril Mottier in <a href="http://cyrilmottier.com/2014/08/26/putting-your-apks-on-diet/" title="his blog" target="_blank" rel="noopener"><strong>his blog</strong></a>. That will certainly takes more time than adjusting some build files as I did. The result from the adjusts in build files, in the other hand, was very good. Removing 1.5MB of unused stuff from your final APK is certainly a good thing. From now on, minify and shrink configurations are my default choices and will certainly be very savy.</em></p>
+</blockquote>
+<h1 id="未来展望"><a href="#未来展望" class="headerlink" title="未来展望"></a><strong>未来展望</strong></h1><p>APK大小应该能进一步压缩。有时我会按照Cyril Mottier在<a href="http://cyrilmottier.com/2014/08/26/putting-your-apks-on-diet/" title="他的博客" target="_blank" rel="noopener"><strong>他的博客</strong></a>里的指导作更深的研究。这肯定会花费多一些时间来调整一些构建文件。调整构建文件的结果从某方面来讲，还是非常不错的。从最终的apk文件中删除了1.5MB的资源文件肯定是一件好事。从现在开始，压缩配置会是我的默认操作，肯定会很牛逼。</p>
+<blockquote>
+<p><em>Some rights reserved by the author.</em></p>
+</blockquote>
+<p>作者拥有本文部分版权</p>
+<p><strong>TAGs ： Android, Gradle, Android Development</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>I Don't Want Your Money, I Want Aragaki Yui.</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/reward_images.jpg" alt="Waylan Punch Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Gradle/" rel="tag"># Gradle</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/03/2016-07-19-aColorUtil/" rel="next" title="颜色转换工具类">
+                <i class="fa fa-chevron-left"></i> 颜色转换工具类
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/11/2016-08-17-Drag-and-Swipe-withRecyclerView-Part-One/" rel="prev" title="Drag and Swipe with RecyclerView Part One">
+                Drag and Swipe with RecyclerView Part One <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Waylan Punch" />
+            
+              <p class="site-author-name" itemprop="name">Waylan Punch</p>
+              <p class="site-description motion-element" itemprop="description">Keep Calm And Code On.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/WaylanPunch" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:waylanpunch@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/waylanpunch" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/users/4849200/waylan-punch" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://stackoverflow.com/" title="StackOverflow" target="_blank">StackOverflow</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://leancloud.cn" title="LeanCloud" target="_blank">LeanCloud</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://yq.aliyun.com/" title="云栖社区" target="_blank">云栖社区</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com" title="GitHub" target="_blank">GitHub</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://juejin.im/" title="掘金网" target="_blank">掘金网</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhihu.com/" title="知乎" target="_blank">知乎</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SHRINK-APPS-WITH-GRADLE-FOR-ANDROID"><span class="nav-number">1.</span> <span class="nav-text">SHRINK APPS WITH GRADLE FOR ANDROID</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过Gradle构建工具压缩Android应用"><span class="nav-number">2.</span> <span class="nav-text">通过Gradle构建工具压缩Android应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-problem"><span class="nav-number"></span> <span class="nav-text">The problem</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number"></span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Enters-Gradle"><span class="nav-number"></span> <span class="nav-text">Enters Gradle</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进入Gradle构建工具"><span class="nav-number"></span> <span class="nav-text">进入Gradle构建工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Resource-Shrink"><span class="nav-number"></span> <span class="nav-text">Resource Shrink</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#资源压缩"><span class="nav-number"></span> <span class="nav-text">资源压缩</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#But-not-that-fast"><span class="nav-number"></span> <span class="nav-text">But not that fast</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#先别急着乐"><span class="nav-number"></span> <span class="nav-text">先别急着乐</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Going-further"><span class="nav-number"></span> <span class="nav-text">Going further</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#未来展望"><span class="nav-number"></span> <span class="nav-text">未来展望</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2014 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Waylan Punch</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'PmkIV6teulYlkGBTiDrJMRVn-gzGzoHsz',
+        appKey: 'SHRefBY1U0LkDzdvXp1oNkAY',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("PmkIV6teulYlkGBTiDrJMRVn-gzGzoHsz", "SHRefBY1U0LkDzdvXp1oNkAY");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

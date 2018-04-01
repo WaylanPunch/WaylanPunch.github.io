@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo_32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo_32x32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo_16x16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo_32x32.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="RecyclerView," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Waylan Punch" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="原文 RecyclerView的拖放和滑动特效 第一部分：基础ItemTouchHelper实例">
+<meta name="keywords" content="RecyclerView">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Drag and Swipe with RecyclerView Part One">
+<meta property="og:url" content="https://waylanpunch.github.io/2016/07/11/2016-08-17-Drag-and-Swipe-withRecyclerView-Part-One/index.html">
+<meta property="og:site_name" content="Waylan Punch">
+<meta property="og:description" content="原文 RecyclerView的拖放和滑动特效 第一部分：基础ItemTouchHelper实例">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://waylanpunch.github.io/2016/07/11/2016-08-17-Drag-and-Swipe-withRecyclerView-Part-One/Images/1-4Cqfs-75ibhvC_3BMEIvVA.gif">
+<meta property="og:image" content="https://waylanpunch.github.io/2016/07/11/2016-08-17-Drag-and-Swipe-withRecyclerView-Part-One/Images/1-FdJbZnF5I-iOw0wgiuVJGQ.gif">
+<meta property="og:updated_time" content="2018-04-01T09:20:59.396Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Drag and Swipe with RecyclerView Part One">
+<meta name="twitter:description" content="原文 RecyclerView的拖放和滑动特效 第一部分：基础ItemTouchHelper实例">
+<meta name="twitter:image" content="https://waylanpunch.github.io/2016/07/11/2016-08-17-Drag-and-Swipe-withRecyclerView-Part-One/Images/1-4Cqfs-75ibhvC_3BMEIvVA.gif">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://waylanpunch.github.io/2016/07/11/2016-08-17-Drag-and-Swipe-withRecyclerView-Part-One/"/>
+
+
+
+
+
+  <title>Drag and Swipe with RecyclerView Part One | Waylan Punch</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Waylan Punch</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">WP</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            Commonweal 404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2016/07/11/2016-08-17-Drag-and-Swipe-withRecyclerView-Part-One/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Drag and Swipe with RecyclerView Part One</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-11T21:13:30+08:00">
+                2016-07-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/07/11/2016-08-17-Drag-and-Swipe-withRecyclerView-Part-One/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2016/07/11/2016-08-17-Drag-and-Swipe-withRecyclerView-Part-One/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/07/11/2016-08-17-Drag-and-Swipe-withRecyclerView-Part-One/" class="leancloud_visitors" data-flag-title="Drag and Swipe with RecyclerView Part One">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://medium.com/@ipaulpro/drag-and-swipe-with-recyclerview-b9456d2b1aaf" title="原文" target="_blank" rel="noopener">原文</a></p>
+<h1 id="RecyclerView的拖放和滑动特效"><a href="#RecyclerView的拖放和滑动特效" class="headerlink" title="RecyclerView的拖放和滑动特效"></a><strong>RecyclerView的拖放和滑动特效</strong></h1><hr>
+<p>第一部分：基础ItemTouchHelper实例</p>
+<a id="more"></a>
+<p><strong><em>2015年6月23日</em></strong></p>
+<p><img src="Images/1-4Cqfs-75ibhvC_3BMEIvVA.gif" alt=""></p>
+<p>有很多教程，库和实例通过RecyclerView实现Android的“<strong>拖放</strong>”和“<strong>滑动消失</strong>”功能。即使有新的，更好的，可用的方法，大多数人仍在使用旧的<a href="http://developer.android.com/guide/topics/ui/drag-drop.html" target="_blank" rel="noopener"><strong>View.OnDragListener</strong></a>接口和<a href="https://github.com/romannurik/Android-SwipeToDismiss" target="_blank" rel="noopener"><strong>Roman Nurik的SwipeToDismiss</strong></a>做法。极少数人会使用较新的API，但往往采用GestureDetectors和onInterceptTouchEvent接口，或者实现过程较为复杂。实际上，有一个非常<strong>简单的途径</strong>将这些功能添加到RecyclerView。它只需要一个类，这个类已经存在于Android支持库了：</p>
+<p><a href="https://developer.android.com/reference/android/support/v7/widget/helper/ItemTouchHelper.html" target="_blank" rel="noopener"><strong>ItemTouchHelper</strong></a></p>
+<p>ItemTouchHelper是一个强大的工具，在实现RecyclerView的“拖放”和“滑动消失”功能时能兼顾到任何细节。它是<a href="https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ItemDecoration.html" target="_blank" rel="noopener"><strong>RecyclerView.ItemDecoration</strong></a>的子类，这意味着它很容易地添加到几乎任何现有的布局管理和适配器中（！）。它还可以适配现有的Item动画，还可以提供类型限制的拖拽，降沉动画，等等。本文我将演示一个基于ItemTouchHelper的简单实现。然后，在这个系列中，我们将范围扩大，去研究更多的特性。</p>
+<h2 id="前瞻"><a href="#前瞻" class="headerlink" title="前瞻"></a><strong>前瞻</strong></h2><p>如果只是对完整源码感兴趣，您可以跳转到Github上：<a href="https://github.com/iPaulPro/Android-ItemTouchHelper-Demo" target="_blank" rel="noopener"><strong>Android-ItemTouchHelper-Demo</strong></a>.本文即是基于<a href="https://github.com/iPaulPro/Android-ItemTouchHelper-Demo/tree/d8d85c32d579f19718b9bbb97f7a1bda0e616f1f" target="_blank" rel="noopener"><strong>第一次commit提交</strong></a>的代码。从<a href="https://github.com/iPaulPro/Android-ItemTouchHelper-Demo/releases" target="_blank" rel="noopener"><strong>这里</strong></a>下载演示APK。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a><strong>配置</strong></h2><p>我们需要的第一件事是配置基本的RecyclerView选项。如果你还没有准备好，更新您的build.gradle文件，包含RecyclerView依赖。</p>
+<pre><code>compile “com.android.support:recyclerview-v7:22.2.0”
+</code></pre><p>ItemTouchHelper可以和几乎所有RecyclerView.Adapter适配器和LayoutManager布局管理器交互，但文章将会基于下面的Gist创建基本文件：</p>
+<p><a href="https://gist.github.com/iPaulPro/2216ea5e14818056cfcc" target="_blank" rel="noopener"><strong>https://gist.github.com/iPaulPro/2216ea5e14818056cfcc</strong></a></p>
+<h2 id="使用ItemTouchHelper和ItemTouchHelper-Callback"><a href="#使用ItemTouchHelper和ItemTouchHelper-Callback" class="headerlink" title="使用ItemTouchHelper和ItemTouchHelper.Callback"></a><strong>使用ItemTouchHelper和ItemTouchHelper.Callback</strong></h2><p>为了使用ItemTouchHelper，需要先创建一个<a href="https://developer.android.com/reference/android/support/v7/widget/helper/ItemTouchHelper.Callback.html" target="_blank" rel="noopener"><strong>ItemTouchHelper.Callback</strong></a>接口。这个接口可以监听“移动”和“滑动”事件。您也可以通过它控制选择视图的状态，或者重写默认动画。作为一个辅助类，<a href="https://developer.android.com/reference/android/support/v7/widget/helper/ItemTouchHelper.SimpleCallback.html" target="_blank" rel="noopener"><strong>SimpleCallback</strong></a>回调方法可以为您提供一个基本的实现，但是如果要深入理解它的工作机制，我们需要创建一个自定义的辅助类。<br>为了实现基本的“拖放”和“滑动消失”功能，以下的方法必须重写：</p>
+<pre><code>getMovementFlags（RecyclerView，ViewHolder）
+onMove（RecyclerView，ViewHolder，ViewHolder）
+onSwiped（ViewHolder，int）
+</code></pre><p>我们还会用到另外几个辅助方法：</p>
+<pre><code>isLongPressDragEnabled()
+isItemViewSwipeEnabled()
+</code></pre><p>下面我们将一个一个的来实现这些方法。</p>
+<pre><code>@Override
+public int getMovementFlags(RecyclerView recyclerView, 
+        RecyclerView.ViewHolder viewHolder) {
+    int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
+    int swipeFlags = ItemTouchHelper.START | ItemTouchHelper.END;
+    return makeMovementFlags(dragFlags, swipeFlags);
+}
+</code></pre><p>ItemTouchHelper可以让您轻松判断一个事件的方向。你必须重写<strong>getMovementFlags()</strong>方法来指定哪些拖放和滑动方向是RecyclerView支持的。使用辅助方法<strong>ItemTouchHelper.makeMovementFlags(int, int)</strong>生成返回标记。在这里我们允许双向的拖放和滑动。</p>
+<pre><code>@Override
+public boolean isLongPressDragEnabled() {
+    return true;
+}
+</code></pre><p>ItemTouchHelper可用于无滑动的拖拽（反之亦然），所以你必须指定你想要支持哪种方式。要实现长按RecyclerView Item子项激活starting drag(开始拖拽)事件必须从<strong>isLongPressDragEnabled()</strong>返回true值。</p>
+<p>另外，<strong>ItemTouchHelper.startDrag(RecyclerView.ViewHolder)</strong>方法可以被“handler”调用以开始一个拖拽事件。我们在后文会进一步探讨。</p>
+<pre><code>@Override
+public boolean isItemViewSwipeEnabled() {
+    return true;
+}
+</code></pre><p>为了在视图中任何位置的触摸事件中启用滑动功能，只需从<strong>isItemViewSwipeEnabled()</strong>方法返回true。另外，通过调用<strong>ItemTouchHelper.startSwipe(RecyclerView.ViewHolder)</strong>方法可以手动启动一个拖拽事件。</p>
+<p>接下来的两个方法，<strong>onMove()</strong>和<strong>onSwiped()</strong>需要在方法里通知负责更新基础数据的任何组件。所以首先我们要创建一个接口，使我们能够将这些事件回调传导至事件链。</p>
+<pre><code>public interface ItemTouchHelperAdapter {
+
+    void onItemMove(int fromPosition, int toPosition);
+
+    void onItemDismiss(int position);
+}
+</code></pre><p><a href="https://gist.github.com/iPaulPro/5d43325ac7ae579760a9" target="_blank" rel="noopener"><strong>ItemTouchHelperAdapter.java Gist</strong></a></p>
+<p>对于本例来说，最简单的方法就是让<a href="https://gist.github.com/iPaulPro/2216ea5e14818056cfcc#file-recyclerlistadapter-java" target="_blank" rel="noopener"><strong>RecyclerListAdapter</strong></a>类实现监听接口。</p>
+<pre><code>public class RecyclerListAdapter extends RecyclerView.Adapter&lt;ItemViewHolder
+    implements ItemTouchHelperAdapter {
+// ... code from [gist](https://gist.github.com/iPaulPro/2216ea5e14818056cfcc#file-recyclerlistadapter-java)
+@Override
+public void onItemDismiss(int position) {
+    mItems.remove(position);
+    notifyItemRemoved(position);
+}
+
+@Override
+public boolean onItemMove(int fromPosition, int toPosition) {
+    if (fromPosition &lt; toPosition) {
+        for (int i = fromPosition; i &lt; toPosition; i++) {
+            Collections.swap(mItems, i, i + 1);
+        }
+    } else {
+        for (int i = fromPosition; i toPosition; i--) {
+            Collections.swap(mItems, i, i - 1);
+        }
+    }
+    notifyItemMoved(fromPosition, toPosition);
+    return true;
+}
+</code></pre><p>调用<strong>notifyItemRemoved()</strong>和<strong>notifyItemMoved()</strong>方法非常重要，这样适配器就能知道Item的变化。同样重要的是要注意，每次改变Item的位置，视图都会形成新的索引，<strong>而不是在“拖拽”事件结束时才修改索引</strong>。</p>
+<p>现在，我们可以创建<strong>SimpleItemTouchHelperCallback</strong>类，因为我们仍然必须重写onMove()和onSwiped()方法。首先为适配器添加一个构造函数和适一个字段：</p>
+<pre><code>private final ItemTouchHelperAdapter mAdapter;
+
+public SimpleItemTouchHelperCallback(
+    ItemTouchHelperAdapter adapter) {
+    mAdapter = adapter;
+}
+</code></pre><p>然后重写剩下的方法以及通知适配器Item的改变。</p>
+<pre><code>@Override
+public boolean onMove(RecyclerView recyclerView, 
+        RecyclerView.ViewHolder viewHolder, 
+        RecyclerView.ViewHolder target) {
+    mAdapter.onItemMove(viewHolder.getAdapterPosition(), 
+            target.getAdapterPosition());
+    return true;
+}
+@Override
+public void onSwiped(RecyclerView.ViewHolder viewHolder, 
+        int direction) {
+    mAdapter.onItemDismiss(viewHolder.getAdapterPosition());
+}
+</code></pre><p>下面为生成的Callback类：</p>
+<pre><code>public class SimpleItemTouchHelperCallback extends ItemTouchHelper.Callback {
+
+    private final ItemTouchHelperAdapter mAdapter;
+
+    public SimpleItemTouchHelperCallback(ItemTouchHelperAdapter adapter) {
+        mAdapter = adapter;
+    }
+
+    @Override
+    public boolean isLongPressDragEnabled() {
+        return true;
+    }
+
+    @Override
+    public boolean isItemViewSwipeEnabled() {
+        return true;
+    }
+
+    @Override
+    public int getMovementFlags(RecyclerView recyclerView, ViewHolder viewHolder) {
+        int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
+        int swipeFlags = ItemTouchHelper.START | ItemTouchHelper.END;
+        return makeMovementFlags(dragFlags, swipeFlags);
+    }
+
+    @Override
+    public boolean onMove(RecyclerView recyclerView, ViewHolder viewHolder, 
+            ViewHolder target) {
+        mAdapter.onItemMove(viewHolder.getAdapterPosition(), target.getAdapterPosition());
+        return true;
+    }
+
+    @Override
+    public void onSwiped(ViewHolder viewHolder, int direction) {
+        mAdapter.onItemDismiss(viewHolder.getAdapterPosition());
+    }
+
+}
+</code></pre><p><a href="https://gist.github.com/iPaulPro/79fa9c8ed00f64af690b#file-simpleitemtouchhelpercallback-java" target="_blank" rel="noopener"><strong>SimpleItemTouchHelperCallback.java</strong></a> hosted with ❤ by <a href="https://github.com/" target="_blank" rel="noopener"><strong>GitHub</strong></a>      <a href="https://gist.github.com/iPaulPro/79fa9c8ed00f64af690b/raw/86baafe406fc38d5e2338c8a32260f1eb4b4e87b/SimpleItemTouchHelperCallback.java" target="_blank" rel="noopener"><strong>view raw</strong></a></p>
+<p>CallBack类准备好了之后，我们就可以创建ItemTouchHelper类对象以及调用<strong>attachToRecyclerView(RecyclerView)</strong>方法了（详细请看<a href="https://gist.github.com/iPaulPro/2216ea5e14818056cfcc#file-mainfragment-java" target="_blank" rel="noopener"><strong>MainFragment.java</strong></a>）:</p>
+<pre><code>ItemTouchHelper.Callback callback = new SimpleItemTouchHelperCallback(adapter);
+ItemTouchHelper touchHelper = new ItemTouchHelper(callback);
+touchHelper.attachToRecyclerView(recyclerView);
+</code></pre><p>运行程序，效果如下图：</p>
+<p><img src="Images/1-FdJbZnF5I-iOw0wgiuVJGQ.gif" alt=""></p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a><strong>结论</strong></h2><p>这是ItemTouchHelper辅助类的一个最基础的实现。但是，应该清楚的是，要实现RecylerView基本的“拖放”和“滑动消失”效果是没有必要使用第三方库的。在接下来的部分，我们将研究如何在Item被拖拽或滑动时更好地控制Item的外观。</p>
+<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a><strong>源码</strong></h2><p>我在Github上创建了一个项目来展示本系列文章所讲的内容：<a href="https://github.com/iPaulPro/Android-ItemTouchHelper-Demo" target="_blank" rel="noopener"><strong>Android-ItemTouchHelper-Demo</strong></a>。第一次commit的代码对应于以上部分，另外也有一点会在本文第2部分论述。</p>
+<h2 id="接下来"><a href="#接下来" class="headerlink" title="接下来"></a><strong>接下来</strong></h2><p>第二部分：<a href="https://medium.com/@ipaulpro/drag-and-swipe-with-recyclerview-6a6f0c422efd" target="_blank" rel="noopener"><strong>Handles, Grids, and Custom Animations</strong></a></p>
+<pre><code>Follow me on Google+ and Twitter
+
+© 2015 Paul Burke
+All code appearing in this article is licensed under Apache 2.0
+
+Some rights reserved by the author.
+
+TAG : Android App DevelopmentAndroid
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>I Don't Want Your Money, I Want Aragaki Yui.</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/reward_images.jpg" alt="Waylan Punch Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/RecyclerView/" rel="tag"># RecyclerView</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/11/2016-08-11-SHRINK-APPS-WITH-GRADLE-FOR-ANDROID/" rel="next" title="SHRINK APPS WITH GRADLE FOR-ANDROID">
+                <i class="fa fa-chevron-left"></i> SHRINK APPS WITH GRADLE FOR-ANDROID
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/11/2016-08-29-drag-and-swipe-with-recyclerview-part-two/" rel="prev" title="Drag and Swipe with RecyclerView Part Two">
+                Drag and Swipe with RecyclerView Part Two <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Waylan Punch" />
+            
+              <p class="site-author-name" itemprop="name">Waylan Punch</p>
+              <p class="site-description motion-element" itemprop="description">Keep Calm And Code On.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/WaylanPunch" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:waylanpunch@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/waylanpunch" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/users/4849200/waylan-punch" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://stackoverflow.com/" title="StackOverflow" target="_blank">StackOverflow</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://leancloud.cn" title="LeanCloud" target="_blank">LeanCloud</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://yq.aliyun.com/" title="云栖社区" target="_blank">云栖社区</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com" title="GitHub" target="_blank">GitHub</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://juejin.im/" title="掘金网" target="_blank">掘金网</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhihu.com/" title="知乎" target="_blank">知乎</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RecyclerView的拖放和滑动特效"><span class="nav-number">1.</span> <span class="nav-text">RecyclerView的拖放和滑动特效</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前瞻"><span class="nav-number">1.1.</span> <span class="nav-text">前瞻</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">1.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用ItemTouchHelper和ItemTouchHelper-Callback"><span class="nav-number">1.3.</span> <span class="nav-text">使用ItemTouchHelper和ItemTouchHelper.Callback</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结论"><span class="nav-number">1.4.</span> <span class="nav-text">结论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源码"><span class="nav-number">1.5.</span> <span class="nav-text">源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接下来"><span class="nav-number">1.6.</span> <span class="nav-text">接下来</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2014 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Waylan Punch</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'PmkIV6teulYlkGBTiDrJMRVn-gzGzoHsz',
+        appKey: 'SHRefBY1U0LkDzdvXp1oNkAY',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("PmkIV6teulYlkGBTiDrJMRVn-gzGzoHsz", "SHRefBY1U0LkDzdvXp1oNkAY");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://waylanpunch.github.io/"/>
-  <updated>2018-04-01T09:02:57.236Z</updated>
+  <updated>2018-05-23T18:08:11.303Z</updated>
   <id>https://waylanpunch.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DevelopmentLog</title>
+    <link href="https://waylanpunch.github.io/2018/05/24/DevelopmentLog/"/>
+    <id>https://waylanpunch.github.io/2018/05/24/DevelopmentLog/</id>
+    <published>2018-05-23T18:07:17.000Z</published>
+    <updated>2018-05-23T18:08:11.303Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;1、jQuery-countdown插件&quot;&gt;&lt;a href=&quot;#1、jQuery-countdown插件&quot; class=&quot;headerlink&quot; title=&quot;1、jQuery countdown插件&quot;&gt;&lt;/a&gt;1、jQuery countdown插件&lt;/h1&gt;&lt;p&gt;倒计时插件&lt;/p&gt;
+&lt;h1 id=&quot;2、Spring-Boot引用js、css文件&quot;&gt;&lt;a href=&quot;#2、Spring-Boot引用js、css文件&quot; class=&quot;headerlink&quot; title=&quot;2、Spring Boot引用js、css文件&quot;&gt;&lt;/a&gt;2、Spring Boot引用js、css文件&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/CureRrzy/article/details/79350356&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/CureRrzy/article/details/79350356&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -582,26 +599,6 @@ import android.widget.TextView;
     
     
       <category term="Toolbar" scheme="https://waylanpunch.github.io/tags/Toolbar/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>学习ConstraintLayout布局</title>
-    <link href="https://waylanpunch.github.io/2016/07/20/2016-07-21-about-constraint-layout/"/>
-    <id>https://waylanpunch.github.io/2016/07/20/2016-07-21-about-constraint-layout/</id>
-    <published>2016-07-19T16:29:48.000Z</published>
-    <updated>2018-04-01T09:18:29.254Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;下载了Android Studio 2.2 Preview 5版本，发现新建项目&lt;strong&gt;build.gradle&lt;/strong&gt;文件新增了一个&lt;strong&gt;layout&lt;/strong&gt;插件&lt;strong&gt;ConstraintLayout&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;compile &amp;apos;com.android.support.constraint:constraint-layout:1.0.0-alpha4&amp;apos;
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-    
-      <category term="ConstraintLayout" scheme="https://waylanpunch.github.io/tags/ConstraintLayout/"/>
     
   </entry>
   

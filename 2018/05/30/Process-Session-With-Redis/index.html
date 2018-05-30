@@ -89,13 +89,13 @@
 <meta property="og:site_name" content="Waylan Punch">
 <meta property="og:description" content="使用Redis管理分布式SessionRedis 是一个强大而简单的键值型数据库，之前在公司网站改版的过程中大量使用 Redis 来处理一些特殊的需求，我希望能将自己对 Redis 的使用经验都分享出来，而这里算是第一篇吧。 背景项目是一个有着不小访问量的网站，为了达到分流的作用，网站按照不同的业务（个人、企业、后台、营销、搜索、API等）区分成不同的子域名，而子域名下运行的是不同的实例。 对用户">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://note.youdao.com/favicon.ico">
-<meta property="og:image" content="https://note.youdao.com/favicon.ico">
-<meta property="og:updated_time" content="2018-05-30T15:43:45.783Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/redis-session-01.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/redis-session-02.png">
+<meta property="og:updated_time" content="2018-05-30T15:49:46.127Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Redis管理分布式Session">
 <meta name="twitter:description" content="使用Redis管理分布式SessionRedis 是一个强大而简单的键值型数据库，之前在公司网站改版的过程中大量使用 Redis 来处理一些特殊的需求，我希望能将自己对 Redis 的使用经验都分享出来，而这里算是第一篇吧。 背景项目是一个有着不小访问量的网站，为了达到分流的作用，网站按照不同的业务（个人、企业、后台、营销、搜索、API等）区分成不同的子域名，而子域名下运行的是不同的实例。 对用户">
-<meta name="twitter:image" content="https://note.youdao.com/favicon.ico">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/redis-session-01.png">
 
 
 
@@ -352,6 +352,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -405,7 +427,7 @@
 <p>对用户登录这块的逻辑，原来的做法是将登录的明文信息（登录ID、用户名、姓名等）在登录过程中直接写入用户 cookie，当需要进行登录校验的时候，后台直接取出 cookie 中保存的ID进行处理。可以想象，这样的模式只要模拟或者盗取了客户端的 cookie 信息，对于客户来说几乎没有任何安全性的保障。</p>
 <p>由于用户的操作可能跨越多个实例，如果采用服务器 session 的机制的话，就需要解决 session 的共享问题，从技术的实现角度来说可能碰到的坑就更多了，于是我们利用了 Redis 来模拟服务器的 session。</p>
 <a id="more"></a>
-<h2 id="实际设计"><a href="#实际设计" class="headerlink" title="实际设计"></a>实际设计</h2><p><img src="https://note.youdao.com/favicon.ico" alt="图1"></p>
+<h2 id="实际设计"><a href="#实际设计" class="headerlink" title="实际设计"></a>实际设计</h2><p><img src="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/redis-session-01.png" alt="图1"></p>
 <blockquote>
 <p>登录流程见图1</p>
 </blockquote>
@@ -414,7 +436,7 @@
 <li>Web Server 首先跟进行用户信息验证，当验证通过的时候，根据用户的客户端信息（IP、浏览器信息等）进行散列，形成一个 token，这个 token 将会是 Redis 中的 Key，同时将经常需要获取的内容（用户ID、姓名等）组装成 Value，根据需要可以是 json 格式或者 HashTable，然后设定一个 expire time 保存进 Redis</li>
 <li>将生成的 token 保存在用户的浏览器 cookie 中</li>
 </ul>
-<p><img src="https://note.youdao.com/favicon.ico" alt="图2"></p>
+<p><img src="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/redis-session-02.png" alt="图2"></p>
 <blockquote>
 <p>验证流程见图2</p>
 </blockquote>
@@ -590,6 +612,15 @@
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
             
 
             

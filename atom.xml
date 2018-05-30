@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://waylanpunch.github.io/"/>
-  <updated>2018-05-30T15:43:45.783Z</updated>
+  <updated>2018-05-30T15:49:46.127Z</updated>
   <id>https://waylanpunch.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://waylanpunch.github.io/2018/05/30/Process-Session-With-Redis/"/>
     <id>https://waylanpunch.github.io/2018/05/30/Process-Session-With-Redis/</id>
     <published>2018-05-30T15:32:18.000Z</published>
-    <updated>2018-05-30T15:43:45.783Z</updated>
+    <updated>2018-05-30T15:49:46.127Z</updated>
     
     <summary type="html">
     
@@ -31,6 +31,8 @@
 &lt;p&gt;由于用户的操作可能跨越多个实例，如果采用服务器 session 的机制的话，就需要解决 session 的共享问题，从技术的实现角度来说可能碰到的坑就更多了，于是我们利用了 Redis 来模拟服务器的 session。&lt;/p&gt;
     
     </summary>
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
     
     
       <category term="Redis" scheme="https://waylanpunch.github.io/tags/Redis/"/>
@@ -44,7 +46,7 @@
     <link href="https://waylanpunch.github.io/2018/05/24/DevelopmentLog/"/>
     <id>https://waylanpunch.github.io/2018/05/24/DevelopmentLog/</id>
     <published>2018-05-23T18:07:17.000Z</published>
-    <updated>2018-05-30T15:35:28.297Z</updated>
+    <updated>2018-05-30T15:50:03.615Z</updated>
     
     <summary type="html">
     
@@ -53,6 +55,10 @@
     
     </summary>
     
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/tags/Java/"/>
     
   </entry>
   

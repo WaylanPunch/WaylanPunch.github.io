@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://waylanpunch.github.io/"/>
-  <updated>2018-05-23T18:08:11.303Z</updated>
+  <updated>2018-05-30T15:43:45.783Z</updated>
   <id>https://waylanpunch.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>DevelopmentLog</title>
+    <title>使用Redis管理分布式Session</title>
+    <link href="https://waylanpunch.github.io/2018/05/30/Process-Session-With-Redis/"/>
+    <id>https://waylanpunch.github.io/2018/05/30/Process-Session-With-Redis/</id>
+    <published>2018-05-30T15:32:18.000Z</published>
+    <updated>2018-05-30T15:43:45.783Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;使用Redis管理分布式Session&quot;&gt;&lt;a href=&quot;#使用Redis管理分布式Session&quot; class=&quot;headerlink&quot; title=&quot;使用Redis管理分布式Session&quot;&gt;&lt;/a&gt;使用Redis管理分布式Session&lt;/h1&gt;&lt;p&gt;Redis 是一个强大而简单的键值型数据库，之前在公司网站改版的过程中大量使用 Redis 来处理一些特殊的需求，我希望能将自己对 Redis 的使用经验都分享出来，而这里算是第一篇吧。&lt;/p&gt;
+&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;项目是一个有着不小访问量的网站，为了达到分流的作用，网站按照不同的业务（个人、企业、后台、营销、搜索、API等）区分成不同的子域名，而子域名下运行的是不同的实例。&lt;/p&gt;
+&lt;p&gt;对用户登录这块的逻辑，原来的做法是将登录的明文信息（登录ID、用户名、姓名等）在登录过程中直接写入用户 cookie，当需要进行登录校验的时候，后台直接取出 cookie 中保存的ID进行处理。可以想象，这样的模式只要模拟或者盗取了客户端的 cookie 信息，对于客户来说几乎没有任何安全性的保障。&lt;/p&gt;
+&lt;p&gt;由于用户的操作可能跨越多个实例，如果采用服务器 session 的机制的话，就需要解决 session 的共享问题，从技术的实现角度来说可能碰到的坑就更多了，于是我们利用了 Redis 来模拟服务器的 session。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Redis" scheme="https://waylanpunch.github.io/tags/Redis/"/>
+    
+      <category term="Session" scheme="https://waylanpunch.github.io/tags/Session/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开发笔记</title>
     <link href="https://waylanpunch.github.io/2018/05/24/DevelopmentLog/"/>
     <id>https://waylanpunch.github.io/2018/05/24/DevelopmentLog/</id>
     <published>2018-05-23T18:07:17.000Z</published>
-    <updated>2018-05-23T18:08:11.303Z</updated>
+    <updated>2018-05-30T15:35:28.297Z</updated>
     
     <summary type="html">
     
@@ -569,36 +592,6 @@ import android.widget.TextView;
     
     
       <category term="HandlerThread" scheme="https://waylanpunch.github.io/tags/HandlerThread/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Toolbar里的文本或者控件不能左对齐</title>
-    <link href="https://waylanpunch.github.io/2016/07/21/2016-08-09-toolbar-style-custom/"/>
-    <id>https://waylanpunch.github.io/2016/07/21/2016-08-09-toolbar-style-custom/</id>
-    <published>2016-07-20T16:16:49.000Z</published>
-    <updated>2018-04-01T09:19:36.548Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;原因:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Wiget.AppCompat.Toolbar&lt;/strong&gt;的默认style指定了&lt;strong&gt;contentInsetStart&lt;/strong&gt;属性，即内容插入只能在&lt;strong&gt;16dp&lt;/strong&gt;处开始。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;style name=&amp;quot;Base.Widget.AppCompat.Toolbar&amp;quot; parent=&amp;quot;android:Widget&amp;quot;&amp;gt;  
-    &amp;lt;item name=&amp;quot;titleTextAppearance&amp;quot;&amp;gt;@style/TextAppearance.Widget.AppCompat.Toolbar.Title&amp;lt;/item&amp;gt;  
-    &amp;lt;item name=&amp;quot;subtitleTextAppearance&amp;quot;&amp;gt;@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle&amp;lt;/item&amp;gt;  
-    &amp;lt;item name=&amp;quot;android:minHeight&amp;quot;&amp;gt;?attr/actionBarSize&amp;lt;/item&amp;gt;  
-    &amp;lt;item name=&amp;quot;titleMargins&amp;quot;&amp;gt;4dp&amp;lt;/item&amp;gt;  
-    &amp;lt;item name=&amp;quot;maxButtonHeight&amp;quot;&amp;gt;56dp&amp;lt;/item&amp;gt;  
-    &amp;lt;item name=&amp;quot;collapseIcon&amp;quot;&amp;gt;?attr/homeAsUpIndicator&amp;lt;/item&amp;gt;  
-    &amp;lt;item name=&amp;quot;collapseContentDescription&amp;quot;&amp;gt;@string/abc_toolbar_collapse_description&amp;lt;/item&amp;gt;  
-    &amp;lt;item name=&amp;quot;contentInsetStart&amp;quot;&amp;gt;16dp&amp;lt;/item&amp;gt;  
-&amp;lt;/style&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-    
-      <category term="Toolbar" scheme="https://waylanpunch.github.io/tags/Toolbar/"/>
     
   </entry>
   

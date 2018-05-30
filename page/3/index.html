@@ -308,6 +308,163 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2016/07/21/2016-08-09-toolbar-style-custom/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/07/21/2016-08-09-toolbar-style-custom/" itemprop="url">Toolbar里的文本或者控件不能左对齐</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-21T00:16:49+08:00">
+                2016-07-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/07/21/2016-08-09-toolbar-style-custom/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2016/07/21/2016-08-09-toolbar-style-custom/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/07/21/2016-08-09-toolbar-style-custom/" class="leancloud_visitors" data-flag-title="Toolbar里的文本或者控件不能左对齐">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><strong>原因:</strong></p>
+<p><strong>Wiget.AppCompat.Toolbar</strong>的默认style指定了<strong>contentInsetStart</strong>属性，即内容插入只能在<strong>16dp</strong>处开始。</p>
+<pre><code>&lt;style name=&quot;Base.Widget.AppCompat.Toolbar&quot; parent=&quot;android:Widget&quot;&gt;  
+    &lt;item name=&quot;titleTextAppearance&quot;&gt;@style/TextAppearance.Widget.AppCompat.Toolbar.Title&lt;/item&gt;  
+    &lt;item name=&quot;subtitleTextAppearance&quot;&gt;@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle&lt;/item&gt;  
+    &lt;item name=&quot;android:minHeight&quot;&gt;?attr/actionBarSize&lt;/item&gt;  
+    &lt;item name=&quot;titleMargins&quot;&gt;4dp&lt;/item&gt;  
+    &lt;item name=&quot;maxButtonHeight&quot;&gt;56dp&lt;/item&gt;  
+    &lt;item name=&quot;collapseIcon&quot;&gt;?attr/homeAsUpIndicator&lt;/item&gt;  
+    &lt;item name=&quot;collapseContentDescription&quot;&gt;@string/abc_toolbar_collapse_description&lt;/item&gt;  
+    &lt;item name=&quot;contentInsetStart&quot;&gt;16dp&lt;/item&gt;  
+&lt;/style&gt;
+</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/07/21/2016-08-09-toolbar-style-custom/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2016/07/20/2016-07-21-about-constraint-layout/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1693,162 +1850,11 @@ public abstract class HidingScrollBottomListener extends RecyclerView.OnScrollLi
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2016/07/03/2016-07-25-AndroidCodeStandard/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Waylan Punch">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Waylan Punch">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/07/03/2016-07-25-AndroidCodeStandard/" itemprop="url">Android Code Standard</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-03T20:45:15+08:00">
-                2016-07-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/07/03/2016-07-25-AndroidCodeStandard/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2016/07/03/2016-07-25-AndroidCodeStandard/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2016/07/03/2016-07-25-AndroidCodeStandard/" class="leancloud_visitors" data-flag-title="Android Code Standard">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>An Android Code Standard Document, It’s A Public Resource, You Might Find It On My Company’s Home Site Or Not.</strong></p>
-<h1 id="1-避免坏习惯"><a href="#1-避免坏习惯" class="headerlink" title="1.避免坏习惯"></a>1.避免坏习惯</h1><h2 id="1-1-代码重复几乎是最常见的坏习惯"><a href="#1-1-代码重复几乎是最常见的坏习惯" class="headerlink" title="1.1 代码重复几乎是最常见的坏习惯"></a>1.1 代码重复几乎是最常见的坏习惯</h2><blockquote>
-<p>代码重复往往来自于copy-and-paste的编程风格。</p>
-</blockquote>
-<h2 id="1-2-代码很长的方法"><a href="#1-2-代码很长的方法" class="headerlink" title="1.2 代码很长的方法"></a>1.2 代码很长的方法</h2><blockquote>
-<p>一个方法应当具有自我独立的意图，不要把几个意图放在一起。</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/07/03/2016-07-25-AndroidCodeStandard/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1898,7 +1904,7 @@ public abstract class HidingScrollBottomListener extends RecyclerView.OnScrollLi
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1911,7 +1917,7 @@ public abstract class HidingScrollBottomListener extends RecyclerView.OnScrollLi
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-count">55</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

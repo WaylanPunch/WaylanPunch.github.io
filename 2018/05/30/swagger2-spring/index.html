@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo_32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo_32x32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo_16x16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo_32x32.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Swagger2,Spring," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Waylan Punch" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="本文将介Swagger2，它可以轻松组织出强大RESTful API文档。它既可以减少我们创建文档的工作量，同时说明内容又整合入实现代码中，让维护文档和修改代码整合为一体，可以让我们在修改代码逻辑的同时方便的修改文档说明。另外Swagger2也提供了强大的页面测试功能来调试每个RESTful API，而不再需要Postman。 Swagger2注解说明Swagger通过注解表明该接口会生成文档，包">
+<meta name="keywords" content="Swagger2,Spring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBoot整合Swagger2并汉化">
+<meta property="og:url" content="https://waylanpunch.github.io/2018/05/30/swagger2-spring/index.html">
+<meta property="og:site_name" content="Waylan Punch">
+<meta property="og:description" content="本文将介Swagger2，它可以轻松组织出强大RESTful API文档。它既可以减少我们创建文档的工作量，同时说明内容又整合入实现代码中，让维护文档和修改代码整合为一体，可以让我们在修改代码逻辑的同时方便的修改文档说明。另外Swagger2也提供了强大的页面测试功能来调试每个RESTful API，而不再需要Postman。 Swagger2注解说明Swagger通过注解表明该接口会生成文档，包">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/swagger2+spring.00.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/swagger2+spring.01.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/swagger2+spring.02.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/swagger2+spring.03.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/swagger2+spring.04.png">
+<meta property="og:updated_time" content="2018-09-02T15:09:48.400Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SpringBoot整合Swagger2并汉化">
+<meta name="twitter:description" content="本文将介Swagger2，它可以轻松组织出强大RESTful API文档。它既可以减少我们创建文档的工作量，同时说明内容又整合入实现代码中，让维护文档和修改代码整合为一体，可以让我们在修改代码逻辑的同时方便的修改文档说明。另外Swagger2也提供了强大的页面测试功能来调试每个RESTful API，而不再需要Postman。 Swagger2注解说明Swagger通过注解表明该接口会生成文档，包">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/swagger2+spring.00.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://waylanpunch.github.io/2018/05/30/swagger2-spring/"/>
+
+
+
+
+
+  <title>SpringBoot整合Swagger2并汉化 | Waylan Punch</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Waylan Punch</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">WP</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            Commonweal 404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/05/30/swagger2-spring/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">SpringBoot整合Swagger2并汉化</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-30T23:32:18+08:00">
+                2018-05-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/30/swagger2-spring/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/30/swagger2-spring/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/05/30/swagger2-spring/" class="leancloud_visitors" data-flag-title="SpringBoot整合Swagger2并汉化">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文将介Swagger2，它可以轻松组织出强大RESTful API文档。它既可以减少我们创建文档的工作量，同时说明内容又整合入实现代码中，让维护文档和修改代码整合为一体，可以让我们在修改代码逻辑的同时方便的修改文档说明。另外Swagger2也提供了强大的页面测试功能来调试每个RESTful API，而不再需要Postman。</p>
+<h1 id="Swagger2注解说明"><a href="#Swagger2注解说明" class="headerlink" title="Swagger2注解说明"></a>Swagger2注解说明</h1><p>Swagger通过注解表明该接口会生成文档，包括接口名、请求方法、参数、返回信息的等等。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@Api：修饰整个类，描述Controller的作用</span><br><span class="line">@ApiOperation：描述一个类的一个方法，或者说一个接口</span><br><span class="line">@ApiParam：单个参数描述</span><br><span class="line">@ApiModel：用对象来接收参数</span><br><span class="line">@ApiProperty：用对象接收参数时，描述对象的一个字段</span><br><span class="line">@ApiResponse：HTTP响应其中1个描述</span><br><span class="line">@ApiResponses：HTTP响应整体描述</span><br><span class="line">@ApiIgnore：使用该注解忽略这个API</span><br><span class="line">@ApiError ：发生错误返回的信息</span><br><span class="line">@ApiImplicitParam：一个请求参数</span><br><span class="line">@ApiImplicitParams：多个请求参数</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>@Api：用在请求的类上，表示对类的说明</p>
+<ul>
+<li>tags=”说明该类的作用，可以在UI界面上看到的注解”</li>
+<li>value=”该参数没什么意义，在UI界面上也看到，所以不需要配置”</li>
+</ul>
+</li>
+<li><p>@ApiOperation：用在请求的方法上，说明方法的用途、作用</p>
+<ul>
+<li>value=”说明方法的用途、作用”</li>
+<li>notes=”方法的备注说明”</li>
+</ul>
+</li>
+<li><p>@ApiImplicitParams：用在请求的方法上，表示一组参数说明</p>
+<ul>
+<li>@ApiImplicitParam：用在@ApiImplicitParams注解中，指定一个请求参数的各个方面<ul>
+<li>name：参数名</li>
+<li>value：参数的汉字说明、解释</li>
+<li>required：参数是否必须传</li>
+<li>paramType：参数放在哪个地方<ul>
+<li>header –&gt; 请求参数的获取：@RequestHeader</li>
+<li>query –&gt; 请求参数的获取：@RequestParam</li>
+<li>path（用于restful接口）–&gt; 请求参数的获取：@PathVariable</li>
+<li>body（不常用）</li>
+<li>form（不常用）    </li>
+</ul>
+</li>
+<li>dataType：参数类型，默认String，其它值dataType=”Integer”       </li>
+<li>defaultValue：参数的默认值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>@ApiResponses：用在请求的方法上，表示一组响应</p>
+<ul>
+<li>@ApiResponse：用在@ApiResponses中，一般用于表达一个错误的响应信息<ul>
+<li>code：数字，例如400</li>
+<li>message：信息，例如”请求参数没填好”</li>
+<li>response：抛出异常的类</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>@ApiModel：用于响应类上，表示一个返回响应数据的信息，（这种一般用在post创建的时候，使用@RequestBody这样的场景，请求参数无法使用@ApiImplicitParam注解进行描述的时候）</p>
+<ul>
+<li>@ApiModelProperty：用在属性上，描述响应类的属性</li>
+</ul>
+</li>
+</ul>
+<h1 id="Swagger2注解示例"><a href="#Swagger2注解示例" class="headerlink" title="Swagger2注解示例"></a>Swagger2注解示例</h1><p><strong>示例1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Api(tags=&quot;APP用户注册Controller&quot;)</span><br></pre></td></tr></table></figure>
+<p><strong>示例2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@ApiOperation(value=&quot;用户注册&quot;,notes=&quot;手机号、密码都是必输项，年龄随边填，但必须是数字&quot;)</span><br><span class="line"></span><br><span class="line">示列：</span><br><span class="line"></span><br><span class="line">@ApiImplicitParams(&#123;</span><br><span class="line">    @ApiImplicitParam(name=&quot;mobile&quot;,value=&quot;手机号&quot;,required=true,paramType=&quot;form&quot;),</span><br><span class="line">    @ApiImplicitParam(name=&quot;password&quot;,value=&quot;密码&quot;,required=true,paramType=&quot;form&quot;),</span><br><span class="line">    @ApiImplicitParam(name=&quot;age&quot;,value=&quot;年龄&quot;,required=true,paramType=&quot;form&quot;,dataType=&quot;Integer&quot;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>示例3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@ApiOperation(value = &quot;select1请求&quot;,notes = &quot;多个参数，多种的查询参数类型&quot;)</span><br><span class="line">@ApiResponses(&#123;</span><br><span class="line">    @ApiResponse(code=400,message=&quot;请求参数没填好&quot;),</span><br><span class="line">    @ApiResponse(code=404,message=&quot;请求路径没有或页面跳转路径不对&quot;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>示例4:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import io.swagger.annotations.ApiModel;</span><br><span class="line">import io.swagger.annotations.ApiModelProperty;</span><br><span class="line"></span><br><span class="line">import java.io.Serializable;</span><br><span class="line"></span><br><span class="line">@ApiModel(description= &quot;返回响应数据&quot;)</span><br><span class="line">public class RestMessage implements Serializable&#123;</span><br><span class="line"></span><br><span class="line">    @ApiModelProperty(value = &quot;是否成功&quot;)</span><br><span class="line">    private boolean success=true;</span><br><span class="line">    @ApiModelProperty(value = &quot;返回对象&quot;)</span><br><span class="line">    private Object data;</span><br><span class="line">    @ApiModelProperty(value = &quot;错误编号&quot;)</span><br><span class="line">    private Integer errCode;</span><br><span class="line">    @ApiModelProperty(value = &quot;错误信息&quot;)</span><br><span class="line">    private String message;</span><br><span class="line"></span><br><span class="line">    /* getter/setter */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Swagger2整合实践"><a href="#Swagger2整合实践" class="headerlink" title="Swagger2整合实践"></a>Swagger2整合实践</h1><p>首先打开Intellij Idea工具创建Spring Initializr项目。</p>
+<p><img src="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/swagger2+spring.00.png" alt="00"></p>
+<h2 id="1-添加依赖"><a href="#1-添加依赖" class="headerlink" title="1.添加依赖"></a>1.添加依赖</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;io.springfox&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;2.6.1&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;io.springfox&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;2.6.1&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="2-编写Swagger配置类"><a href="#2-编写Swagger配置类" class="headerlink" title="2.编写Swagger配置类"></a>2.编写Swagger配置类</h2><p>其实这个配置类，只要了解具体能配置哪些东西就好了，毕竟这个东西配置一次之后就不用再动了。 特别要注意的是里面配置了api文件也就是controller包的路径，不然生成的文档扫描不到接口。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">package com.example.swagger2demo;</span><br><span class="line"></span><br><span class="line">import org.springframework.context.annotation.Bean;</span><br><span class="line">import org.springframework.context.annotation.Configuration;</span><br><span class="line">import springfox.documentation.builders.ApiInfoBuilder;</span><br><span class="line">import springfox.documentation.builders.PathSelectors;</span><br><span class="line">import springfox.documentation.builders.RequestHandlerSelectors;</span><br><span class="line">import springfox.documentation.service.ApiInfo;</span><br><span class="line">import springfox.documentation.spi.DocumentationType;</span><br><span class="line">import springfox.documentation.spring.web.plugins.Docket;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author waylanpunch</span><br><span class="line"> * @ClassName com.example.swagger2demo.Swagger2</span><br><span class="line"> * @Description Swagger2 Configuration</span><br><span class="line"> */</span><br><span class="line">@Configuration</span><br><span class="line">public class Swagger2 &#123;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public Docket createRestApi() &#123;</span><br><span class="line">        return new Docket(DocumentationType.SWAGGER_2)</span><br><span class="line">                .apiInfo(apiInfo())</span><br><span class="line">                .select()</span><br><span class="line">                .apis(RequestHandlerSelectors.basePackage(&quot;com.example.swagger2demo.controller&quot;))</span><br><span class="line">                .paths(PathSelectors.any())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private ApiInfo apiInfo() &#123;</span><br><span class="line">        return new ApiInfoBuilder()</span><br><span class="line">                .title(&quot;springboot利用swagger构建api文档&quot;)</span><br><span class="line">                .description(&quot;简单优雅的REST风格，https://github.com/WaylanPunch/&quot;)</span><br><span class="line">                .termsOfServiceUrl(&quot;https://github.com/WaylanPunch/&quot;)</span><br><span class="line">                .version(&quot;1.0&quot;)</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>用@Configuration注解该类，等价于XML中配置beans；用@Bean标注方法等价于XML中配置bean。</p>
+</blockquote>
+<h2 id="3-创建Restful-API"><a href="#3-创建Restful-API" class="headerlink" title="3.创建Restful API"></a>3.创建Restful API</h2><ul>
+<li>一个UserController类提供访问接口</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br></pre></td><td class="code"><pre><span class="line">package com.example.swagger2demo.controller;</span><br><span class="line"></span><br><span class="line">import com.example.swagger2demo.bean.JsonResult;</span><br><span class="line">import com.example.swagger2demo.bean.User;</span><br><span class="line">import io.swagger.annotations.ApiImplicitParam;</span><br><span class="line">import io.swagger.annotations.ApiImplicitParams;</span><br><span class="line">import io.swagger.annotations.ApiOperation;</span><br><span class="line">import org.springframework.http.ResponseEntity;</span><br><span class="line">import org.springframework.web.bind.annotation.*;</span><br><span class="line">import springfox.documentation.annotations.ApiIgnore;</span><br><span class="line"></span><br><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author waylanpunch</span><br><span class="line"> * @ClassName com.example.swagger2demo.controller.UserController</span><br><span class="line"> * @Description UserController for User Controller</span><br><span class="line"> */</span><br><span class="line">@RestController</span><br><span class="line">public class UserController &#123;</span><br><span class="line">    // 创建线程安全的Map</span><br><span class="line">    static Map&lt;Integer, User&gt; users = Collections.synchronizedMap(new HashMap&lt;Integer, User&gt;());</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 根据ID查询用户</span><br><span class="line">     * @param id</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    @ApiOperation(value=&quot;获取用户详细信息&quot;, notes=&quot;根据url的id来获取用户详细信息&quot;)</span><br><span class="line">    @ApiImplicitParam(name = &quot;id&quot;, value = &quot;用户ID&quot;, required = true, dataType = &quot;Integer&quot;, paramType = &quot;path&quot;)</span><br><span class="line">    @RequestMapping(value = &quot;user/&#123;id&#125;&quot;, method = RequestMethod.GET)</span><br><span class="line">    public ResponseEntity&lt;JsonResult&gt; getUserById (@PathVariable(value = &quot;id&quot;) Integer id)&#123;</span><br><span class="line">        JsonResult r = new JsonResult();</span><br><span class="line">        try &#123;</span><br><span class="line">            User user = users.get(id);</span><br><span class="line">            r.setResult(user);</span><br><span class="line">            r.setStatus(&quot;ok&quot;);</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            r.setResult(e.getClass().getName() + &quot;:&quot; + e.getMessage());</span><br><span class="line">            r.setStatus(&quot;error&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        return ResponseEntity.ok(r);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 查询用户列表</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    @ApiOperation(value=&quot;获取用户列表&quot;, notes=&quot;获取用户列表&quot;)</span><br><span class="line">    @RequestMapping(value = &quot;users&quot;, method = RequestMethod.GET)</span><br><span class="line">    public ResponseEntity&lt;JsonResult&gt; getUserList ()&#123;</span><br><span class="line">        JsonResult r = new JsonResult();</span><br><span class="line">        try &#123;</span><br><span class="line">            List&lt;User&gt; userList = new ArrayList&lt;User&gt;(users.values());</span><br><span class="line">            r.setResult(userList);</span><br><span class="line">            r.setStatus(&quot;ok&quot;);</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            r.setResult(e.getClass().getName() + &quot;:&quot; + e.getMessage());</span><br><span class="line">            r.setStatus(&quot;error&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        return ResponseEntity.ok(r);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 添加用户</span><br><span class="line">     * @param user</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    @ApiOperation(value=&quot;创建用户&quot;, notes=&quot;根据User对象创建用户&quot;)</span><br><span class="line">    @ApiImplicitParam(name = &quot;user&quot;, value = &quot;用户详细实体user&quot;, required = true, dataType = &quot;User&quot;)</span><br><span class="line">    @RequestMapping(value = &quot;user&quot;, method = RequestMethod.POST)</span><br><span class="line">    public ResponseEntity&lt;JsonResult&gt; add (@RequestBody User user)&#123;</span><br><span class="line">        JsonResult r = new JsonResult();</span><br><span class="line">        try &#123;</span><br><span class="line">            users.put(user.getId(), user);</span><br><span class="line">            r.setResult(user.getId());</span><br><span class="line">            r.setStatus(&quot;ok&quot;);</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            r.setResult(e.getClass().getName() + &quot;:&quot; + e.getMessage());</span><br><span class="line">            r.setStatus(&quot;error&quot;);</span><br><span class="line"></span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        return ResponseEntity.ok(r);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 根据id删除用户</span><br><span class="line">     * @param id</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    @ApiOperation(value=&quot;删除用户&quot;, notes=&quot;根据url的id来指定删除用户&quot;)</span><br><span class="line">    @ApiImplicitParam(name = &quot;id&quot;, value = &quot;用户ID&quot;, required = true, dataType = &quot;Long&quot;, paramType = &quot;path&quot;)</span><br><span class="line">    @RequestMapping(value = &quot;user/&#123;id&#125;&quot;, method = RequestMethod.DELETE)</span><br><span class="line">    public ResponseEntity&lt;JsonResult&gt; delete (@PathVariable(value = &quot;id&quot;) Integer id)&#123;</span><br><span class="line">        JsonResult r = new JsonResult();</span><br><span class="line">        try &#123;</span><br><span class="line">            users.remove(id);</span><br><span class="line">            r.setResult(id);</span><br><span class="line">            r.setStatus(&quot;ok&quot;);</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            r.setResult(e.getClass().getName() + &quot;:&quot; + e.getMessage());</span><br><span class="line">            r.setStatus(&quot;error&quot;);</span><br><span class="line"></span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        return ResponseEntity.ok(r);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 根据id修改用户信息</span><br><span class="line">     * @param user</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    @ApiOperation(value=&quot;更新信息&quot;, notes=&quot;根据url的id来指定更新用户信息&quot;)</span><br><span class="line">    @ApiImplicitParams(&#123;</span><br><span class="line">            @ApiImplicitParam(name = &quot;id&quot;, value = &quot;用户ID&quot;, required = true, dataType = &quot;Long&quot;,paramType = &quot;path&quot;),</span><br><span class="line">            @ApiImplicitParam(name = &quot;user&quot;, value = &quot;用户实体user&quot;, required = true, dataType = &quot;User&quot;)</span><br><span class="line">    &#125;)</span><br><span class="line">    @RequestMapping(value = &quot;user/&#123;id&#125;&quot;, method = RequestMethod.PUT)</span><br><span class="line">    public ResponseEntity&lt;JsonResult&gt; update (@PathVariable(&quot;id&quot;) Integer id, @RequestBody User user)&#123;</span><br><span class="line">        JsonResult r = new JsonResult();</span><br><span class="line">        try &#123;</span><br><span class="line">            User u = users.get(id);</span><br><span class="line">            u.setUsername(user.getUsername());</span><br><span class="line">            u.setAge(user.getAge());</span><br><span class="line">            users.put(id, u);</span><br><span class="line">            r.setResult(u);</span><br><span class="line">            r.setStatus(&quot;ok&quot;);</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            r.setResult(e.getClass().getName() + &quot;:&quot; + e.getMessage());</span><br><span class="line">            r.setStatus(&quot;error&quot;);</span><br><span class="line"></span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        return ResponseEntity.ok(r);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @ApiIgnore//使用该注解忽略这个API</span><br><span class="line">    @RequestMapping(value = &quot;/hi&quot;, method = RequestMethod.GET)</span><br><span class="line">    public String  jsonTest() &#123;</span><br><span class="line">        return &quot; hi you!&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Json格式输出类 JsonResult.class</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">package com.example.swagger2demo.bean;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author waylanpunch</span><br><span class="line"> * @ClassName com.example.swagger2demo.bean.JsonResult</span><br><span class="line"> * @Description JsonResult Bean</span><br><span class="line"> */</span><br><span class="line">public class JsonResult &#123;</span><br><span class="line">    private String status = null;</span><br><span class="line"></span><br><span class="line">    private Object result = null;</span><br><span class="line"></span><br><span class="line">    public String getStatus() &#123;</span><br><span class="line">        return status;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setStatus(String status) &#123;</span><br><span class="line">        this.status = status;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Object getResult() &#123;</span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setResult(Object result) &#123;</span><br><span class="line">        this.result = result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>实体User.class</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">package com.example.swagger2demo.bean;</span><br><span class="line"></span><br><span class="line">import java.util.Date;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author waylanpunch</span><br><span class="line"> * @ClassName com.example.swagger2demo.bean.User</span><br><span class="line"> * @Description User Bean</span><br><span class="line"> */</span><br><span class="line">public class User &#123;</span><br><span class="line"></span><br><span class="line">    private int id;</span><br><span class="line">    private String username;</span><br><span class="line">    private int age;</span><br><span class="line">    private Date ctm;</span><br><span class="line"></span><br><span class="line">    public int getId() &#123;</span><br><span class="line">        return id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setId(int id) &#123;</span><br><span class="line">        this.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getUsername() &#123;</span><br><span class="line">        return username;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setUsername(String username) &#123;</span><br><span class="line">        this.username = username;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int getAge() &#123;</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setAge(int age) &#123;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Date getCtm() &#123;</span><br><span class="line">        return ctm;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setCtm(Date ctm) &#123;</span><br><span class="line">        this.ctm = ctm;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4-启动类添加-EnableSwagger2注解"><a href="#4-启动类添加-EnableSwagger2注解" class="headerlink" title="4.启动类添加@EnableSwagger2注解"></a>4.启动类添加@EnableSwagger2注解</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">package com.example.swagger2demo;</span><br><span class="line"></span><br><span class="line">import org.springframework.boot.SpringApplication;</span><br><span class="line">import org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line">import springfox.documentation.swagger2.annotations.EnableSwagger2;</span><br><span class="line"></span><br><span class="line">@SpringBootApplication</span><br><span class="line">@EnableSwagger2</span><br><span class="line">public class Swagger2demoApplication &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        SpringApplication.run(Swagger2demoApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="5-访问Swagger2文档"><a href="#5-访问Swagger2文档" class="headerlink" title="5.访问Swagger2文档"></a>5.访问Swagger2文档</h2><p>启动SpringBoot项目，访问 <a href="http://localhost:8080/swagger-ui.html" target="_blank" rel="noopener">http://localhost:8080/swagger-ui.html</a></p>
+<h1 id="Swagger2汉化过程"><a href="#Swagger2汉化过程" class="headerlink" title="Swagger2汉化过程"></a>Swagger2汉化过程</h1><p><img src="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/swagger2+spring.01.png" alt="01"></p>
+<p>swagger-ui/dist/lang/translator.js文档中有这样一段描述：</p>
+<blockquote>
+<p>To enable translation you should include one of language-files in your index.html after </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; &lt;script src=&apos;lang/translator.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>For example - </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; &lt;script src=&apos;lang/ru.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+</blockquote>
+<p>也就是说，只要添加翻译器和对于的译文JS就可以显示中文界面了。</p>
+<p><img src="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/swagger2+spring.02.png" alt="02"></p>
+<p>使用IDEA 双击Shift 快速找到swagger-ui.html 入口文件，完全拷贝内容在项目中创建一模一样的文件swagger-ui.html。<br>注意文件路径必须为src\main\resources\META-INF\resources\swagger-ui.html。</p>
+<p><img src="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/swagger2+spring.03.png" alt="03"></p>
+<p>针对中文的本地化，在swagger-ui.html文件中添加以下两行标签：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--国际化操作：选择中文版 --&gt;</span><br><span class="line">&lt;script src=&apos;webjars/springfox-swagger-ui/lang/translator.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&apos;webjars/springfox-swagger-ui/lang/zh-cn.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>完整内容为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Swagger UI&lt;/title&gt;</span><br><span class="line">    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;webjars/springfox-swagger-ui/images/favicon-32x32.png&quot; sizes=&quot;32x32&quot;/&gt;</span><br><span class="line">    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;webjars/springfox-swagger-ui/images/favicon-16x16.png&quot; sizes=&quot;16x16&quot;/&gt;</span><br><span class="line">    &lt;link href=&apos;webjars/springfox-swagger-ui/css/typography.css&apos; media=&apos;screen&apos; rel=&apos;stylesheet&apos; type=&apos;text/css&apos;/&gt;</span><br><span class="line">    &lt;link href=&apos;webjars/springfox-swagger-ui/css/reset.css&apos; media=&apos;screen&apos; rel=&apos;stylesheet&apos; type=&apos;text/css&apos;/&gt;</span><br><span class="line">    &lt;link href=&apos;webjars/springfox-swagger-ui/css/screen.css&apos; media=&apos;screen&apos; rel=&apos;stylesheet&apos; type=&apos;text/css&apos;/&gt;</span><br><span class="line">    &lt;link href=&apos;webjars/springfox-swagger-ui/css/reset.css&apos; media=&apos;print&apos; rel=&apos;stylesheet&apos; type=&apos;text/css&apos;/&gt;</span><br><span class="line">    &lt;link href=&apos;webjars/springfox-swagger-ui/css/print.css&apos; media=&apos;print&apos; rel=&apos;stylesheet&apos; type=&apos;text/css&apos;/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/jquery.slideto.min.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/lodash.min.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/backbone-min.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/swagger-ui.min.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/jsoneditor.min.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/marked.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/swagger-oauth.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/springfox.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!--国际化操作：选择中文版 --&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lang/translator.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lang/zh-cn.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body class=&quot;swagger-section&quot;&gt;</span><br><span class="line">&lt;div id=&apos;header&apos;&gt;</span><br><span class="line">    &lt;div class=&quot;swagger-ui-wrap&quot;&gt;</span><br><span class="line">        &lt;a id=&quot;logo&quot; href=&quot;http://swagger.io&quot;&gt;&lt;img class=&quot;logo__img&quot; alt=&quot;swagger&quot; height=&quot;30&quot; width=&quot;30&quot; src=&quot;webjars/springfox-swagger-ui/images/logo_small.png&quot; /&gt;&lt;span class=&quot;logo__title&quot;&gt;swagger&lt;/span&gt;&lt;/a&gt;</span><br><span class="line">        &lt;form id=&apos;api_selector&apos;&gt;</span><br><span class="line">            &lt;div class=&apos;input&apos;&gt;</span><br><span class="line">                &lt;select id=&quot;select_baseUrl&quot; name=&quot;select_baseUrl&quot;/&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&apos;input&apos;&gt;&lt;input placeholder=&quot;http://example.com/api&quot; id=&quot;input_baseUrl&quot; name=&quot;baseUrl&quot; type=&quot;text&quot;/&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div id=&apos;auth_container&apos;&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div class=&apos;input&apos;&gt;&lt;a id=&quot;explore&quot; class=&quot;header__btn&quot; href=&quot;#&quot; data-sw-translate&gt;Explore&lt;/a&gt;&lt;/div&gt;</span><br><span class="line">        &lt;/form&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div id=&quot;message-bar&quot; class=&quot;swagger-ui-wrap&quot; data-sw-translate&gt;&amp;nbsp;&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;swagger-ui-container&quot; class=&quot;swagger-ui-wrap&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>再次启动项目，访问 <a href="http://localhost:8080/swagger-ui.html，看看显示效果：" target="_blank" rel="noopener">http://localhost:8080/swagger-ui.html，看看显示效果：</a></p>
+<p><img src="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/swagger2+spring.04.png" alt="04"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>I Don't Want Your Money, I Want Aragaki Yui.</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/reward_images.jpg" alt="Waylan Punch Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Swagger2/" rel="tag"># Swagger2</a>
+          
+            <a href="/tags/Spring/" rel="tag"># Spring</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/24/DevelopmentLog/" rel="next" title="开发笔记">
+                <i class="fa fa-chevron-left"></i> 开发笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/30/Process-Session-With-Redis/" rel="prev" title="使用Redis管理分布式Session">
+                使用Redis管理分布式Session <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Waylan Punch" />
+            
+              <p class="site-author-name" itemprop="name">Waylan Punch</p>
+              <p class="site-description motion-element" itemprop="description">Keep Calm And Code On.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/WaylanPunch" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:waylanpunch@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/waylanpunch" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/users/4849200/waylan-punch" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://stackoverflow.com/" title="StackOverflow" target="_blank">StackOverflow</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://leancloud.cn" title="LeanCloud" target="_blank">LeanCloud</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://yq.aliyun.com/" title="云栖社区" target="_blank">云栖社区</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com" title="GitHub" target="_blank">GitHub</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://juejin.im/" title="掘金网" target="_blank">掘金网</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhihu.com/" title="知乎" target="_blank">知乎</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Swagger2注解说明"><span class="nav-number">1.</span> <span class="nav-text">Swagger2注解说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Swagger2注解示例"><span class="nav-number">2.</span> <span class="nav-text">Swagger2注解示例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Swagger2整合实践"><span class="nav-number">3.</span> <span class="nav-text">Swagger2整合实践</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-添加依赖"><span class="nav-number">3.1.</span> <span class="nav-text">1.添加依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-编写Swagger配置类"><span class="nav-number">3.2.</span> <span class="nav-text">2.编写Swagger配置类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-创建Restful-API"><span class="nav-number">3.3.</span> <span class="nav-text">3.创建Restful API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-启动类添加-EnableSwagger2注解"><span class="nav-number">3.4.</span> <span class="nav-text">4.启动类添加@EnableSwagger2注解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-访问Swagger2文档"><span class="nav-number">3.5.</span> <span class="nav-text">5.访问Swagger2文档</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Swagger2汉化过程"><span class="nav-number">4.</span> <span class="nav-text">Swagger2汉化过程</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2014 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Waylan Punch</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'PmkIV6teulYlkGBTiDrJMRVn-gzGzoHsz',
+        appKey: 'SHRefBY1U0LkDzdvXp1oNkAY',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("PmkIV6teulYlkGBTiDrJMRVn-gzGzoHsz", "SHRefBY1U0LkDzdvXp1oNkAY");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

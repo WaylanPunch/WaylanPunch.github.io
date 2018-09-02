@@ -42,6 +42,34 @@
   </entry>
   
   <entry>
+    <title>SpringBoot整合Swagger2并汉化</title>
+    <link href="https://waylanpunch.github.io/2018/05/30/swagger2-spring/"/>
+    <id>https://waylanpunch.github.io/2018/05/30/swagger2-spring/</id>
+    <published>2018-05-30T15:32:18.000Z</published>
+    <updated>2018-09-02T15:09:48.400Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文将介Swagger2，它可以轻松组织出强大RESTful
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
+    
+    
+      <category term="Swagger2" scheme="https://waylanpunch.github.io/tags/Swagger2/"/>
+    
+      <category term="Spring" scheme="https://waylanpunch.github.io/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
     <title>开发笔记</title>
     <link href="https://waylanpunch.github.io/2018/05/24/DevelopmentLog/"/>
     <id>https://waylanpunch.github.io/2018/05/24/DevelopmentLog/</id>
@@ -572,32 +600,6 @@ dependencies {
     
     
       <category term="ButterKnife" scheme="https://waylanpunch.github.io/tags/ButterKnife/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>An Simple HandlerThread Example</title>
-    <link href="https://waylanpunch.github.io/2016/08/10/2016-08-10-handlerthreadexample/"/>
-    <id>https://waylanpunch.github.io/2016/08/10/2016-08-10-handlerthreadexample/</id>
-    <published>2016-08-10T15:51:35.000Z</published>
-    <updated>2018-04-01T09:20:09.565Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;HandlerThread实例&quot;&gt;&lt;a href=&quot;#HandlerThread实例&quot; class=&quot;headerlink&quot; title=&quot;HandlerThread实例&quot;&gt;&lt;/a&gt;HandlerThread实例&lt;/h1&gt;&lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;import android.os.Bundle;
-import android.os.Handler;
-import android.os.HandlerThread;
-import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
-import android.widget.TextView;
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-    
-      <category term="HandlerThread" scheme="https://waylanpunch.github.io/tags/HandlerThread/"/>
     
   </entry>
   

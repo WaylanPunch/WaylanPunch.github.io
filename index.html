@@ -308,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/05/30/Process-Session-With-Redis/">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/07/06/swagger2-spring/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Waylan Punch">
@@ -327,7 +327,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/30/Process-Session-With-Redis/" itemprop="url">使用Redis管理分布式Session</a></h1>
+                <a class="post-title-link" href="/2018/07/06/swagger2-spring/" itemprop="url">SpringBoot整合Swagger2并汉化</a></h1>
         
 
         <div class="post-meta">
@@ -339,8 +339,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-30T23:32:18+08:00">
-                2018-05-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-06T22:05:01+08:00">
+                2018-07-06
               </time>
             
 
@@ -380,8 +380,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/30/Process-Session-With-Redis/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/30/Process-Session-With-Redis/" itemprop="commentCount"></span>
+                <a href="/2018/07/06/swagger2-spring/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/06/swagger2-spring/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -389,177 +389,7 @@
 
           
           
-             <span id="/2018/05/30/Process-Session-With-Redis/" class="leancloud_visitors" data-flag-title="使用Redis管理分布式Session">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="使用Redis管理分布式Session"><a href="#使用Redis管理分布式Session" class="headerlink" title="使用Redis管理分布式Session"></a>使用Redis管理分布式Session</h1><p>Redis 是一个强大而简单的键值型数据库，之前在公司网站改版的过程中大量使用 Redis 来处理一些特殊的需求，我希望能将自己对 Redis 的使用经验都分享出来，而这里算是第一篇吧。</p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>项目是一个有着不小访问量的网站，为了达到分流的作用，网站按照不同的业务（个人、企业、后台、营销、搜索、API等）区分成不同的子域名，而子域名下运行的是不同的实例。</p>
-<p>对用户登录这块的逻辑，原来的做法是将登录的明文信息（登录ID、用户名、姓名等）在登录过程中直接写入用户 cookie，当需要进行登录校验的时候，后台直接取出 cookie 中保存的ID进行处理。可以想象，这样的模式只要模拟或者盗取了客户端的 cookie 信息，对于客户来说几乎没有任何安全性的保障。</p>
-<p>由于用户的操作可能跨越多个实例，如果采用服务器 session 的机制的话，就需要解决 session 的共享问题，从技术的实现角度来说可能碰到的坑就更多了，于是我们利用了 Redis 来模拟服务器的 session。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/30/Process-Session-With-Redis/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/05/30/swagger2-spring/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Waylan Punch">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Waylan Punch">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/30/swagger2-spring/" itemprop="url">SpringBoot整合Swagger2并汉化</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-30T23:32:18+08:00">
-                2018-05-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/30/swagger2-spring/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/30/swagger2-spring/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/05/30/swagger2-spring/" class="leancloud_visitors" data-flag-title="SpringBoot整合Swagger2并汉化">
+             <span id="/2018/07/06/swagger2-spring/" class="leancloud_visitors" data-flag-title="SpringBoot整合Swagger2并汉化">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -696,8 +526,182 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Swagger UI&lt;/title&gt;</span><br><span class="line">    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;webjars/springfox-swagger-ui/images/favicon-32x32.png&quot; sizes=&quot;32x32&quot;/&gt;</span><br><span class="line">    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;webjars/springfox-swagger-ui/images/favicon-16x16.png&quot; sizes=&quot;16x16&quot;/&gt;</span><br><span class="line">    &lt;link href=&apos;webjars/springfox-swagger-ui/css/typography.css&apos; media=&apos;screen&apos; rel=&apos;stylesheet&apos; type=&apos;text/css&apos;/&gt;</span><br><span class="line">    &lt;link href=&apos;webjars/springfox-swagger-ui/css/reset.css&apos; media=&apos;screen&apos; rel=&apos;stylesheet&apos; type=&apos;text/css&apos;/&gt;</span><br><span class="line">    &lt;link href=&apos;webjars/springfox-swagger-ui/css/screen.css&apos; media=&apos;screen&apos; rel=&apos;stylesheet&apos; type=&apos;text/css&apos;/&gt;</span><br><span class="line">    &lt;link href=&apos;webjars/springfox-swagger-ui/css/reset.css&apos; media=&apos;print&apos; rel=&apos;stylesheet&apos; type=&apos;text/css&apos;/&gt;</span><br><span class="line">    &lt;link href=&apos;webjars/springfox-swagger-ui/css/print.css&apos; media=&apos;print&apos; rel=&apos;stylesheet&apos; type=&apos;text/css&apos;/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/jquery.slideto.min.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/lodash.min.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/backbone-min.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/swagger-ui.min.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/jsoneditor.min.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/marked.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lib/swagger-oauth.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/springfox.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!--国际化操作：选择中文版 --&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lang/translator.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&apos;webjars/springfox-swagger-ui/lang/zh-cn.js&apos; type=&apos;text/javascript&apos;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body class=&quot;swagger-section&quot;&gt;</span><br><span class="line">&lt;div id=&apos;header&apos;&gt;</span><br><span class="line">    &lt;div class=&quot;swagger-ui-wrap&quot;&gt;</span><br><span class="line">        &lt;a id=&quot;logo&quot; href=&quot;http://swagger.io&quot;&gt;&lt;img class=&quot;logo__img&quot; alt=&quot;swagger&quot; height=&quot;30&quot; width=&quot;30&quot; src=&quot;webjars/springfox-swagger-ui/images/logo_small.png&quot; /&gt;&lt;span class=&quot;logo__title&quot;&gt;swagger&lt;/span&gt;&lt;/a&gt;</span><br><span class="line">        &lt;form id=&apos;api_selector&apos;&gt;</span><br><span class="line">            &lt;div class=&apos;input&apos;&gt;</span><br><span class="line">                &lt;select id=&quot;select_baseUrl&quot; name=&quot;select_baseUrl&quot;/&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&apos;input&apos;&gt;&lt;input placeholder=&quot;http://example.com/api&quot; id=&quot;input_baseUrl&quot; name=&quot;baseUrl&quot; type=&quot;text&quot;/&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div id=&apos;auth_container&apos;&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div class=&apos;input&apos;&gt;&lt;a id=&quot;explore&quot; class=&quot;header__btn&quot; href=&quot;#&quot; data-sw-translate&gt;Explore&lt;/a&gt;&lt;/div&gt;</span><br><span class="line">        &lt;/form&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div id=&quot;message-bar&quot; class=&quot;swagger-ui-wrap&quot; data-sw-translate&gt;&amp;nbsp;&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;swagger-ui-container&quot; class=&quot;swagger-ui-wrap&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 <p>再次启动项目，访问 <a href="http://localhost:8080/swagger-ui.html，看看显示效果：" target="_blank" rel="noopener">http://localhost:8080/swagger-ui.html，看看显示效果：</a></p>
 <p><img src="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/swagger2+spring.04.png" alt="04"></p>
+<p>可将zh-cn.js文件复制到项目中，进一步定制翻译内容，注意zh-cn.js与swagger-ui.html的相对路径。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\src\main\resources\META-INF\resources\swagger-ui.html</span><br><span class="line">\src\main\resources\META-INF\resources\webjars\springfox-swagger-ui\lang\zh-cn.js</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/swagger2+spring.05.png" alt="05"></p>
+<p>zh-cn.js文件全部内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">&apos;use strict&apos;;</span><br><span class="line"></span><br><span class="line">/* jshint quotmark: double */</span><br><span class="line">window.SwaggerTranslator.learn(&#123;</span><br><span class="line">    &quot;Warning: Deprecated&quot;:&quot;警告：已过时&quot;,</span><br><span class="line">    &quot;Implementation Notes&quot;:&quot;实现备注&quot;,</span><br><span class="line">    &quot;Response Class&quot;:&quot;响应类&quot;,</span><br><span class="line">    &quot;Status&quot;:&quot;状态&quot;,</span><br><span class="line">    &quot;Parameters&quot;:&quot;参数&quot;,</span><br><span class="line">    &quot;Parameter&quot;:&quot;参数&quot;,</span><br><span class="line">    &quot;Value&quot;:&quot;值&quot;,</span><br><span class="line">    &quot;Description&quot;:&quot;描述&quot;,</span><br><span class="line">    &quot;Parameter Type&quot;:&quot;参数类型&quot;,</span><br><span class="line">    &quot;Data Type&quot;:&quot;数据类型&quot;,</span><br><span class="line">    &quot;Response Messages&quot;:&quot;响应消息&quot;,</span><br><span class="line">    &quot;HTTP Status Code&quot;:&quot;HTTP状态码&quot;,</span><br><span class="line">    &quot;Reason&quot;:&quot;原因&quot;,</span><br><span class="line">    &quot;Response Model&quot;:&quot;响应模型&quot;,</span><br><span class="line">    &quot;Request URL&quot;:&quot;请求URL&quot;,</span><br><span class="line">    &quot;Response Body&quot;:&quot;响应体&quot;,</span><br><span class="line">    &quot;Response Code&quot;:&quot;响应码&quot;,</span><br><span class="line">    &quot;Response Headers&quot;:&quot;响应头&quot;,</span><br><span class="line">    &quot;Hide Response&quot;:&quot;隐藏响应&quot;,</span><br><span class="line">    &quot;Headers&quot;:&quot;头&quot;,</span><br><span class="line">    &quot;Try it out!&quot;:&quot;试一下！&quot;,</span><br><span class="line">    &quot;Show/Hide&quot;:&quot;显示/隐藏&quot;,</span><br><span class="line">    &quot;List Operations&quot;:&quot;显示操作&quot;,</span><br><span class="line">    &quot;Expand Operations&quot;:&quot;展开操作&quot;,</span><br><span class="line">    &quot;Raw&quot;:&quot;原始&quot;,</span><br><span class="line">    &quot;can&apos;t parse JSON.  Raw result&quot;:&quot;无法解析JSON. 原始结果&quot;,</span><br><span class="line">    &quot;Example Value&quot;:&quot;示例&quot;,</span><br><span class="line">    &quot;Click to set as parameter value&quot;:&quot;点击设置参数&quot;,</span><br><span class="line">    &quot;Model Schema&quot;:&quot;模型架构&quot;,</span><br><span class="line">    &quot;Model&quot;:&quot;模型&quot;,</span><br><span class="line">    &quot;apply&quot;:&quot;应用&quot;,</span><br><span class="line">    &quot;Username&quot;:&quot;用户名&quot;,</span><br><span class="line">    &quot;Password&quot;:&quot;密码&quot;,</span><br><span class="line">    &quot;Terms of service&quot;:&quot;服务条款&quot;,</span><br><span class="line">    &quot;Created by&quot;:&quot;创建者&quot;,</span><br><span class="line">    &quot;See more at&quot;:&quot;查看更多：&quot;,</span><br><span class="line">    &quot;Contact the developer&quot;:&quot;联系开发者&quot;,</span><br><span class="line">    &quot;api version&quot;:&quot;api版本&quot;,</span><br><span class="line">    &quot;Response Content Type&quot;:&quot;响应Content Type&quot;,</span><br><span class="line">    &quot;Parameter content type:&quot;:&quot;参数类型:&quot;,</span><br><span class="line">    &quot;fetching resource&quot;:&quot;正在获取资源&quot;,</span><br><span class="line">    &quot;fetching resource list&quot;:&quot;正在获取资源列表&quot;,</span><br><span class="line">    &quot;Explore&quot;:&quot;浏览&quot;,</span><br><span class="line">    &quot;Show Swagger Petstore Example Apis&quot;:&quot;显示 Swagger Petstore 示例 Apis&quot;,</span><br><span class="line">    &quot;Can&apos;t read from server.  It may not have the appropriate access-control-origin settings.&quot;:&quot;无法从服务器读取。可能没有正确设置access-control-origin。&quot;,</span><br><span class="line">    &quot;Please specify the protocol for&quot;:&quot;请指定协议：&quot;,</span><br><span class="line">    &quot;Can&apos;t read swagger JSON from&quot;:&quot;无法读取swagger JSON于&quot;,</span><br><span class="line">    &quot;Finished Loading Resource Information. Rendering Swagger UI&quot;:&quot;已加载资源信息。正在渲染Swagger UI&quot;,</span><br><span class="line">    &quot;Unable to read api&quot;:&quot;无法读取api&quot;,</span><br><span class="line">    &quot;from path&quot;:&quot;从路径&quot;,</span><br><span class="line">    &quot;server returned&quot;:&quot;服务器返回&quot;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/05/30/Process-Session-With-Redis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/30/Process-Session-With-Redis/" itemprop="url">使用Redis管理分布式Session</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-30T23:32:18+08:00">
+                2018-05-30
+              </time>
+            
+
+            
+
+            
+          </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/30/Process-Session-With-Redis/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/30/Process-Session-With-Redis/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/05/30/Process-Session-With-Redis/" class="leancloud_visitors" data-flag-title="使用Redis管理分布式Session">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="使用Redis管理分布式Session"><a href="#使用Redis管理分布式Session" class="headerlink" title="使用Redis管理分布式Session"></a>使用Redis管理分布式Session</h1><p>Redis 是一个强大而简单的键值型数据库，之前在公司网站改版的过程中大量使用 Redis 来处理一些特殊的需求，我希望能将自己对 Redis 的使用经验都分享出来，而这里算是第一篇吧。</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>项目是一个有着不小访问量的网站，为了达到分流的作用，网站按照不同的业务（个人、企业、后台、营销、搜索、API等）区分成不同的子域名，而子域名下运行的是不同的实例。</p>
+<p>对用户登录这块的逻辑，原来的做法是将登录的明文信息（登录ID、用户名、姓名等）在登录过程中直接写入用户 cookie，当需要进行登录校验的时候，后台直接取出 cookie 中保存的ID进行处理。可以想象，这样的模式只要模拟或者盗取了客户端的 cookie 信息，对于客户来说几乎没有任何安全性的保障。</p>
+<p>由于用户的操作可能跨越多个实例，如果采用服务器 session 的机制的话，就需要解决 session 的共享问题，从技术的实现角度来说可能碰到的坑就更多了，于是我们利用了 Redis 来模拟服务器的 session。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/30/Process-Session-With-Redis/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

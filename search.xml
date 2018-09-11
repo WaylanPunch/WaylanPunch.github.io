@@ -364,8 +364,8 @@
         <tag>test</tag>
         <tag>sample</tag>
         <tag>markdown</tag>
-        <tag>syntax</tag>
         <tag>jekyll</tag>
+        <tag>syntax</tag>
       </tags>
   </entry>
   <entry>
@@ -385,9 +385,9 @@
       <tags>
         <tag>test</tag>
         <tag>markdown</tag>
-        <tag>jekyll</tag>
         <tag>mathjax</tag>
         <tag>example</tag>
+        <tag>jekyll</tag>
       </tags>
   </entry>
   <entry>

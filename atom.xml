@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://waylanpunch.github.io/"/>
-  <updated>2018-09-11T14:56:03.246Z</updated>
+  <updated>2018-09-11T15:02:01.847Z</updated>
   <id>https://waylanpunch.github.io/</id>
   
   <author>
@@ -21,17 +21,62 @@
     <link href="https://waylanpunch.github.io/2018/07/06/swagger2-spring/"/>
     <id>https://waylanpunch.github.io/2018/07/06/swagger2-spring/</id>
     <published>2018-07-06T14:05:01.000Z</published>
-    <updated>2018-09-11T14:56:03.246Z</updated>
+    <updated>2018-09-11T15:02:01.847Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;本文将介Swagger2，它可以轻松组织出强大RESTful
-        
-      
+      &lt;p&gt;本文将介Swagger2，它可以轻松组织出强大RESTful API文档。它既可以减少我们创建文档的工作量，同时说明内容又整合入实现代码中，让维护文档和修改代码整合为一体，可以让我们在修改代码逻辑的同时方便的修改文档说明。另外Swagger2也提供了强大的页面测试功能来调试每个RESTful API，而不再需要Postman。&lt;/p&gt;
+&lt;h1 id=&quot;Swagger2注解说明&quot;&gt;&lt;a href=&quot;#Swagger2注解说明&quot; class=&quot;headerlink&quot; title=&quot;Swagger2注解说明&quot;&gt;&lt;/a&gt;Swagger2注解说明&lt;/h1&gt;&lt;p&gt;Swagger通过注解表明该接口会生成文档，包括接口名、请求方法、参数、返回信息的等等。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;@Api：修饰整个类，描述Controller的作用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@ApiOperation：描述一个类的一个方法，或者说一个接口&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@ApiParam：单个参数描述&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@ApiModel：用对象来接收参数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@ApiProperty：用对象接收参数时，描述对象的一个字段&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@ApiResponse：HTTP响应其中1个描述&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@ApiResponses：HTTP响应整体描述&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@ApiIgnore：使用该注解忽略这个API&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@ApiError ：发生错误返回的信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@ApiImplicitParam：一个请求参数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@ApiImplicitParams：多个请求参数&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;@Api：用在请求的类上，表示对类的说明&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tags=”说明该类的作用，可以在UI界面上看到的注解”&lt;/li&gt;
+&lt;li&gt;value=”该参数没什么意义，在UI界面上也看到，所以不需要配置”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;@ApiOperation：用在请求的方法上，说明方法的用途、作用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;value=”说明方法的用途、作用”&lt;/li&gt;
+&lt;li&gt;notes=”方法的备注说明”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;@ApiImplicitParams：用在请求的方法上，表示一组参数说明&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;@ApiImplicitParam：用在@ApiImplicitParams注解中，指定一个请求参数的各个方面&lt;ul&gt;
+&lt;li&gt;name：参数名&lt;/li&gt;
+&lt;li&gt;value：参数的汉字说明、解释&lt;/li&gt;
+&lt;li&gt;required：参数是否必须传&lt;/li&gt;
+&lt;li&gt;paramType：参数放在哪个地方&lt;ul&gt;
+&lt;li&gt;header –&amp;gt; 请求参数的获取：@RequestHeader&lt;/li&gt;
+&lt;li&gt;query –&amp;gt; 请求参数的获取：@RequestParam&lt;/li&gt;
+&lt;li&gt;path（用于restful接口）–&amp;gt; 请求参数的获取：@PathVariable&lt;/li&gt;
+&lt;li&gt;body（不常用）&lt;/li&gt;
+&lt;li&gt;form（不常用）    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;dataType：参数类型，默认String，其它值dataType=”Integer”       &lt;/li&gt;
+&lt;li&gt;defaultValue：参数的默认值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;@ApiResponses：用在请求的方法上，表示一组响应&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;@ApiResponse：用在@ApiResponses中，一般用于表达一个错误的响应信息&lt;ul&gt;
+&lt;li&gt;code：数字，例如400&lt;/li&gt;
+&lt;li&gt;message：信息，例如”请求参数没填好”&lt;/li&gt;
+&lt;li&gt;response：抛出异常的类&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;@ApiModel：用于响应类上，表示一个返回响应数据的信息，（这种一般用在post创建的时候，使用@RequestBody这样的场景，请求参数无法使用@ApiImplicitParam注解进行描述的时候）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;@ApiModelProperty：用在属性上，描述响应类的属性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     

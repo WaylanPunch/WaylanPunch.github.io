@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://waylanpunch.github.io/"/>
-  <updated>2018-09-11T15:02:01.847Z</updated>
+  <updated>2018-09-22T13:35:26.941Z</updated>
   <id>https://waylanpunch.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS 7和Docker使用以及常用中间件安装指南</title>
+    <link href="https://waylanpunch.github.io/2018/09/22/centos-middlewareguide/"/>
+    <id>https://waylanpunch.github.io/2018/09/22/centos-middlewareguide/</id>
+    <published>2018-09-22T13:31:16.000Z</published>
+    <updated>2018-09-22T13:35:26.941Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Oracle-VM-Virtual-Box安装CentOS-7过程&quot;&gt;&lt;a href=&quot;#Oracle-VM-Virtual-Box安装CentOS-7过程&quot; class=&quot;headerlink&quot; title=&quot;Oracle VM Virtual Box安装CentOS 7过程&quot;&gt;&lt;/a&gt;Oracle VM Virtual Box安装CentOS 7过程&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/maty_wang/article/details/79127718&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Install&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;启动网络服务&quot;&gt;&lt;a href=&quot;#启动网络服务&quot; class=&quot;headerlink&quot; title=&quot;启动网络服务&quot;&gt;&lt;/a&gt;启动网络服务&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ip addr&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;vi /etc/sysconfig/network-scripts/ifcfg-ens33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ONBOOT=yes&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo service network restart&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ip addr&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;关机-重启命令&quot;&gt;&lt;a href=&quot;#关机-重启命令&quot; class=&quot;headerlink&quot; title=&quot;关机/重启命令&quot;&gt;&lt;/a&gt;关机/重启命令&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/endv/p/6622452.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Shuntdown Command&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux centos重启命令：&lt;ul&gt;
+&lt;li&gt;1、reboot   普通重启&lt;/li&gt;
+&lt;li&gt;2、shutdown -r now 立刻重启(root用户使用)&lt;/li&gt;
+&lt;li&gt;3、shutdown -r 10 过10分钟自动重启(root用户使用)&lt;/li&gt;
+&lt;li&gt;4、shutdown -r 20:35 在时间为20:35时候重启(root用户使用)&lt;/li&gt;
+&lt;li&gt;如果是通过shutdown命令设置重启的话，可以用shutdown -c命令取消重启&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Linux centos关机命令：&lt;ul&gt;
+&lt;li&gt;1、halt 立刻关机&lt;/li&gt;
+&lt;li&gt;2、poweroff 立刻关机&lt;/li&gt;
+&lt;li&gt;3、shutdown -h now 立刻关机(root用户使用)&lt;/li&gt;
+&lt;li&gt;4、shutdown -h 10 10分钟后自动关机&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;Putty连接&quot;&gt;&lt;a href=&quot;#Putty连接&quot; class=&quot;headerlink&quot; title=&quot;Putty连接&quot;&gt;&lt;/a&gt;Putty连接&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/zhcncn/p/4133999.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Putty&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/HD/p/4011323.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Firewall&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;安装Docker&quot;&gt;&lt;a href=&quot;#安装Docker&quot; class=&quot;headerlink&quot; title=&quot;安装Docker&quot;&gt;&lt;/a&gt;安装Docker&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/yufeng218/p/8370670.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Docker&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;由于国内访问不到docker官方镜像，可以通过aliyun的源来完成。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/doegoo/article/details/80062132&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;阿里云镜像&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sudo systemctl start docker&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sudo systemctl enable docker&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
+    
+    
+      <category term="CentOS" scheme="https://waylanpunch.github.io/tags/CentOS/"/>
+    
+      <category term="Docker" scheme="https://waylanpunch.github.io/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>SpringBoot整合Swagger2并汉化</title>
@@ -621,30 +669,6 @@ dependencies {
     
     
       <category term="Android" scheme="https://waylanpunch.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ButterKnife Problem</title>
-    <link href="https://waylanpunch.github.io/2016/08/28/2017-03-10-butterknife-problem/"/>
-    <id>https://waylanpunch.github.io/2016/08/28/2017-03-10-butterknife-problem/</id>
-    <published>2016-08-28T15:16:57.000Z</published>
-    <updated>2018-04-01T09:25:39.342Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;注入式框架共有的问题&quot;&gt;&lt;a href=&quot;#注入式框架共有的问题&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="ButterKnife" scheme="https://waylanpunch.github.io/tags/ButterKnife/"/>
     
   </entry>
   

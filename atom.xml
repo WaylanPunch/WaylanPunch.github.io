@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://waylanpunch.github.io/"/>
-  <updated>2018-09-22T13:35:26.941Z</updated>
+  <updated>2018-10-10T17:35:25.097Z</updated>
   <id>https://waylanpunch.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>利用Gogs搭建个人Git服务</title>
+    <link href="https://waylanpunch.github.io/2018/10/11/gogs-personal-git-server/"/>
+    <id>https://waylanpunch.github.io/2018/10/11/gogs-personal-git-server/</id>
+    <published>2018-10-10T17:20:05.000Z</published>
+    <updated>2018-10-10T17:35:25.097Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;服务器：&lt;/strong&gt; CentOS 7&lt;br&gt;&lt;strong&gt;容器：&lt;/strong&gt; Docker 18&lt;br&gt;&lt;strong&gt;环境：&lt;/strong&gt; MySQL 5.7 + Gogs:0.11.66&lt;/p&gt;
+&lt;h2 id=&quot;1-Docker容器内安装MySQL&quot;&gt;&lt;a href=&quot;#1-Docker容器内安装MySQL&quot; class=&quot;headerlink&quot; title=&quot;1.Docker容器内安装MySQL&quot;&gt;&lt;/a&gt;1.Docker容器内安装MySQL&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;docker pull mysql&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;docker pull registry.docker-cn.com/library/mysql:8.0.12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;docker pull registry.docker-cn.com/library/mysql:5.7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;docker images |grep mysql&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;docker run --name mymysql -e MYSQL_ROOT_PASSWORD=123456 -d -i -p 3306:3306 6a834f03bd02&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/*数据卷的挂载*/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;docker run -i -t --name mymysql -p 3306:3306 -v /var/lib/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 563a026a1511&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;pre&gt;&lt;code&gt;error: database is uninitialized and password option is not specified 
+    You need to specify one of MYSQL_ROOT_PASSWORD, MYSQL_ALLOW_EMPTY_PASSWORD and MYSQL_RANDOM_ROOT_PASSWORD
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
+    
+    
+      <category term="Docker" scheme="https://waylanpunch.github.io/tags/Docker/"/>
+    
+      <category term="Git" scheme="https://waylanpunch.github.io/tags/Git/"/>
+    
+      <category term="Gogs" scheme="https://waylanpunch.github.io/tags/Gogs/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CentOS 7和Docker使用以及常用中间件安装指南</title>
     <link href="https://waylanpunch.github.io/2018/09/22/centos-middlewareguide/"/>
     <id>https://waylanpunch.github.io/2018/09/22/centos-middlewareguide/</id>
     <published>2018-09-22T13:31:16.000Z</published>
-    <updated>2018-09-22T13:35:26.941Z</updated>
+    <updated>2018-10-10T17:40:53.786Z</updated>
     
     <summary type="html">
     
@@ -650,25 +678,6 @@ dependencies {
     
     
       <category term="RenderScript" scheme="https://waylanpunch.github.io/tags/RenderScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android 6.0之后的权限适配处理</title>
-    <link href="https://waylanpunch.github.io/2016/09/13/2016-09-13-android-6-permissions/"/>
-    <id>https://waylanpunch.github.io/2016/09/13/2016-09-13-android-6-permissions/</id>
-    <published>2016-09-13T15:03:04.000Z</published>
-    <updated>2018-04-01T09:22:06.112Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Android-6-0之后的权限适配处理&quot;&gt;&lt;a href=&quot;#Android-6-0之后的权限适配处理&quot; class=&quot;headerlink&quot; title=&quot;Android 6.0之后的权限适配处理&quot;&gt;&lt;/a&gt;Android 6.0之后的权限适配处理&lt;/h1&gt;&lt;hr&gt;
-&lt;p&gt;一个基本的android程序是没有任何权限的。也就是说，无论是从用户体验上和设备数据上都没有什么危害。 在产品需求下，为了能够使用设备的受保护特性，你必须在AndroidManifest.xml 里声明至少一种所需要的权限。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Android" scheme="https://waylanpunch.github.io/tags/Android/"/>
     
   </entry>
   

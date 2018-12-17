@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://waylanpunch.github.io/"/>
-  <updated>2018-10-10T17:35:25.097Z</updated>
+  <updated>2018-12-17T14:38:44.975Z</updated>
   <id>https://waylanpunch.github.io/</id>
   
   <author>
@@ -15,6 +15,262 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>69个经典Spring面试题和答案</title>
+    <link href="https://waylanpunch.github.io/2018/12/17/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%207/"/>
+    <id>https://waylanpunch.github.io/2018/12/17/Java后端技术 - 7/</id>
+    <published>2018-12-16T17:20:05.000Z</published>
+    <updated>2018-12-17T14:38:44.975Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;69个经典Spring面试题和答案&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;Java后端技术&quot;&gt;&lt;a href=&quot;#Java后端技术&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/tags/Java/"/>
+    
+      <category term="面试题" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="面试" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java面试题84题系列全集</title>
+    <link href="https://waylanpunch.github.io/2018/12/16/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%206/"/>
+    <id>https://waylanpunch.github.io/2018/12/16/Java后端技术 - 6/</id>
+    <published>2018-12-15T17:20:05.000Z</published>
+    <updated>2018-12-17T14:38:35.634Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Java面试题84题系列全集&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;Java后端技术&quot;&gt;&lt;a href=&quot;#Java后端技术&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/tags/Java/"/>
+    
+      <category term="面试题" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="面试" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018年Java面试题汇总 - 5</title>
+    <link href="https://waylanpunch.github.io/2018/12/15/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%205/"/>
+    <id>https://waylanpunch.github.io/2018/12/15/Java后端技术 - 5/</id>
+    <published>2018-12-14T17:20:05.000Z</published>
+    <updated>2018-12-17T14:38:04.015Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;2018年Java面试题汇总 - 5&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;Java后端技术&quot;&gt;&lt;a href=&quot;#Java后端技术&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/tags/Java/"/>
+    
+      <category term="面试题" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="面试" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018年Java面试题汇总 - 4</title>
+    <link href="https://waylanpunch.github.io/2018/12/14/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%204/"/>
+    <id>https://waylanpunch.github.io/2018/12/14/Java后端技术 - 4/</id>
+    <published>2018-12-13T17:20:05.000Z</published>
+    <updated>2018-12-17T14:37:45.828Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;2018年Java面试题汇总 - 4&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;Java后端技术&quot;&gt;&lt;a href=&quot;#Java后端技术&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/tags/Java/"/>
+    
+      <category term="面试题" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="面试" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018年Java面试题汇总 - 3</title>
+    <link href="https://waylanpunch.github.io/2018/12/13/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%203/"/>
+    <id>https://waylanpunch.github.io/2018/12/13/Java后端技术 - 3/</id>
+    <published>2018-12-12T17:20:05.000Z</published>
+    <updated>2018-12-17T14:37:30.308Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;2018年Java面试题汇总 - 3&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;Java后端技术&quot;&gt;&lt;a href=&quot;#Java后端技术&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/tags/Java/"/>
+    
+      <category term="面试题" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="面试" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018年Java面试题汇总 - 2</title>
+    <link href="https://waylanpunch.github.io/2018/12/12/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%202/"/>
+    <id>https://waylanpunch.github.io/2018/12/12/Java后端技术 - 2/</id>
+    <published>2018-12-11T17:20:05.000Z</published>
+    <updated>2018-12-17T14:37:14.281Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;2018年Java面试题汇总 - 2&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;Java后端技术&quot;&gt;&lt;a href=&quot;#Java后端技术&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/tags/Java/"/>
+    
+      <category term="面试题" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="面试" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018年Java面试题汇总 - 1</title>
+    <link href="https://waylanpunch.github.io/2018/12/11/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%201/"/>
+    <id>https://waylanpunch.github.io/2018/12/11/Java后端技术 - 1/</id>
+    <published>2018-12-10T17:20:05.000Z</published>
+    <updated>2018-12-17T14:37:01.461Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;2018年Java面试题汇总 - 1&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;Java后端技术&quot;&gt;&lt;a href=&quot;#Java后端技术&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/tags/Java/"/>
+    
+      <category term="面试题" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="面试" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机网络基础几道常见面试试题</title>
+    <link href="https://waylanpunch.github.io/2018/12/11/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%208/"/>
+    <id>https://waylanpunch.github.io/2018/12/11/Java后端技术 - 8/</id>
+    <published>2018-12-10T17:20:05.000Z</published>
+    <updated>2018-12-17T14:42:14.250Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;计算机网络基础几道常见面试试题&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;Java后端技术&quot;&gt;&lt;a href=&quot;#Java后端技术&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/tags/Java/"/>
+    
+      <category term="面试题" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="面试" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>利用Gogs搭建个人Git服务</title>
@@ -36,9 +292,9 @@
       <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
     
     
-      <category term="Docker" scheme="https://waylanpunch.github.io/tags/Docker/"/>
-    
       <category term="Git" scheme="https://waylanpunch.github.io/tags/Git/"/>
+    
+      <category term="Docker" scheme="https://waylanpunch.github.io/tags/Docker/"/>
     
       <category term="Gogs" scheme="https://waylanpunch.github.io/tags/Gogs/"/>
     
@@ -86,9 +342,9 @@
       <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
     
     
-      <category term="CentOS" scheme="https://waylanpunch.github.io/tags/CentOS/"/>
-    
       <category term="Docker" scheme="https://waylanpunch.github.io/tags/Docker/"/>
+    
+      <category term="CentOS" scheme="https://waylanpunch.github.io/tags/CentOS/"/>
     
   </entry>
   
@@ -429,255 +685,6 @@
     
     
       <category term="Decompile" scheme="https://waylanpunch.github.io/tags/Decompile/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Visual Studio Code进行Python编程输出中文乱码问题</title>
-    <link href="https://waylanpunch.github.io/2016/12/12/2016-12-12-VSCode-encode/"/>
-    <id>https://waylanpunch.github.io/2016/12/12/2016-12-12-VSCode-encode/</id>
-    <published>2016-12-11T16:36:41.000Z</published>
-    <updated>2018-04-01T09:24:42.765Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;代码：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;print(b&amp;apos;ABC&amp;apos;.decode(&amp;apos;ascii&amp;apos;))
-print(
-        
-      
-    
-    </summary>
-    
-    
-      <category term="VisualStudioCode" scheme="https://waylanpunch.github.io/tags/VisualStudioCode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WeakRefrence Demo</title>
-    <link href="https://waylanpunch.github.io/2016/12/10/2016-12-10-WeakRefrence-Demo/"/>
-    <id>https://waylanpunch.github.io/2016/12/10/2016-12-10-WeakRefrence-Demo/</id>
-    <published>2016-12-10T12:16:31.000Z</published>
-    <updated>2018-04-01T09:24:26.067Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Strong-reference（强引用）&quot;&gt;&lt;a href=&quot;#Strong-reference（强引用）&quot; class=&quot;headerlink&quot; title=&quot;Strong reference（强引用）&quot;&gt;&lt;/a&gt;Strong reference（强引用）&lt;/h2&gt;&lt;p&gt;在Java中，非静态内部类会在其整个生命周期中持有对它外部类的强引用。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public class MainActivity extends Activity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        new MyAsyncTask(this).execute();
-    }
-
-    private class MyAsyncTask extends AsyncTask { 
-
-        @Override
-        protected Object doInBackground(Object[] params) {
-
-            // 模拟耗时任务
-            try {
-                Thread.sleep(60000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
-            return doSomeStuff();
-        }
-        private Object doSomeStuff() {
-            return new Object();
-        }
-        @Override
-        protected void onPostExecute(Object object) {
-            super.onPostExecute(object);
-            // 更新UI
-        }
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-    
-      <category term="WeakReference" scheme="https://waylanpunch.github.io/tags/WeakReference/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android提供的下载类DownloadManager</title>
-    <link href="https://waylanpunch.github.io/2016/10/18/2016-10-19-DownloadManager-Usage/"/>
-    <id>https://waylanpunch.github.io/2016/10/18/2016-10-19-DownloadManager-Usage/</id>
-    <published>2016-10-18T15:54:11.000Z</published>
-    <updated>2018-04-01T09:24:04.515Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Android提供的下载类DownloadManager&quot;&gt;&lt;a href=&quot;#Android提供的下载类DownloadManager&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>透明的系统状态栏SystemBar</title>
-    <link href="https://waylanpunch.github.io/2016/10/18/2016-10-18-system-bar-transparent/"/>
-    <id>https://waylanpunch.github.io/2016/10/18/2016-10-18-system-bar-transparent/</id>
-    <published>2016-10-18T15:26:51.000Z</published>
-    <updated>2018-04-01T09:23:54.573Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;透明的系统状态栏SystemBar&quot;&gt;&lt;a href=&quot;#透明的系统状态栏SystemBar&quot; class=&quot;headerlink&quot; title=&quot;透明的系统状态栏SystemBar&quot;&gt;&lt;/a&gt;透明的系统状态栏SystemBar&lt;/h1&gt;&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;values/styles.xml&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;resources&amp;gt;
-
-    &amp;lt;!-- Base application theme. --&amp;gt;
-    &amp;lt;style name=&amp;quot;AppTheme&amp;quot; parent=&amp;quot;Theme.AppCompat.Light.DarkActionBar&amp;quot;&amp;gt;
-        &amp;lt;item name=&amp;quot;colorPrimary&amp;quot;&amp;gt;@color/colorPrimary&amp;lt;/item&amp;gt;
-        &amp;lt;item name=&amp;quot;colorPrimaryDark&amp;quot;&amp;gt;@color/colorPrimaryDark&amp;lt;/item&amp;gt;
-        &amp;lt;item name=&amp;quot;colorAccent&amp;quot;&amp;gt;@color/colorAccent&amp;lt;/item&amp;gt;
-        &amp;lt;!-- Customize your theme here. --&amp;gt;
-    &amp;lt;/style&amp;gt;
-
-    &amp;lt;style name=&amp;quot;AppTheme.NoActionBar&amp;quot;&amp;gt;
-        &amp;lt;item name=&amp;quot;windowActionBar&amp;quot;&amp;gt;false&amp;lt;/item&amp;gt;
-        &amp;lt;item name=&amp;quot;windowNoTitle&amp;quot;&amp;gt;true&amp;lt;/item&amp;gt;
-    &amp;lt;/style&amp;gt;
-
-&amp;lt;/resources&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>使用AppCompat-21适配Material Design</title>
-    <link href="https://waylanpunch.github.io/2016/09/30/2016-09-30-AppCompat-21-Material-Design/"/>
-    <id>https://waylanpunch.github.io/2016/09/30/2016-09-30-AppCompat-21-Material-Design/</id>
-    <published>2016-09-30T10:29:36.000Z</published>
-    <updated>2018-04-01T09:23:37.198Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;使用AppCompat-21适配Material-Design&quot;&gt;&lt;a href=&quot;#使用AppCompat-21适配Material-Design&quot; class=&quot;headerlink&quot; title=&quot;使用AppCompat-21适配Material Design&quot;&gt;&lt;/a&gt;使用AppCompat-21适配Material Design&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&quot;设置compileSdkVersion为21&quot;&gt;&lt;a href=&quot;#设置compileSdkVersion为21&quot; class=&quot;headerlink&quot; title=&quot;设置compileSdkVersion为21&quot;&gt;&lt;/a&gt;设置compileSdkVersion为21&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;android {
-    compileSdkVersion 21
-    buildToolsVersion &amp;quot;21.0.0&amp;quot;
-
-    defaultConfig {
-        applicationId &amp;quot;com.way.material&amp;quot;
-        minSdkVersion 14
-        targetSdkVersion 21
-        versionCode 1
-        versionName &amp;quot;1.0&amp;quot;
-    }
-     ...
-}
-
-dependencies {
-    compile fileTree(dir: &amp;apos;libs&amp;apos;, include: [&amp;apos;*.jar&amp;apos;])
-    compile &amp;apos;com.android.support:appcompat-v7:21.+&amp;apos;
-}
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>TextInput使用知识</title>
-    <link href="https://waylanpunch.github.io/2016/09/26/2016-09-26-TextInput-Usage/"/>
-    <id>https://waylanpunch.github.io/2016/09/26/2016-09-26-TextInput-Usage/</id>
-    <published>2016-09-25T17:11:00.000Z</published>
-    <updated>2018-04-01T09:23:05.843Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;TextInput使用知识&quot;&gt;&lt;a href=&quot;#TextInput使用知识&quot; class=&quot;headerlink&quot; title=&quot;TextInput使用知识&quot;&gt;&lt;/a&gt;TextInput使用知识&lt;/h1&gt;&lt;hr&gt;
-&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/22402340&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;TextInput&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;XML属性&amp;amp;常用方法&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;counterEnabled：false or true，用于设置字符计数器的开启或关闭。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;对应方法：setCounterEnabled(boolean)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;counterMaxLength：设置字符计数器的最大长度。（仅用于设置计数器最大值，并不影响文本实际能输入的最大长度）&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;对应方法：setCounterMaxLength(int)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;errorEnabled：false or true，用于设置错误提示是否开启。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;对应方法：setErrorEnabled(boolean)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>A MarginLayoutParams Error</title>
-    <link href="https://waylanpunch.github.io/2016/09/25/2016-09-25-MarginLayoutParams-Error/"/>
-    <id>https://waylanpunch.github.io/2016/09/25/2016-09-25-MarginLayoutParams-Error/</id>
-    <published>2016-09-25T08:24:44.000Z</published>
-    <updated>2018-04-01T09:22:50.014Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;A-MarginLayoutParams-Error&quot;&gt;&lt;a href=&quot;#A-MarginLayoutParams-Error&quot; class=&quot;headerlink&quot; title=&quot;A MarginLayoutParams Error&quot;&gt;&lt;/a&gt;A
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>RenderScript框架实现图片模糊效果</title>
-    <link href="https://waylanpunch.github.io/2016/09/16/2016-09-16-renderscript-fuzy-image/"/>
-    <id>https://waylanpunch.github.io/2016/09/16/2016-09-16-renderscript-fuzy-image/</id>
-    <published>2016-09-16T15:30:59.000Z</published>
-    <updated>2018-04-01T09:22:31.121Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;RenderScript框架实现图片模糊效果&quot;&gt;&lt;a href=&quot;#RenderScript框架实现图片模糊效果&quot; class=&quot;headerlink&quot; title=&quot;RenderScript框架实现图片模糊效果&quot;&gt;&lt;/a&gt;RenderScript框架实现图片模糊效果&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&quot;1-使用RenderScript-Support-Library-APIs&quot;&gt;&lt;a href=&quot;#1-使用RenderScript-Support-Library-APIs&quot; class=&quot;headerlink&quot; title=&quot;1.使用RenderScript Support Library APIs&quot;&gt;&lt;/a&gt;1.使用RenderScript Support Library APIs&lt;/h2&gt;&lt;p&gt;为了使用Support Library RenderScript的API，你必须确保你的开发环境能够访问到它们。下面的Android SDK工具是使用这些API所需要的：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Android SDK Tools revision 22.2 or higher&lt;/li&gt;
-&lt;li&gt;Android SDK Build-tools revision 18.1.0 or higher&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="RenderScript" scheme="https://waylanpunch.github.io/tags/RenderScript/"/>
     
   </entry>
   

@@ -308,6 +308,3070 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/12/17/Java后端技术 - 7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/17/Java后端技术 - 7/" itemprop="url">69个经典Spring面试题和答案</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-17T01:20:05+08:00">
+                2018-12-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/17/Java后端技术 - 7/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/17/Java后端技术 - 7/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/17/Java后端技术 - 7/" class="leancloud_visitors" data-flag-title="69个经典Spring面试题和答案">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>69个经典Spring面试题和答案</p>
+<hr>
+<h1 id="Java后端技术"><a href="#Java后端技术" class="headerlink" title="Java后端技术"></a><strong>Java后端技术</strong></h1><p><strong>1. 什么是spring?</strong>  </p>
+<p>Spring 是个java企业级应用的开源开发框架。Spring主要用来开发Java应用，但是有些扩展是针对构建J2EE平台的web应用。Spring 框架目标是简化Java企业级应用开发，并通过POJO为基础的编程模型促进良好的编程习惯。</p>
+<p><strong>2. 使用Spring框架的好处是什么？</strong></p>
+<ul>
+<li><p><strong>轻量：</strong>Spring 是轻量的，基本的版本大约2MB</p>
+</li>
+<li><p><strong>控制反转：</strong>Spring通过控制反转实现了松散耦合，对象们给出它们的依赖，而不是创建或查找依赖的对象们</p>
+</li>
+<li><p><strong>面向切面的编程(AOP)：</strong>Spring支持面向切面的编程，并且把应用业务逻辑和系统服务分开</p>
+</li>
+<li><p><strong>容器：</strong>Spring 包含并管理应用中对象的生命周期和配置</p>
+</li>
+<li><p><strong>MVC框架：</strong>Spring的WEB框架是个精心设计的框架，是Web框架的一个很好的替代品</p>
+</li>
+<li><p><strong>事务管理：</strong>Spring 提供一个持续的事务管理接口，可以扩展到上至本地事务下至全局事务（JTA）</p>
+</li>
+<li><p><strong>异常处理：</strong>Spring 提供方便的API把具体技术相关的异常（比如由JDBC，Hibernate or JDO抛出的）转化为一致的unchecked 异常</p>
+</li>
+</ul>
+<p><strong>3.  Spring由哪些模块组成？</strong></p>
+<p>以下是Spring 框架的基本模块：  </p>
+<ul>
+<li><p>Core module  </p>
+</li>
+<li><p>Bean module</p>
+</li>
+<li><p>Context module</p>
+</li>
+<li><p>Expression Language module</p>
+</li>
+<li><p>JDBC module</p>
+</li>
+<li><p>ORM module</p>
+</li>
+<li><p>OXM module</p>
+</li>
+<li><p>Java Messaging Service(JMS) module</p>
+</li>
+<li><p>Transaction module</p>
+</li>
+<li><p>Web module</p>
+</li>
+<li><p>Web-Servlet module</p>
+</li>
+<li><p>Web-Struts module</p>
+</li>
+<li><p>Web-Portlet module</p>
+</li>
+</ul>
+<p><strong>4. 核心容器（应用上下文) 模块</strong></p>
+<p>这是基本的Spring模块，提供spring 框架的基础功能，BeanFactory 是 任何以spring为基础的应用的核心。Spring 框架建立在此模块之上，它使Spring成为一个容器。</p>
+<p><strong>5. BeanFactory – BeanFactory 实现举例</strong></p>
+<p>Bean 工厂是工厂模式的一个实现，提供了控制反转功能，用来把应用的配置和依赖从正真的应用代码中分离。</p>
+<p>最常用的BeanFactory 实现是XmlBeanFactory 类。</p>
+<p><strong>6. XMLBeanFactory </strong></p>
+<p>最常用的就是org.springframework.beans.factory.xml.XmlBeanFactory ，它根据XML文件中的定义加载beans。该容器从XML 文件读取配置元数据并用它去创建一个完全配置的系统或应用。</p>
+<p><strong>7. 解释AOP模块</strong></p>
+<p>AOP模块用于发给我们的Spring应用做面向切面的开发， 很多支持由AOP联盟提供，这样就确保了Spring和其他AOP框架的共通性。这个模块将元数据编程引入Spring。</p>
+<p><strong>8. 解释JDBC抽象和DAO模块</strong></p>
+<p>通过使用JDBC抽象和DAO模块，保证数据库代码的简洁，并能避免数据库资源错误关闭导致的问题，它在各种不同的数据库的错误信息之上，提供了一个统一的异常访问层。它还利用Spring的AOP 模块给Spring应用中的对象提供事务管理服务。</p>
+<p><strong>9. 解释对象/关系映射集成模块</strong></p>
+<p>Spring 通过提供ORM模块，支持我们在直接JDBC之上使用一个对象/关系映射映射(ORM)工具，Spring 支持集成主流的ORM框架，如Hiberate,JDO和 iBATIS SQL Maps。Spring的事务管理同样支持以上所有ORM框架及JDBC。</p>
+<p><strong>10.  解释WEB 模块</strong></p>
+<p>Spring的WEB模块是构建在application context 模块基础之上，提供一个适合web应用的上下文。这个模块也包括支持多种面向web的任务，如透明地处理多个文件上传请求和程序级请求参数的绑定到你的业务对象。它也有对Jakarta Struts的支持。</p>
+<p><strong>12.  Spring配置文件</strong></p>
+<p>Spring配置文件是个XML 文件，这个文件包含了类信息，描述了如何配置它们，以及如何相互调用。</p>
+<p><strong>13.  什么是Spring IOC 容器？</strong></p>
+<p>Spring IOC 负责创建对象，管理对象（通过依赖注入（DI），装配对象，配置对象，并且管理这些对象的整个生命周期。</p>
+<p><strong>14.  IOC的优点是什么？</strong></p>
+<p>IOC 或 依赖注入把应用的代码量降到最低。它使应用容易测试，单元测试不再需要单例和JNDI查找机制。最小的代价和最小的侵入性使松散耦合得以实现。IOC容器支持加载服务时的饿汉式初始化和懒加载。</p>
+<p><strong>15. ApplicationContext通常的实现是什么？</strong></p>
+<ul>
+<li><p><strong>FileSystemXmlApplicationContext ：</strong>此容器从一个XML文件中加载beans的定义，XML Bean 配置文件的全路径名必须提供给它的构造函数。</p>
+</li>
+<li><p><strong>ClassPathXmlApplicationContext：</strong>此容器也从一个XML文件中加载beans的定义，这里，你需要正确设置classpath因为这个容器将在classpath里找bean配置。</p>
+</li>
+<li><p><strong>WebXmlApplicationContext：</strong>此容器加载一个XML文件，此文件定义了一个WEB应用的所有bean。</p>
+</li>
+</ul>
+<p><strong>16. Bean 工厂和 Application contexts  有什么区别？</strong></p>
+<p>Application contexts提供一种方法处理文本消息，一个通常的做法是加载文件资源（比如镜像），它们可以向注册为监听器的bean发布事件。另外，在容器或容器内的对象上执行的那些不得不由bean工厂以程序化方式处理的操作，可以在Application contexts中以声明的方式处理。Application contexts实现了MessageSource接口，该接口的实现以可插拔的方式提供获取本地化消息的方法。</p>
+<p><strong>17. 一个Spring的应用看起来象什么？</strong></p>
+<ul>
+<li><p>一个定义了一些功能的接口</p>
+</li>
+<li><p>这实现包括属性，它的Setter ， getter 方法和函数等</p>
+</li>
+<li><p>Spring AOP</p>
+</li>
+<li><p>Spring 的XML 配置文件</p>
+</li>
+<li><p>使用以上功能的客户端程序</p>
+</li>
+</ul>
+<p>依赖注入</p>
+<p><strong>18. 什么是Spring的依赖注入？</strong></p>
+<p>依赖注入，是IOC的一个方面，是个通常的概念，它有多种解释。这概念是说你不用创建对象，而只需要描述它如何被创建。你不在代码里直接组装你的组件和服务，但是要在配置文件里描述哪些组件需要哪些服务，之后一个容器（IOC容器）负责把他们组装起来。</p>
+<p><strong>19.  有哪些不同类型的IOC（依赖注入）方式？</strong></p>
+<ul>
+<li><p><strong>构造器依赖注入：</strong>构造器依赖注入通过容器触发一个类的构造器来实现的，该类有一系列参数，每个参数代表一个对其他类的依赖。</p>
+</li>
+<li><p><strong>Setter方法注入：</strong>Setter方法注入是容器通过调用无参构造器或无参static工厂 方法实例化bean之后，调用该bean的setter方法，即实现了基于setter的依赖注入。</p>
+</li>
+</ul>
+<p><strong>20. 哪种依赖注入方式你建议使用，构造器注入，还是 Setter方法注入？</strong></p>
+<p>你两种依赖方式都可以使用，构造器注入和Setter方法注入。最好的解决方案是用构造器参数实现强制依赖，setter方法实现可选依赖。</p>
+<p>Spring Beans</p>
+<p><strong>21.什么是Spring beans？</strong></p>
+<p>Spring beans 是那些形成Spring应用的主干的java对象。它们被Spring IOC容器初始化，装配，和管理。这些beans通过容器中配置的元数据创建。比如，以XML文件中<bean> 的形式定义。</bean></p>
+<p>Spring 框架定义的beans都是单件beans。在bean tag中有个属性”singleton”，如果它被赋为TRUE，bean 就是单件，否则就是一个 prototype bean。默认是TRUE，所以所有在Spring框架中的beans 缺省都是单件。</p>
+<p><strong>22. 一个 Spring Bean 定义 包含什么？</strong></p>
+<p>一个Spring Bean 的定义包含容器必知的所有配置元数据，包括如何创建一个bean，它的生命周期详情及它的依赖。</p>
+<p><strong>23. 如何给Spring 容器提供配置元数据？</strong></p>
+<p>这里有三种重要的方法给Spring 容器提供配置元数据。</p>
+<p>XML配置文件。</p>
+<p>基于注解的配置。</p>
+<p>基于java的配置。</p>
+<p><strong>24. 你怎样定义类的作用域？</strong></p>
+<p>当定义一个<bean> 在Spring里，我们还能给这个bean声明一个作用域。它可以通过bean 定义中的scope属性来定义。如，当Spring要在需要的时候每次生产一个新的bean实例，bean的scope属性被指定为prototype。另一方面，一个bean每次使用的时候必须返回同一个实例，这个bean的scope 属性 必须设为 singleton。</bean></p>
+<p><strong>25. 解释Spring支持的几种bean的作用域</strong></p>
+<p>Spring框架支持以下五种bean的作用域：</p>
+<ul>
+<li><p><strong>singleton :</strong> bean在每个Spring ioc 容器中只有一个实例。</p>
+</li>
+<li><p><strong>prototype：</strong>一个bean的定义可以有多个实例。</p>
+</li>
+<li><p><strong>request：</strong>每次http请求都会创建一个bean，该作用域仅在基于web的Spring ApplicationContext情形下有效。</p>
+</li>
+<li><p><strong>session：</strong>在一个HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效。</p>
+</li>
+<li><p><strong>global-session：</strong>在一个全局的HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效。</p>
+</li>
+</ul>
+<p>缺省的Spring bean 的作用域是Singleton。</p>
+<p><strong>26. Spring框架中的单例bean是线程安全的吗？</strong></p>
+<p>不，Spring框架中的单例bean不是线程安全的。</p>
+<p><strong>27. 解释Spring框架中bean的生命周期</strong></p>
+<ul>
+<li><p>Spring容器 从XML 文件中读取bean的定义，并实例化bean。</p>
+</li>
+<li><p>Spring根据bean的定义填充所有的属性。</p>
+</li>
+<li><p>如果bean实现了BeanNameAware 接口，Spring 传递bean 的ID 到 setBeanName方法。</p>
+</li>
+<li><p>如果Bean 实现了 BeanFactoryAware 接口， Spring传递beanfactory 给setBeanFactory 方法。</p>
+</li>
+<li><p>如果有任何与bean相关联的BeanPostProcessors，Spring会在postProcesserBeforeInitialization()方法内调用它们。</p>
+</li>
+<li><p>如果bean实现IntializingBean了，调用它的afterPropertySet方法，如果bean声明了初始化方法，调用此初始化方法。</p>
+</li>
+<li><p>如果有BeanPostProcessors 和bean 关联，这些bean的postProcessAfterInitialization() 方法将被调用。</p>
+</li>
+<li><p>如果bean实现了 DisposableBean，它将调用destroy()方法。</p>
+</li>
+</ul>
+<p><strong>28.  哪些是重要的bean生命周期方法？ 你能重载它们吗？</strong></p>
+<p>有两个重要的bean 生命周期方法，第一个是setup ， 它是在容器加载bean的时候被调用。第二个方法是 teardown  它是在容器卸载类的时候被调用。</p>
+<p>The bean 标签有两个重要的属性（init-method和destroy-method）。用它们你可以自己定制初始化和注销方法。它们也有相应的注解（@PostConstruct和@PreDestroy）。</p>
+<p><strong>29. 什么是Spring的内部bean？</strong></p>
+<p>当一个bean仅被用作另一个bean的属性时，它能被声明为一个内部bean，为了定义inner bean，在Spring 的 基于XML的 配置元数据中，可以在 <property>或 <constructor-arg> 元素内使用<bean> 元素，内部bean通常是匿名的，它们的Scope一般是prototype。</bean></constructor-arg></property></p>
+<p><strong>30. 在 Spring中如何注入一个java集合？</strong></p>
+<p>Spring提供以下几种集合的配置元素：</p>
+<ul>
+<li><p><list>类型用于注入一列值，允许有相同的值。</list></p>
+</li>
+<li><p><set> 类型用于注入一组值，不允许有相同的值。</set></p>
+</li>
+<li><p><map> 类型用于注入一组键值对，键和值都可以为任意类型。</map></p>
+</li>
+<li><p><props>类型用于注入一组键值对，键和值都只能为String类型。</props></p>
+</li>
+</ul>
+<p><strong>31. 什么是bean装配？</strong></p>
+<p>装配，或bean 装配是指在Spring 容器中把bean组装到一起，前提是容器需要知道bean的依赖关系，如何通过依赖注入来把它们装配到一起。</p>
+<p><strong>32. 什么是bean的自动装配？</strong></p>
+<p>Spring 容器能够自动装配相互合作的bean，这意味着容器不需要<constructor-arg>和<property>配置，能通过Bean工厂自动处理bean之间的协作。</property></constructor-arg></p>
+<p><strong>33. 解释不同方式的自动装配</strong></p>
+<p>有五种自动装配的方式，可以用来指导Spring容器用自动装配方式来进行依赖注入</p>
+<ul>
+<li><p><strong>no：</strong>默认的方式是不进行自动装配，通过显式设置ref 属性来进行装配。</p>
+</li>
+<li><p><strong>byName：</strong>通过参数名 自动装配，Spring容器在配置文件中发现bean的autowire属性被设置成byname，之后容器试图匹配、装配和该bean的属性具有相同名字的bean。</p>
+</li>
+<li><p><strong>byType：</strong>通过参数类型自动装配，Spring容器在配置文件中发现bean的autowire属性被设置成byType，之后容器试图匹配、装配和该bean的属性具有相同类型的bean。如果有多个bean符合条件，则抛出错误。</p>
+</li>
+<li><p><strong>constructor：</strong>这个方式类似于byType， 但是要提供给构造器参数，如果没有确定的带参数的构造器参数类型，将会抛出异常。</p>
+</li>
+<li><p><strong>autodetect：</strong>首先尝试使用constructor来自动装配，如果无法工作，则使用byType方式。</p>
+</li>
+</ul>
+<p><strong>34.自动装配有哪些局限性？</strong></p>
+<p>自动装配的局限性是：</p>
+<ul>
+<li><p><strong>重写：</strong>你仍需用 <constructor-arg>和 <property> 配置来定义依赖，意味着总要重写自动装配。</property></constructor-arg></p>
+</li>
+<li><p><strong>基本数据类型：</strong>你不能自动装配简单的属性，如基本数据类型，String字符串，和类。</p>
+</li>
+<li><p><strong>模糊特性：</strong>自动装配不如显式装配精确，如果有可能，建议使用显式装配。</p>
+</li>
+</ul>
+<p><strong>35. 你可以在Spring中注入一个null 和一个空字符串吗？</strong></p>
+<p>可以。</p>
+<p>Spring注解</p>
+<p><strong>36. 什么是基于Java的Spring注解配置? 给一些注解的例子</strong></p>
+<p>基于Java的配置，允许你在少量的Java注解的帮助下，进行你的大部分Spring配置而非通过XML文件。</p>
+<p>以@Configuration 注解为例，它用来标记类可以当做一个bean的定义，被Spring IOC容器使用。另一个例子是@Bean注解，它表示此方法将要返回一个对象，作为一个bean注册进Spring应用上下文。</p>
+<p><strong>37. 什么是基于注解的容器配置？</strong></p>
+<p>相对于XML文件，注解型的配置依赖于通过字节码元数据装配组件，而非尖括号的声明。</p>
+<p>开发者通过在相应的类，方法或属性上使用注解的方式，直接组件类中进行配置，而不是使用xml表述bean的装配关系。</p>
+<p><strong>38. 怎样开启注解装配？</strong></p>
+<p>注解装配在默认情况下是不开启的，为了使用注解装配，我们必须在Spring配置文件中配置 <a href="context:annotation-config/" target="_blank" rel="noopener">context:annotation-config/</a>元素。</p>
+<p><strong>39. @Required  注解</strong></p>
+<p>这个注解表明bean的属性必须在配置的时候设置，通过一个bean定义的显式的属性值或通过自动装配，若@Required注解的bean属性未被设置，容器将抛出BeanInitializationException。</p>
+<p><strong>40. @Autowired 注解</strong></p>
+<p>@Autowired 注解提供了更细粒度的控制，包括在何处以及如何完成自动装配。它的用法和@Required一样，修饰setter方法、构造器、属性或者具有任意名称和/或多个参数的PN方法。</p>
+<p><strong>41. @Qualifier 注解</strong></p>
+<p>当有多个相同类型的bean却只有一个需要自动装配时，将@Qualifier 注解和@Autowire 注解结合使用以消除这种混淆，指定需要装配的确切的bean。</p>
+<p>Spring数据访问</p>
+<p><strong>42.在Spring框架中如何更有效地使用JDBC？</strong></p>
+<p>使用SpringJDBC 框架，资源管理和错误处理的代价都会被减轻。所以开发者只需写statements 和 queries从数据存取数据，JDBC也可以在Spring框架提供的模板类的帮助下更有效地被使用，这个模板叫JdbcTemplate （例子见这里here）</p>
+<p><strong>43. JdbcTemplate</strong></p>
+<p>JdbcTemplate 类提供了很多便利的方法解决诸如把数据库数据转变成基本数据类型或对象，执行写好的或可调用的数据库操作语句，提供自定义的数据错误处理。</p>
+<p><strong>44. Spring对DAO的支持</strong></p>
+<p>Spring对数据访问对象（DAO）的支持旨在简化它和数据访问技术如JDBC，Hibernate or JDO 结合使用。这使我们可以方便切换持久层。编码时也不用担心会捕获每种技术特有的异常。</p>
+<p><strong>45. 使用Spring通过什么方式访问Hibernate？</strong></p>
+<p>在Spring中有两种方式访问Hibernate：</p>
+<ul>
+<li><p>控制反转  Hibernate Template和 Callback</p>
+</li>
+<li><p>继承 HibernateDAOSupport提供一个AOP 拦截器</p>
+</li>
+</ul>
+<p><strong>46. Spring支持的ORM</strong></p>
+<p>Spring支持以下ORM：</p>
+<ul>
+<li><p>Hibernate</p>
+</li>
+<li><p>iBatis</p>
+</li>
+<li><p>JPA (Java Persistence API)</p>
+</li>
+<li><p>TopLink</p>
+</li>
+<li><p>JDO (Java Data Objects)</p>
+</li>
+<li><p>OJB</p>
+</li>
+</ul>
+<p><strong>47.如何通过HibernateDaoSupport将Spring和Hibernate结合起来？</strong></p>
+<p>用Spring的 SessionFactory 调用 LocalSessionFactory。集成过程分三步：</p>
+<ul>
+<li><p>配置the Hibernate SessionFactory</p>
+</li>
+<li><p>继承HibernateDaoSupport实现一个DAO</p>
+</li>
+<li><p>在AOP支持的事务中装配</p>
+</li>
+</ul>
+<p><strong>48. Spring支持的事务管理类型</strong></p>
+<p>Spring支持两种类型的事务管理：</p>
+<ul>
+<li><p><strong>编程式事务管理：</strong>这意味你通过编程的方式管理事务，给你带来极大的灵活性，但是难维护。</p>
+</li>
+<li><p><strong>声明式事务管理：</strong>这意味着你可以将业务代码和事务管理分离，你只需用注解和XML配置来管理事务。</p>
+</li>
+</ul>
+<p><strong>49. Spring框架的事务管理有哪些优点？</strong></p>
+<ul>
+<li><p>它为不同的事务API  如 JTA，JDBC，Hibernate，JPA 和JDO，提供一个不变的编程模式。</p>
+</li>
+<li><p>它为编程式事务管理提供了一套简单的API而不是一些复杂的事务API如</p>
+</li>
+<li><p>它支持声明式事务管理。</p>
+</li>
+<li><p>它和Spring各种数据访问抽象层很好得集成。</p>
+</li>
+</ul>
+<p><strong>50. 你更倾向用那种事务管理类型？</strong></p>
+<p>大多数Spring框架的用户选择声明式事务管理，因为它对应用代码的影响最小，因此更符合一个无侵入的轻量级容器的思想。声明式事务管理要优于编程式事务管理，虽然比编程式事务管理（这种方式允许你通过代码控制事务）少了一点灵活性。</p>
+<p>Spring面向切面编程（AOP）</p>
+<p><strong>51.  解释AOP</strong></p>
+<p>面向切面的编程，或AOP， 是一种编程技术，允许程序模块化横向切割关注点，或横切典型的责任划分，如日志和事务管理。</p>
+<p><strong>52. Aspect 切面</strong></p>
+<p>AOP核心就是切面，它将多个类的通用行为封装成可重用的模块，该模块含有一组API提供横切功能。比如，一个日志模块可以被称作日志的AOP切面。根据需求的不同，一个应用程序可以有若干切面。在Spring AOP中，切面通过带有@Aspect注解的类实现。</p>
+<p><strong>52. 在Spring AOP 中，关注点和横切关注的区别是什么？</strong></p>
+<p>关注点是应用中一个模块的行为，一个关注点可能会被定义成一个我们想实现的一个功能。</p>
+<p>横切关注点是一个关注点，此关注点是整个应用都会使用的功能，并影响整个应用，比如日志，安全和数据传输，几乎应用的每个模块都需要的功能。因此这些都属于横切关注点。</p>
+<p><strong>54. 连接点</strong></p>
+<p>连接点代表一个应用程序的某个位置，在这个位置我们可以插入一个AOP切面，它实际上是个应用程序执行Spring AOP的位置。</p>
+<p><strong>55. 通知</strong></p>
+<p>通知是个在方法执行前或执行后要做的动作，实际上是程序执行时要通过SpringAOP框架触发的代码段。</p>
+<p>Spring切面可以应用五种类型的通知：</p>
+<ul>
+<li><p><strong>before：</strong>前置通知，在一个方法执行前被调用</p>
+</li>
+<li><p><strong>after：</strong>在方法执行之后调用的通知，无论方法执行是否成功</p>
+</li>
+<li><p><strong>after-returning：</strong>仅当方法成功完成后执行的通知</p>
+</li>
+<li><p><strong>after-throwing：</strong>在方法抛出异常退出时执行的通知</p>
+</li>
+<li><p><strong>around：</strong>在方法执行之前和之后调用的通知</p>
+</li>
+</ul>
+<p><strong>56. 切点</strong></p>
+<p>切入点是一个或一组连接点，通知将在这些位置执行。可以通过表达式或匹配的方式指明切入点。</p>
+<p><strong>57. 什么是引入？</strong></p>
+<p>引入允许我们在已存在的类中增加新的方法和属性。</p>
+<p><strong>58. 什么是目标对象？</strong></p>
+<p>被一个或者多个切面所通知的对象。它通常是一个代理对象。也指被通知（advised）对象。</p>
+<p><strong>59. 什么是代理？</strong></p>
+<p>代理是通知目标对象后创建的对象。从客户端的角度看，代理对象和目标对象是一样的。</p>
+<p><strong>60. 有几种不同类型的自动代理？</strong></p>
+<p>BeanNameAutoProxyCreator</p>
+<p>DefaultAdvisorAutoProxyCreator</p>
+<p>Metadata autoproxying</p>
+<p><strong>61. 什么是织入。什么是织入应用的不同点？</strong></p>
+<p>织入是将切面和到其他应用类型或对象连接或创建一个被通知对象的过程。</p>
+<p>织入可以在编译时，加载时，或运行时完成。</p>
+<p><strong>62. 解释基于XML Schema方式的切面实现</strong></p>
+<p>在这种情况下，切面由常规类以及基于XML的配置实现。</p>
+<p><strong>63. 解释基于注解的切面实现</strong></p>
+<p>在这种情况下(基于@AspectJ的实现)，涉及到的切面声明的风格与带有java5标注的普通java类一致。</p>
+<p>Spring 的MVC</p>
+<p><strong>64. 什么是Spring的MVC框架？</strong></p>
+<p>Spring 配备构建Web 应用的全功能MVC框架。Spring可以很便捷地和其他MVC框架集成，如Struts，Spring 的MVC框架用控制反转把业务对象和控制逻辑清晰地隔离。它也允许以声明的方式把请求参数和业务对象绑定。</p>
+<p><strong>65. DispatcherServlet</strong></p>
+<p>Spring的MVC框架是围绕DispatcherServlet来设计的，它用来处理所有的HTTP请求和响应。</p>
+<p><strong>66. WebApplicationContext</strong></p>
+<p>WebApplicationContext 继承了ApplicationContext  并增加了一些WEB应用必备的特有功能，它不同于一般的ApplicationContext ，因为它能处理主题，并找到被关联的servlet。</p>
+<p><strong>67. 什么是Spring MVC框架的控制器？</strong></p>
+<p>控制器提供一个访问应用程序的行为，此行为通常通过服务接口实现。控制器解析用户输入并将其转换为一个由视图呈现给用户的模型。Spring用一个非常抽象的方式实现了一个控制层，允许用户创建多种用途的控制器。</p>
+<p><strong>68. @Controller 注解</strong></p>
+<p>该注解表明该类扮演控制器的角色，Spring不需要你继承任何其他控制器基类或引用Servlet API。</p>
+<p><strong>69. @RequestMapping 注解</strong></p>
+<p>该注解是用来映射一个URL到一个类或一个特定的方处理法上。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/12/16/Java后端技术 - 6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/16/Java后端技术 - 6/" itemprop="url">Java面试题84题系列全集</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-16T01:20:05+08:00">
+                2018-12-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/16/Java后端技术 - 6/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/16/Java后端技术 - 6/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/16/Java后端技术 - 6/" class="leancloud_visitors" data-flag-title="Java面试题84题系列全集">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Java面试题84题系列全集</p>
+<hr>
+<h1 id="Java后端技术"><a href="#Java后端技术" class="headerlink" title="Java后端技术"></a><strong>Java后端技术</strong></h1><p><strong>目录</strong></p>
+<p>01.面试的整体流程</p>
+<p>02.java的垮平台原理</p>
+<p>03.搭建一个java的开发环境</p>
+<p>04.java中int占几个字节</p>
+<p>05.java面向对象的特征</p>
+<p>06.装箱和拆箱</p>
+<p>07.==和equals的区别</p>
+<p>08.String</p>
+<p>09.讲一下java中的集合</p>
+<p>10.ArrayList 和LinkedList的区别</p>
+<p>11.HashMap和HashTable的区别</p>
+<p>12.实现一个拷贝文件的工具类要使用字节流还是字符串</p>
+<p>13.线程的的实现方式？怎么启动线程？怎么区分线程？</p>
+<p>14.线程并发库和线程池的作用</p>
+<p>15.设计模式和常用的设计模式</p>
+<p>16.http get post请求的区别</p>
+<p>17.说说你对Servlet的理解</p>
+<p>18.Servlet的生命周期</p>
+<p>19.Servlet中forward和redirect的区别</p>
+<p>20.jsp和Servlet的相同点和不同点</p>
+<p>21.内置对象和四大作用域和页面传值</p>
+<p>22.Session和Cookie的区别和使用场景</p>
+<p>23.mvc模式和mvc各部分的实现</p>
+<p>24.数据库分类和常用数据库</p>
+<p>25.关系型数据库的三范式</p>
+<p>26.事务的四大特征</p>
+<p>27.mysql数据库最大连接数</p>
+<p>28.mysql和oracle的分页语句</p>
+<p>29.触发器的使用场景？</p>
+<p>30.存储过程的优点</p>
+<p>31.jdbc调用存储过程</p>
+<p>32.简单说一下你对jdbc的理解</p>
+<p>33.写一个jdbc的访问oracle的列子</p>
+<p>34.jdbc中preparedStatement比Statement的好处</p>
+<p>35.数据库连接池的作用</p>
+<p>36.HTML</p>
+<p>37.简单介绍了一下Ajax</p>
+<p>38.js和JQuery的关系</p>
+<p>39.jQuery中的常用选择器</p>
+<p>40.jQuery中页面加载完毕事件</p>
+<p>41.jQuery中Ajax和原生js实现Ajax的关系</p>
+<p>42.简单说一下html5</p>
+<p>43.简单说一下css3</p>
+<p>44.bootstrap的是什么</p>
+<p>45.什么是框架</p>
+<p>46.简单介绍一下MVC模式</p>
+<p>47.简单说一下对mvc框架的理解</p>
+<p>48.struts2的执行流程或者struts2的原理</p>
+<p>49.Struts2的拦截器是什么</p>
+<p>50.Spring MVC的执行流程</p>
+<p>51.SpringMVC和Struts2的不同</p>
+<p>52.简单介绍一下Spring或者Spring的两大核心</p>
+<p>53.AOP是什么？都用它做什么？</p>
+<p>54.Spring事务的传播特性和隔离级别</p>
+<p>55.ORM是什么？ORM框架是什么？</p>
+<p>56.ibatis和hibernate有什么不同</p>
+<p>57.hibernate对象状态及其转换</p>
+<p>58：hibernate的缓存</p>
+<p>59.webservice的使用场景</p>
+<p>60.activiti的简单介绍</p>
+<p>61.linux的使用场景</p>
+<p>62.linux常用命令</p>
+<p>63：怎么操作linux服务器</p>
+<p>64：有没有使用过云主机</p>
+<p>65：数据库优化方面的事情</p>
+<p>66：如果查询和定位慢查询</p>
+<p>67：数据库优化之数据库表设计遵循范式</p>
+<p>68：选择合适的数据库引擎</p>
+<p>69：选择合适的索引</p>
+<p>70：使用索引的一些技巧</p>
+<p>71：数据库优化之分表</p>
+<p>72：数据库的读写分离</p>
+<p>73：数据库优化之缓存</p>
+<p>74：sql语句优化小技巧</p>
+<p>75：批量插入几百万条数据</p>
+<p>76：有没有使用过redis</p>
+<p>77：redis的使用场景</p>
+<p>78：redis存储对象的方式</p>
+<p>79：redis数据淘汰机制</p>
+<p>80：java访问redis级redis集群</p>
+<p>81：微信公众号分类和微信开发原理</p>
+<p>82：怎么把微信和业务平台进行绑定</p>
+<p>83：项目的分类和项目参与者</p>
+<p>84：项目流程和业务注意事项</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/12/15/Java后端技术 - 5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/15/Java后端技术 - 5/" itemprop="url">2018年Java面试题汇总 - 5</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-15T01:20:05+08:00">
+                2018-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/15/Java后端技术 - 5/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/15/Java后端技术 - 5/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/15/Java后端技术 - 5/" class="leancloud_visitors" data-flag-title="2018年Java面试题汇总 - 5">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>2018年Java面试题汇总 - 5</p>
+<hr>
+<h1 id="Java后端技术"><a href="#Java后端技术" class="headerlink" title="Java后端技术"></a><strong>Java后端技术</strong></h1><p><strong>一、Java相关</strong></p>
+<ul>
+<li><p>乐观悲观锁的设计，如何保证原子性，解决的问题；</p>
+</li>
+<li><p>char和double的字节，以及在内存的分布是怎样；</p>
+</li>
+<li><p>对象内存布局，然后讲下对象的死亡过程？</p>
+</li>
+<li><p>对象头，详细讲下；</p>
+</li>
+<li><p>sync原理详细，sync内抛异常会怎样，死锁吗？还是释放掉？怎么排查死锁？死锁会怎样？有没有什么更好的替代方案？</p>
+</li>
+<li><p>详细讲一下集合，HashSet源码，HashMap源码，如果要线程安全需要怎么做？</p>
+</li>
+<li><p>多线程是解决什么问题的？线程池解决什么问题？</p>
+</li>
+<li><p>线程池，如何设计的，里面的参数有多少种，里面的工作队列和线程队列是怎样的结构，如果给你，怎样设计线程池？</p>
+</li>
+<li><p>AQS原理，ReentranLock源码，设计原理，整体过程。</p>
+</li>
+<li><p>继续聊多线程源码，sync原理，然后一个场景设计题；</p>
+</li>
+<li><p>float f = 1.4f;double d = 1.4d; 与 float f = 1.5f;double d = 1.5d; 是否为true，内存是怎样的；</p>
+</li>
+<li><p>split的源码，split(“a|b|c”);得出多少个数组；</p>
+</li>
+<li><p>把所有认识熟用的JUC( java.util.concurrent(简称JUC)包)下的类写出来，讲下使用，然后讲下原生的线程操作;</p>
+</li>
+<li><p>开闭原则，解析工厂方法模式，建造者模式，区别。手撸出来。</p>
+</li>
+<li><p>讲下JVM的大页模式，JVM内存模型;</p>
+</li>
+<li><p>什么是敏捷开发，防御性编程，并行编程。Team Leader的思考;</p>
+</li>
+<li><p>逃逸分析是什么，作用是什么，用途是什么;</p>
+</li>
+<li><p>怎么认为一个类是线程安全？线程安全的定义是什么？Java有多少个关键字进行同步？为什么这样设计？（聊了一大堆，一堆为什么）；</p>
+</li>
+<li><p>两个线程设计题。记得一个是：t1,t2,t3，让t1，t2执行完才执行t3，原生实现。</p>
+</li>
+<li><p>写个后缀表达式，为什么要设计后缀表达式，有什么好处？然后写下中缀。</p>
+</li>
+<li><p>我看你做过性能优化，比如你怎么分析项目里面的OOM的，内存泄露呢？详细说思路;</p>
+</li>
+<li><p>说下多线程，我们什么时候需要分析线程数，怎么分析，分析什么因素;</p>
+</li>
+<li><p>抽象方法和类方法的区别，static的抽象方法可以吗？</p>
+</li>
+<li><p>说下Java的克隆体系;</p>
+</li>
+<li><p>涉及OOM、JVM优化、源码问题、数据库优化、多线程等问题;</p>
+</li>
+<li><p>CPU高？什么情况CPU高？解决什么问题？</p>
+</li>
+<li><p>你有遇到过临界区问题吗？有遇到过吗？你在项目遇到这个问题是怎样解决的？</p>
+</li>
+<li><p>volatile关键字作用;</p>
+</li>
+<li><p>Java的多态怎么实现;</p>
+</li>
+<li><p>解释一下自旋;</p>
+</li>
+<li><p>解释一下信号量;</p>
+</li>
+<li><p>什么情况下会触发类加载；</p>
+</li>
+<li><p>Java内存抖动严重，优化的思路；</p>
+</li>
+</ul>
+<p><strong>二、数据库相关</strong></p>
+<ul>
+<li><p>SQL优化思路，联合索引与底层树结构的映像关系，索引结构（B+、B-），为什么用这样的结构；</p>
+</li>
+<li><p>讲下MySQL的集群？集群遇到过什么问题？sql的优化？</p>
+</li>
+<li><p>你目前为止遇到的最大数据量是多少？知道100万时候怎么设计吗？1000万呢？过几十亿呢？</p>
+</li>
+<li><p>MySQL有多少个参数可调，除了最大连接数。全部列出来，一个个分析。</p>
+</li>
+<li><p>聊下优化过的索引，怎么优化;</p>
+</li>
+<li><p>红黑树和平衡树的区别，为什么数据库不用红黑树;</p>
+</li>
+<li><p>mysql有哪些锁，意向锁有什么用;</p>
+</li>
+<li><p>数据库高并发下的优化思路;</p>
+</li>
+<li><p>数据库什么情况下索引会失效;</p>
+</li>
+</ul>
+<p><strong>三、数据结构和操作系统相关</strong></p>
+<ul>
+<li><p>数据结构学过吧，聊一下？学过什么结构？讲下树和队列？B树呢？</p>
+</li>
+<li><p>操作系统学过吧，聊一下？讲一下系统内存是怎样的？分段分页虚拟内存？</p>
+</li>
+<li><p>页面置换算法呢？多少种？有最优的置换算法吗？</p>
+</li>
+<li><p>你学过什么课程？然后聊下操作系统，内核、用户之类。</p>
+</li>
+<li><p>反转链表手撸;</p>
+</li>
+<li><p>快排，给一串数组，把具体每次patition写下，最终结果也写45, 32, 41, 35, 38, 20, 50;</p>
+</li>
+<li><p>一个整数status, 判断第K个比特位是否为比特1;</p>
+</li>
+<li><p>把递归实现的快排改成非递归，你知道非递归有什么好处吗;</p>
+</li>
+<li><p>举例使用分治思想的算法;</p>
+</li>
+</ul>
+<p><strong>四、网络相关</strong></p>
+<ul>
+<li><p>讲下请求头细节？</p>
+</li>
+<li><p>Http和Https？Http1.0,1.1,2.0，讲下长连接和短连接？Https是怎样的？如果我篡改了公钥呢？怎么防止？</p>
+</li>
+<li><p>Get和Post，讲下区别，要我模拟出抓包来。</p>
+</li>
+<li><p>详细讲下Cookie和Session，Token，OAuth2.0协议;</p>
+</li>
+<li><p>拥塞算法知道吗？哪些，分别怎样？</p>
+</li>
+<li><p>学过计算机网络是吧？socket熟悉吗？对它的读写缓冲区有理解吗？怎么的？那滑动窗口是怎样的？为什么这样设计？</p>
+</li>
+<li><p>再聊下Http的Http basic authentication;</p>
+</li>
+<li><p>Https的过程;</p>
+</li>
+</ul>
+<p><strong>五、框架相关</strong></p>
+<ul>
+<li><p>聊下Spring源码，知道多少，都聊一下；</p>
+</li>
+<li><p>聊下Spring注解，@Autowire，@Resource，以及他们的解析过程；</p>
+</li>
+<li><p>聊一下架构，接入层架构，服务层架构。聊下技术栈，Spring Boot，Spring Cloud、Docker；</p>
+</li>
+<li><p>Spring ioc的具体优势，和直接New一个对象有什么区别;</p>
+</li>
+<li><p>Servlet生命周期，是否单例，为什么是单例;</p>
+</li>
+<li><p>Spring Mvc初始化过程；</p>
+</li>
+</ul>
+<p><strong>五、分布式相关</strong></p>
+<ul>
+<li><p>多少种RPC框架？</p>
+</li>
+<li><p>一致性哈希是干嘛的？</p>
+</li>
+<li><p>搭建高并发高可用系统需要怎样设计？考虑哪些东西，有多少说多少。</p>
+</li>
+<li><p>你对缓存有什么理解？缓存是解决什么问题？后端缓存有哪些，分别解决什么问题？</p>
+</li>
+<li><p>聊一下分布式锁；</p>
+</li>
+<li><p>你是怎么设计系统缓存的，为什么，什么场景；</p>
+</li>
+<li><p>也来说下，削峰的多种实现，Redis？MQ？</p>
+</li>
+<li><p>为什么用mq就能削峰？解决什么问题？</p>
+</li>
+</ul>
+<p><strong>六、设计题</strong></p>
+<ul>
+<li><p>有几台机器存储着几亿淘宝搜索日志，你只有一台2g的电脑，怎么选出搜索热度最高的十个搜索关键词;</p>
+</li>
+<li><p>如何设计算法压缩一段URL;</p>
+</li>
+<li><p>有一个页面能同时展示两个广告，现在有五个广告，设计算法使五个广告展示概率为1:2:3:4:5；</p>
+</li>
+<li><p>有25匹马，五个赛道，用最少比赛次数将25匹马排序；</p>
+</li>
+</ul>
+<p><strong>七、其他相关</strong></p>
+<ul>
+<li><p>Tomcat缓存，聊下缓存的整体理解，知道多少种缓存；</p>
+</li>
+<li><p>解释下Mucene原理，倒排索引，怎样进行中文分词，基于什么进行分词；</p>
+</li>
+<li><p>TopN的大数据量题；</p>
+</li>
+<li><p>你对接入层要思考什么东西？遇到过哪些问题？搭建系统要考量哪些因素？</p>
+</li>
+<li><p>然后项目问题，优化问题；</p>
+</li>
+<li><p>熟悉maven是吧？我们来聊下Maven的源码原理，Maven冲突的时候，怎么选择依赖包，我们怎么查，我们遇到两个不一样的版本，我们应该如何去选择，为什么？</p>
+</li>
+<li><p>项目如何分组，性能优化小组应该做哪些;</p>
+</li>
+<li><p>我们来说下接入层的搭建，认知分析;</p>
+</li>
+<li><p>问下项目的系统构建，思考，为什么这样构建？</p>
+</li>
+<li><p>如何判断一段代码的好坏;</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/12/14/Java后端技术 - 4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/14/Java后端技术 - 4/" itemprop="url">2018年Java面试题汇总 - 4</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-14T01:20:05+08:00">
+                2018-12-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/14/Java后端技术 - 4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/14/Java后端技术 - 4/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/14/Java后端技术 - 4/" class="leancloud_visitors" data-flag-title="2018年Java面试题汇总 - 4">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>2018年Java面试题汇总 - 4</p>
+<hr>
+<h1 id="Java后端技术"><a href="#Java后端技术" class="headerlink" title="Java后端技术"></a><strong>Java后端技术</strong></h1><p><strong>一、Java基础</strong></p>
+<ul>
+<li><p>为什么JVM调优经常会将-Xms和-Xmx参数设置成一样；</p>
+</li>
+<li><p>Java线程池的核心属性以及处理流程；</p>
+</li>
+<li><p>Java内存模型，方法区存什么；</p>
+</li>
+<li><p>CMS垃圾回收过程；</p>
+</li>
+<li><p>Full GC次数太多了，如何优化；</p>
+</li>
+<li><p>直接内存如何管理的；</p>
+</li>
+<li><p>Java线程池的几个参数的意义和实现机制；</p>
+</li>
+<li><p>Java线程池使用无界任务队列和有界任务队列的优劣对比；</p>
+</li>
+<li><p>CountDownLatch和CyclicBarrier的区别；</p>
+</li>
+<li><p>Java中有哪些同步方案（重量级锁、显式锁、并发容器、并发同步器、CAS、volatile、AQS等）</p>
+</li>
+<li><p>如果你的项目出现了内存泄露，怎么监控这个问题呢；</p>
+</li>
+<li><p>标记清除和标记整理的区别和优缺点，为何标记整理会发生stop the world；</p>
+</li>
+<li><p>线程池，如何根据CPU的核数来设计线程大小，如果是计算机密集型的呢，如果是IO密集型的呢？</p>
+</li>
+<li><p>让你设计一个cache如何设计；</p>
+</li>
+<li><p>String中hashcode是怎么实现的；</p>
+</li>
+<li><p>JDK中哪些实现了单例模式？</p>
+</li>
+<li><p>多个线程同时读写，读线程的数量远远⼤于写线程，你认为应该如何解决并发的问题？你会选择加什么样的锁？</p>
+</li>
+<li><p>线程池内的线程如果全部忙，提交⼀个新的任务，会发⽣什么？队列全部塞满了之后，还是忙，再提交会发⽣什么？</p>
+</li>
+<li><p>synchronized关键字锁住的是什么东西？在字节码中是怎么表示的？在内存中的对象上表现为什么？</p>
+</li>
+<li><p>wait/notify/notifyAll⽅法需不需要被包含在synchronized块中？这是为什么？</p>
+</li>
+<li><p>ExecutorService你一般是怎么⽤的？是每个Service放一个还是个项目放一个？有什么好处？</p>
+</li>
+</ul>
+<p><strong>二、数据库</strong></p>
+<ul>
+<li><p>InnoDB的插入缓冲和两次写的概率和意义；</p>
+</li>
+<li><p>如果建了⼀个单列索引，查询的时候查出2列，会⽤到这个单列索引吗？（会用到）</p>
+</li>
+<li><p>如果建了⼀个包含多个列的索引，查询的时候只⽤了第⼀列，能不能⽤上这个索引？查三列呢？</p>
+</li>
+<li><p>接上题，如果where条件后⾯带有⼀个 i + 5 &lt; 100 会使⽤到这个索引吗？</p>
+</li>
+<li><p>like %aaa%会使⽤索引吗? like aaa%呢?</p>
+</li>
+<li><p>drop、truncate、delete的区别？</p>
+</li>
+<li><p>平时你们是怎么监控数据库的? 慢SQL是怎么排查的？（慢查询日志）</p>
+</li>
+<li><p>你们数据库是否⽀持emoji表情，如果不⽀持，如何操作?选择什么编码方式？如果支持一个表情占几个字节?(utf8mb4)；</p>
+</li>
+<li><p>如果查询很慢，你会想到的第⼀个⽅式是什么？（数据库索引）</p>
+</li>
+</ul>
+<p><strong>三、Linux基础</strong></p>
+<ul>
+<li><p>Linux下可以在/proc目录下可以查看CPU的核心数等；cat /proc/下边会有很多系统内核信息可供显示； </p>
+</li>
+<li><p>说一下栈的内存是怎么分配的；</p>
+</li>
+<li><p>Linux各个目录有了解过吗？/etc、/bin、/dev、/lib、/sbin这些常见的目录主要作用是什么？</p>
+</li>
+<li><p>说一下栈帧的内存是怎么分配的；</p>
+</li>
+<li><p>Linux下排查某个死循环的线程；</p>
+</li>
+<li><p>动态链接和静态链接的区别；</p>
+</li>
+<li><p>进程的内存分布；</p>
+</li>
+<li><p>如何查找一个进程打开所有的文件；</p>
+</li>
+<li><p>说一下常使用的协议及其对应的端口；</p>
+</li>
+<li><p>为什么会有内核态，保护模式你知道吗?</p>
+</li>
+<li><p>文件是怎么在磁盘上存储的？</p>
+</li>
+<li><p>有了进程为何还要线程呢，不同进程和线程他们之间有什么不同。（进程是资源管理的最小单位，线程是程序执行的最小单位。在操作系统设计上，从进程演化出线程，最主要的目的就是更好的支持SMP以及减小（进程/线程）上下文切换开销。）</p>
+</li>
+<li><p>InnoDB聚集索引B+树叶子节点和磁盘什么顺序相同;</p>
+</li>
+<li><p>文件系统，进程管理和调度，内存管理机制、虚地址保护模式；</p>
+</li>
+</ul>
+<p><strong>四、网络基础</strong></p>
+<ul>
+<li><p>HTTP1.0和HTTP1.1的区别；</p>
+</li>
+<li><p>DHCP如何实现分配IP的； 发现阶段（DHCP客户端在网络中广播发送DHCP DISCOVER请求报文，发现DHCP服务器，请求IP地址租约）、提供阶段（DHCP服务器通过DHCP OFFER报文向DHCP客户端提供IP地址预分配）、选择阶段（DHCP客户端通过DHCP REQUEST报文确认选择第一个DHCP服务器为它提供IP地址自动分配服务）和确认阶段（被选择的DHCP服务器通过DHCP ACK报文把在DHCP OFFER报文中准备的IP地址租约给对应DHCP客户端）。</p>
+</li>
+<li><p>OSI七层模型，每层都说下自己的理解和知道的，说的越多越好；</p>
+</li>
+</ul>
+<p><strong>五、框架相关</strong></p>
+<ul>
+<li><p>Servlet如何保证单例模式,可不可以编程多例的哪？</p>
+</li>
+<li><p>Dubbo请求流程以及原理；</p>
+</li>
+<li><p>Spring框架如何实现事务的；</p>
+</li>
+<li><p>如果一个接⼝有2个不同的实现, 那么怎么来Autowire一个指定的实现？(可以使用Qualifier注解限定要注入的Bean，也可以使用Qualifier和Autowire注解指定要获取的bean，也可以使用Resource注解的name属性指定要获取的Bean)</p>
+</li>
+<li><p>Spring框架中需要引用哪些jar包，以及这些jar包的用途；</p>
+</li>
+<li><p>Spring Boot没有放到web容器⾥为什么能跑HTTP服务？</p>
+</li>
+<li><p>Spring中循环注入是什么意思，可不可以解决，如何解决；</p>
+</li>
+<li><p>Spring的声明式事务 @Transaction注解⼀般写在什么位置? 抛出了异常会⾃动回滚吗？有没有办法控制不触发回滚?</p>
+</li>
+<li><p>MyBatis怎么防止SQL注入；</p>
+</li>
+<li><p>Tomcat本身的参数你⼀般会怎么调整？</p>
+</li>
+<li><p>了解哪几种序列化协议？如何选择合适的序列化协议；</p>
+</li>
+<li><p>Redis渐进式rehash过程？</p>
+</li>
+<li><p>比如我有个电商平台，做每日订单的异常检测，服务端代码应该写；</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/12/13/Java后端技术 - 3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/13/Java后端技术 - 3/" itemprop="url">2018年Java面试题汇总 - 3</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-13T01:20:05+08:00">
+                2018-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/13/Java后端技术 - 3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/13/Java后端技术 - 3/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/13/Java后端技术 - 3/" class="leancloud_visitors" data-flag-title="2018年Java面试题汇总 - 3">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>2018年Java面试题汇总 - 3</p>
+<hr>
+<h1 id="Java后端技术"><a href="#Java后端技术" class="headerlink" title="Java后端技术"></a><strong>Java后端技术</strong></h1><p><strong>一、基础题</strong></p>
+<ul>
+<li><p>怎么解决Hash冲突；（开放地址法、链地址法、再哈希法、建立公共溢出区等）</p>
+</li>
+<li><p>写出一个必然会产生死锁的伪代码；</p>
+</li>
+<li><p>Spring IoC涉及到的设计模式；（工厂模式、单利模式。。）</p>
+</li>
+<li><p>toString()方法什么情况下需要重写；</p>
+</li>
+<li><p>判断对象相等时，什么情况下只需要重写 equals()，什么情况下需要重写 equals(),hashcode()？</p>
+</li>
+<li><p>Set内存放的元素为什么不可以重复，内部是如何保证和实现的？</p>
+</li>
+<li><p>如何保证分布式缓存的一致性(分布式缓存一致性hash算法?)？分布式session实现？</p>
+</li>
+<li><p>Java 8流式迭代的好处？</p>
+</li>
+<li><p>项目中用到的JDK的哪些特性？</p>
+</li>
+<li><p>说一下TreeMap的实现原理？红黑树的性质？红黑树遍历方式有哪些？如果key冲突如何解决？setColor()方法在什么时候用？什么时候会进行旋转和颜色转换？</p>
+</li>
+<li><p>Spring的bean的创建时机？依赖注入的时机？</p>
+</li>
+<li><p>ArrayList和LinkList的删除一个元素的时间复杂度；（ArrayList是O(N)，LinkList是O(1)）；</p>
+</li>
+<li><p>CopyOnWriteArrayList是什么；</p>
+</li>
+<li><p>序列化和反序列化底层如何实现的（ObjectOutputStream 、ObjectInputStream、 readObject  writeObject）；</p>
+</li>
+<li><p>如何调试多线程的程序；</p>
+</li>
+<li><p>一个线程连着调用start两次会出现什么情况？（由于状态只有就绪、阻塞、执行，状态是无法由执行转化为执行的，所以会报不合法的状态！）</p>
+</li>
+<li><p>HashMap在什么时候时间复杂度是O（1），什么时候是O（n），什么时候又是O（logn）；</p>
+</li>
+<li><p>wait方法能不能被重写？（wait是final类型的，不可以被重写，不仅如此，notify和notifyall都是final类型的），wait能不能被中断；</p>
+</li>
+<li><p>一个Controller调用两个Service，这两Service又都分别调用两个Dao，问其中用到了几个数据库连接池的连接？</p>
+</li>
+</ul>
+<p><strong>二、网络基础</strong></p>
+<ul>
+<li><p>HTTP、TCP、UDP的区别和联系；</p>
+</li>
+<li><p>TCP和UDP各自的优势，知道哪些使用UDP协议的成功案例；</p>
+</li>
+<li><p>TCP和UDP各用了底层什么协议；</p>
+</li>
+<li><p>单个UDP报文最大容量；</p>
+</li>
+<li><p>单个TCP报文最大容量；</p>
+</li>
+<li><p>TCP报头格式、UDP报头格式；</p>
+</li>
+<li><p>Server遭遇SYN Flood应当怎么处理；</p>
+</li>
+<li><p>Web开发中如何防范XSS？</p>
+</li>
+<li><p>拆包和粘包的问题，如何解决，如果我们的包没有固定长度的话，我们的应用程序应该如何解决；</p>
+</li>
+</ul>
+<p><strong>三、操作系统</strong></p>
+<ul>
+<li><p>为什么要内存对齐；</p>
+</li>
+<li><p>为什么会有大端小端，htol这一类函数的作用；</p>
+</li>
+<li><p>top显示出来的系统信息都是什么含义；（重要！）</p>
+</li>
+<li><p>Linux地址空间，怎么样进行寻址的；</p>
+</li>
+<li><p>Linux如何查找目录或者文件的；</p>
+</li>
+</ul>
+<p><strong>四、分布式其他</strong></p>
+<ul>
+<li><p>分库与分表带来的分布式困境与应对之策；</p>
+</li>
+<li><p>Solr如何实现全天24小时索引更新；</p>
+</li>
+</ul>
+<p><strong>五、Redis</strong></p>
+<ul>
+<li><p>Redis插槽的分配（key的有效部分使用CRC16算法计算出哈希值，再将哈希值对16384取余，得到插槽值）;</p>
+</li>
+<li><p>Redis主从是怎么选取的（一种是主动切换，另一种是使用sentinel自动方式）;</p>
+</li>
+<li><p>Redis复制的过程;</p>
+</li>
+<li><p>Redis队列应用场景；</p>
+</li>
+<li><p>Redis主节点宕机了怎么办，还有没有同步的数据怎么办;</p>
+</li>
+</ul>
+<p><strong>六、系统设计开放性题目</strong></p>
+<ul>
+<li><p>秒杀系统设计，超卖怎么搞;</p>
+</li>
+<li><p>你们的图片时怎么存储的，对应在数据库中时如何保存图片的信息的？</p>
+</li>
+<li><p>假如成都没有一座消防站，现在问你要建立几座消防站，每个消防站要配多少名消防官兵，多少辆消防车，请你拿出一个方案；</p>
+</li>
+<li><p>基于数组实现一个循环阻塞队列；</p>
+</li>
+<li><p>常见的ipv4地址的展现形式如“168.0.0.1”，请实现ip地址和int类型的相互转换。（使用位移的方式）</p>
+</li>
+<li><p>现网某个服务部署在多台Liunx服务器上，其中一台突然出现CPU 100%的情况，而其他服务器正常，请列举可能导致这种情况发生的原因？如果您遇到这样的情况，应如何定位？内存？CPU？发布？debug？请求量？  </p>
+</li>
+</ul>
+<p><strong>七、大数据量问题（后边会有专题单独讨论）</strong></p>
+<ul>
+<li><p>给定a、b两个文件，各存放50亿个url，每个url各占64字节，内存限制是4G，让你找出a、b文件共同的url？</p>
+</li>
+<li><p>海量日志数据，提取出某日访问百度次数最多的那个IP；</p>
+</li>
+<li><p>一个文本文件，大约有一万行，每行一个词，要求统计出其中最频繁出现的前10个词，请给出思想，给出时间复杂度分析。</p>
+</li>
+</ul>
+<p>此话题后边会有专门的文章探讨，如果有等不及的小伙伴，可以移步参考：</p>
+<p>1、<a href="https://blog.csdn.net/v\_july\_v/article/details/6279498" target="_blank" rel="noopener">https://blog.csdn.net/v\_july\_v/article/details/6279498</a>  </p>
+<p>2、<a href="https://blog.csdn.net/v\_july\_v/article/details/7382693" target="_blank" rel="noopener">https://blog.csdn.net/v\_july\_v/article/details/7382693</a></p>
+<p><strong>八、逻辑思维题</strong></p>
+<ul>
+<li><p>有两根粗细均匀的香（烧香拜佛的香），每一根烧完都花一个小时，怎么样能够得到15min？</p>
+</li>
+<li><p>假定你有8个撞球，其中有1个球比其他的球稍重,如果只能利用天平来断定哪一个球重,要找到较重的球,要称几次?（2次）；</p>
+</li>
+<li><p>实验室里有1000个一模一样的瓶子，但是其中的一瓶有毒。可以用实验室的小白鼠来测试哪一瓶是毒药。如果小白鼠喝掉毒药的话，会在一个星期的时候死去，其他瓶子里的药水没有任何副作用。请问最少用多少只小白鼠可以在一个星期以内查出哪瓶是毒药；（答案是10只）</p>
+</li>
+<li><p>假设有一个池塘，里面有无穷多的水。现有2个空水壶，容积分别为5升和6升。问题是如何只用这2个水壶从池塘里取得3升的水；</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/12/12/Java后端技术 - 2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/12/Java后端技术 - 2/" itemprop="url">2018年Java面试题汇总 - 2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-12T01:20:05+08:00">
+                2018-12-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/12/Java后端技术 - 2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/12/Java后端技术 - 2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/12/Java后端技术 - 2/" class="leancloud_visitors" data-flag-title="2018年Java面试题汇总 - 2">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>2018年Java面试题汇总 - 2</p>
+<hr>
+<h1 id="Java后端技术"><a href="#Java后端技术" class="headerlink" title="Java后端技术"></a><strong>Java后端技术</strong></h1><p><strong>一、Java相关</strong></p>
+<ul>
+<li><p>Arraylist与LinkedList默认空间是多少；  </p>
+</li>
+<li><p>Arraylist与LinkedList区别与各自的优势List 和 Map 区别；  </p>
+</li>
+<li><p>谈谈HashMap，哈希表解决hash冲突的方法；</p>
+</li>
+<li><p>为什么要重写hashcode()和equals()以及他们之间的区别与关系；  </p>
+</li>
+<li><p>Object的hashcode()是怎么计算的？</p>
+</li>
+<li><p>若hashcode方法永远返回1或者一个常量会产生什么结果？  </p>
+</li>
+<li><p>Java Collections和Arrays的sort方法默认的排序方法是什么；  </p>
+</li>
+<li><p>引用计数法与GC Root可达性分析法区别；  </p>
+</li>
+<li><p>浅拷贝和深拷贝的区别；  </p>
+</li>
+<li><p>String s=”abc”和String s=new String(“abc”)区别；  </p>
+</li>
+<li><p>HashSet方法里面的hashcode存在哪，如果重写equals不重写hashcode会怎么样？  </p>
+</li>
+<li><p>反射的作用与实现原理；  </p>
+</li>
+<li><p>Java中的回调机制；  </p>
+</li>
+<li><p>模板方法模式；  </p>
+</li>
+<li><p>开闭原则说一下；  </p>
+</li>
+<li><p>发布/订阅使用场景；  </p>
+</li>
+<li><p>KMP算法（一种改进的字符串匹配算法）；  </p>
+</li>
+<li><p>JMM里边的原子性、可见性、有序性是如何体现出来的，JMM中内存屏障是什么意思，</p>
+</li>
+</ul>
+<p><strong>二、多线程</strong></p>
+<ul>
+<li><p>AtomicInteger底层实现原理；  </p>
+</li>
+<li><p>synchronized与ReentraLock哪个是公平锁；</p>
+</li>
+<li><p>CAS机制会出现什么问题；  </p>
+</li>
+<li><p>用过并发包下边的哪些类；  </p>
+</li>
+<li><p>一个线程连着调用start两次会出现什么情况？  </p>
+</li>
+<li><p>wait方法能不能被重写，wait能不能被中断；  </p>
+</li>
+<li><p>线程池的实现？四种线程池？重要参数及原理？任务拒接策略有哪几种？</p>
+</li>
+<li><p>线程状态以及API怎么操作会发生这种转换；</p>
+</li>
+<li><p>常用的避免死锁方法；</p>
+</li>
+</ul>
+<p><strong>三、JVM</strong></p>
+<ul>
+<li><p>Minor GC与Full GC分别在什么时候发生？什么时候触发Full GC;  </p>
+</li>
+<li><p>GC收集器有哪些？CMS收集器与G1收集器的特点。  </p>
+</li>
+<li><p>Java在什么时候会出现内存泄漏；  </p>
+</li>
+<li><p>Java中的大对象如何进行存储；  </p>
+</li>
+<li><p>rt.jar被什么类加载器加载，什么时间加载；  </p>
+</li>
+<li><p>自己写的类被什么加载，什么时间加载；</p>
+</li>
+<li><p>自己写的两个不同的类是被同一个类加载器加载的吗？为什么？</p>
+</li>
+<li><p>为什么新生代内存需要有两个Survivor区？</p>
+</li>
+<li><p>几种常用的内存调试工具：jmap、jstack、jconsole；</p>
+</li>
+<li><p>类加载的五个过程：加载、验证、准备、解析、初始化；</p>
+</li>
+<li><p>G1停顿吗，CMS回收步骤，CMS为什么会停顿，停顿时间；</p>
+</li>
+<li><p>栈主要存的数据是什么，堆呢？  </p>
+</li>
+<li><p>堆分为哪几块，比如说新生代老生代，那么新生代又分为什么？  </p>
+</li>
+<li><p>软引用和弱引用的使用场景（软引用可以实现缓存，弱引用可以用来在回调函数中防止内存泄露）；  </p>
+</li>
+</ul>
+<p><strong>四、数据库</strong></p>
+<ul>
+<li><p>数据库索引，什么是全文索引，全文索引中的倒排索引是什么原理；  </p>
+</li>
+<li><p>数据库最佳左前缀原则是什么？  </p>
+</li>
+<li><p>数据库的三大范式；</p>
+</li>
+<li><p>悲观锁和乐观锁的原理和应用场景；  </p>
+</li>
+<li><p>左连接、右连接、内连接、外连接、交叉连接、笛卡儿积等；  </p>
+</li>
+<li><p>一般情况下数据库宕机了如何进行恢复（什么是Write Ahead Log机制，什么是Double Write机制，什么是Check Point）；  </p>
+</li>
+<li><p>什么是redo日志、什么是undo日志；  </p>
+</li>
+<li><p>数据库中的隔离性是怎样实现的；原子性、一致性、持久性又是如何实现的；  </p>
+</li>
+<li><p>什么是组合索引，组合索引什么时候会失效；  </p>
+</li>
+<li><p>关系型数据库和非关系型数据库区别；  </p>
+</li>
+<li><p>数据库死锁如何解决；  </p>
+</li>
+<li><p>MySQL并发情况下怎么解决（通过事务、隔离级别、锁）；  </p>
+</li>
+<li><p>MySQL中的MVCC机制是什么意思，根据具体场景，MVCC是否有问题；  </p>
+</li>
+<li><p>MySQL数据库的隔离级别，以及如何解决幻读；</p>
+</li>
+</ul>
+<p><strong>五、缓存服务器</strong></p>
+<ul>
+<li><p>Redis中zSet跳跃表问题；  </p>
+</li>
+<li><p>Redis的set的应用场合？  </p>
+</li>
+<li><p>Redis高级特性了解吗？  </p>
+</li>
+<li><p>Redis的pipeline有什么用处？  </p>
+</li>
+<li><p>Redis集群宕机如何处理，怎么样进行数据的迁移；  </p>
+</li>
+<li><p>Redis的集群方案；</p>
+</li>
+<li><p>Redis原子操作怎么用比较好；</p>
+</li>
+<li><p>Redis过期策略是怎么实现的呢？</p>
+</li>
+</ul>
+<p><strong>六、SSM相关</strong></p>
+<ul>
+<li><p>Spring中@Autowired和@Resource注解的区别？  </p>
+</li>
+<li><p>Spring声明一个 bean 如何对其进行个性化定制；  </p>
+</li>
+<li><p>MyBatis有什么优势；  </p>
+</li>
+<li><p>MyBatis如何做事务管理；  </p>
+</li>
+</ul>
+<p><strong>七、操作系统</strong></p>
+<ul>
+<li><p>Linux静态链接和动态链接；  </p>
+</li>
+<li><p>什么是IO多路复用模型（select、poll、epoll）；  </p>
+</li>
+<li><p>Linux中的grep管道用处？Linux的常用命令？  </p>
+</li>
+<li><p>操作系统中虚拟地址、逻辑地址、线性地址、物理地址的概念及区别；  </p>
+</li>
+<li><p>内存的页面置换算法；  </p>
+</li>
+<li><p>内存的页面置换算法；  </p>
+</li>
+<li><p>进程调度算法，操作系统是如何调度进程的；</p>
+</li>
+<li><p>父子进程、孤儿进程、僵死进程等概念；</p>
+</li>
+<li><p>fork进程时的操作；</p>
+</li>
+<li><p>kill用法，某个进程杀不掉的原因（僵死进程；进入内核态，忽略kill信号）；</p>
+</li>
+<li><p>系统管理命令（如查看内存使用、网络情况）；</p>
+</li>
+<li><p>find命令、awk使用；</p>
+</li>
+<li><p>Linux下排查某个死循环的线程；</p>
+</li>
+</ul>
+<p><strong>八、网络相关</strong></p>
+<ul>
+<li><p>数据链路层是做什么的?  </p>
+</li>
+<li><p>数据链路层的流量控制？  </p>
+</li>
+<li><p>网络模型的分层、IP和Mac地址在那个层、TCP和HTTP分别在那个层；  </p>
+</li>
+<li><p>TCP滑动窗口；  </p>
+</li>
+<li><p>TCP为什么可靠；  </p>
+</li>
+<li><p>TCP的同传，拆包与组装包是什么意思；  </p>
+</li>
+<li><p>Https和Http有什么区别；  </p>
+</li>
+<li><p>Http 为什么是无状态的；</p>
+</li>
+<li><p>TCP三次握手，为什么不是三次，为什么不是四次；</p>
+</li>
+<li><p>TCP的拥塞控制、流量控制详细说明？  </p>
+</li>
+<li><p>Http1.0和Http2.0的区别；  </p>
+</li>
+<li><p>两个不同ip地址的计算机之间如何通信；  </p>
+</li>
+<li><p>地址解析协议ARP；  </p>
+</li>
+<li><p>OSI七层模型分别对应着五层模型的哪一部分；</p>
+</li>
+<li><p>TCP三次握手数据丢失了怎么办？那如果后面又找到了呢？</p>
+</li>
+</ul>
+<p><strong>九、分布式相关</strong></p>
+<ul>
+<li><p>消息队列使用的场景介绍和作用（应用耦合、异步消息、流量削锋等）；  </p>
+</li>
+<li><p>如何解决消息队列丢失消息和重复消费问题；  </p>
+</li>
+<li><p>Kafka使用过吗，什么是幂等性？怎么保证一致性，持久化怎么做，分区partition的理解，LEO是什么意思，如何保证多个partition之间数据一致性的（ISR机制），为什么Kafka可以这么快（基于磁盘的顺序读写）；  </p>
+</li>
+<li><p>异步队列怎么实现；  </p>
+</li>
+<li><p>你项目的并发是多少？怎么解决高并发问题？单机情况下Tomcat的并发大概是多少，MySQL的并发大致是多少？  </p>
+</li>
+<li><p>什么是C10K问题；  </p>
+</li>
+<li><p>高并发情况下怎么办；  </p>
+</li>
+<li><p>分布式理论，什么是CAP理论，什么是Base理论，什么是Paxos理论；</p>
+</li>
+<li><p>分布式协议的选举算法；  </p>
+</li>
+<li><p>说一下你对微服务的理解，与SOA的区别；  </p>
+</li>
+<li><p>Dubbo的基本原理，RPC，支持哪些通信方式，服务的调用过程；  </p>
+</li>
+<li><p>Dubbo如果有一个服务挂掉了怎么办；  </p>
+</li>
+<li><p>分布式事务，操作两个表不在一个库，如何保证一致性。  </p>
+</li>
+<li><p>分布式系统中，每台机器如何产生一个唯一的随机值；  </p>
+</li>
+<li><p>系统的量级、pv、uv等；  </p>
+</li>
+<li><p>什么是Hash一致性算法？分布式缓存的一致性，服务器如何扩容（哈希环）；  </p>
+</li>
+<li><p>正向代理、反向代理；</p>
+</li>
+<li><p>什么是客户端负载均衡策略、什么是服务器端负载均衡策略；</p>
+</li>
+<li><p>如何优化Tomcat，常见的优化方式有哪些；</p>
+</li>
+<li><p>Nginx的Master和Worker，Nginx是如何处理请求的；</p>
+</li>
+</ul>
+<p><strong>十、系统设计相关</strong></p>
+<ul>
+<li><p>如何防止表单重复提交（Token令牌环等方式）；</p>
+</li>
+<li><p>有一个url白名单，需要使用正则表达式进行过滤，但是url量级很大，大概亿级，那么如何优化正则表达式？如何优化亿级的url匹配呢？</p>
+</li>
+<li><p>常见的Nginx负载均衡策略；已有两台Nginx服务器了，倘若这时候再增加一台服务器，采用什么负载均衡算法比较好？</p>
+</li>
+<li><p>扫描二维码登录的过程解析；</p>
+</li>
+<li><p>如何设计一个生成唯一UUID的算法？</p>
+</li>
+<li><p>实现一个负载均衡的算法，服务器资源分配为70%、20%、10%；</p>
+</li>
+<li><p>有三个线程T1 T2 T3，如何保证他们按顺序执行；</p>
+</li>
+<li><p>三个线程循环输出ABCABCABC….</p>
+</li>
+</ul>
+<p><strong>十一、安全相关</strong></p>
+<ul>
+<li>什么是XSS攻击，XSS攻击的一般表现形式有哪些？如何防止XSS攻击；</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/12/11/Java后端技术 - 1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/11/Java后端技术 - 1/" itemprop="url">2018年Java面试题汇总 - 1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-11T01:20:05+08:00">
+                2018-12-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/11/Java后端技术 - 1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/11/Java后端技术 - 1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/11/Java后端技术 - 1/" class="leancloud_visitors" data-flag-title="2018年Java面试题汇总 - 1">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>2018年Java面试题汇总 - 1</p>
+<hr>
+<h1 id="Java后端技术"><a href="#Java后端技术" class="headerlink" title="Java后端技术"></a><strong>Java后端技术</strong></h1><h2 id="一、基础篇"><a href="#一、基础篇" class="headerlink" title="一、基础篇"></a><strong>一、基础篇</strong></h2><h3 id="1-1、Java基础"><a href="#1-1、Java基础" class="headerlink" title="1.1、Java基础 "></a><strong>1.1、Java基础 </strong></h3><ul>
+<li><p>面向对象的特征：继承、封装和多态</p>
+</li>
+<li><p>final, finally, finalize 的区别</p>
+</li>
+<li><p>Exception、Error、运行时异常与一般异常有何异同</p>
+</li>
+<li><p>请写出5种常见到的runtime exception</p>
+</li>
+<li><p>int 和 Integer 有什么区别，Integer的值缓存范围</p>
+</li>
+<li><p>包装类，装箱和拆箱</p>
+</li>
+<li><p>String、StringBuilder、StringBuffer</p>
+</li>
+<li><p>重载和重写的区别</p>
+</li>
+<li><p>抽象类和接口有什么区别</p>
+</li>
+<li><p>说说反射的用途及实现</p>
+</li>
+<li><p>说说自定义注解的场景及实现</p>
+</li>
+<li><p>HTTP请求的GET与POST方式的区别</p>
+</li>
+<li><p>Session与Cookie区别</p>
+</li>
+<li><p>列出自己常用的JDK包</p>
+</li>
+<li><p>MVC设计思想</p>
+</li>
+<li><p>equals与==的区别</p>
+</li>
+<li><p>hashCode和equals方法的区别与联系</p>
+</li>
+<li><p>什么是Java序列化和反序列化，如何实现Java序列化？或者请解释Serializable 接口的作用</p>
+</li>
+<li><p>Object类中常见的方法，为什么wait  notify会放在Object里边？</p>
+</li>
+<li><p>Java的平台无关性如何体现出来的</p>
+</li>
+<li><p>JDK和JRE的区别</p>
+</li>
+<li><p>Java 8有哪些新特性</p>
+</li>
+</ul>
+<h3 id="1-2、Java常见集合"><a href="#1-2、Java常见集合" class="headerlink" title="1.2、Java常见集合"></a><strong>1.2、Java常见集合</strong></h3><ul>
+<li><p>List 和 Set 区别</p>
+</li>
+<li><p>Set和hashCode以及equals方法的联系</p>
+</li>
+<li><p>List 和 Map 区别</p>
+</li>
+<li><p>Arraylist 与 LinkedList 区别</p>
+</li>
+<li><p>ArrayList 与 Vector 区别</p>
+</li>
+<li><p>HashMap 和 Hashtable 的区别</p>
+</li>
+<li><p>HashSet 和 HashMap 区别</p>
+</li>
+<li><p>HashMap 和 ConcurrentHashMap 的区别</p>
+</li>
+<li><p>HashMap 的工作原理及代码实现，什么时候用到红黑树</p>
+</li>
+<li><p>多线程情况下HashMap死循环的问题</p>
+</li>
+<li><p>HashMap出现Hash DOS攻击的问题</p>
+</li>
+<li><p>ConcurrentHashMap 的工作原理及代码实现，如何统计所有的元素个数</p>
+</li>
+<li><p>手写简单的HashMap</p>
+</li>
+<li><p>看过那些Java集合类的源码</p>
+</li>
+</ul>
+<p><strong>1.3、进程和线程</strong></p>
+<ul>
+<li><p>线程和进程的概念、并行和并发的概念</p>
+</li>
+<li><p>创建线程的方式及实现</p>
+</li>
+<li><p>进程间通信的方式</p>
+</li>
+<li><p>说说 CountDownLatch、CyclicBarrier 原理和区别</p>
+</li>
+<li><p>说说 Semaphore 原理</p>
+</li>
+<li><p>说说 Exchanger 原理</p>
+</li>
+<li><p>ThreadLocal 原理分析，ThreadLocal为什么会出现OOM，出现的深层次原理</p>
+</li>
+<li><p>讲讲线程池的实现原理</p>
+</li>
+<li><p>线程池的几种实现方式</p>
+</li>
+<li><p>线程的生命周期，状态是如何转移的</p>
+</li>
+<li><p>可参考：《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247484881&amp;idx=2&amp;sn=b0ecf85cd7c9e543c84e7a9859c20a26&amp;chksm=e9c5fc60deb27576a6a9c453dabc585f43d9f29fd8a8f37ed0e7cc2f012c86b23fbd21763a39&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">Java多线程编程核心技术</a>》</p>
+</li>
+</ul>
+<h3 id="1-4、锁机制"><a href="#1-4、锁机制" class="headerlink" title="1.4、锁机制"></a><strong>1.4、锁机制</strong></h3><ul>
+<li><p>说说线程安全问题，什么是线程安全，如何保证线程安全</p>
+</li>
+<li><p>重入锁的概念，重入锁为什么可以防止死锁</p>
+</li>
+<li><p>产生死锁的四个条件（互斥、请求与保持、不剥夺、循环等待）</p>
+</li>
+<li><p>如何检查死锁（通过jConsole检查死锁）</p>
+</li>
+<li><p>volatile 实现原理（禁止指令重排、刷新内存）</p>
+</li>
+<li><p>synchronized 实现原理（对象监视器）</p>
+</li>
+<li><p>synchronized 与 lock 的区别</p>
+</li>
+<li><p>AQS同步队列</p>
+</li>
+<li><p>CAS无锁的概念、乐观锁和悲观锁</p>
+</li>
+<li><p>常见的原子操作类</p>
+</li>
+<li><p>什么是ABA问题，出现ABA问题JDK是如何解决的</p>
+</li>
+<li><p>乐观锁的业务场景及实现方式</p>
+</li>
+<li><p>Java 8并法包下常见的并发类</p>
+</li>
+<li><p>偏向锁、轻量级锁、重量级锁、自旋锁的概念</p>
+</li>
+<li><p>可参考：《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247484881&amp;idx=2&amp;sn=b0ecf85cd7c9e543c84e7a9859c20a26&amp;chksm=e9c5fc60deb27576a6a9c453dabc585f43d9f29fd8a8f37ed0e7cc2f012c86b23fbd21763a39&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">Java多线程编程核心技术</a>》</p>
+</li>
+</ul>
+<h3 id="1-5、JVM"><a href="#1-5、JVM" class="headerlink" title="1.5、JVM"></a><strong>1.5、JVM</strong></h3><ul>
+<li><p>JVM运行时内存区域划分</p>
+</li>
+<li><p>内存溢出OOM和堆栈溢出SOE的示例及原因、如何排查与解决</p>
+</li>
+<li><p>如何判断对象是否可以回收或存活</p>
+</li>
+<li><p>常见的GC回收算法及其含义</p>
+</li>
+<li><p>常见的JVM性能监控和故障处理工具类：jps、jstat、jmap、jinfo、jconsole等</p>
+</li>
+<li><p>JVM如何设置参数</p>
+</li>
+<li><p>JVM性能调优</p>
+</li>
+<li><p>类加载器、双亲委派模型、一个类的生命周期、类是如何加载到JVM中的</p>
+</li>
+<li><p>类加载的过程：加载、验证、准备、解析、初始化</p>
+</li>
+<li><p>强引用、软引用、弱引用、虚引用</p>
+</li>
+<li><p>Java内存模型JMM</p>
+</li>
+</ul>
+<h3 id="1-6、设计模式"><a href="#1-6、设计模式" class="headerlink" title="1.6、设计模式"></a><strong>1.6、设计模式</strong></h3><ul>
+<li><p>常见的设计模式</p>
+</li>
+<li><p>设计模式的的六大原则及其含义</p>
+</li>
+<li><p>常见的单例模式以及各种实现方式的优缺点，哪一种最好，手写常见的单利模式</p>
+</li>
+<li><p>设计模式在实际场景中的应用</p>
+</li>
+<li><p>Spring中用到了哪些设计模式</p>
+</li>
+<li><p>MyBatis中用到了哪些设计模式</p>
+</li>
+<li><p>你项目中有使用哪些设计模式</p>
+</li>
+<li><p>说说常用开源框架中设计模式使用分析</p>
+</li>
+<li><p>动态代理很重要！！！</p>
+</li>
+</ul>
+<p><strong>1.7、数据结构</strong></p>
+<ul>
+<li><p>树（二叉查找树、平衡二叉树、红黑树、B树、B+树）</p>
+</li>
+<li><p>深度有限算法、广度优先算法</p>
+</li>
+<li><p>克鲁斯卡尔算法、普林母算法、迪克拉斯算法</p>
+</li>
+<li><p>什么是一致性Hash及其原理、Hash环问题</p>
+</li>
+<li><p>常见的排序算法和查找算法：快排、折半查找、堆排序等</p>
+</li>
+</ul>
+<h3 id="1-8、网络-IO基础"><a href="#1-8、网络-IO基础" class="headerlink" title="1.**8、网络/IO基础**"></a><strong>1.**</strong>8、网络/IO基础**</h3><ul>
+<li><p>BIO、NIO、AIO的概念</p>
+</li>
+<li><p>什么是长连接和短连接</p>
+</li>
+<li><p>Http1.0和2.0相比有什么区别，可参考《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247484611&amp;idx=1&amp;sn=66c875392eedff8150633ddcd5d83e7a&amp;chksm=e9c5fd72deb274648a607b9bc39bac34adadd768577b77354f6dc85422691605e210b69eeb7b&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">Http 2.0</a>》</p>
+</li>
+<li><p>Https的基本概念</p>
+</li>
+<li><p>三次握手和四次挥手、为什么挥手需要四次</p>
+</li>
+<li><p>从游览器中输入URL到页面加载的发生了什么？可参考《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247483724&amp;idx=1&amp;sn=e58dd30d124971c795584e8673d6cc71&amp;chksm=e9c5f8fddeb271ebebbb6c350ed1abc252f1f26b4f35c4ce36e10bde9659a37520feabed2290&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">从输入URL到页面加载发生了什么</a>》</p>
+</li>
+</ul>
+<p><strong>二、数据存储和消息队列</strong></p>
+<h3 id="2-1、数据库"><a href="#2-1、数据库" class="headerlink" title="2.1、数据库"></a><strong>2.1、数据库</strong></h3><ul>
+<li><p>MySQL 索引使用的注意事项</p>
+</li>
+<li><p>DDL、DML、DCL分别指什么</p>
+</li>
+<li><p>explain命令</p>
+</li>
+<li><p>left join，right join，inner join</p>
+</li>
+<li><p>数据库事物ACID（原子性、一致性、隔离性、持久性）</p>
+</li>
+<li><p>事物的隔离级别（读未提交、读以提交、可重复读、可序列化读）</p>
+</li>
+<li><p>脏读、幻读、不可重复读</p>
+</li>
+<li><p>数据库的几大范式</p>
+</li>
+<li><p>数据库常见的命令</p>
+</li>
+<li><p>说说分库与分表设计</p>
+</li>
+<li><p>分库与分表带来的分布式困境与应对之策（如何解决分布式下的分库分表，全局表？）</p>
+</li>
+<li><p>说说 SQL 优化之道</p>
+</li>
+<li><p>MySQL遇到的死锁问题、如何排查与解决</p>
+</li>
+<li><p>存储引擎的 InnoDB与MyISAM区别，优缺点，使用场景</p>
+</li>
+<li><p>索引类别（B+树索引、全文索引、哈希索引）、索引的原理</p>
+</li>
+<li><p>什么是自适应哈希索引（AHI）</p>
+</li>
+<li><p>为什么要用 B+tree作为MySQL索引的数据结构</p>
+</li>
+<li><p>聚集索引与非聚集索引的区别</p>
+</li>
+<li><p>遇到过索引失效的情况没，什么时候可能会出现，如何解决</p>
+</li>
+<li><p>limit 20000 加载很慢怎么解决</p>
+</li>
+<li><p>如何选择合适的分布式主键方案</p>
+</li>
+<li><p>选择合适的数据存储方案</p>
+</li>
+<li><p>常见的几种分布式ID的设计方案</p>
+</li>
+<li><p>常见的数据库优化方案，在你的项目中数据库如何进行优化的</p>
+</li>
+</ul>
+<h3 id="2-2、Redis"><a href="#2-2、Redis" class="headerlink" title="2.2、Redis"></a><strong>2.2、Redis</strong></h3><ul>
+<li><p>Redis 有哪些数据类型，可参考《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247483987&amp;idx=1&amp;sn=5c5e4cd5bc73a7e6f84e5d6adfab0935&amp;chksm=e9c5fbe2deb272f4b5b75bd2ac92bb27950452623ec83c0e1add7e30c773160421fab1571680&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">Redis常见的5种不同的数据类型详解</a>》</p>
+</li>
+<li><p>Redis 内部结构</p>
+</li>
+<li><p>Redis 使用场景</p>
+</li>
+<li><p>Redis 持久化机制，可参考《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247483992&amp;idx=1&amp;sn=8f554bc490c4db1a78a30144f873e911&amp;chksm=e9c5fbe9deb272fff47483c241e6d2a7aae99dc8f6fe9fee31f2dd214d0cf81b33d51f7a7dbe&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">使用快照和AOF将Redis数据持久化到硬盘中</a>》</p>
+</li>
+<li><p>Redis 集群方案与实现</p>
+</li>
+<li><p>Redis 为什么是单线程的？</p>
+</li>
+<li><p>缓存雪崩、缓存穿透、缓存预热、缓存更新、缓存降级</p>
+</li>
+<li><p>使用缓存的合理性问题</p>
+</li>
+<li><p>Redis常见的回收策略</p>
+</li>
+</ul>
+<h3 id="2-3、消息队列"><a href="#2-3、消息队列" class="headerlink" title="2.3、消息队列"></a><strong>2.3、消息队列</strong></h3><ul>
+<li><p>消息队列的使用场景</p>
+</li>
+<li><p>消息的重发补偿解决思路</p>
+</li>
+<li><p>消息的幂等性解决思路</p>
+</li>
+<li><p>消息的堆积解决思路</p>
+</li>
+<li><p>自己如何实现消息队列</p>
+</li>
+<li><p>如何保证消息的有序性</p>
+</li>
+</ul>
+<h2 id="三、开源框架和容器"><a href="#三、开源框架和容器" class="headerlink" title="三、开源框架和容器"></a><strong>三、开源框架和容器</strong></h2><h3 id="3-1、SSM-Servlet"><a href="#3-1、SSM-Servlet" class="headerlink" title="3.1、SSM/Servlet"></a><strong>3.1、SSM/Servlet</strong></h3><ul>
+<li><p>Servlet的生命周期</p>
+</li>
+<li><p>转发与重定向的区别</p>
+</li>
+<li><p>BeanFactory 和 ApplicationContext 有什么区别</p>
+</li>
+<li><p>Spring Bean 的生命周期</p>
+</li>
+<li><p>Spring IOC 如何实现</p>
+</li>
+<li><p>Spring中Bean的作用域，默认的是哪一个</p>
+</li>
+<li><p>说说 Spring AOP、Spring AOP 实现原理</p>
+</li>
+<li><p>动态代理（CGLib 与 JDK）、优缺点、性能对比、如何选择</p>
+</li>
+<li><p>Spring 事务实现方式、事务的传播机制、默认的事务类别</p>
+</li>
+<li><p>Spring 事务底层原理</p>
+</li>
+<li><p>Spring事务失效（事务嵌套），JDK动态代理给Spring事务埋下的坑，可参考《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247484940&amp;idx=1&amp;sn=0a0a7198e96f57d610d3421b19573002&amp;chksm=e9c5ffbddeb276ab64ff3b3efde003193902c69acda797fdc04124f6c2a786255d58817b5a5c&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">JDK动态代理给Spring事务埋下的坑！</a>》</p>
+</li>
+<li><p>如何自定义注解实现功能</p>
+</li>
+<li><p>Spring MVC 运行流程</p>
+</li>
+<li><p>Spring MVC 启动流程</p>
+</li>
+<li><p>Spring 的单例实现原理</p>
+</li>
+<li><p>Spring 框架中用到了哪些设计模式</p>
+</li>
+<li><p>Spring 其他产品（Srping Boot、Spring Cloud、Spring Secuirity、Spring Data、Spring AMQP 等）</p>
+</li>
+<li><p>有没有用到Spring Boot，Spring Boot的认识、原理</p>
+</li>
+<li><p>MyBatis的原理</p>
+</li>
+<li><p>可参考《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247484822&amp;idx=1&amp;sn=6fbee2a12b31b6102a18d3725671d41b&amp;chksm=e9c5fc27deb275319641c3f30d168b85c7c196fd276d47efa35046b5dc54f5b77174c5bf8808&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">为什么会有Spring</a>》</p>
+</li>
+<li><p>可参考《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247484827&amp;idx=1&amp;sn=b9d82f3fced6a875f8dfc22e5849b28e&amp;chksm=e9c5fc2adeb2753c516ef8fc959c0c9dd84ccacaa40473b64bc58b5137c30562a0b45803ba8e&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">为什么会有Spring AOP</a>》</p>
+</li>
+</ul>
+<h3 id="3-2、Netty"><a href="#3-2、Netty" class="headerlink" title="3.2、Netty"></a><strong>3.2、Netty</strong></h3><ul>
+<li><p>为什么选择 Netty</p>
+</li>
+<li><p>说说业务中，Netty 的使用场景</p>
+</li>
+<li><p>原生的 NIO 在 JDK 1.7 版本存在 epoll bug</p>
+</li>
+<li><p>什么是TCP 粘包/拆包</p>
+</li>
+<li><p>TCP粘包/拆包的解决办法</p>
+</li>
+<li><p>Netty 线程模型</p>
+</li>
+<li><p>说说 Netty 的零拷贝</p>
+</li>
+<li><p>Netty 内部执行流程</p>
+</li>
+<li><p>Netty 重连实现</p>
+</li>
+</ul>
+<p><strong>3.3、Tomcat</strong></p>
+<ul>
+<li><p>Tomcat的基础架构（Server、Service、Connector、Container）</p>
+</li>
+<li><p>Tomcat如何加载Servlet的</p>
+</li>
+<li><p>Pipeline-Valve机制</p>
+</li>
+<li><p>可参考：《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247484905&amp;idx=1&amp;sn=6c8acd89476fadbc4cb9ccfda9c9c2e4&amp;chksm=e9c5fc58deb2754e7519511bb0ed8dcbfa3fe29179663b53f3626643f8b9c82068d9b0464ee6&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">四张图带你了解Tomcat系统架构</a>！》</p>
+</li>
+</ul>
+<h2 id="四、分布式"><a href="#四、分布式" class="headerlink" title="四、分布式"></a><strong>四、分布式</strong></h2><h2 id="4-1、Nginx"><a href="#4-1、Nginx" class="headerlink" title="4.1、Nginx"></a><strong>4.1、Nginx</strong></h2><ul>
+<li><p>请解释什么是C10K问题或者知道什么是C10K问题吗？</p>
+</li>
+<li><p>Nginx简介，可参考《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247483994&amp;idx=1&amp;sn=b6591f62c7ea6b4adc5a5bf1bf4eac40&amp;chksm=e9c5fbebdeb272fdd865a9c61a380f6b909fc988f99d00ce0aa8c3efca501644db46c40bd4f2&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">Nginx简介</a>》  </p>
+</li>
+<li><p>正向代理和反向代理.</p>
+</li>
+<li><p>Nginx几种常见的负载均衡策略</p>
+</li>
+<li><p>Nginx服务器上的Master和Worker进程分别是什么</p>
+</li>
+<li><p>使用“反向代理服务器”的优点是什么?</p>
+</li>
+</ul>
+<h3 id="4-2、分布式其他"><a href="#4-2、分布式其他" class="headerlink" title="4.2、分布式其他"></a><strong>4.2、分布式其他</strong></h3><ul>
+<li><p>谈谈业务中使用分布式的场景</p>
+</li>
+<li><p>Session 分布式方案</p>
+</li>
+<li><p>Session 分布式处理</p>
+</li>
+<li><p>分布式锁的应用场景、分布式锁的产生原因、基本概念</p>
+</li>
+<li><p>分布是锁的常见解决方案</p>
+</li>
+<li><p>分布式事务的常见解决方案</p>
+</li>
+<li><p>集群与负载均衡的算法与实现</p>
+</li>
+<li><p>说说分库与分表设计，可参考《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247483931&amp;idx=1&amp;sn=6eda41aa81c1243422a603205d2fad22&amp;chksm=e9c5fbaadeb272bc92537803c14a6f55e1170b1a3b8f60160f66417800c0ace960dfe192717a&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">数据库分库分表策略的具体实现方案</a>》</p>
+</li>
+<li><p>分库与分表带来的分布式困境与应对之策</p>
+</li>
+</ul>
+<p><strong>4.3、</strong>Dubbo<em>**</em></p>
+<ul>
+<li><p>什么是Dubbo，可参考《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247483791&amp;idx=1&amp;sn=49345f1a022734e81e9257f2b8d38a52&amp;chksm=e9c5f83edeb2712805a77c1e1589e8f1d04bd17e55eeb2a45cabddb46d03615636908f058628&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">Dubbo入门</a>》</p>
+</li>
+<li><p>什么是RPC、如何实现RPC、RPC 的实现原理，可参考《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247483900&amp;idx=1&amp;sn=c5ca198a66a701f81c2ab118fe7a734a&amp;chksm=e9c5f84ddeb2715bc574e467cd6537ef81f223453e0989ffd136976b48dcc2d961a75be596de&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">基于HTTP的RPC实现</a>》</p>
+</li>
+<li><p>Dubbo中的SPI是什么概念</p>
+</li>
+<li><p>Dubbo的基本原理、执行流程</p>
+</li>
+</ul>
+<p><strong>五、微服务</strong></p>
+<p><strong>5.1、微服务</strong></p>
+<ul>
+<li><p>前后端分离是如何做的？</p>
+</li>
+<li><p>微服务哪些框架</p>
+</li>
+<li><p>Spring Could的常见组件有哪些？可参考《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247484125&amp;idx=1&amp;sn=ddba9fba6ae900f5ef71a68f70afebe5&amp;chksm=e9c5fb6cdeb2727a1e8d16a05adb7d9df0170e392ae579d1e40075fb488d680f0c061aa45327&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">Spring Cloud概述</a>》</p>
+</li>
+<li><p>领域驱动有了解吗？什么是领域驱动模型？充血模型、贫血模型</p>
+</li>
+<li><p>JWT有了解吗，什么是JWT，可参考《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247485183&amp;idx=1&amp;sn=05dac824dbb534710dd99d6c895fbaf5&amp;chksm=e9c5ff4edeb27658173c8b06ad6d1241d3b7822c734ddf6ac064d40e63cb0cb0a0c90804b9c7&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">前后端分离利器之JWT</a>》</p>
+</li>
+<li><p>你怎么理解 RESTful</p>
+</li>
+<li><p>说说如何设计一个良好的 API</p>
+</li>
+<li><p>如何理解 RESTful API 的幂等性</p>
+</li>
+<li><p>如何保证接口的幂等性</p>
+</li>
+<li><p>说说 CAP 定理、BASE 理论</p>
+</li>
+<li><p>怎么考虑数据一致性问题</p>
+</li>
+<li><p>说说最终一致性的实现方案</p>
+</li>
+<li><p>微服务的优缺点，可参考《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247485005&amp;idx=1&amp;sn=78a1d286c6a15a81ea5dcf6634a70b54&amp;chksm=e9c5fffcdeb276ea3c766a6e5954685db0e89bea8ff0f47c9a3ff2c0c02991f791a5160287c4&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">微服务批判</a>》</p>
+</li>
+<li><p>微服务与 SOA 的区别</p>
+</li>
+<li><p>如何拆分服务、水平分割、垂直分割</p>
+</li>
+<li><p>如何应对微服务的链式调用异常</p>
+</li>
+<li><p>如何快速追踪与定位问题</p>
+</li>
+<li><p>如何保证微服务的安全、认证</p>
+</li>
+</ul>
+<h3 id="5-2、安全问题"><a href="#5-2、安全问题" class="headerlink" title="5.2、安全问题"></a><strong>5.2、安全问题</strong></h3><ul>
+<li><p>如何防范常见的Web攻击、如何方式SQL注入</p>
+</li>
+<li><p>服务端通信安全攻防</p>
+</li>
+<li><p>HTTPS原理剖析、降级攻击、HTTP与HTTPS的对比</p>
+</li>
+</ul>
+<h3 id="5-3、性能优化"><a href="#5-3、性能优化" class="headerlink" title="5.3、性能优化"></a><strong>5.3、性能优化</strong></h3><ul>
+<li><p>性能指标有哪些</p>
+</li>
+<li><p>如何发现性能瓶颈</p>
+</li>
+<li><p>性能调优的常见手段</p>
+</li>
+<li><p>说说你在项目中如何进行性能调优</p>
+</li>
+</ul>
+<h2 id="六、其他"><a href="#六、其他" class="headerlink" title="六、其他"></a><strong>六、其他</strong></h2><h3 id="6-1、设计能力"><a href="#6-1、设计能力" class="headerlink" title="6.1、设计能力"></a><strong>6.1、设计能力</strong></h3><ul>
+<li><p>说说你在项目中使用过的UML图</p>
+</li>
+<li><p>你如何考虑组件化、服务化、系统拆分</p>
+</li>
+<li><p>秒杀场景如何设计</p>
+</li>
+<li><p>可参考：《<a href="http://mp.weixin.qq.com/s?__biz=MzI1NDQ3MjQxNA==&amp;mid=2247485294&amp;idx=1&amp;sn=681b3fc8833bc978344f66c8dd33ff32&amp;chksm=e9c5fedfdeb277c96e03e8943bff709ad5354cbbe0c0d894cdb9d1e8cc8da92bf51f1e832e37&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">秒杀系统的技术挑战、应对策略以及架构设计总结一二！</a>》</p>
+</li>
+</ul>
+<h3 id="6-2、业务工程"><a href="#6-2、业务工程" class="headerlink" title="6.2、业务工程"></a><strong>6.2、业务工程</strong></h3><ul>
+<li><p>说说你的开发流程、如何进行自动化部署的</p>
+</li>
+<li><p>你和团队是如何沟通的</p>
+</li>
+<li><p>你如何进行代码评审</p>
+</li>
+<li><p>说说你对技术与业务的理解</p>
+</li>
+<li><p>说说你在项目中遇到感觉最难Bug，是如何解决的</p>
+</li>
+<li><p>介绍一下工作中的一个你认为最有价值的项目，以及在这个过程中的角色、解决的问题、你觉得你们项目还有哪些不足的地方</p>
+</li>
+</ul>
+<h3 id="6-3、软实力"><a href="#6-3、软实力" class="headerlink" title="6.3、软实力"></a><strong>6.3、软实力</strong></h3><ul>
+<li><p>说说你的优缺点、亮点</p>
+</li>
+<li><p>说说你最近在看什么书、什么博客、在研究什么新技术、再看那些开源项目的源代码</p>
+</li>
+<li><p>说说你觉得最有意义的技术书籍</p>
+</li>
+<li><p>工作之余做什么事情、平时是如何学习的，怎样提升自己的能力</p>
+</li>
+<li><p>说说个人发展方向方面的思考</p>
+</li>
+<li><p>说说你认为的服务端开发工程师应该具备哪些能力</p>
+</li>
+<li><p>说说你认为的架构师是什么样的，架构师主要做什么</p>
+</li>
+<li><p>如何看待加班的问题</p>
+</li>
+</ul>
+<p>当然，一个完整的面试肯定不止上述的知识点，其他的诸如：Linux、数据结构、算法、逻辑思维题、系统设计题、职业规划等等都会有所涉及！总之，充分的准备是应对一切面试的不二法宝！</p>
+<p>欢迎留言讨论上述的问题！有哪些经常被问到的面试题也欢迎大家留言补充！</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/12/11/Java后端技术 - 8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/11/Java后端技术 - 8/" itemprop="url">计算机网络基础几道常见面试试题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-11T01:20:05+08:00">
+                2018-12-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/11/Java后端技术 - 8/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/11/Java后端技术 - 8/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/11/Java后端技术 - 8/" class="leancloud_visitors" data-flag-title="计算机网络基础几道常见面试试题">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>计算机网络基础几道常见面试试题</p>
+<hr>
+<h1 id="Java后端技术"><a href="#Java后端技术" class="headerlink" title="Java后端技术"></a><strong>Java后端技术</strong></h1><p>1、OSI，TCP/IP，五层协议的体系结构，以及各层协议</p>
+<p>OSI分层 （7层）：物理层、数据链路层、网络层、传输层、会话层、表示层、应用层。</p>
+<p>TCP/IP分层（4层）：网络接口层、 网际层、运输层、 应用层。</p>
+<p>五层协议 （5层）：物理层、数据链路层、网络层、运输层、 应用层。</p>
+<p>每一层的协议如下：</p>
+<p>物理层：RJ45、CLOCK、IEEE802.3    （中继器，集线器，网关）；</p>
+<p>数据链路：PPP、FR、HDLC、VLAN、MAC  （网桥，交换机）；</p>
+<p>网络层：IP、ICMP、ARP、RARP、OSPF、IPX、RIP、IGRP、 （路由器）；</p>
+<p>传输层：TCP、UDP、SPX；</p>
+<p>会话层：NFS、SQL、NETBIOS、RPC；</p>
+<p>表示层：JPEG、MPEG、ASII；</p>
+<p>应用层：FTP、DNS、Telnet、SMTP、HTTP、WWW、NFS；</p>
+<p>每一层的作用如下：</p>
+<p>物理层：通过媒介传输比特,确定机械及电气规范（比特Bit）</p>
+<p>数据链路层：将比特组装成帧和点到点的传递（帧Frame）</p>
+<p>网络层：负责数据包从源到宿的传递和网际互连（包PackeT）</p>
+<p>传输层：提供端到端的可靠报文传递和错误恢复（段Segment）</p>
+<p>会话层：建立、管理和终止会话（会话协议数据单元SPDU）</p>
+<p>表示层：对数据进行翻译、加密和压缩（表示协议数据单元PPDU）</p>
+<p>应用层：允许访问OSI环境的手段（应用协议数据单元APDU）</p>
+<p><strong>2、IP地址的分类</strong></p>
+<p>A类地址：以0开头， 第一个字节范围：0~127（1.0.0.0 - 126.255.255.255）；</p>
+<p>B类地址：以10开头，第一个字节范围：128~191（128.0.0.0 - 191.255.255.255）；</p>
+<p>C类地址：以110开头，第一个字节范围：192~223（192.0.0.0 - 223.255.255.255）；</p>
+<p>10.0.0.0—10.255.255.255，172.16.0.0—172.31.255.255， 192.168.0.0—192.168.255.255。（Internet上保留地址用于内部）</p>
+<p>IP地址与子网掩码相与得到主机号<br><img src="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/computer-network-636.webp" alt="计算机网络基础"><br><img src="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/computer-network-637.webp" alt="计算机网络基础"></p>
+<p><strong>3、TCP三次握手和四次挥手的全过程</strong></p>
+<p>三次握手：</p>
+<p>第一次握手：客户端发送syn包(syn=x)到服务器，并进入SYN_SEND状态，等待服务器确认；</p>
+<p>第二次握手：服务器收到syn包，必须确认客户的SYN（ack=x+1），同时自己也发送一个SYN包（syn=y），即SYN+ACK包，此时服务器进入SYN_RECV状态；</p>
+<p>第三次握手：客户端收到服务器的SYN＋ACK包，向服务器发送确认包ACK(ack=y+1)，此包发送完毕，客户端和服务器进入ESTABLISHED状态，完成三次握手。</p>
+<p>握手过程中传送的包里不包含数据，三次握手完毕后，客户端与服务器才正式开始传送数据。理想状态下，TCP连接一旦建立，在通信双方中的任何一方主动关闭连接之前，TCP 连接都将被一直保持下去。</p>
+<p>四次握手</p>
+<p>与建立连接的“三次握手”类似，断开一个TCP连接则需要“四次握手”。</p>
+<p>第一次挥手：主动关闭方发送一个FIN，用来关闭主动方到被动关闭方的数据传送，也就是主动关闭方告诉被动关闭方：我已经不 会再给你发数据了(当然，在fin包之前发送出去的数据，如果没有收到对应的ack确认报文，主动关闭方依然会重发这些数据)，但是，此时主动关闭方还可 以接受数据。</p>
+<p>第二次挥手：被动关闭方收到FIN包后，发送一个ACK给对方，确认序号为收到序号+1（与SYN相同，一个FIN占用一个序号）。<br>第三次挥手：被动关闭方发送一个FIN，用来关闭被动关闭方到主动关闭方的数据传送，也就是告诉主动关闭方，我的数据也发送完了，不会再给你发数据了。<br>第四次挥手：主动关闭方收到FIN后，发送一个ACK给被动关闭方，确认序号为收到序号+1，至此，完成四次挥手。</p>
+<p><img src="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/computer-network-638.webp" alt="计算机网络基础"></p>
+<p><strong>4、各种协议</strong>  </p>
+<p>ICMP协议： 因特网控制报文协议。它是TCP/IP协议族的一个子协议，用于在IP主机、路由器之间传递控制消息。</p>
+<p>TFTP协议： 是TCP/IP协议族中的一个用来在客户机与服务器之间进行简单文件传输的协议，提供不复杂、开销不大的文件传输服务。</p>
+<p>HTTP协议： 超文本传输协议，是一个属于应用层的面向对象的协议，由于其简捷、快速的方式，适用于分布式超媒体信息系统。</p>
+<p>DHCP协议： 动态主机配置协议，是一种让系统得以连接到网络上，并获取所需要的配置参数手段。</p>
+<p>NAT协议：网络地址转换属接入广域网(WAN)技术，是一种将私有（保留）地址转化为合法IP地址的转换技术，</p>
+<p>DHCP协议：一个局域网的网络协议，使用UDP协议工作，用途：给内部网络或网络服务供应商自动分配IP地址，给用户或者内部网络管理员作为对所有计算机作中央管理的手段。</p>
+<p><strong>5、在浏览器中输入<a href="http://www.baidu.com后执行的全部过程" target="_blank" rel="noopener">www.baidu.com后执行的全部过程</a></strong></p>
+<p>1、客户端浏览器通过DNS解析到<a href="http://www.baidu.com的IP地址220.181.27.48，通过这个IP地址找到客户端到服务器的路径。客户端浏览器发起一个HTTP会话到220.161.27.48，然后通过TCP进行封装数据包，输入到网络层。" target="_blank" rel="noopener">www.baidu.com的IP地址220.181.27.48，通过这个IP地址找到客户端到服务器的路径。客户端浏览器发起一个HTTP会话到220.161.27.48，然后通过TCP进行封装数据包，输入到网络层。</a></p>
+<p>2、在客户端的传输层，把HTTP会话请求分成报文段，添加源和目的端口，如服务器使用80端口监听客户端的请求，客户端由系统随机选择一个端口如5000，与服务器进行交换，服务器把相应的请求返回给客户端的5000端口。然后使用IP层的IP地址查找目的端。</p>
+<p>3、客户端的网络层不用关系应用层或者传输层的东西，主要做的是通过查找路由表确定如何到达服务器，期间可能经过多个路由器，这些都是由路由器来完成的工作，我不作过多的描述，无非就是通过查找路由表决定通过那个路径到达服务器。</p>
+<p>4、客户端的链路层，包通过链路层发送到路由器，通过邻居协议查找给定IP地址的MAC地址，然后发送ARP请求查找目的地址，如果得到回应后就可以使用ARP的请求应答交换的IP数据包现在就可以传输了，然后发送IP数据包到达服务器的地址。</p>
+<p><strong>6、TCP和UDP的区别？</strong></p>
+<p>TCP提供面向连接的、可靠的数据流传输，而UDP提供的是非面向连接的、不可靠的数据流传输。</p>
+<p>TCP传输单位称为TCP报文段，UDP传输单位称为用户数据报。</p>
+<p>TCP注重数据安全性，UDP数据传输快，因为不需要连接等待，少了许多操作，但是其安全性却一般。</p>
+<p><strong>7、TCP对应的协议和UDP对应的协议</strong></p>
+<p>TCP对应的协议：</p>
+<p>（1） FTP：定义了文件传输协议，使用21端口。</p>
+<p>（2） Telnet：一种用于远程登陆的端口，使用23端口，用户可以以自己的身份远程连接到计算机上，可提供基于DOS模式下的通信服务。</p>
+<p>（3） SMTP：邮件传送协议，用于发送邮件。服务器开放的是25号端口。</p>
+<p>（4） POP3：它是和SMTP对应，POP3用于接收邮件。POP3协议所用的是110端口。</p>
+<p>（5）HTTP：是从Web服务器传输超文本到本地浏览器的传送协议。</p>
+<p>UDP对应的协议：  </p>
+<p>（1） DNS：用于域名解析服务，将域名地址转换为IP地址。DNS用的是53号端口。</p>
+<p>（2） SNMP：简单网络管理协议，使用161号端口，是用来管理网络设备的。由于网络设备很多，无连接的服务就体现出其优势。</p>
+<p>（3） TFTP(Trival File Tran敏感词er Protocal)，简单文件传输协议，该协议在熟知端口69上使用UDP服务。</p>
+<p><strong>8、DNS域名系统，简单描述其工作原理。</strong></p>
+<p>当DNS客户机需要在程序中使用名称时，它会查询DNS服务器来解析该名称。客户机发送的每条查询信息包括三条信息：包括：指定的DNS域名，指定的查询类型，DNS域名的指定类别。基于UDP服务，端口53. 该应用一般不直接为用户使用，而是为其他应用服务，如HTTP，SMTP等在其中需要完成主机名到IP地址的转换。</p>
+<p><img src="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/computer-network-639.webp" alt="计算机网络基础"></p>
+<p><strong>9、TCP的三次握手过程？为什么会采用三次握手，若采用二次握手可以吗？</strong></p>
+<p>答：建立连接的过程是利用客户服务器模式，假设主机A为客户端，主机B为服务器端。</p>
+<p>（1）TCP的三次握手过程：主机A向B发送连接请求；主机B对收到的主机A的报文段进行确认；主机A再次对主机B的确认进行确认。</p>
+<p>（2）采用三次握手是为了防止失效的连接请求报文段突然又传送到主机B，因而产生错误。失效的连接请求报文段是指：主机A发出的连接请求没有收到主机B的确认，于是经过一段时间后，主机A又重新向主机B发送连接请求，且建立成功，顺序完成数据传输。考虑这样一种特殊情况，主机A第一次发送的连接请求并没有丢失，而是因为网络节点导致延迟达到主机B，主机B以为是主机A又发起的新连接，于是主机B同意连接，并向主机A发回确认，但是此时主机A根本不会理会，主机B就一直在等待主机A发送数据，导致主机B的资源浪费。</p>
+<p>（3）采用两次握手不行，原因就是上面说的实效的连接请求的特殊情况。</p>
+<p><strong>10、端口及对应的服务？</strong></p>
+<p><img src="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/computer-network-640.webp" alt="计算机网络基础"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/10/11/gogs-personal-git-server/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -659,1373 +3723,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/07/06/swagger2-spring/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Waylan Punch">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Waylan Punch">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/06/swagger2-spring/" itemprop="url">SpringBoot整合Swagger2并汉化</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-06T22:05:01+08:00">
-                2018-07-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/07/06/swagger2-spring/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/06/swagger2-spring/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/07/06/swagger2-spring/" class="leancloud_visitors" data-flag-title="SpringBoot整合Swagger2并汉化">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>本文将介Swagger2，它可以轻松组织出强大RESTful API文档。它既可以减少我们创建文档的工作量，同时说明内容又整合入实现代码中，让维护文档和修改代码整合为一体，可以让我们在修改代码逻辑的同时方便的修改文档说明。另外Swagger2也提供了强大的页面测试功能来调试每个RESTful API，而不再需要Postman。</p>
-<h1 id="Swagger2注解说明"><a href="#Swagger2注解说明" class="headerlink" title="Swagger2注解说明"></a>Swagger2注解说明</h1><p>Swagger通过注解表明该接口会生成文档，包括接口名、请求方法、参数、返回信息的等等。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@Api：修饰整个类，描述Controller的作用</span><br><span class="line">@ApiOperation：描述一个类的一个方法，或者说一个接口</span><br><span class="line">@ApiParam：单个参数描述</span><br><span class="line">@ApiModel：用对象来接收参数</span><br><span class="line">@ApiProperty：用对象接收参数时，描述对象的一个字段</span><br><span class="line">@ApiResponse：HTTP响应其中1个描述</span><br><span class="line">@ApiResponses：HTTP响应整体描述</span><br><span class="line">@ApiIgnore：使用该注解忽略这个API</span><br><span class="line">@ApiError ：发生错误返回的信息</span><br><span class="line">@ApiImplicitParam：一个请求参数</span><br><span class="line">@ApiImplicitParams：多个请求参数</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>@Api：用在请求的类上，表示对类的说明</p>
-<ul>
-<li>tags=”说明该类的作用，可以在UI界面上看到的注解”</li>
-<li>value=”该参数没什么意义，在UI界面上也看到，所以不需要配置”</li>
-</ul>
-</li>
-<li><p>@ApiOperation：用在请求的方法上，说明方法的用途、作用</p>
-<ul>
-<li>value=”说明方法的用途、作用”</li>
-<li>notes=”方法的备注说明”</li>
-</ul>
-</li>
-<li><p>@ApiImplicitParams：用在请求的方法上，表示一组参数说明</p>
-<ul>
-<li>@ApiImplicitParam：用在@ApiImplicitParams注解中，指定一个请求参数的各个方面<ul>
-<li>name：参数名</li>
-<li>value：参数的汉字说明、解释</li>
-<li>required：参数是否必须传</li>
-<li>paramType：参数放在哪个地方<ul>
-<li>header –&gt; 请求参数的获取：@RequestHeader</li>
-<li>query –&gt; 请求参数的获取：@RequestParam</li>
-<li>path（用于restful接口）–&gt; 请求参数的获取：@PathVariable</li>
-<li>body（不常用）</li>
-<li>form（不常用）    </li>
-</ul>
-</li>
-<li>dataType：参数类型，默认String，其它值dataType=”Integer”       </li>
-<li>defaultValue：参数的默认值</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>@ApiResponses：用在请求的方法上，表示一组响应</p>
-<ul>
-<li>@ApiResponse：用在@ApiResponses中，一般用于表达一个错误的响应信息<ul>
-<li>code：数字，例如400</li>
-<li>message：信息，例如”请求参数没填好”</li>
-<li>response：抛出异常的类</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>@ApiModel：用于响应类上，表示一个返回响应数据的信息，（这种一般用在post创建的时候，使用@RequestBody这样的场景，请求参数无法使用@ApiImplicitParam注解进行描述的时候）</p>
-<ul>
-<li>@ApiModelProperty：用在属性上，描述响应类的属性</li>
-</ul>
-</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/06/swagger2-spring/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/05/30/Process-Session-With-Redis/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Waylan Punch">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Waylan Punch">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/30/Process-Session-With-Redis/" itemprop="url">使用Redis管理分布式Session</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-30T23:32:18+08:00">
-                2018-05-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/30/Process-Session-With-Redis/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/30/Process-Session-With-Redis/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/05/30/Process-Session-With-Redis/" class="leancloud_visitors" data-flag-title="使用Redis管理分布式Session">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="使用Redis管理分布式Session"><a href="#使用Redis管理分布式Session" class="headerlink" title="使用Redis管理分布式Session"></a>使用Redis管理分布式Session</h1><p>Redis 是一个强大而简单的键值型数据库，之前在公司网站改版的过程中大量使用 Redis 来处理一些特殊的需求，我希望能将自己对 Redis 的使用经验都分享出来，而这里算是第一篇吧。</p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>项目是一个有着不小访问量的网站，为了达到分流的作用，网站按照不同的业务（个人、企业、后台、营销、搜索、API等）区分成不同的子域名，而子域名下运行的是不同的实例。</p>
-<p>对用户登录这块的逻辑，原来的做法是将登录的明文信息（登录ID、用户名、姓名等）在登录过程中直接写入用户 cookie，当需要进行登录校验的时候，后台直接取出 cookie 中保存的ID进行处理。可以想象，这样的模式只要模拟或者盗取了客户端的 cookie 信息，对于客户来说几乎没有任何安全性的保障。</p>
-<p>由于用户的操作可能跨越多个实例，如果采用服务器 session 的机制的话，就需要解决 session 的共享问题，从技术的实现角度来说可能碰到的坑就更多了，于是我们利用了 Redis 来模拟服务器的 session。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/30/Process-Session-With-Redis/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/05/24/DevelopmentLog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Waylan Punch">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Waylan Punch">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/24/DevelopmentLog/" itemprop="url">开发笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-24T02:07:17+08:00">
-                2018-05-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/24/DevelopmentLog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/24/DevelopmentLog/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/05/24/DevelopmentLog/" class="leancloud_visitors" data-flag-title="开发笔记">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="1、jQuery-countdown插件"><a href="#1、jQuery-countdown插件" class="headerlink" title="1、jQuery countdown插件"></a>1、jQuery countdown插件</h1><p>倒计时插件</p>
-<h1 id="2、Spring-Boot引用js、css文件"><a href="#2、Spring-Boot引用js、css文件" class="headerlink" title="2、Spring Boot引用js、css文件"></a>2、Spring Boot引用js、css文件</h1><p><a href="https://blog.csdn.net/CureRrzy/article/details/79350356" target="_blank" rel="noopener">https://blog.csdn.net/CureRrzy/article/details/79350356</a></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/24/DevelopmentLog/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/03/31/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Waylan Punch">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Waylan Punch">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/31/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-31T23:11:08+08:00">
-                2018-03-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/03/31/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/31/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/03/31/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/31/hello-world/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2017/12/12/2017-12-12-Electron-Translation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Waylan Punch">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Waylan Punch">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/12/2017-12-12-Electron-Translation/" itemprop="url">已加入Electron中文简体翻译计划</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-12T12:12:12+08:00">
-                2017-12-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/12/12/2017-12-12-Electron-Translation/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/12/12/2017-12-12-Electron-Translation/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/12/12/2017-12-12-Electron-Translation/" class="leancloud_visitors" data-flag-title="已加入Electron中文简体翻译计划">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p><a href="https://github.com/WaylanPunch" target="_blank" rel="noopener">Waylan Punch</a>已加入<a href="https://crowdin.com/project/electron/zh-CN#" target="_blank" rel="noopener">Electron中文简体翻译计划</a>。</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2017/12/11/2017-12-11-MathJax-Usage/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Waylan Punch">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Waylan Punch">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/11/2017-12-11-MathJax-Usage/" itemprop="url">MathJax在网页中的使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-11T22:16:04+08:00">
-                2017-12-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/12/11/2017-12-11-MathJax-Usage/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/12/11/2017-12-11-MathJax-Usage/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/12/11/2017-12-11-MathJax-Usage/" class="leancloud_visitors" data-flag-title="MathJax在网页中的使用">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>MathJax允许你在网页中使用LaTeX，MathML或AsciiMath注解来包含数学公式，这些数学公式将使用JavaScript处理HTML，SVG或MathML方程式来产生，以显示在任何浏览器中。</p>
-<p>有两种方法可以访问MathJax：最简单的方法是使用分布式网络服务（如cdnjs.com）提供的MathJax副本，但是也可以在本地机器上下载并安装MathJax的副本，或者在你的硬盘上使用（不需要网络访问）。 本文给出了在您的Web站点上运行MathJax的最快和最简单的方法，但是您可能需要去官网查阅更详细得信息以进行自定义页面的设置。</p>
-<p>#使用CDN</p>
-<p>使用MathJax最简单的方法是直接接入内容分发网络（CDN）提供的公共链接。<br>有许多免费的CDN提供商提供MathJax的副本。 一些提供“滚动版本”，即在发布时更新到最新可用版本的链接：</p>
-<ul>
-<li>cdnjs.com（推荐）(<a href="https://cdnjs.com/" target="_blank" rel="noopener">https://cdnjs.com/</a>)</li>
-<li>jsdelivr.com <a href="https://jsdelivr.com/" target="_blank" rel="noopener">滚动</a></li>
-<li>unpkg.com <a href="https://unpkg.com/" target="_blank" rel="noopener">滚动</a></li>
-<li>rawgit.com(<a href="https://rawgit.com/" target="_blank" rel="noopener">https://rawgit.com/</a>)</li>
-<li>gitcdn.xyz(<a href="http://gitcdn.xyz/" target="_blank" rel="noopener">http://gitcdn.xyz/</a>)</li>
-<li>raw.githack.com(<a href="http://docs.mathjax.org/en/latest/raw.githack.com" target="_blank" rel="noopener">http://docs.mathjax.org/en/latest/raw.githack.com</a>)</li>
-</ul>
-<p>如何接入？</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">async</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/12/11/2017-12-11-MathJax-Usage/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2017/03/12/2017-03-12-leancloud-restfulapi-retrofit/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Waylan Punch">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Waylan Punch">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/03/12/2017-03-12-leancloud-restfulapi-retrofit/" itemprop="url">基于LeanCloud Restful API的Retrofit编程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-12T20:13:52+08:00">
-                2017-03-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/12/2017-03-12-leancloud-restfulapi-retrofit/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/03/12/2017-03-12-leancloud-restfulapi-retrofit/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/03/12/2017-03-12-leancloud-restfulapi-retrofit/" class="leancloud_visitors" data-flag-title="基于LeanCloud Restful API的Retrofit编程">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="基于LeanCloud-Restful-API的Retrofit编程"><a href="#基于LeanCloud-Restful-API的Retrofit编程" class="headerlink" title="基于LeanCloud Restful API的Retrofit编程"></a>基于LeanCloud Restful API的Retrofit编程</h1><blockquote>
-<p>BaaS提供商LeanCloud提供了Restful API，没有提供Retrofit使用教程。</p>
-</blockquote>
-<ul>
-<li>注册用户</li>
-</ul>
-<p>注册API设计：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST \</span><br><span class="line">  -H &quot;X-LC-Id: y0crQpaNCKUq9WFaSMLByoKo-gzGzoHsz&quot; \</span><br><span class="line">  -H &quot;X-LC-Key: ihdOweBmtk9yrDbuPEbJfyBb&quot; \</span><br><span class="line">  -H &quot;Content-Type: application/json&quot; \</span><br><span class="line">  -d &apos;&#123;&quot;username&quot;:&quot;hjiang&quot;,&quot;password&quot;:&quot;f32@ds*@&amp;dsa&quot;,&quot;phone&quot;:&quot;18612340000&quot;&#125;&apos; \</span><br><span class="line">  https://api.leancloud.cn/1.1/users</span><br></pre></td></tr></table></figure>
-<p>登录API设计：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST \</span><br><span class="line">-H &quot;Content-Type: application/json&quot; \</span><br><span class="line">-H &quot;X-LC-Id: y0crQpaNCKUq9WFaSMLByoKo-gzGzoHsz&quot; \</span><br><span class="line">-H &quot;X-LC-Key: ihdOweBmtk9yrDbuPEbJfyBb&quot; \</span><br><span class="line">-d &apos;&#123;&quot;username&quot;:&quot;hjiang&quot;,&quot;password&quot;:&quot;f32@ds*@&amp;dsa&quot;&#125;&apos; \</span><br><span class="line">https://api.leancloud.cn/1.1/login</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/12/2017-03-12-leancloud-restfulapi-retrofit/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2017/03/12/2017-03-21-butterknife-vs-roboguice/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Waylan Punch">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Waylan Punch">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/03/12/2017-03-21-butterknife-vs-roboguice/" itemprop="url">ButterKnife vs RoboGuice</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-12T19:19:57+08:00">
-                2017-03-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/12/2017-03-21-butterknife-vs-roboguice/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/03/12/2017-03-21-butterknife-vs-roboguice/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/03/12/2017-03-21-butterknife-vs-roboguice/" class="leancloud_visitors" data-flag-title="ButterKnife vs RoboGuice">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="ButterKnife-vs-RoboGuice"><a href="#ButterKnife-vs-RoboGuice" class="headerlink" title="ButterKnife vs RoboGuice"></a>ButterKnife vs RoboGuice</h1><blockquote>
-<p>当涉及到Android上的依赖注入（DI）类库的时候，存在不少的选择，我在公司项目中用了RoboGuice，现在非常后悔。最开始认为RoboGuice节约了大量的时间。较少的代码意味着较少的错误，较少的样板代码意味着可以把更多的时间放到应用的核心逻辑上。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>比较</th>
-<th>RoboGuice</th>
-<th>ButterKnife</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>所需的最少jar包</td>
-<td>3 (roboguice-2.0.jar, javax.inject-1.jar and guice-3.0-no_aop.jar)</td>
-<td>1 (butterknife-4.0.1.jar)</td>
-</tr>
-<tr>
-<td>是否需要替代Activity</td>
-<td>需要，RoboActivity替代Activity</td>
-<td>不需要</td>
-</tr>
-<tr>
-<td>与ActionBarSherlock的兼容性</td>
-<td>兼容，需添加roboguice-sherlock-1.5.jar包到应用并且用RoboSherlockActivity替换SherlockActivity</td>
-<td>兼容，不需要额外jars包</td>
-</tr>
-<tr>
-<td>单击监听器的注入</td>
-<td>不支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>性能</td>
-<td>运行时采取反射机制有性能影响</td>
-<td>没有采取反射而使用了预编译技术，因为基于反射的DI非常占用资源和耗时</td>
-</tr>
-<tr>
-<td>POJO注入</td>
-<td>支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>Fragments注入</td>
-<td>支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>适配器注入</td>
-<td>不支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>代码协议</td>
-<td>Apache License 2.0</td>
-<td>Apache License 2.0</td>
-</tr>
-<tr>
-<td>链接</td>
-<td><a href="https://github.com/roboguice/roboguice/wiki" target="_blank" rel="noopener">Rroboguice Link</a></td>
-<td><a href="http://jakewharton.github.io/butterknife/" target="_blank" rel="noopener">Butterknife Link</a></td>
-</tr>
-</tbody>
-</table>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2075,7 +3777,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">54</span>
+                  <span class="site-state-item-count">62</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2097,7 +3799,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">61</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

@@ -308,6 +308,199 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/09/22/centos-middlewareguide/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/22/centos-middlewareguide/" itemprop="url">CentOS 7和Docker使用以及常用中间件安装指南</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-22T21:31:16+08:00">
+                2018-09-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/22/centos-middlewareguide/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/22/centos-middlewareguide/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/09/22/centos-middlewareguide/" class="leancloud_visitors" data-flag-title="CentOS 7和Docker使用以及常用中间件安装指南">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Oracle-VM-Virtual-Box安装CentOS-7过程"><a href="#Oracle-VM-Virtual-Box安装CentOS-7过程" class="headerlink" title="Oracle VM Virtual Box安装CentOS 7过程"></a>Oracle VM Virtual Box安装CentOS 7过程</h1><p><a href="https://blog.csdn.net/maty_wang/article/details/79127718" target="_blank" rel="noopener">Install</a></p>
+<h1 id="启动网络服务"><a href="#启动网络服务" class="headerlink" title="启动网络服务"></a>启动网络服务</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ip addr</span><br><span class="line"></span><br><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens33</span><br><span class="line"></span><br><span class="line">ONBOOT=yes</span><br><span class="line"></span><br><span class="line">sudo service network restart</span><br><span class="line"></span><br><span class="line">ip addr</span><br></pre></td></tr></table></figure>
+<h1 id="关机-重启命令"><a href="#关机-重启命令" class="headerlink" title="关机/重启命令"></a>关机/重启命令</h1><p><a href="https://www.cnblogs.com/endv/p/6622452.html" target="_blank" rel="noopener">Shuntdown Command</a></p>
+<ul>
+<li>Linux centos重启命令：<ul>
+<li>1、reboot   普通重启</li>
+<li>2、shutdown -r now 立刻重启(root用户使用)</li>
+<li>3、shutdown -r 10 过10分钟自动重启(root用户使用)</li>
+<li>4、shutdown -r 20:35 在时间为20:35时候重启(root用户使用)</li>
+<li>如果是通过shutdown命令设置重启的话，可以用shutdown -c命令取消重启</li>
+</ul>
+</li>
+<li>Linux centos关机命令：<ul>
+<li>1、halt 立刻关机</li>
+<li>2、poweroff 立刻关机</li>
+<li>3、shutdown -h now 立刻关机(root用户使用)</li>
+<li>4、shutdown -h 10 10分钟后自动关机</li>
+</ul>
+</li>
+</ul>
+<h1 id="Putty连接"><a href="#Putty连接" class="headerlink" title="Putty连接"></a>Putty连接</h1><p><a href="https://www.cnblogs.com/zhcncn/p/4133999.html" target="_blank" rel="noopener">Putty</a></p>
+<p><a href="https://www.cnblogs.com/HD/p/4011323.html" target="_blank" rel="noopener">Firewall</a></p>
+<h1 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h1><p><a href="https://www.cnblogs.com/yufeng218/p/8370670.html" target="_blank" rel="noopener">Docker</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+<p>由于国内访问不到docker官方镜像，可以通过aliyun的源来完成。</p>
+<p><a href="https://blog.csdn.net/doegoo/article/details/80062132" target="_blank" rel="noopener">阿里云镜像</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl start docker</span><br><span class="line">$ sudo systemctl enable docker</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/22/centos-middlewareguide/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2018/07/06/swagger2-spring/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1829,170 +2022,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2016/12/15/2016-12-15-how-to-decompile-apk-file/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Waylan Punch">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Waylan Punch">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/12/15/2016-12-15-how-to-decompile-apk-file/" itemprop="url">如何反编译apk文件</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-15T01:12:03+08:00">
-                2016-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/12/15/2016-12-15-how-to-decompile-apk-file/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2016/12/15/2016-12-15-how-to-decompile-apk-file/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2016/12/15/2016-12-15-how-to-decompile-apk-file/" class="leancloud_visitors" data-flag-title="如何反编译apk文件">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><em>准备三个工具：Apktool、dex2jar、jd-gui</em></p>
-<ul>
-<li><p><a href="https://ibotpeaches.github.io/Apktool/" target="_blank" rel="noopener">Apktool</a></p>
-<ul>
-<li><p>下载：<a href="https://bitbucket.org/iBotPeaches/apktool/downloads" target="_blank" rel="noopener">downloads</a></p>
-</li>
-<li><p>安装：<a href="https://ibotpeaches.github.io/Apktool/install/" target="_blank" rel="noopener">install</a></p>
-<pre><code>**Windows:**
-1.Download Windows wrapper script (Right click, Save Link As apktool.bat)
-2.Download apktool-2 (find newest here)
-3.Rename downloaded jar to apktool.jar
-4.Move both files (apktool.jar &amp; apktool.bat) to your Windows directory (Usually C://Windows)
-5.If you do not have access to C://Windows, you may place the two files anywhere then add that directory to your Environment Variables System PATH variable.
-6.Try running apktool via command prompt
-</code></pre></li>
-<li><p>使用：<a href="https://ibotpeaches.github.io/Apktool/documentation/" target="_blank" rel="noopener">documentation</a></p>
-</li>
-</ul>
-</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/12/15/2016-12-15-how-to-decompile-apk-file/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2047,7 +2076,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2069,7 +2098,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -2175,7 +2204,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2014 &mdash; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2014 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

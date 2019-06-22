@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://waylanpunch.github.io/"/>
-  <updated>2018-12-17T15:06:31.154Z</updated>
+  <updated>2019-06-22T14:28:50.625Z</updated>
   <id>https://waylanpunch.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MongoDB Atlas平台使用教程</title>
+    <link href="https://waylanpunch.github.io/2019/06/22/MongoDB-Atlas/"/>
+    <id>https://waylanpunch.github.io/2019/06/22/MongoDB-Atlas/</id>
+    <published>2019-06-22T13:31:22.000Z</published>
+    <updated>2019-06-22T14:28:50.625Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;MongoDB Atlas是MongoDB的云平台。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
+    
+    
+      <category term="MongoDB" scheme="https://waylanpunch.github.io/tags/MongoDB/"/>
+    
+  </entry>
   
   <entry>
     <title>69个经典Spring面试题和答案</title>
@@ -883,43 +903,6 @@
       <category term="Activity" scheme="https://waylanpunch.github.io/tags/Activity/"/>
     
       <category term="Fragment" scheme="https://waylanpunch.github.io/tags/Fragment/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何反编译apk文件</title>
-    <link href="https://waylanpunch.github.io/2016/12/15/2016-12-15-how-to-decompile-apk-file/"/>
-    <id>https://waylanpunch.github.io/2016/12/15/2016-12-15-how-to-decompile-apk-file/</id>
-    <published>2016-12-14T17:12:03.000Z</published>
-    <updated>2018-04-01T09:25:01.726Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;em&gt;准备三个工具：Apktool、dex2jar、jd-gui&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://ibotpeaches.github.io/Apktool/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Apktool&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;下载：&lt;a href=&quot;https://bitbucket.org/iBotPeaches/apktool/downloads&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;downloads&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;安装：&lt;a href=&quot;https://ibotpeaches.github.io/Apktool/install/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;install&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;**Windows:**
-1.Download Windows wrapper script (Right click, Save Link As apktool.bat)
-2.Download apktool-2 (find newest here)
-3.Rename downloaded jar to apktool.jar
-4.Move both files (apktool.jar &amp;amp; apktool.bat) to your Windows directory (Usually C://Windows)
-5.If you do not have access to C://Windows, you may place the two files anywhere then add that directory to your Environment Variables System PATH variable.
-6.Try running apktool via command prompt
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;使用：&lt;a href=&quot;https://ibotpeaches.github.io/Apktool/documentation/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Decompile" scheme="https://waylanpunch.github.io/tags/Decompile/"/>
     
   </entry>
   

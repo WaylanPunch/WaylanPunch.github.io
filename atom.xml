@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://waylanpunch.github.io/"/>
-  <updated>2019-06-22T14:28:50.625Z</updated>
+  <updated>2019-07-27T10:56:45.366Z</updated>
   <id>https://waylanpunch.github.io/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>docker-mongodb</title>
+    <link href="https://waylanpunch.github.io/2019/07/27/docker-mongodb/"/>
+    <id>https://waylanpunch.github.io/2019/07/27/docker-mongodb/</id>
+    <published>2019-07-27T10:45:24.000Z</published>
+    <updated>2019-07-27T10:56:45.366Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;1-Docker命令拉取MongoDB镜像&quot;&gt;&lt;a href=&quot;#1-Docker命令拉取MongoDB镜像&quot; class=&quot;headerlink&quot; title=&quot;1.Docker命令拉取MongoDB镜像&quot;&gt;&lt;/a&gt;1.Docker命令拉取MongoDB镜像&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;docker pull mongo:4.0&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
+    
+    
+      <category term="MongoDB" scheme="https://waylanpunch.github.io/tags/MongoDB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MongoDB Atlas平台使用教程</title>
     <link href="https://waylanpunch.github.io/2019/06/22/MongoDB-Atlas/"/>
     <id>https://waylanpunch.github.io/2019/06/22/MongoDB-Atlas/</id>
     <published>2019-06-22T13:31:22.000Z</published>
-    <updated>2019-06-22T14:28:50.625Z</updated>
+    <updated>2019-06-22T14:28:50.626Z</updated>
     
     <summary type="html">
     
@@ -41,7 +61,7 @@
     <link href="https://waylanpunch.github.io/2018/12/17/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%207/"/>
     <id>https://waylanpunch.github.io/2018/12/17/Java后端技术 - 7/</id>
     <published>2018-12-16T17:20:05.000Z</published>
-    <updated>2018-12-17T15:06:31.154Z</updated>
+    <updated>2018-12-17T15:06:31.155Z</updated>
     
     <summary type="html">
     
@@ -85,7 +105,7 @@
     <link href="https://waylanpunch.github.io/2018/12/16/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%206/"/>
     <id>https://waylanpunch.github.io/2018/12/16/Java后端技术 - 6/</id>
     <published>2018-12-15T17:20:05.000Z</published>
-    <updated>2018-12-17T15:06:31.152Z</updated>
+    <updated>2018-12-17T15:06:31.153Z</updated>
     
     <summary type="html">
     
@@ -122,7 +142,7 @@
     <link href="https://waylanpunch.github.io/2018/12/15/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%205/"/>
     <id>https://waylanpunch.github.io/2018/12/15/Java后端技术 - 5/</id>
     <published>2018-12-14T17:20:05.000Z</published>
-    <updated>2018-12-17T15:06:31.154Z</updated>
+    <updated>2018-12-17T15:06:31.155Z</updated>
     
     <summary type="html">
     
@@ -216,7 +236,7 @@
     <link href="https://waylanpunch.github.io/2018/12/14/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%204/"/>
     <id>https://waylanpunch.github.io/2018/12/14/Java后端技术 - 4/</id>
     <published>2018-12-13T17:20:05.000Z</published>
-    <updated>2018-12-17T15:06:31.152Z</updated>
+    <updated>2018-12-17T15:06:31.153Z</updated>
     
     <summary type="html">
     
@@ -286,7 +306,7 @@
     <link href="https://waylanpunch.github.io/2018/12/13/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%203/"/>
     <id>https://waylanpunch.github.io/2018/12/13/Java后端技术 - 3/</id>
     <published>2018-12-12T17:20:05.000Z</published>
-    <updated>2018-12-17T15:06:31.152Z</updated>
+    <updated>2018-12-17T15:06:31.153Z</updated>
     
     <summary type="html">
     
@@ -352,7 +372,7 @@
     <link href="https://waylanpunch.github.io/2018/12/12/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%202/"/>
     <id>https://waylanpunch.github.io/2018/12/12/Java后端技术 - 2/</id>
     <published>2018-12-11T17:20:05.000Z</published>
-    <updated>2018-12-17T15:06:31.154Z</updated>
+    <updated>2018-12-17T15:06:31.155Z</updated>
     
     <summary type="html">
     
@@ -412,11 +432,56 @@
   </entry>
   
   <entry>
+    <title>计算机网络基础几道常见面试试题</title>
+    <link href="https://waylanpunch.github.io/2018/12/11/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%208/"/>
+    <id>https://waylanpunch.github.io/2018/12/11/Java后端技术 - 8/</id>
+    <published>2018-12-10T17:20:05.000Z</published>
+    <updated>2018-12-17T15:06:31.155Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;计算机网络基础几道常见面试试题&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;Java后端技术&quot;&gt;&lt;a href=&quot;#Java后端技术&quot; class=&quot;headerlink&quot; title=&quot;Java后端技术&quot;&gt;&lt;/a&gt;&lt;strong&gt;Java后端技术&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;1、OSI，TCP/IP，五层协议的体系结构，以及各层协议&lt;/p&gt;
+&lt;p&gt;OSI分层 （7层）：物理层、数据链路层、网络层、传输层、会话层、表示层、应用层。&lt;/p&gt;
+&lt;p&gt;TCP/IP分层（4层）：网络接口层、 网际层、运输层、 应用层。&lt;/p&gt;
+&lt;p&gt;五层协议 （5层）：物理层、数据链路层、网络层、运输层、 应用层。&lt;/p&gt;
+&lt;p&gt;每一层的协议如下：&lt;/p&gt;
+&lt;p&gt;物理层：RJ45、CLOCK、IEEE802.3    （中继器，集线器，网关）；&lt;/p&gt;
+&lt;p&gt;数据链路：PPP、FR、HDLC、VLAN、MAC  （网桥，交换机）；&lt;/p&gt;
+&lt;p&gt;网络层：IP、ICMP、ARP、RARP、OSPF、IPX、RIP、IGRP、 （路由器）；&lt;/p&gt;
+&lt;p&gt;传输层：TCP、UDP、SPX；&lt;/p&gt;
+&lt;p&gt;会话层：NFS、SQL、NETBIOS、RPC；&lt;/p&gt;
+&lt;p&gt;表示层：JPEG、MPEG、ASII；&lt;/p&gt;
+&lt;p&gt;应用层：FTP、DNS、Telnet、SMTP、HTTP、WWW、NFS；&lt;/p&gt;
+&lt;p&gt;每一层的作用如下：&lt;/p&gt;
+&lt;p&gt;物理层：通过媒介传输比特,确定机械及电气规范（比特Bit）&lt;/p&gt;
+&lt;p&gt;数据链路层：将比特组装成帧和点到点的传递（帧Frame）&lt;/p&gt;
+&lt;p&gt;网络层：负责数据包从源到宿的传递和网际互连（包PackeT）&lt;/p&gt;
+&lt;p&gt;传输层：提供端到端的可靠报文传递和错误恢复（段Segment）&lt;/p&gt;
+&lt;p&gt;会话层：建立、管理和终止会话（会话协议数据单元SPDU）&lt;/p&gt;
+&lt;p&gt;表示层：对数据进行翻译、加密和压缩（表示协议数据单元PPDU）&lt;/p&gt;
+&lt;p&gt;应用层：允许访问OSI环境的手段（应用协议数据单元APDU）&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/tags/Java/"/>
+    
+      <category term="面试题" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="面试" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2018年Java面试题汇总 - 1</title>
     <link href="https://waylanpunch.github.io/2018/12/11/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%201/"/>
     <id>https://waylanpunch.github.io/2018/12/11/Java后端技术 - 1/</id>
     <published>2018-12-10T17:20:05.000Z</published>
-    <updated>2018-12-17T15:06:31.152Z</updated>
+    <updated>2018-12-17T15:06:31.153Z</updated>
     
     <summary type="html">
     
@@ -483,56 +548,11 @@
   </entry>
   
   <entry>
-    <title>计算机网络基础几道常见面试试题</title>
-    <link href="https://waylanpunch.github.io/2018/12/11/Java%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%20-%208/"/>
-    <id>https://waylanpunch.github.io/2018/12/11/Java后端技术 - 8/</id>
-    <published>2018-12-10T17:20:05.000Z</published>
-    <updated>2018-12-17T15:06:31.154Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;计算机网络基础几道常见面试试题&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;Java后端技术&quot;&gt;&lt;a href=&quot;#Java后端技术&quot; class=&quot;headerlink&quot; title=&quot;Java后端技术&quot;&gt;&lt;/a&gt;&lt;strong&gt;Java后端技术&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;1、OSI，TCP/IP，五层协议的体系结构，以及各层协议&lt;/p&gt;
-&lt;p&gt;OSI分层 （7层）：物理层、数据链路层、网络层、传输层、会话层、表示层、应用层。&lt;/p&gt;
-&lt;p&gt;TCP/IP分层（4层）：网络接口层、 网际层、运输层、 应用层。&lt;/p&gt;
-&lt;p&gt;五层协议 （5层）：物理层、数据链路层、网络层、运输层、 应用层。&lt;/p&gt;
-&lt;p&gt;每一层的协议如下：&lt;/p&gt;
-&lt;p&gt;物理层：RJ45、CLOCK、IEEE802.3    （中继器，集线器，网关）；&lt;/p&gt;
-&lt;p&gt;数据链路：PPP、FR、HDLC、VLAN、MAC  （网桥，交换机）；&lt;/p&gt;
-&lt;p&gt;网络层：IP、ICMP、ARP、RARP、OSPF、IPX、RIP、IGRP、 （路由器）；&lt;/p&gt;
-&lt;p&gt;传输层：TCP、UDP、SPX；&lt;/p&gt;
-&lt;p&gt;会话层：NFS、SQL、NETBIOS、RPC；&lt;/p&gt;
-&lt;p&gt;表示层：JPEG、MPEG、ASII；&lt;/p&gt;
-&lt;p&gt;应用层：FTP、DNS、Telnet、SMTP、HTTP、WWW、NFS；&lt;/p&gt;
-&lt;p&gt;每一层的作用如下：&lt;/p&gt;
-&lt;p&gt;物理层：通过媒介传输比特,确定机械及电气规范（比特Bit）&lt;/p&gt;
-&lt;p&gt;数据链路层：将比特组装成帧和点到点的传递（帧Frame）&lt;/p&gt;
-&lt;p&gt;网络层：负责数据包从源到宿的传递和网际互连（包PackeT）&lt;/p&gt;
-&lt;p&gt;传输层：提供端到端的可靠报文传递和错误恢复（段Segment）&lt;/p&gt;
-&lt;p&gt;会话层：建立、管理和终止会话（会话协议数据单元SPDU）&lt;/p&gt;
-&lt;p&gt;表示层：对数据进行翻译、加密和压缩（表示协议数据单元PPDU）&lt;/p&gt;
-&lt;p&gt;应用层：允许访问OSI环境的手段（应用协议数据单元APDU）&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="https://waylanpunch.github.io/tags/Java/"/>
-    
-      <category term="面试题" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-      <category term="面试" scheme="https://waylanpunch.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>利用Gogs搭建个人Git服务</title>
     <link href="https://waylanpunch.github.io/2018/10/11/gogs-personal-git-server/"/>
     <id>https://waylanpunch.github.io/2018/10/11/gogs-personal-git-server/</id>
     <published>2018-10-10T17:20:05.000Z</published>
-    <updated>2018-10-10T17:35:25.097Z</updated>
+    <updated>2018-10-10T17:35:25.098Z</updated>
     
     <summary type="html">
     
@@ -560,7 +580,7 @@
     <link href="https://waylanpunch.github.io/2018/09/22/centos-middlewareguide/"/>
     <id>https://waylanpunch.github.io/2018/09/22/centos-middlewareguide/</id>
     <published>2018-09-22T13:31:16.000Z</published>
-    <updated>2018-10-10T17:40:53.786Z</updated>
+    <updated>2018-10-10T17:40:53.787Z</updated>
     
     <summary type="html">
     
@@ -608,7 +628,7 @@
     <link href="https://waylanpunch.github.io/2018/07/06/swagger2-spring/"/>
     <id>https://waylanpunch.github.io/2018/07/06/swagger2-spring/</id>
     <published>2018-07-06T14:05:01.000Z</published>
-    <updated>2018-09-11T15:02:01.847Z</updated>
+    <updated>2018-09-11T15:02:01.848Z</updated>
     
     <summary type="html">
     
@@ -772,7 +792,7 @@
     <link href="https://waylanpunch.github.io/2017/12/11/2017-12-11-MathJax-Usage/"/>
     <id>https://waylanpunch.github.io/2017/12/11/2017-12-11-MathJax-Usage/</id>
     <published>2017-12-11T14:16:04.000Z</published>
-    <updated>2018-04-01T09:27:01.142Z</updated>
+    <updated>2018-04-01T09:27:01.143Z</updated>
     
     <summary type="html">
     
@@ -811,7 +831,7 @@
     <link href="https://waylanpunch.github.io/2017/03/12/2017-03-12-leancloud-restfulapi-retrofit/"/>
     <id>https://waylanpunch.github.io/2017/03/12/2017-03-12-leancloud-restfulapi-retrofit/</id>
     <published>2017-03-12T12:13:52.000Z</published>
-    <updated>2018-04-01T09:25:59.877Z</updated>
+    <updated>2018-04-01T09:25:59.878Z</updated>
     
     <summary type="html">
     
@@ -838,7 +858,7 @@
     <link href="https://waylanpunch.github.io/2017/03/12/2017-03-21-butterknife-vs-roboguice/"/>
     <id>https://waylanpunch.github.io/2017/03/12/2017-03-21-butterknife-vs-roboguice/</id>
     <published>2017-03-12T11:19:57.000Z</published>
-    <updated>2018-04-01T09:26:32.117Z</updated>
+    <updated>2018-04-01T09:26:32.118Z</updated>
     
     <summary type="html">
     
@@ -856,53 +876,6 @@
       <category term="ButterKnife" scheme="https://waylanpunch.github.io/tags/ButterKnife/"/>
     
       <category term="RoboGuice" scheme="https://waylanpunch.github.io/tags/RoboGuice/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Fragment操作宿主Activity</title>
-    <link href="https://waylanpunch.github.io/2016/12/17/2016-12-17-Fragment-to-Activity/"/>
-    <id>https://waylanpunch.github.io/2016/12/17/2016-12-17-Fragment-to-Activity/</id>
-    <published>2016-12-17T13:04:28.000Z</published>
-    <updated>2018-04-01T09:25:19.450Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;宿主 Activity 实现 Fragment 定义的对外接口 IOneFragmentClickListener，便可以实现 Fragment 调用 Activity 的功能。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public class OneFragment extends Fragment implements View.OnClickListener{
-
-    private IOneFragmentClickListener clickListener;
-
-    public interface IOneFragmentClickListener{
-        void onOneFragmentClick();
-    }
-
-    public void setClickListener(IOneFragmentClickListener clickListener) {
-        this.clickListener = clickListener;
-    }
-
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View contentView = inflater.inflate(R.layout.fragment_one, null);
-        contentView.findViewById(R.id.edt_one).setOnClickListener(this);
-        return contentView;
-    }
-
-    @Override
-    public void onClick(View v) {
-        clickListener.onOneFragmentClick();
-    }
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-    
-      <category term="Activity" scheme="https://waylanpunch.github.io/tags/Activity/"/>
-    
-      <category term="Fragment" scheme="https://waylanpunch.github.io/tags/Fragment/"/>
     
   </entry>
   

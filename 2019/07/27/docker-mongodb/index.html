@@ -89,10 +89,12 @@
 <meta property="og:site_name" content="Waylan Punch">
 <meta property="og:description" content="1.Docker命令拉取MongoDB镜像1docker pull mongo:4.0">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-27T10:56:45.366Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/docker-mongodb-001.PNG">
+<meta property="og:updated_time" content="2019-07-27T11:01:21.474Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker-mongodb">
 <meta name="twitter:description" content="1.Docker命令拉取MongoDB镜像1docker pull mongo:4.0">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/docker-mongodb-001.PNG">
 
 
 
@@ -428,6 +430,7 @@
 <h2 id="3-2-启动MongoDB容器实例"><a href="#3-2-启动MongoDB容器实例" class="headerlink" title="3.2.启动MongoDB容器实例"></a>3.2.启动MongoDB容器实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --restart=always --name mymongoexpress --link mongodb:mongo-db -d -p 8081:8081 -e ME_CONFIG_OPTIONS_EDITORTHEME=&quot;3024-night&quot; -e ME_CONFIG_BASICAUTH_USERNAME=&quot;root&quot; -e ME_CONFIG_BASICAUTH_PASSWORD=&quot;123456&quot; -e ME_CONFIG_MONGODB_ADMINUSERNAME=&quot;root&quot; -e ME_CONFIG_MONGODB_ADMINPASSWORD=&quot;123456&quot; mongo-express:0.49</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name mymongoexpress -p 8081:8081 --link mymongodb:mongo --env ME_CONFIG_MONGODB_ADMINUSERNAME=&apos;root&apos; --env ME_CONFIG_MONGODB_ADMINPASSWORD=&apos;123456&apos; mongo-express:0.49</span><br></pre></td></tr></table></figure>
 <h2 id="3-3-防火墙开启8081端口"><a href="#3-3-防火墙开启8081端口" class="headerlink" title="3.3.防火墙开启8081端口"></a>3.3.防火墙开启8081端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --add-port=8081/tcp</span><br><span class="line">firewall-cmd --query-port=8081/tcp</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/WaylanPunch/WaylanPunch.github.io/master/images/docker-mongodb-001.PNG" alt="预览"></p>
 
       
     </div>

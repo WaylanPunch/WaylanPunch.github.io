@@ -308,6 +308,210 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2017/03/12/2017-03-21-butterknife-vs-roboguice/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/12/2017-03-21-butterknife-vs-roboguice/" itemprop="url">ButterKnife vs RoboGuice</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-12T19:19:57+08:00">
+                2017-03-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/12/2017-03-21-butterknife-vs-roboguice/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/03/12/2017-03-21-butterknife-vs-roboguice/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/03/12/2017-03-21-butterknife-vs-roboguice/" class="leancloud_visitors" data-flag-title="ButterKnife vs RoboGuice">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="ButterKnife-vs-RoboGuice"><a href="#ButterKnife-vs-RoboGuice" class="headerlink" title="ButterKnife vs RoboGuice"></a>ButterKnife vs RoboGuice</h1><blockquote>
+<p>当涉及到Android上的依赖注入（DI）类库的时候，存在不少的选择，我在公司项目中用了RoboGuice，现在非常后悔。最开始认为RoboGuice节约了大量的时间。较少的代码意味着较少的错误，较少的样板代码意味着可以把更多的时间放到应用的核心逻辑上。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>比较</th>
+<th>RoboGuice</th>
+<th>ButterKnife</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>所需的最少jar包</td>
+<td>3 (roboguice-2.0.jar, javax.inject-1.jar and guice-3.0-no_aop.jar)</td>
+<td>1 (butterknife-4.0.1.jar)</td>
+</tr>
+<tr>
+<td>是否需要替代Activity</td>
+<td>需要，RoboActivity替代Activity</td>
+<td>不需要</td>
+</tr>
+<tr>
+<td>与ActionBarSherlock的兼容性</td>
+<td>兼容，需添加roboguice-sherlock-1.5.jar包到应用并且用RoboSherlockActivity替换SherlockActivity</td>
+<td>兼容，不需要额外jars包</td>
+</tr>
+<tr>
+<td>单击监听器的注入</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>性能</td>
+<td>运行时采取反射机制有性能影响</td>
+<td>没有采取反射而使用了预编译技术，因为基于反射的DI非常占用资源和耗时</td>
+</tr>
+<tr>
+<td>POJO注入</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>Fragments注入</td>
+<td>支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>适配器注入</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>代码协议</td>
+<td>Apache License 2.0</td>
+<td>Apache License 2.0</td>
+</tr>
+<tr>
+<td>链接</td>
+<td><a href="https://github.com/roboguice/roboguice/wiki" target="_blank" rel="noopener">Rroboguice Link</a></td>
+<td><a href="http://jakewharton.github.io/butterknife/" target="_blank" rel="noopener">Butterknife Link</a></td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2016/12/17/2016-12-17-Fragment-to-Activity/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1762,156 +1966,6 @@ dependencies {
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2016/09/16/2016-09-16-renderscript-fuzy-image/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Waylan Punch">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Waylan Punch">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/09/16/2016-09-16-renderscript-fuzy-image/" itemprop="url">RenderScript框架实现图片模糊效果</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-16T23:30:59+08:00">
-                2016-09-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/09/16/2016-09-16-renderscript-fuzy-image/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2016/09/16/2016-09-16-renderscript-fuzy-image/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2016/09/16/2016-09-16-renderscript-fuzy-image/" class="leancloud_visitors" data-flag-title="RenderScript框架实现图片模糊效果">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="RenderScript框架实现图片模糊效果"><a href="#RenderScript框架实现图片模糊效果" class="headerlink" title="RenderScript框架实现图片模糊效果"></a>RenderScript框架实现图片模糊效果</h1><hr>
-<h2 id="1-使用RenderScript-Support-Library-APIs"><a href="#1-使用RenderScript-Support-Library-APIs" class="headerlink" title="1.使用RenderScript Support Library APIs"></a>1.使用RenderScript Support Library APIs</h2><p>为了使用Support Library RenderScript的API，你必须确保你的开发环境能够访问到它们。下面的Android SDK工具是使用这些API所需要的：</p>
-<ul>
-<li>Android SDK Tools revision 22.2 or higher</li>
-<li>Android SDK Build-tools revision 18.1.0 or higher</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/09/16/2016-09-16-renderscript-fuzy-image/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1966,7 +2020,7 @@ dependencies {
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">64</span>
+                  <span class="site-state-item-count">65</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1988,7 +2042,7 @@ dependencies {
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">64</span>
+                  <span class="site-state-item-count">65</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

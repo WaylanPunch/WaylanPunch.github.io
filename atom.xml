@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://waylanpunch.github.io/"/>
-  <updated>2019-07-27T11:01:21.474Z</updated>
+  <updated>2019-07-27T14:49:41.337Z</updated>
   <id>https://waylanpunch.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mongodb-fileserver</title>
+    <link href="https://waylanpunch.github.io/2019/07/27/mongodb-fileserver/"/>
+    <id>https://waylanpunch.github.io/2019/07/27/mongodb-fileserver/</id>
+    <published>2019-07-27T12:07:15.000Z</published>
+    <updated>2019-07-27T14:49:41.337Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;1-创建mongodb数据库&quot;&gt;&lt;a href=&quot;#1-创建mongodb数据库&quot; class=&quot;headerlink&quot; title=&quot;1.创建mongodb数据库&quot;&gt;&lt;/a&gt;1.创建mongodb数据库&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;docker exec -it mymongodb mongo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;show dbs&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;use filedb;// 创建一个名为&amp;quot;filedb&amp;quot;的数据库&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;db.createUser(&amp;#123; user: &amp;apos;root&amp;apos;, pwd: &amp;apos;123456&amp;apos;, roles: [ &amp;#123; role: &amp;quot;root&amp;quot;, db: &amp;quot;admin&amp;quot; &amp;#125; ] &amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;db.createCollection(&amp;quot;Collection1&amp;quot;);  // 在&amp;quot;filedb&amp;quot;中创建一个名为&amp;quot;Images&amp;quot;的Collection&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://waylanpunch.github.io/tags/Java/"/>
+    
+      <category term="MongoDB" scheme="https://waylanpunch.github.io/tags/MongoDB/"/>
+    
+      <category term="Thymeleaf" scheme="https://waylanpunch.github.io/tags/Thymeleaf/"/>
+    
+  </entry>
   
   <entry>
     <title>docker-mongodb</title>
@@ -850,32 +874,6 @@
     
     
       <category term="Retrofit" scheme="https://waylanpunch.github.io/tags/Retrofit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ButterKnife vs RoboGuice</title>
-    <link href="https://waylanpunch.github.io/2017/03/12/2017-03-21-butterknife-vs-roboguice/"/>
-    <id>https://waylanpunch.github.io/2017/03/12/2017-03-21-butterknife-vs-roboguice/</id>
-    <published>2017-03-12T11:19:57.000Z</published>
-    <updated>2018-04-01T09:26:32.118Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;ButterKnife-vs-RoboGuice&quot;&gt;&lt;a href=&quot;#ButterKnife-vs-RoboGuice&quot; class=&quot;headerlink&quot; title=&quot;ButterKnife vs RoboGuice&quot;&gt;&lt;/a&gt;ButterKnife
-        
-      
-    
-    </summary>
-    
-    
-      <category term="ButterKnife" scheme="https://waylanpunch.github.io/tags/ButterKnife/"/>
-    
-      <category term="RoboGuice" scheme="https://waylanpunch.github.io/tags/RoboGuice/"/>
     
   </entry>
   

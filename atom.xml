@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://waylanpunch.github.io/"/>
-  <updated>2019-07-28T02:22:18.471Z</updated>
+  <updated>2019-07-28T02:28:18.493Z</updated>
   <id>https://waylanpunch.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>mongodb-fileserver</title>
+    <title>MongoDB作为静态文件服务器使用</title>
     <link href="https://waylanpunch.github.io/2019/07/27/mongodb-fileserver/"/>
     <id>https://waylanpunch.github.io/2019/07/27/mongodb-fileserver/</id>
     <published>2019-07-27T12:07:15.000Z</published>
-    <updated>2019-07-28T02:22:18.471Z</updated>
+    <updated>2019-07-28T02:28:18.493Z</updated>
     
     <summary type="html">
     

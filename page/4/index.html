@@ -308,6 +308,154 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2016/09/25/2016-09-25-MarginLayoutParams-Error/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Waylan Punch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Waylan Punch">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/09/25/2016-09-25-MarginLayoutParams-Error/" itemprop="url">A MarginLayoutParams Error</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-25T16:24:44+08:00">
+                2016-09-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/09/25/2016-09-25-MarginLayoutParams-Error/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2016/09/25/2016-09-25-MarginLayoutParams-Error/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/09/25/2016-09-25-MarginLayoutParams-Error/" class="leancloud_visitors" data-flag-title="A MarginLayoutParams Error">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="A-MarginLayoutParams-Error"><a href="#A-MarginLayoutParams-Error" class="headerlink" title="A MarginLayoutParams Error"></a>A MarginLayoutParams Error</h1><hr>
+<p>Code:</p>
+<pre><code>ViewGroup.MarginLayoutParams lp = new ViewGroup.MarginLayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+</code></pre><p>Error:</p>
+<pre><code>should pass resolved pixel dimension instead of resource id here:getResource().getDimession*(ViewGroup.LayoutParams.WRAP_CONTENT)
+</code></pre><blockquote>
+<p><strong>MATCH_PARENT</strong> 和 <strong>WRAP_CONTENT</strong> 其实是 <strong>MarginLayoutParams</strong> 构造函数的合法参数. 按<strong>Alt</strong> + <strong>Enter</strong>忽略代码检测即可。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2016/09/16/2016-09-16-renderscript-fuzy-image/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1646,153 +1794,6 @@ if (activity.getSupportActionBar() != null){
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://waylanpunch.github.io/2016/07/11/2016-08-29-drag-and-swipe-with-recyclerview-part-two/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Waylan Punch">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Waylan Punch">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/07/11/2016-08-29-drag-and-swipe-with-recyclerview-part-two/" itemprop="url">Drag and Swipe with RecyclerView Part Two</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-11T21:16:18+08:00">
-                2016-07-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/07/11/2016-08-29-drag-and-swipe-with-recyclerview-part-two/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2016/07/11/2016-08-29-drag-and-swipe-with-recyclerview-part-two/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2016/07/11/2016-08-29-drag-and-swipe-with-recyclerview-part-two/" class="leancloud_visitors" data-flag-title="Drag and Swipe with RecyclerView Part Two">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><a href="https://medium.com/@ipaulpro/drag-and-swipe-with-recyclerview-6a6f0c422efd" target="_blank" rel="noopener">原文</a></p>
-<h1 id="RecyclerView的拖放和滑动特效"><a href="#RecyclerView的拖放和滑动特效" class="headerlink" title="RecyclerView的拖放和滑动特效"></a>RecyclerView的拖放和滑动特效</h1><hr>
-<h2 id="第二部分：手柄、网格与自定义动画"><a href="#第二部分：手柄、网格与自定义动画" class="headerlink" title="第二部分：手柄、网格与自定义动画"></a>第二部分：手柄、网格与自定义动画</h2>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/07/11/2016-08-29-drag-and-swipe-with-recyclerview-part-two/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1847,7 +1848,7 @@ if (activity.getSupportActionBar() != null){
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-count">66</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1858,7 +1859,7 @@ if (activity.getSupportActionBar() != null){
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1869,7 +1870,7 @@ if (activity.getSupportActionBar() != null){
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-count">66</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

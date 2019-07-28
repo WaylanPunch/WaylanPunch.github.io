@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://waylanpunch.github.io/"/>
-  <updated>2019-07-28T02:28:18.493Z</updated>
+  <updated>2019-07-28T12:55:32.362Z</updated>
   <id>https://waylanpunch.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为 `waylanpunch.github.io` 仓库配置个人域名</title>
+    <link href="https://waylanpunch.github.io/2019/07/28/github-page-domain/"/>
+    <id>https://waylanpunch.github.io/2019/07/28/github-page-domain/</id>
+    <published>2019-07-28T12:16:35.000Z</published>
+    <updated>2019-07-28T12:55:32.362Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1-购买域名&quot;&gt;&lt;a href=&quot;#1-购买域名&quot; class=&quot;headerlink&quot; title=&quot;1.购买域名&quot;&gt;&lt;/a&gt;1.购买域名&lt;/h1&gt;&lt;p&gt;登录 &lt;a href=&quot;https://wanwang.aliyun.com/domain&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Tool" scheme="https://waylanpunch.github.io/categories/Tool/"/>
+    
+    
+      <category term="Hexo" scheme="https://waylanpunch.github.io/tags/Hexo/"/>
+    
+      <category term="GitHub" scheme="https://waylanpunch.github.io/tags/GitHub/"/>
+    
+  </entry>
   
   <entry>
     <title>MongoDB作为静态文件服务器使用</title>
@@ -847,33 +875,6 @@
       <category term="MathML" scheme="https://waylanpunch.github.io/tags/MathML/"/>
     
       <category term="AsciiMath" scheme="https://waylanpunch.github.io/tags/AsciiMath/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于LeanCloud Restful API的Retrofit编程</title>
-    <link href="https://waylanpunch.github.io/2017/03/12/2017-03-12-leancloud-restfulapi-retrofit/"/>
-    <id>https://waylanpunch.github.io/2017/03/12/2017-03-12-leancloud-restfulapi-retrofit/</id>
-    <published>2017-03-12T12:13:52.000Z</published>
-    <updated>2018-04-01T09:25:59.878Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;基于LeanCloud-Restful-API的Retrofit编程&quot;&gt;&lt;a href=&quot;#基于LeanCloud-Restful-API的Retrofit编程&quot; class=&quot;headerlink&quot; title=&quot;基于LeanCloud Restful API的Retrofit编程&quot;&gt;&lt;/a&gt;基于LeanCloud Restful API的Retrofit编程&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;BaaS提供商LeanCloud提供了Restful API，没有提供Retrofit使用教程。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;注册用户&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;注册API设计：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -X POST \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  -H &amp;quot;X-LC-Id: y0crQpaNCKUq9WFaSMLByoKo-gzGzoHsz&amp;quot; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  -H &amp;quot;X-LC-Key: ihdOweBmtk9yrDbuPEbJfyBb&amp;quot; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  -H &amp;quot;Content-Type: application/json&amp;quot; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  -d &amp;apos;&amp;#123;&amp;quot;username&amp;quot;:&amp;quot;hjiang&amp;quot;,&amp;quot;password&amp;quot;:&amp;quot;f32@ds*@&amp;amp;dsa&amp;quot;,&amp;quot;phone&amp;quot;:&amp;quot;18612340000&amp;quot;&amp;#125;&amp;apos; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  https://api.leancloud.cn/1.1/users&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;登录API设计：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -X POST \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-H &amp;quot;Content-Type: application/json&amp;quot; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-H &amp;quot;X-LC-Id: y0crQpaNCKUq9WFaSMLByoKo-gzGzoHsz&amp;quot; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-H &amp;quot;X-LC-Key: ihdOweBmtk9yrDbuPEbJfyBb&amp;quot; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d &amp;apos;&amp;#123;&amp;quot;username&amp;quot;:&amp;quot;hjiang&amp;quot;,&amp;quot;password&amp;quot;:&amp;quot;f32@ds*@&amp;amp;dsa&amp;quot;&amp;#125;&amp;apos; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;https://api.leancloud.cn/1.1/login&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="Retrofit" scheme="https://waylanpunch.github.io/tags/Retrofit/"/>
     
   </entry>
   

@@ -533,18 +533,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Markdown Syntax]]></title>
-    <url>%2F2016%2F03%2F15%2F2016-03-20-markdown-syntax%2F</url>
-    <content type="text"><![CDATA[HTML ElementsBelow is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs. Heading 1Heading 2Heading 3Heading 4Heading 5Heading 6Body textLorem ipsum dolor sit amet, test link adipiscing elit. This is strong. Nullam dignissim convallis est. Quisque aliquam. {: .image-right} This is emphasized. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H2O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times (That’s a citation). Underline.Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Blockquotes Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. List TypesOrdered Lists Item one sub item one sub item two sub item three Item two Unordered Lists Item one Item two Item three Tables Header1 Header2 Header3 cell1 cell2 cell3 cell4 cell5 cell6 —- cell1 cell2 cell3 cell4 cell5 cell6 ===== Foot1 Foot2 Foot3 {: rules=”groups”} Code Snippets1234567&#123;% highlight css %&#125;#container &#123; float: left; margin: 0 -240px 0 0; width: 100%;&#125;&#123;% endhighlight %&#125; ButtonsMake any link standout more when applying the .btn class. 123&#123;% highlight html %&#125;&lt;a href=&quot;#&quot; class=&quot;btn btn-success&quot;&gt;Success Button&lt;/a&gt;&#123;% endhighlight %&#125; Primary ButtonSuccess ButtonWarning ButtonDanger ButtonInfo Button KBDYou can also use &lt;kbd&gt; tag for keyboard buttons. 123&#123;% highlight html %&#125;&lt;kbd&gt;W&lt;/kbd&gt;&lt;kbd&gt;A&lt;/kbd&gt;&lt;kbd&gt;S&lt;/kbd&gt;&lt;kbd&gt;D&lt;/kbd&gt;&#123;% endhighlight %&#125; Press WASD to move your car. Midtown Maddness!! NoticesWatch out! You can also add notices by appending {: .notice} to a paragraph.{: .notice}]]></content>
-      <tags>
-        <tag>test</tag>
-        <tag>sample</tag>
-        <tag>markdown</tag>
-        <tag>syntax</tag>
-        <tag>jekyll</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[A Post with a Video]]></title>
     <url>%2F2016%2F03%2F15%2F2013-06-25-video-post%2F</url>
     <content type="text"><![CDATA[Video embeds are responsive and scale with the width of the main content block with the help of FitVids. Not sure if this only effects Kramdown or if it’s an issue with Markdown in general. But adding YouTube video embeds causes errors when building your Jekyll site. To fix add a space between the &lt;iframe&gt; tags and remove allowfullscreen. Example below: 123&#123;% highlight html %&#125;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/SU3kYxJmWuQ&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;&#123;% endhighlight %&#125;]]></content>
@@ -555,15 +543,27 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Markdown Syntax]]></title>
+    <url>%2F2016%2F03%2F15%2F2016-03-20-markdown-syntax%2F</url>
+    <content type="text"><![CDATA[HTML ElementsBelow is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs. Heading 1Heading 2Heading 3Heading 4Heading 5Heading 6Body textLorem ipsum dolor sit amet, test link adipiscing elit. This is strong. Nullam dignissim convallis est. Quisque aliquam. {: .image-right} This is emphasized. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H2O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times (That’s a citation). Underline.Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Blockquotes Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. List TypesOrdered Lists Item one sub item one sub item two sub item three Item two Unordered Lists Item one Item two Item three Tables Header1 Header2 Header3 cell1 cell2 cell3 cell4 cell5 cell6 —- cell1 cell2 cell3 cell4 cell5 cell6 ===== Foot1 Foot2 Foot3 {: rules=”groups”} Code Snippets1234567&#123;% highlight css %&#125;#container &#123; float: left; margin: 0 -240px 0 0; width: 100%;&#125;&#123;% endhighlight %&#125; ButtonsMake any link standout more when applying the .btn class. 123&#123;% highlight html %&#125;&lt;a href=&quot;#&quot; class=&quot;btn btn-success&quot;&gt;Success Button&lt;/a&gt;&#123;% endhighlight %&#125; Primary ButtonSuccess ButtonWarning ButtonDanger ButtonInfo Button KBDYou can also use &lt;kbd&gt; tag for keyboard buttons. 123&#123;% highlight html %&#125;&lt;kbd&gt;W&lt;/kbd&gt;&lt;kbd&gt;A&lt;/kbd&gt;&lt;kbd&gt;S&lt;/kbd&gt;&lt;kbd&gt;D&lt;/kbd&gt;&#123;% endhighlight %&#125; Press WASD to move your car. Midtown Maddness!! NoticesWatch out! You can also add notices by appending {: .notice} to a paragraph.{: .notice}]]></content>
+      <tags>
+        <tag>test</tag>
+        <tag>markdown</tag>
+        <tag>jekyll</tag>
+        <tag>syntax</tag>
+        <tag>sample</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MathJax Example]]></title>
     <url>%2F2015%2F08%2F10%2F2015-08-10-mathjax-example%2F</url>
     <content type="text"><![CDATA[MathJax is a simple way of including Tex/LaTex/MathML based mathematics in HTML webpages. To get up and running you need to include the MathJax script in the header of your github pages page, and then write some maths. For LaTex, there are two delimiters you need to know about, one for block or displayed mathematics \[ ... \], and the other for inline mathematics \( ... \). UsageTo enable MathJax support be sure Kramdown is your Markdown flavor of choice and MathJax is set to true in your _config.yml file. 12markdown: kramdownmathjax: true 12Here is an example MathJax inline rendering \\( 1/x^&#123;2&#125; \\), and here is a block rendering: \\[ \frac&#123;1&#125;&#123;n^&#123;2&#125;&#125; \\] Here is an example MathJax inline rendering \( 1/x^{2} \), and here is a block rendering:\[ \frac{1}{n^{2}} \] The only thing to look out for is the escaping of the backslash when using markdown, so the delimiters become \\[ ... \\] and \\( ... \\) for inline and block maths respectively. $$\begin{align} &amp; \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \ &amp; (x_1, \ldots, x_n) \left( \begin{array}{ccc} \phi(e_1, e_1) &amp; \cdots &amp; \phi(e_1, e_n) \ \vdots &amp; \ddots &amp; \vdots \ \phi(e_n, e_1) &amp; \cdots &amp; \phi(e_n, e_n) \end{array} \right) \left( \begin{array}{c} y_1 \ \vdots \ y_n \end{array} \right)\end{align}$$]]></content>
       <tags>
         <tag>test</tag>
         <tag>markdown</tag>
-        <tag>jekyll</tag>
         <tag>mathjax</tag>
         <tag>example</tag>
+        <tag>jekyll</tag>
       </tags>
   </entry>
   <entry>
